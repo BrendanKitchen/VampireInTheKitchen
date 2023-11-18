@@ -1,0 +1,314 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "bottle_click",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 306244838204551
+		},
+		{
+			"eventType": "variable",
+			"name": "animation_speed",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 712476940832591
+		},
+		{
+			"eventType": "variable",
+			"name": "knob_clicked",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 984973086211033
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 239188268715991
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-from-sprite",
+					"objectClass": "Mouse",
+					"sid": 166210114409830,
+					"parameters": {
+						"sprite": "cursor"
+					}
+				}
+			],
+			"sid": 597958259212347
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 608787168074447,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "sink"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 390853926250775,
+					"parameters": {
+						"layout": "Sink_Zoomed"
+					}
+				}
+			],
+			"sid": 447762618549237
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 401247129788484,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "sink_knob_R"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-speed",
+					"objectClass": "sink_faucet",
+					"sid": 862554854174999,
+					"parameters": {
+						"speed": "5"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "sink_faucet",
+					"sid": 903158291380176,
+					"parameters": {
+						"animation": "\"water drop\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation-speed",
+					"objectClass": "sink_knob_R",
+					"sid": 106046524950673,
+					"parameters": {
+						"speed": "5"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "sink_knob_R",
+					"sid": 179102840893356,
+					"parameters": {
+						"animation": "\"knob_turn_R\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 320714567701827,
+					"parameters": {
+						"variable": "knob_clicked",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 987050434910685,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 733410040801102,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "sink_knob_L"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-speed",
+					"objectClass": "sink_faucet",
+					"sid": 531649341995002,
+					"parameters": {
+						"speed": "5"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "sink_faucet",
+					"sid": 814345078251166,
+					"parameters": {
+						"animation": "\"water drop\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation-speed",
+					"objectClass": "sink_knob_L",
+					"sid": 474286058956583,
+					"parameters": {
+						"speed": "5"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "sink_knob_L",
+					"sid": 562613181853255,
+					"parameters": {
+						"animation": "\"knob_turn_L\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 573345731529544,
+					"parameters": {
+						"variable": "knob_clicked",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 769138577598035,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "sink_faucet",
+					"sid": 579116917119718,
+					"parameters": {
+						"animation": "\"water drop\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Sink_zoomed",
+					"sid": 165780837188753,
+					"parameters": {
+						"animation": "\"\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 440707638525572,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 885800598811201,
+							"parameters": {
+								"variable": "knob_clicked",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sink_zoomed",
+							"sid": 810714534095887,
+							"parameters": {
+								"animation": "\"\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 681889598812319
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 752231423266826,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "arrow"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 517429406613844,
+					"parameters": {
+						"layout": "Bathroom_Scene2"
+					}
+				}
+			],
+			"sid": 454492011013732,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 302516451845592,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "backarrow2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 621310367265708,
+					"parameters": {
+						"layout": "Bathroom_Scene1"
+					}
+				}
+			],
+			"sid": 638907505839565
+		}
+	],
+	"sid": 103033473827399
+}

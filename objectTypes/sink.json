@@ -1,0 +1,50 @@
+{
+	"name": "sink",
+	"plugin-id": "Sprite",
+	"sid": 315602360859304,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 233,
+						"height": 165,
+						"originX": 0.5407725321888412,
+						"originY": 0.23636363636363636,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5411942,
+						"collisionPoly": {
+							"points": [
+								0.004291845493562232,
+								0,
+								1,
+								0,
+								1,
+								0.9939393939393939,
+								0.004291845493562232,
+								0.9939393939393939
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 860815759230251,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
