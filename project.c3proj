@@ -65,13 +65,15 @@
 		"items": [
 			"Bathroom_Scene1",
 			"Sink_Zoomed",
-			"Bathroom_Scene2"
+			"Bathroom_Scene2",
+			"Main_Menu"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Event sheet 1",
+			"Main Menu Events"
 		],
 		"subfolders": []
 	},
