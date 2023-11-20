@@ -8,6 +8,20 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Mouse",
 			"name": "Mouse",
 			"author": "Scirra",
@@ -51,7 +65,20 @@
 			"tub",
 			"floor_bg",
 			"backarrow2",
-			"cursor"
+			"cursor",
+			"PauseTemp",
+			"Keyboard",
+			"MainMenuTemp",
+			"PlayTemp",
+			"Audio",
+			"CreditsTemp",
+			"CreditsPageTemp",
+			"BackTemp",
+			"MainMenuButtonTemp",
+			"Main_Menu_BG",
+			"Play_button",
+			"Credits_1",
+			"Credit_Page"
 		],
 		"subfolders": []
 	},
@@ -63,10 +90,11 @@
 	},
 	"layouts": {
 		"items": [
+			"Main_Menu",
+			"Credits Page",
 			"Bathroom_Scene1",
 			"Sink_Zoomed",
-			"Bathroom_Scene2",
-			"Main_Menu"
+			"Bathroom_Scene2"
 		],
 		"subfolders": []
 	},
@@ -87,7 +115,16 @@
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "Theres_a_Vampire_in_the_Kitchen (2).webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 151081589424324,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
@@ -229,7 +266,7 @@
 		"exportFileStructure": "folders",
 		"uidAllocationMode": "increment"
 	},
-	"viewportWidth": 854,
-	"viewportHeight": 480,
+	"viewportWidth": 1920,
+	"viewportHeight": 1080,
 	"firstLayout": null
 }

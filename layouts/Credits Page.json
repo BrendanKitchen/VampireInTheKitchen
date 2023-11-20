@@ -1,69 +1,11 @@
 {
-	"name": "Main_Menu",
+	"name": "Credits Page",
 	"layers": [
 		{
 			"name": "Layer 0",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
-				{
-					"type": "PlayTemp",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 28,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 419,
-						"y": 251,
-						"width": 234.1691844615442,
-						"height": 79.46767378461767,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CreditsTemp",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 30,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 418,
-						"y": 368,
-						"width": 262.41097491887626,
-						"height": 91.9396116504092,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
 				{
 					"type": "Main_Menu_BG",
 					"properties": {
@@ -73,15 +15,44 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 27,
+					"uid": 36,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
 						"x": 963.5,
 						"y": 542.5,
-						"width": 1923,
-						"height": 1083,
+						"width": 1920,
+						"height": 1080,
 						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							0.5
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Credit_Page",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 31,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1009.7175639894086,
+						"y": 537,
+						"width": 1138,
+						"height": 1076,
+						"originX": 0.5127978817299206,
 						"originY": 0.5,
 						"color": [
 							1,
@@ -94,53 +65,24 @@
 					}
 				},
 				{
-					"type": "Play_button",
+					"type": "BackTemp",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Default",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 34,
+					"uid": 32,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 961,
-						"y": 806,
-						"width": 230,
-						"height": 230,
-						"originX": 0.48478260869565215,
-						"originY": 0.5413043478260869,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Credits_1",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 35,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 238.33823529411765,
-						"y": 751.0208333333334,
-						"width": 278.4892086330935,
-						"height": 292.10791366906477,
-						"originX": 0.5563725490196079,
-						"originY": 0.5208333333333334,
+						"x": 978,
+						"y": 995,
+						"width": 230.02717230796884,
+						"height": 92.01086892318754,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -152,7 +94,7 @@
 					}
 				}
 			],
-			"sid": 694784549473573,
+			"sid": 555237925330288,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -181,7 +123,7 @@
 			"global": false
 		}
 	],
-	"sid": 169258270175575,
+	"sid": 277362001841023,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 1920,
