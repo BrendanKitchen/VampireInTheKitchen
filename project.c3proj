@@ -8,6 +8,13 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -60,7 +67,14 @@
 			"backarrow2",
 			"cursor",
 			"PauseTemp",
-			"Keyboard"
+			"Keyboard",
+			"MainMenuTemp",
+			"PlayTemp",
+			"Audio",
+			"CreditsTemp",
+			"CreditsPageTemp",
+			"BackTemp",
+			"MainMenuButtonTemp"
 		],
 		"subfolders": []
 	},
@@ -72,10 +86,11 @@
 	},
 	"layouts": {
 		"items": [
+			"Main_Menu",
+			"Credits Page",
 			"Bathroom_Scene1",
 			"Sink_Zoomed",
-			"Bathroom_Scene2",
-			"Main_Menu"
+			"Bathroom_Scene2"
 		],
 		"subfolders": []
 	},
@@ -96,7 +111,16 @@
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "Theres_a_Vampire_in_the_Kitchen (2).webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 151081589424324,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {

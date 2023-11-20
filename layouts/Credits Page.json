@@ -1,5 +1,5 @@
 {
-	"name": "Main_Menu",
+	"name": "Credits Page",
 	"layers": [
 		{
 			"name": "Layer 0",
@@ -7,7 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "MainMenuTemp",
+					"type": "CreditsPageTemp",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -15,14 +15,14 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 27,
+					"uid": 31,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 426.1569782631899,
-						"y": 239.39598960580477,
-						"width": 856.4732427865684,
-						"height": 480.9121532329289,
+						"x": 428.5,
+						"y": 240.5,
+						"width": 855.8974726620743,
+						"height": 480.5358473862959,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -36,7 +36,7 @@
 					}
 				},
 				{
-					"type": "PlayTemp",
+					"type": "BackTemp",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -44,43 +44,14 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 28,
+					"uid": 32,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 419,
-						"y": 251,
-						"width": 234.1691844615442,
-						"height": 79.46767378461767,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CreditsTemp",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 30,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 418,
-						"y": 368,
-						"width": 262.41097491887626,
-						"height": 91.9396116504092,
+						"x": 422,
+						"y": 376,
+						"width": 230.02717230796884,
+						"height": 92.01086892318754,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -94,7 +65,7 @@
 					}
 				}
 			],
-			"sid": 694784549473573,
+			"sid": 555237925330288,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -123,7 +94,7 @@
 			"global": false
 		}
 	],
-	"sid": 169258270175575,
+	"sid": 277362001841023,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 1708,
