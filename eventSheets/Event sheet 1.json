@@ -325,9 +325,9 @@
 				{
 					"id": "on-key-pressed",
 					"objectClass": "Keyboard",
-					"sid": 589122699676425,
+					"sid": 684975132364819,
 					"parameters": {
-						"key": 80
+						"key": 27
 					}
 				}
 			],
@@ -400,6 +400,14 @@
 						"layer": "0",
 						"interactive": false
 					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 507123282416500,
+					"parameters": {
+						"time-scale": "0"
+					}
 				}
 			],
 			"sid": 647355673441920
@@ -462,9 +470,51 @@
 						"layer": "0",
 						"interactive": true
 					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 778658658997978,
+					"parameters": {
+						"time-scale": "1.0"
+					}
 				}
 			],
 			"sid": 342784255212097
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 334407927844176,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "MainMenuButtonTemp"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 137665850293918,
+					"parameters": {
+						"layout": "Main_Menu"
+					}
+				},
+				{
+					"id": "toggle-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 783848516807384,
+					"parameters": {
+						"variable": "Paused"
+					}
+				}
+			],
+			"sid": 637375812019776
 		}
 	],
 	"sid": 103033473827399

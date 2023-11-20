@@ -1,5 +1,84 @@
 {
 	"name": "Main Menu Events",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 413464795860091,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "PlayTemp"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 218331615073960,
+					"parameters": {
+						"layout": "Bathroom_Scene1"
+					}
+				}
+			],
+			"sid": 702250222680533
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 420040325361100,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "CreditsTemp"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 570673831503397,
+					"parameters": {
+						"layout": "Credits Page"
+					}
+				}
+			],
+			"sid": 949363204670841
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 406047219436474,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BackTemp"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 737063352489875,
+					"parameters": {
+						"layout": "Main_Menu"
+					}
+				}
+			],
+			"sid": 378813785028031
+		}
+	],
 	"sid": 588019371100103
 }
