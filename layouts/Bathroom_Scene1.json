@@ -420,7 +420,11 @@
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
+<<<<<<< Updated upstream
 			"global": false
+=======
+			"global": true
+>>>>>>> Stashed changes
 		}
 	],
 	"sid": 511573543543875,
