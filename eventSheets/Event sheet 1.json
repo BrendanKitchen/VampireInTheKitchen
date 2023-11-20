@@ -457,15 +457,9 @@
 				{
 					"id": "set-layer-interactive",
 					"objectClass": "System",
-<<<<<<< Updated upstream
-					"sid": 523027130112437,
-					"parameters": {
-						"layer": "2",
-=======
 					"sid": 400574084079623,
 					"parameters": {
 						"layer": "0",
->>>>>>> Stashed changes
 						"interactive": true
 					}
 				}
