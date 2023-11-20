@@ -8,6 +8,13 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Mouse",
 			"name": "Mouse",
 			"author": "Scirra",
@@ -51,7 +58,9 @@
 			"tub",
 			"floor_bg",
 			"backarrow2",
-			"cursor"
+			"cursor",
+			"PauseTemp",
+			"Keyboard"
 		],
 		"subfolders": []
 	},

@@ -32,6 +32,16 @@
 			"sid": 984973086211033
 		},
 		{
+			"eventType": "variable",
+			"name": "Paused",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Checks to see whether or not the game is paused. False (default) = unpaused, True = paused.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 491096694580174
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -308,6 +318,153 @@
 				}
 			],
 			"sid": 638907505839565
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 589122699676425,
+					"parameters": {
+						"key": 80
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "toggle-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 977279714300522,
+					"parameters": {
+						"variable": "Paused"
+					}
+				}
+			],
+			"sid": 513288361878920
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 421255863854602,
+					"parameters": {
+						"variable": "Paused"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 796023477466566,
+					"parameters": {
+						"layer": "2",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 726927121609709,
+					"parameters": {
+						"layer": "1",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 403381459018221,
+					"parameters": {
+						"layer": "2",
+						"interactive": true
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 177996907525610,
+					"parameters": {
+						"layer": "1",
+						"interactive": false
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 302597356457604,
+					"parameters": {
+						"layer": "0",
+						"interactive": false
+					}
+				}
+			],
+			"sid": 647355673441920
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 598790399598199,
+					"parameters": {
+						"variable": "Paused"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 424212128304474,
+					"parameters": {
+						"layer": "2",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 123122310724349,
+					"parameters": {
+						"layer": "1",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 932279743550017,
+					"parameters": {
+						"layer": "2",
+						"interactive": false
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 147319533315252,
+					"parameters": {
+						"layer": "1",
+						"interactive": true
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 523027130112437,
+					"parameters": {
+						"layer": "2",
+						"interactive": true
+					}
+				}
+			],
+			"sid": 342784255212097
 		}
 	],
 	"sid": 103033473827399
