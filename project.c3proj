@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 35800,
+	"savedWithRelease": 36800,
 	"name": "test",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -36,8 +36,36 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Spritefont2",
+			"name": "Sprite font",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Timeline",
 			"name": "Timeline controller",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "TileMovement",
+			"name": "Tile movement",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
 			"author": "Scirra",
 			"bundled": false
 		}
@@ -66,19 +94,24 @@
 			"floor_bg",
 			"backarrow2",
 			"cursor",
-			"PauseTemp",
+			"PauseMenu",
 			"Keyboard",
-			"MainMenuTemp",
-			"PlayTemp",
+			"Resume_Game",
 			"Audio",
-			"CreditsTemp",
-			"CreditsPageTemp",
 			"BackTemp",
-			"MainMenuButtonTemp",
+			"MainMenuButton",
 			"Main_Menu_BG",
 			"Play_button",
 			"Credits_1",
-			"Credit_Page"
+			"Credit_Page",
+			"portait_temp",
+			"wall_temp",
+			"border_temp",
+			"portait_tmp",
+			"port_tmp",
+			"grid",
+			"Settings",
+			"border_puzzle_temp"
 		],
 		"subfolders": []
 	},
@@ -94,7 +127,8 @@
 			"Credits Page",
 			"Bathroom_Scene1",
 			"Sink_Zoomed",
-			"Bathroom_Scene2"
+			"Bathroom_Scene2",
+			"Sliding Puzzle"
 		],
 		"subfolders": []
 	},

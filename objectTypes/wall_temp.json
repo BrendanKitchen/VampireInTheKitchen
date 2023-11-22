@@ -1,34 +1,40 @@
 {
-	"name": "Sink_zoomed",
+	"name": "wall_temp",
 	"plugin-id": "Sprite",
-	"sid": 625476744682645,
+	"sid": 695164723709364,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "TileMovement",
+			"name": "TileMovement",
+			"sid": 298872866545161
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 2725,
-						"height": 2440,
+						"width": 102,
+						"height": 102,
 						"originX": 0.5,
-						"originY": 0.3604060913705584,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2304188,
+						"imageSpriteId": 8613997,
 						"collisionPoly": {
 							"points": [
-								0.003968253968253968,
-								0,
-								0.996031746031746,
-								0,
-								0.996031746031746,
-								0.9949238578680203,
-								0.003968253968253968,
-								0.9949238578680203
+								0.00980392156862745,
+								0.00980392156862745,
+								0.9901960784313726,
+								0.00980392156862745,
+								0.9901960784313726,
+								0.9901960784313726,
+								0.00980392156862745,
+								0.9901960784313726
 							]
 						},
 						"useCollisionPoly": true,
@@ -36,7 +42,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 711570635194379,
+				"sid": 923335083932959,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

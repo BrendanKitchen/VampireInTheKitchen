@@ -7,7 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "PlayTemp",
+					"type": "Resume_Game",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -21,39 +21,10 @@
 					"world": {
 						"x": 419,
 						"y": 251,
-						"width": 234.1691844615442,
-						"height": 79.46767378461767,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CreditsTemp",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 30,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 418,
-						"y": 368,
-						"width": 262.41097491887626,
-						"height": 91.9396116504092,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 245.8776436846214,
+						"height": 35.76045320307795,
+						"originX": 0.2742857142857143,
+						"originY": -1.7777777777777777,
 						"color": [
 							1,
 							1,
@@ -141,6 +112,35 @@
 						"height": 292.10791366906477,
 						"originX": 0.5563725490196079,
 						"originY": 0.5208333333333334,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Settings",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 30,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1237,
+						"y": 799,
+						"width": 174,
+						"height": 175,
+						"originX": 0.48253275109170307,
+						"originY": 0.5416666666666666,
 						"color": [
 							1,
 							1,

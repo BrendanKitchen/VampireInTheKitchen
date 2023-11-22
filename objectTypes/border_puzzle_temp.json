@@ -1,7 +1,7 @@
 {
-	"name": "MainMenuButtonTemp",
+	"name": "border_puzzle_temp",
 	"plugin-id": "Sprite",
-	"sid": 945333842468365,
+	"sid": 139050423431487,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,21 +11,33 @@
 			{
 				"frames": [
 					{
-						"width": 500,
+						"width": 200,
 						"height": 200,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7188942,
+						"imageSpriteId": 6955637,
+						"collisionPoly": {
+							"points": [
+								0.00790501385739481,
+								0.00790501385739481,
+								0.9920949861426052,
+								0.00790501385739481,
+								0.9920949861426052,
+								0.9920949861426052,
+								0.00790501385739481,
+								0.9920949861426052
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 305100781614011,
-				"name": "Default",
+				"sid": 398897013709199,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

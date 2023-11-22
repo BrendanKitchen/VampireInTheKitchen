@@ -3,16 +3,6 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "bottle_click",
-			"type": "boolean",
-			"initialValue": "false",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 306244838204551
-		},
-		{
-			"eventType": "variable",
 			"name": "animation_speed",
 			"type": "number",
 			"initialValue": "5",
@@ -42,6 +32,16 @@
 			"sid": 491096694580174
 		},
 		{
+			"eventType": "variable",
+			"name": "Positioned",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 521172088138621
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -51,6 +51,42 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "port_tmp",
+					"sid": 525920227726963,
+					"parameters": {
+						"x": "round(random(1500,1800))",
+						"y": "round(random(100,900))"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "port_tmp",
+					"sid": 543032213389002,
+					"parameters": {
+						"instance-variable": "Sequence",
+						"value": "Self.IID"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "grid",
+					"sid": 988371345199633,
+					"parameters": {
+						"instance-variable": "Sequence",
+						"value": "port_tmp.Sequence"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "grid",
+					"sid": 671153594624627,
+					"parameters": {
+						"instance-variable": "position",
+						"value": "Self.position"
+					}
+				},
 				{
 					"id": "set-cursor-from-sprite",
 					"objectClass": "Mouse",
@@ -492,7 +528,7 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "MainMenuButtonTemp"
+						"object-clicked": "MainMenuButton"
 					}
 				}
 			],
@@ -515,6 +551,205 @@
 				}
 			],
 			"sid": 637375812019776
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 313706635677177,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Settings"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "toggle-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 939247158851238,
+					"parameters": {
+						"variable": "Paused"
+					}
+				}
+			],
+			"sid": 123015802063559
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 313605636780149,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "portait_temp"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 408921708816930,
+					"parameters": {
+						"layout": "Sliding Puzzle"
+					}
+				}
+			],
+			"sid": 937872410910749
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-dragging",
+					"objectClass": "port_tmp",
+					"sid": 118332174047335,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"actions": [],
+			"sid": 387367677762244,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "grid",
+							"sid": 746976455914073,
+							"parameters": {
+								"object": "port_tmp"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "grid",
+							"sid": 763708873784025,
+							"parameters": {
+								"instance-variable": "Sequence",
+								"comparison": 0,
+								"value": "port_tmp.Sequence"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 275277649300503,
+							"parameters": {
+								"first-value": "distance(grid.X,grid.Y,port_tmp.X, port_tmp.Y)",
+								"comparison": 2,
+								"second-value": "20"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "port_tmp",
+							"sid": 581342905232961,
+							"parameters": {
+								"x": "grid.X",
+								"y": "grid.Y"
+							}
+						}
+					],
+					"sid": 315383642690976
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "grid",
+							"sid": 756871853582860,
+							"parameters": {
+								"instance-variable": "position",
+								"comparison": 0,
+								"value": "port_tmp.Position"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 931234497848337
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 315958884328548,
+							"parameters": {
+								"variable": "Positioned",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 159660199852277
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 131159378514788,
+					"parameters": {
+						"object": "port_tmp"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-top",
+					"objectClass": "port_tmp",
+					"sid": 782619224416794
+				}
+			],
+			"sid": 330584270307433
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 953885154336278,
+					"parameters": {
+						"variable": "Positioned",
+						"comparison": 0,
+						"value": "25"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "port_tmp",
+					"sid": 998785209560825,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "portait_temp",
+					"sid": 601152502578612,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 358580676117013
 		}
 	],
 	"sid": 103033473827399

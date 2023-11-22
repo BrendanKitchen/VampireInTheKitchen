@@ -1,0 +1,42 @@
+{
+	"name": "port_tmp",
+	"plugin-id": "Spritefont2",
+	"sid": 258163483945428,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Sequence",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 662803197363966
+		},
+		{
+			"name": "position",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 221790787905354
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 438092865139771
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 1000,
+		"height": 1000,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 9020365,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

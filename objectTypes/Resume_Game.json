@@ -1,5 +1,5 @@
 {
-	"name": "PlayTemp",
+	"name": "Resume_Game",
 	"plugin-id": "Sprite",
 	"sid": 841725685718627,
 	"isGlobal": false,
@@ -11,14 +11,28 @@
 			{
 				"frames": [
 					{
-						"width": 500,
-						"height": 200,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 525,
+						"height": 90,
+						"originX": 0.2742857142857143,
+						"originY": -1.7777777777777777,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8600218,
+						"imageSpriteId": 9108305,
+						"collisionPoly": {
+							"points": [
+								0.02857142857142857,
+								0.011111111111111112,
+								0.9885714285714285,
+								0.26666666666666666,
+								0.9523809523809523,
+								0.9222222222222223,
+								0.6342857142857142,
+								0.9888888888888889,
+								0.007619047619047619,
+								0.8111111111111111
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

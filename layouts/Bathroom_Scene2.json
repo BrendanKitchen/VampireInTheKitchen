@@ -77,8 +77,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1730,
-						"y": 441,
+						"x": 1728,
+						"y": 448,
 						"width": 694,
 						"height": 966,
 						"originX": 0.5,
@@ -135,12 +135,207 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 122,
-						"y": 573,
-						"width": 229.184,
-						"height": 196.464,
-						"originX": 0.44936708860759494,
-						"originY": 0.46564885496183206,
+						"x": 96,
+						"y": 512,
+						"width": 160,
+						"height": 288,
+						"originX": 0.5192355423181931,
+						"originY": 0.45480487978882783,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "border_temp",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 46,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 96,
+						"y": 256,
+						"width": 191,
+						"height": 320,
+						"originX": 0.4712041884816754,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 3.141592653589793,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "border_temp",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 48,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 288,
+						"y": 32,
+						"width": 191,
+						"height": 416,
+						"originX": 0.4712041884816754,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 4.71238898038469,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "border_temp",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 45,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 512,
+						"y": 192,
+						"width": 191,
+						"height": 384,
+						"originX": 0.4712041884816754,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "border_temp",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 47,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 320,
+						"y": 416,
+						"width": 191,
+						"height": 384,
+						"originX": 0.4712041884816754,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 1.5707963267948966,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "portait_temp",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 12,
+					"instanceVariables": {
+						"Random_Number": 0
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
+						"TileMovement": {
+							"properties": {
+								"grid-width": 32,
+								"grid-height": 32,
+								"grid-offset-x": 0,
+								"grid-offset-y": 0,
+								"speed-x": 100,
+								"speed-y": 100,
+								"enabled": true,
+								"default-controls": true,
+								"isometric": false
+							}
+						}
+					},
+					"world": {
+						"x": 320,
+						"y": 224,
+						"width": 300,
+						"height": 350,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

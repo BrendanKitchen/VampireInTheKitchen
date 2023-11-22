@@ -1,5 +1,5 @@
 {
-	"name": "PauseTemp",
+	"name": "PauseMenu",
 	"plugin-id": "Sprite",
 	"sid": 360026423823822,
 	"isGlobal": false,
@@ -11,14 +11,28 @@
 			{
 				"frames": [
 					{
-						"width": 500,
-						"height": 500,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 1166,
+						"height": 1053,
+						"originX": 0.5042881646655232,
+						"originY": 0.5137701804368471,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7550784,
+						"imageSpriteId": 7278525,
+						"collisionPoly": {
+							"points": [
+								0.03173241852487135,
+								0.000949667616334283,
+								0.9768439108061749,
+								0.000949667616334283,
+								0.9442538593481989,
+								0.9534662867996201,
+								0.7264150943396226,
+								0.9819563152896487,
+								0.22984562607204118,
+								0.9981006647673314
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

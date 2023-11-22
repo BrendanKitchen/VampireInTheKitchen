@@ -106,10 +106,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 543.9489795918367,
-						"y": 347.938679245283,
-						"width": 550.608,
-						"height": 704.608,
+						"x": 552.1304783370899,
+						"y": 336,
+						"width": 658.8716098644325,
+						"height": 833.965475931935,
 						"originX": 0.49489795918367346,
 						"originY": 0.5235849056603774,
 						"color": [
@@ -135,10 +135,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 604,
-						"y": 690,
-						"width": 677.232,
-						"height": 509.53999999999996,
+						"x": 586,
+						"y": 636,
+						"width": 1015.0400461918708,
+						"height": 965.6489779507747,
 						"originX": 0.5407725321888412,
 						"originY": 0.23636363636363636,
 						"color": [
@@ -285,12 +285,12 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1785,
-						"y": 569,
-						"width": 229.18399999999997,
-						"height": 196.464,
-						"originX": 0.5506329113924051,
-						"originY": 0.46564885496183206,
+						"x": 1873,
+						"y": 568,
+						"width": 160,
+						"height": 288,
+						"originX": 0.8028933092224234,
+						"originY": 0.45480487978882783,
 						"color": [
 							1,
 							1,
@@ -336,7 +336,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "PauseTemp",
+					"type": "PauseMenu",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -348,12 +348,12 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 998,
-						"y": 555,
-						"width": 873.9786090139381,
-						"height": 710.9786090139381,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": 969,
+						"y": 457,
+						"width": 1152,
+						"height": 896,
+						"originX": 0.5042881646655232,
+						"originY": 0.5137701804368471,
 						"color": [
 							1,
 							1,
@@ -365,7 +365,7 @@
 					}
 				},
 				{
-					"type": "MainMenuButtonTemp",
+					"type": "MainMenuButton",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -377,12 +377,41 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1000,
-						"y": 624.5,
-						"width": 605,
-						"height": 252,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": 973,
+						"y": 437,
+						"width": 530,
+						"height": 64,
+						"originX": 0.23694029850746268,
+						"originY": 3.0833333333333335,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.0006268412643535282,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Resume_Game",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 49,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 971.3485714285714,
+						"y": 453.55555555555554,
+						"width": 509.8776436846214,
+						"height": 77.76045320307796,
+						"originX": 0.2742857142857143,
+						"originY": -1.7777777777777777,
 						"color": [
 							1,
 							1,
