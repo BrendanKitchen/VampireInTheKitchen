@@ -444,6 +444,15 @@
 					"parameters": {
 						"time-scale": "0"
 					}
+				},
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 206545184582906,
+					"parameters": {
+						"layer": "0",
+						"opacity": "50"
+					}
 				}
 			],
 			"sid": 647355673441920
@@ -513,6 +522,15 @@
 					"sid": 778658658997978,
 					"parameters": {
 						"time-scale": "1.0"
+					}
+				},
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 654621064481328,
+					"parameters": {
+						"layer": "0",
+						"opacity": "100"
 					}
 				}
 			],
