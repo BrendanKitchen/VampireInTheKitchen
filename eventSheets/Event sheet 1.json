@@ -359,6 +359,32 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 678228157018039,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "backarrow3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 926429476778464,
+					"parameters": {
+						"layout": "Bathroom_Scene2"
+					}
+				}
+			],
+			"sid": 278442730890185
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-key-pressed",
 					"objectClass": "Keyboard",
 					"sid": 684975132364819,

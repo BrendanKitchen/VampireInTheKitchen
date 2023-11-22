@@ -1,7 +1,7 @@
 {
-	"name": "backarrow",
+	"name": "backarrow3",
 	"plugin-id": "Sprite",
-	"sid": 437447149848753,
+	"sid": 572927359692058,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,14 +11,14 @@
 			{
 				"frames": [
 					{
-						"width": 158,
-						"height": 131,
-						"originX": 0.44936708860759494,
-						"originY": 0.46564885496183206,
+						"width": 357,
+						"height": 749,
+						"originX": 0.5192355423181931,
+						"originY": 0.45480487978882783,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7034296,
+						"imageSpriteId": 9151064,
 						"collisionPoly": {
 							"points": [
 								1,
@@ -36,7 +36,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 377994029902553,
+				"sid": 267191052998074,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

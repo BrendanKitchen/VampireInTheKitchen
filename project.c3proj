@@ -83,7 +83,6 @@
 			"mirror",
 			"lock",
 			"toilet",
-			"backarrow",
 			"plant",
 			"Sink_zoomed",
 			"sink_knob_L",
@@ -111,7 +110,8 @@
 			"port_tmp",
 			"grid",
 			"Settings",
-			"border_puzzle_temp"
+			"border_puzzle_temp",
+			"backarrow3"
 		],
 		"subfolders": []
 	},
