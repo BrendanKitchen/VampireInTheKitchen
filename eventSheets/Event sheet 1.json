@@ -584,6 +584,32 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
+					"sid": 328754456489001,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Resume_Game"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "toggle-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 496434556402919,
+					"parameters": {
+						"variable": "Paused"
+					}
+				}
+			],
+			"sid": 532256240976223
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
 					"sid": 313605636780149,
 					"parameters": {
 						"mouse-button": "left",
