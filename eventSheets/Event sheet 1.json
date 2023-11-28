@@ -271,44 +271,42 @@
 					}
 				}
 			],
-			"sid": 440707638525572,
-			"children": [
+			"sid": 440707638525572
+		},
+		{
+			"eventType": "block",
+			"conditions": [
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 885800598811201,
-							"parameters": {
-								"variable": "knob_clicked",
-								"comparison": 0,
-								"value": "3"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "Sink_zoomed",
-							"sid": 810714534095887,
-							"parameters": {
-								"animation": "\"\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Qtip",
-							"sid": 927553132913932,
-							"parameters": {
-								"visibility": "visible"
-							}
-						}
-					],
-					"sid": 681889598812319
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 426622951126529,
+					"parameters": {
+						"variable": "knob_clicked",
+						"comparison": 0,
+						"value": "5"
+					}
 				}
-			]
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Sink_zoomed",
+					"sid": 274227803612723,
+					"parameters": {
+						"animation": "\"\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Qtip",
+					"sid": 201543933207189,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 495103061141859
 		},
 		{
 			"eventType": "block",
@@ -337,6 +335,14 @@
 					"id": "move-to-layer",
 					"objectClass": "barofsoap",
 					"sid": 598289636907914,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "Qtip",
+					"sid": 339188246924775,
 					"parameters": {
 						"layer": "1"
 					}
@@ -375,6 +381,14 @@
 					"parameters": {
 						"layer": "0"
 					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "Qtip",
+					"sid": 679365324706090,
+					"parameters": {
+						"layer": "1"
+					}
 				}
 			],
 			"sid": 638907505839565,
@@ -402,6 +416,30 @@
 						}
 					],
 					"sid": 577382877170779
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "barofsoap",
+							"sid": 972621775005607,
+							"parameters": {
+								"instance-variable": "placed"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-layer",
+							"objectClass": "Qtip",
+							"sid": 211330034179419,
+							"parameters": {
+								"layer": "1"
+							}
+						}
+					],
+					"sid": 371046007468247
 				}
 			]
 		},
@@ -426,6 +464,14 @@
 					"sid": 926429476778464,
 					"parameters": {
 						"layout": "Bathroom_Scene2"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "Qtip",
+					"sid": 807076030128213,
+					"parameters": {
+						"layer": "1"
 					}
 				}
 			],
@@ -911,6 +957,45 @@
 			"sid": 963832440813612
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 941336790331414,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Qtip"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Qtip",
+					"sid": 239912257307367,
+					"parameters": {
+						"object": "Inventory_Box"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "AddtoInventory",
+					"sid": 826868216435335,
+					"parameters": [
+						"\"qtip\""
+					]
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Qtip",
+					"sid": 975417525617910
+				}
+			],
+			"sid": 302364419187409
+		},
+		{
 			"functionName": "AddtoInventory",
 			"functionDescription": "Item clicked is added to the Inventory",
 			"functionCategory": "",
@@ -1032,6 +1117,37 @@
 								}
 							],
 							"sid": 381533871963329
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 748208860369716,
+									"parameters": {
+										"variable": "Parameter0",
+										"comparison": 0,
+										"value": "\"qtip\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 886549659806139,
+									"parameters": {
+										"object-to-create": "Qtip",
+										"layer": "1",
+										"x": "Inventory_Box.X",
+										"y": "Inventory_Box.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								}
+							],
+							"sid": 860461012508879
 						}
 					]
 				}
