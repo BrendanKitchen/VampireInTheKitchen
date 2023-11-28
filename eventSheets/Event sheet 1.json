@@ -296,6 +296,14 @@
 								"animation": "\"\"",
 								"from": "beginning"
 							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Qtip",
+							"sid": 927553132913932,
+							"parameters": {
+								"visibility": "visible"
+							}
 						}
 					],
 					"sid": 681889598812319

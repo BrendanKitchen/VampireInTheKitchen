@@ -114,7 +114,8 @@
 			"backarrow3",
 			"barofsoap",
 			"Inventory",
-			"Inventory_Box"
+			"Inventory_Box",
+			"Qtip"
 		],
 		"subfolders": []
 	},
