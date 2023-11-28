@@ -111,7 +111,10 @@
 			"grid",
 			"Settings",
 			"border_puzzle_temp",
-			"backarrow3"
+			"backarrow3",
+			"barofsoap",
+			"Inventory",
+			"Inventory_Box"
 		],
 		"subfolders": []
 	},

@@ -36,7 +36,7 @@
 			"name": "Positioned",
 			"type": "number",
 			"initialValue": "0",
-			"comment": "",
+			"comment": "Number system that checks to see how many pieces have been fitted in the puzzle",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 521172088138621
@@ -142,9 +142,9 @@
 				{
 					"id": "set-animation-speed",
 					"objectClass": "sink_faucet",
-					"sid": 862554854174999,
+					"sid": 954569176632781,
 					"parameters": {
-						"speed": "5"
+						"speed": "8"
 					}
 				},
 				{
@@ -204,9 +204,9 @@
 				{
 					"id": "set-animation-speed",
 					"objectClass": "sink_faucet",
-					"sid": 531649341995002,
+					"sid": 256577448501534,
 					"parameters": {
-						"speed": "5"
+						"speed": "8"
 					}
 				},
 				{
@@ -820,6 +820,193 @@
 				}
 			],
 			"sid": 358580676117013
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 404352346581619,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "barofsoap"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "barofsoap",
+					"sid": 629525025919350,
+					"parameters": {
+						"object": "Inventory_Box"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "AddtoInventory",
+					"sid": 243047024502599,
+					"parameters": [
+						"\"soap\""
+					]
+				},
+				{
+					"id": "destroy",
+					"objectClass": "barofsoap",
+					"sid": 924787298816882
+				}
+			],
+			"sid": 963832440813612
+		},
+		{
+			"functionName": "AddtoInventory",
+			"functionDescription": "Item clicked is added to the Inventory",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "Parameter0",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 566835740869887
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 202206284299489,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "Once_In_Inventory",
+					"type": "boolean",
+					"initialValue": "false",
+					"comment": "Makes sure the item is added only once to the inventory",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 927308912915092
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 885433611622022,
+							"parameters": {
+								"object": "Inventory_Box"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Inventory_Box",
+							"sid": 162401698891847,
+							"parameters": {
+								"instance-variable": "Box_Filled"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 462199352846986,
+							"parameters": {
+								"variable": "Once_In_Inventory"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 521748111940520,
+							"parameters": {
+								"variable": "Once_In_Inventory",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Inventory_Box",
+							"sid": 123029436197044,
+							"parameters": {
+								"instance-variable": "Box_Filled",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 286622495769580,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 449304262108645,
+									"parameters": {
+										"variable": "Parameter0",
+										"comparison": 0,
+										"value": "\"soap\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 955757976263564,
+									"parameters": {
+										"object-to-create": "barofsoap",
+										"layer": "1",
+										"x": "Inventory_Box.X",
+										"y": "Inventory_Box.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								}
+							],
+							"sid": 381533871963329
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-dragging",
+					"objectClass": "barofsoap",
+					"sid": 570812523467560,
+					"behaviorType": "DragDrop"
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "barofsoap",
+					"sid": 490769417758606,
+					"parameters": {
+						"object": "plant"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-flipped",
+					"objectClass": "plant",
+					"sid": 966710298779206,
+					"parameters": {
+						"state": "flipped"
+					}
+				}
+			],
+			"sid": 523586323844325
 		}
 	],
 	"sid": 103033473827399

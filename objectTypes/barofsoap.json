@@ -1,14 +1,14 @@
 {
-	"name": "border_temp",
+	"name": "barofsoap",
 	"plugin-id": "Sprite",
-	"sid": 250485340068130,
-	"isGlobal": false,
+	"sid": 724239648266388,
+	"isGlobal": true,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 357177765903055
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 662923198836761
 		}
 	],
 	"effectTypes": [],
@@ -17,32 +17,20 @@
 			{
 				"frames": [
 					{
-						"width": 191,
-						"height": 252,
-						"originX": 0.4712041884816754,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5908422,
-						"collisionPoly": {
-							"points": [
-								0,
-								0.003968253968253968,
-								1,
-								0.003968253968253968,
-								1,
-								0.996031746031746,
-								0,
-								0.996031746031746
-							]
-						},
+						"imageSpriteId": 2284912,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 846713232026874,
+				"sid": 404240238909855,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
