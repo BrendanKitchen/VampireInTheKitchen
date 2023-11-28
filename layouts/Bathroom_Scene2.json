@@ -327,18 +327,13 @@
 						"live-preview": false
 					},
 					"uid": 64,
-					"instanceVariables": {},
-					"behaviors": {
-						"DragDrop": {
-							"properties": {
-								"axes": "both",
-								"enabled": true
-							}
-						}
+					"instanceVariables": {
+						"placed": false
 					},
+					"behaviors": {},
 					"world": {
-						"x": 1440,
-						"y": 992,
+						"x": 1467,
+						"y": 977,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,

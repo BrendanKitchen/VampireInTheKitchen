@@ -3,14 +3,16 @@
 	"plugin-id": "Sprite",
 	"sid": 724239648266388,
 	"isGlobal": true,
-	"instanceVariables": [],
-	"behaviorTypes": [
+	"instanceVariables": [
 		{
-			"behaviorId": "DragnDrop",
-			"name": "DragDrop",
-			"sid": 662923198836761
+			"name": "placed",
+			"type": "boolean",
+			"desc": "Is the soap placed in the inventory",
+			"show": true,
+			"sid": 524513958769413
 		}
 	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [

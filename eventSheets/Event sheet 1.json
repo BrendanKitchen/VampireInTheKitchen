@@ -324,6 +324,14 @@
 					"parameters": {
 						"layout": "Bathroom_Scene2"
 					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "barofsoap",
+					"sid": 598289636907914,
+					"parameters": {
+						"layer": "1"
+					}
 				}
 			],
 			"sid": 454492011013732,
@@ -351,9 +359,43 @@
 					"parameters": {
 						"layout": "Bathroom_Scene1"
 					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "barofsoap",
+					"sid": 732159732037829,
+					"parameters": {
+						"layer": "0"
+					}
 				}
 			],
-			"sid": 638907505839565
+			"sid": 638907505839565,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "barofsoap",
+							"sid": 162643766840607,
+							"parameters": {
+								"instance-variable": "placed"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-layer",
+							"objectClass": "barofsoap",
+							"sid": 754549954898951,
+							"parameters": {
+								"layer": "1"
+							}
+						}
+					],
+					"sid": 577382877170779
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -970,6 +1012,15 @@
 										"create-hierarchy": false,
 										"template-name": "\"\""
 									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "barofsoap",
+									"sid": 175441301479637,
+									"parameters": {
+										"instance-variable": "placed",
+										"value": "true"
+									}
 								}
 							],
 							"sid": 381533871963329
@@ -977,36 +1028,6 @@
 					]
 				}
 			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-dragging",
-					"objectClass": "barofsoap",
-					"sid": 570812523467560,
-					"behaviorType": "DragDrop"
-				},
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "barofsoap",
-					"sid": 490769417758606,
-					"parameters": {
-						"object": "plant"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-flipped",
-					"objectClass": "plant",
-					"sid": 966710298779206,
-					"parameters": {
-						"state": "flipped"
-					}
-				}
-			],
-			"sid": 523586323844325
 		}
 	],
 	"sid": 103033473827399
