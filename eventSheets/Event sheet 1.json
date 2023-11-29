@@ -1357,6 +1357,45 @@
 				}
 			],
 			"sid": 887929461726691
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 908373728728358,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "plant"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "barofsoap",
+					"sid": 826724341916324,
+					"parameters": {
+						"instance-variable": "placed"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "barofsoap",
+					"sid": 308760805654464
+				},
+				{
+					"id": "move-forward",
+					"objectClass": "plant",
+					"sid": 671520273728778,
+					"parameters": {
+						"distance": "150"
+					}
+				}
+			],
+			"sid": 417877426724178
 		}
 	],
 	"sid": 103033473827399
