@@ -332,9 +332,17 @@
 					}
 				},
 				{
+					"id": "set-visible",
+					"objectClass": "barofsoap",
+					"sid": 841613549554626,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
 					"id": "move-to-layer",
 					"objectClass": "barofsoap",
-					"sid": 598289636907914,
+					"sid": 316253279018648,
 					"parameters": {
 						"layer": "1"
 					}
@@ -349,6 +357,32 @@
 				}
 			],
 			"sid": 454492011013732,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Qtip",
+							"sid": 643949159070850,
+							"parameters": {
+								"instance-variable": "placed"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Qtip",
+							"sid": 506316571961443,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 789589997512925
+				}
+			],
 			"isOrBlock": true
 		},
 		{
@@ -377,9 +411,9 @@
 				{
 					"id": "move-to-layer",
 					"objectClass": "barofsoap",
-					"sid": 732159732037829,
+					"sid": 898204242051086,
 					"parameters": {
-						"layer": "0"
+						"layer": "1"
 					}
 				},
 				{
@@ -399,23 +433,24 @@
 						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "barofsoap",
-							"sid": 162643766840607,
+							"sid": 277703542950709,
 							"parameters": {
 								"instance-variable": "placed"
-							}
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
 						{
-							"id": "move-to-layer",
+							"id": "set-visible",
 							"objectClass": "barofsoap",
-							"sid": 754549954898951,
+							"sid": 361158279464814,
 							"parameters": {
-								"layer": "1"
+								"visibility": "invisible"
 							}
 						}
 					],
-					"sid": 577382877170779
+					"sid": 923101934600089
 				},
 				{
 					"eventType": "block",
@@ -423,7 +458,7 @@
 						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "barofsoap",
-							"sid": 972621775005607,
+							"sid": 380766570014713,
 							"parameters": {
 								"instance-variable": "placed"
 							}
@@ -431,15 +466,39 @@
 					],
 					"actions": [
 						{
-							"id": "move-to-layer",
-							"objectClass": "Qtip",
-							"sid": 211330034179419,
+							"id": "set-visible",
+							"objectClass": "barofsoap",
+							"sid": 406183458467804,
 							"parameters": {
-								"layer": "1"
+								"visibility": "visible"
 							}
 						}
 					],
-					"sid": 371046007468247
+					"sid": 340187199242005
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Qtip",
+							"sid": 164500748403053,
+							"parameters": {
+								"instance-variable": "placed"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Qtip",
+							"sid": 708566360045455,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 775063737007823
 				}
 			]
 		},
@@ -467,15 +526,57 @@
 					}
 				},
 				{
+					"id": "set-visible",
+					"objectClass": "barofsoap",
+					"sid": 822350730213411,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
 					"id": "move-to-layer",
 					"objectClass": "Qtip",
 					"sid": 807076030128213,
 					"parameters": {
 						"layer": "1"
 					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "barofsoap",
+					"sid": 337139168952352,
+					"parameters": {
+						"layer": "1"
+					}
 				}
 			],
-			"sid": 278442730890185
+			"sid": 278442730890185,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Qtip",
+							"sid": 991865759746935,
+							"parameters": {
+								"instance-variable": "placed"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Qtip",
+							"sid": 497145485114793,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 415840533442605
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -1109,7 +1210,7 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "barofsoap",
-									"sid": 175441301479637,
+									"sid": 994952972691768,
 									"parameters": {
 										"instance-variable": "placed",
 										"value": "true"
@@ -1144,6 +1245,15 @@
 										"y": "Inventory_Box.Y",
 										"create-hierarchy": false,
 										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Qtip",
+									"sid": 672822550294005,
+									"parameters": {
+										"instance-variable": "placed",
+										"value": "true"
 									}
 								}
 							],

@@ -161,7 +161,9 @@
 						"live-preview": false
 					},
 					"uid": 127,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"placed": false
+					},
 					"behaviors": {},
 					"world": {
 						"x": 1000,
