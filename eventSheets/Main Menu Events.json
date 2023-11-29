@@ -49,6 +49,22 @@
 					"parameters": {
 						"layout": "Credits Page"
 					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "H",
+					"sid": 418070616460783,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "H2",
+					"sid": 230907471268256,
+					"parameters": {
+						"visibility": "invisible"
+					}
 				}
 			],
 			"sid": 949363204670841
@@ -74,6 +90,22 @@
 					"sid": 737063352489875,
 					"parameters": {
 						"layout": "Main_Menu"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "H",
+					"sid": 698193818307530,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "H2",
+					"sid": 119913740671443,
+					"parameters": {
+						"visibility": "visible"
 					}
 				}
 			],
