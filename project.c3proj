@@ -135,7 +135,9 @@
 			"H2",
 			"dialogue_box",
 			"DialogueText",
-			"stake_tmp"
+			"stake_tmp",
+			"magazine_tmp",
+			"portait_locked"
 		],
 		"subfolders": []
 	},

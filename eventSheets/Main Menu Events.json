@@ -160,6 +160,15 @@
 						"instance-variable": "present",
 						"value": "true"
 					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 554666645249435,
+					"parameters": {
+						"variable": "puzzlescompleted",
+						"value": "1"
+					}
 				}
 			],
 			"sid": 799060492359263

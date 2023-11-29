@@ -32,6 +32,16 @@
 			"sid": 521172088138621
 		},
 		{
+			"eventType": "variable",
+			"name": "puzzlescompleted",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 114310230438557
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -1243,6 +1253,16 @@
 						"click-type": "clicked",
 						"object-clicked": "Letter_Lock"
 					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 924487387920359,
+					"parameters": {
+						"variable": "puzzlescompleted",
+						"comparison": 0,
+						"value": "5"
+					}
 				}
 			],
 			"actions": [
@@ -1284,6 +1304,16 @@
 						"mouse-button": "left",
 						"click-type": "clicked",
 						"object-clicked": "portait_temp"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 690464428963534,
+					"parameters": {
+						"variable": "puzzlescompleted",
+						"comparison": 0,
+						"value": "5"
 					}
 				}
 			],
@@ -1868,6 +1898,15 @@
 						"instance-variable": "opened",
 						"value": "true"
 					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 200475679463566,
+					"parameters": {
+						"variable": "puzzlescompleted",
+						"value": "1"
+					}
 				}
 			],
 			"sid": 887929461726691
@@ -1906,6 +1945,15 @@
 					"sid": 671520273728778,
 					"parameters": {
 						"distance": "150"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 938997410503879,
+					"parameters": {
+						"variable": "puzzlescompleted",
+						"value": "1"
 					}
 				},
 				{
