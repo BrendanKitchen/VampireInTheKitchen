@@ -36,35 +36,6 @@
 					}
 				},
 				{
-					"type": "Sprite",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 3,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 1440,
-						"y": 178,
-						"width": 200,
-						"height": 221,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "medCab",
 					"properties": {
 						"initially-visible": true,
@@ -77,10 +48,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1574,
-						"y": 244,
-						"width": 693.408,
-						"height": 328,
+						"x": 1211,
+						"y": 205,
+						"width": 646.408,
+						"height": 269,
 						"originX": 0.5,
 						"originY": 0.75,
 						"color": [
@@ -164,10 +135,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1603,
-						"y": 223,
-						"width": 108.2,
-						"height": 124.136,
+						"x": 1247,
+						"y": 185,
+						"width": 61.2,
+						"height": 65.136,
 						"originX": 0.3375,
 						"originY": 0.7340425531914894,
 						"color": [

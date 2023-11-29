@@ -867,6 +867,32 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
+					"sid": 569721469800201,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Letter_Lock"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 600857614972479,
+					"parameters": {
+						"layout": "Sliding Puzzle"
+					}
+				}
+			],
+			"sid": 628031077048820
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
 					"sid": 313605636780149,
 					"parameters": {
 						"mouse-button": "left",
@@ -1278,6 +1304,59 @@
 					]
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 765604451277221,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "H"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 952053922055962
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 710413559573916,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "lock"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Qtip",
+					"sid": 557735753871009,
+					"parameters": {
+						"instance-variable": "placed"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "lock",
+					"sid": 757122095493931
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Qtip",
+					"sid": 778915866589678
+				}
+			],
+			"sid": 887929461726691
 		}
 	],
 	"sid": 103033473827399

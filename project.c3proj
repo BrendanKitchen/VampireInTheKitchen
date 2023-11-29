@@ -116,7 +116,8 @@
 			"Inventory",
 			"Inventory_Box",
 			"Qtip",
-			"H"
+			"H",
+			"Letter_Lock"
 		],
 		"subfolders": []
 	},
