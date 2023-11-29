@@ -2,7 +2,7 @@
 	"name": "lock",
 	"plugin-id": "Sprite",
 	"sid": 744458259356199,
-	"isGlobal": false,
+	"isGlobal": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],

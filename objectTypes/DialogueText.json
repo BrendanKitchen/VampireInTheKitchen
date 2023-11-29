@@ -1,0 +1,15 @@
+{
+	"name": "DialogueText",
+	"plugin-id": "Text",
+	"sid": 942900900918106,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 462376065623935
+		}
+	],
+	"effectTypes": []
+}

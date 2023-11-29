@@ -78,6 +78,85 @@
 				}
 			],
 			"sid": 378813785028031
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 397261184535616,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "H2"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "H",
+					"sid": 486152906990027,
+					"parameters": {
+						"instance-variable": "clicked"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "H",
+					"sid": 642320403802568,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "H",
+					"sid": 269751653149746,
+					"parameters": {
+						"instance-variable": "clicked",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "H2",
+					"sid": 886710296244363,
+					"parameters": {
+						"instance-variable": "present",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 799060492359263
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "H2",
+					"sid": 437152535751838,
+					"parameters": {
+						"instance-variable": "present"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "H",
+					"sid": 926028007377523
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "H2",
+					"sid": 135588583612943
+				}
+			],
+			"sid": 913831458670186
 		}
 	],
 	"sid": 588019371100103

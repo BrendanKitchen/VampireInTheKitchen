@@ -3,16 +3,6 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "animation_speed",
-			"type": "number",
-			"initialValue": "5",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 712476940832591
-		},
-		{
-			"eventType": "variable",
 			"name": "knob_clicked",
 			"type": "number",
 			"initialValue": "0",
@@ -94,6 +84,14 @@
 					"parameters": {
 						"sprite": "cursor"
 					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "DialogueText",
+					"sid": 646031698037473,
+					"parameters": {
+						"visibility": "invisible"
+					}
 				}
 			],
 			"sid": 597958259212347
@@ -120,6 +118,39 @@
 					"parameters": {
 						"layout": "Sink_Zoomed"
 					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 476582637900677,
+					"parameters": {
+						"variable": "knob_clicked",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "plant",
+					"sid": 225152889550520,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "medCab",
+					"sid": 791899543347564,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "lock",
+					"sid": 741318138274542,
+					"parameters": {
+						"visibility": "invisible"
+					}
 				}
 			],
 			"sid": 447762618549237
@@ -142,9 +173,9 @@
 				{
 					"id": "set-animation-speed",
 					"objectClass": "sink_faucet",
-					"sid": 954569176632781,
+					"sid": 128371713357996,
 					"parameters": {
-						"speed": "8"
+						"speed": "10"
 					}
 				},
 				{
@@ -172,15 +203,6 @@
 						"animation": "\"knob_turn_R\"",
 						"from": "beginning"
 					}
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 320714567701827,
-					"parameters": {
-						"variable": "knob_clicked",
-						"value": "1"
-					}
 				}
 			],
 			"sid": 987050434910685,
@@ -204,9 +226,9 @@
 				{
 					"id": "set-animation-speed",
 					"objectClass": "sink_faucet",
-					"sid": 256577448501534,
+					"sid": 792231312004889,
 					"parameters": {
-						"speed": "8"
+						"speed": "10"
 					}
 				},
 				{
@@ -234,15 +256,6 @@
 						"animation": "\"knob_turn_L\"",
 						"from": "beginning"
 					}
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 573345731529544,
-					"parameters": {
-						"variable": "knob_clicked",
-						"value": "1"
-					}
 				}
 			],
 			"sid": 769138577598035,
@@ -262,12 +275,12 @@
 			],
 			"actions": [
 				{
-					"id": "set-animation",
-					"objectClass": "Sink_zoomed",
-					"sid": 165780837188753,
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 565403721646056,
 					"parameters": {
-						"animation": "\"\"",
-						"from": "beginning"
+						"variable": "knob_clicked",
+						"value": "1"
 					}
 				}
 			],
@@ -279,11 +292,11 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 426622951126529,
+					"sid": 749098140455602,
 					"parameters": {
 						"variable": "knob_clicked",
 						"comparison": 0,
-						"value": "5"
+						"value": "7"
 					}
 				}
 			],
@@ -332,11 +345,11 @@
 					}
 				},
 				{
-					"id": "set-visible",
-					"objectClass": "barofsoap",
-					"sid": 841613549554626,
+					"id": "move-to-layer",
+					"objectClass": "lock",
+					"sid": 969259665518887,
 					"parameters": {
-						"visibility": "visible"
+						"layer": "1"
 					}
 				},
 				{
@@ -349,10 +362,90 @@
 				},
 				{
 					"id": "move-to-layer",
+					"objectClass": "stake_tmp",
+					"sid": 337238811802836,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
 					"objectClass": "Qtip",
 					"sid": 339188246924775,
 					"parameters": {
 						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "medCab",
+					"sid": 449420939736543,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "plant",
+					"sid": 528362158973237,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "barofsoap",
+					"sid": 898973544470506,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory",
+					"sid": 429748030124844,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory_Box",
+					"sid": 884063175707692,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "plant",
+					"sid": 409464170014711,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "medCab",
+					"sid": 858502399338179,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "lock",
+					"sid": 654601092715306,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_tmp",
+					"sid": 516639648259430,
+					"parameters": {
+						"visibility": "invisible"
 					}
 				}
 			],
@@ -422,6 +515,91 @@
 					"sid": 679365324706090,
 					"parameters": {
 						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "lock",
+					"sid": 565738762345052,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "stake_tmp",
+					"sid": 178483451735364,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "medCab",
+					"sid": 706067693238142,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "plant",
+					"sid": 321300903374054,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory",
+					"sid": 521438826046419,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory_Box",
+					"sid": 814828779048371,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "medCab",
+					"sid": 386749282555130,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "plant",
+					"sid": 946024081134062,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "lock",
+					"sid": 572331541074507,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "lock",
+					"sid": 261039686201018
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_tmp",
+					"sid": 390570145834553,
+					"parameters": {
+						"visibility": "invisible"
 					}
 				}
 			],
@@ -547,6 +725,86 @@
 					"sid": 337139168952352,
 					"parameters": {
 						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "medCab",
+					"sid": 659544674937405,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "plant",
+					"sid": 883983924248800,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "lock",
+					"sid": 332815165972293,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "stake_tmp",
+					"sid": 676259316317544,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory",
+					"sid": 298851363169645,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory_Box",
+					"sid": 147922804929594,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "medCab",
+					"sid": 773309005632062,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "plant",
+					"sid": 334977872650649,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "lock",
+					"sid": 138093351598621,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_tmp",
+					"sid": 215303925868467,
+					"parameters": {
+						"visibility": "invisible"
 					}
 				}
 			],
@@ -676,6 +934,54 @@
 						"layer": "0",
 						"opacity": "50"
 					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "barofsoap",
+					"sid": 921492280395519,
+					"parameters": {
+						"layer": "0"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "stake_tmp",
+					"sid": 281856130800039,
+					"parameters": {
+						"layer": "0"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "Qtip",
+					"sid": 450278652067987,
+					"parameters": {
+						"layer": "0"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "medCab",
+					"sid": 346759636599809,
+					"parameters": {
+						"layer": "0"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "lock",
+					"sid": 267716984001010,
+					"parameters": {
+						"layer": "0"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "plant",
+					"sid": 400304012181774,
+					"parameters": {
+						"layer": "0"
+					}
 				}
 			],
 			"sid": 647355673441920
@@ -770,6 +1076,70 @@
 					"sid": 403161156404003,
 					"parameters": {
 						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "medCab",
+					"sid": 852369260096020,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "lock",
+					"sid": 523662029274371,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "plant",
+					"sid": 140823788027492,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "barofsoap",
+					"sid": 843283951529305,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "stake_tmp",
+					"sid": 573289232068582,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "Qtip",
+					"sid": 466538347936282,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "H",
+					"sid": 867337399792758,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "H2",
+					"sid": 733255077857244,
+					"parameters": {
+						"visibility": "invisible"
 					}
 				}
 			],
@@ -879,9 +1249,25 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 600857614972479,
+					"sid": 139194936048926,
 					"parameters": {
-						"layout": "Sliding Puzzle"
+						"layout": "LockedPuzzle"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory",
+					"sid": 512425337248080,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory",
+					"sid": 401140959623338,
+					"parameters": {
+						"visibility": "invisible"
 					}
 				}
 			],
@@ -908,6 +1294,22 @@
 					"sid": 408921708816930,
 					"parameters": {
 						"layout": "Sliding Puzzle"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory",
+					"sid": 305082109147844,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory_Box",
+					"sid": 201599976792206,
+					"parameters": {
+						"visibility": "invisible"
 					}
 				}
 			],
@@ -1139,6 +1541,45 @@
 			"sid": 302364419187409
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 167100111479776,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "stake_tmp"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "stake_tmp",
+					"sid": 557857158541275,
+					"parameters": {
+						"object": "Inventory_Box"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "AddtoInventory",
+					"sid": 919221691107011,
+					"parameters": [
+						"\"stake\""
+					]
+				},
+				{
+					"id": "destroy",
+					"objectClass": "stake_tmp",
+					"sid": 295685527777478
+				}
+			],
+			"sid": 455841973636841
+		},
+		{
 			"functionName": "AddtoInventory",
 			"functionDescription": "Item clicked is added to the Inventory",
 			"functionCategory": "",
@@ -1297,30 +1738,69 @@
 										"instance-variable": "placed",
 										"value": "true"
 									}
+								},
+								{
+									"id": "move-to-layer",
+									"objectClass": "Qtip",
+									"sid": 882436228762217,
+									"parameters": {
+										"layer": "1"
+									}
 								}
 							],
 							"sid": 860461012508879
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 678964501825800,
+									"parameters": {
+										"variable": "Parameter0",
+										"comparison": 0,
+										"value": "\"stake\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 365941076290821,
+									"parameters": {
+										"object-to-create": "stake_tmp",
+										"layer": "1",
+										"x": "Inventory_Box.X",
+										"y": "Inventory_Box.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "stake_tmp",
+									"sid": 202359687856053,
+									"parameters": {
+										"instance-variable": "placed",
+										"value": "true"
+									}
+								},
+								{
+									"id": "move-to-layer",
+									"objectClass": "stake_tmp",
+									"sid": 985692756190947,
+									"parameters": {
+										"layer": "1"
+									}
+								}
+							],
+							"sid": 118789534524791
 						}
 					]
 				}
 			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 765604451277221,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "H"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 952053922055962
 		},
 		{
 			"eventType": "block",
@@ -1354,6 +1834,40 @@
 					"id": "destroy",
 					"objectClass": "Qtip",
 					"sid": 778915866589678
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "medCab",
+					"sid": 614807382942950,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_tmp",
+					"sid": 509571129122594,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "stake_tmp",
+					"sid": 720589448269334,
+					"parameters": {
+						"where": "in-front",
+						"object": "medCab"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "medCab",
+					"sid": 107052082562023,
+					"parameters": {
+						"instance-variable": "opened",
+						"value": "true"
+					}
 				}
 			],
 			"sid": 887929461726691
@@ -1393,9 +1907,161 @@
 					"parameters": {
 						"distance": "150"
 					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 412314283033200,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "3",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 397298452163184,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
 				}
 			],
 			"sid": 417877426724178
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 536660009158058,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "plant"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "barofsoap",
+					"sid": 506932715955933,
+					"parameters": {
+						"object": "Inventory_Box"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 211983383033741,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 151102757654473,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "3",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "DialogueText",
+					"sid": 800584305736759,
+					"parameters": {
+						"text": "plant.dialogue_txt"
+					}
+				}
+			],
+			"sid": 158192225328907
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "medCab",
+					"sid": 502776697131060,
+					"parameters": {
+						"instance-variable": "opened"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "medCab",
+					"sid": 893995015200895,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_tmp",
+					"sid": 231003270824369,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 798829780501778
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "medCab",
+					"sid": 695201660489508,
+					"parameters": {
+						"instance-variable": "opened"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "medCab",
+					"sid": 849068640331431,
+					"parameters": {
+						"frame-number": "0"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_tmp",
+					"sid": 476562578003572,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 396850845173409
 		}
 	],
 	"sid": 103033473827399

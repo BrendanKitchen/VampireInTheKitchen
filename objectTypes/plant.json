@@ -2,8 +2,23 @@
 	"name": "plant",
 	"plugin-id": "Sprite",
 	"sid": 701727729713594,
-	"isGlobal": false,
-	"instanceVariables": [],
+	"isGlobal": true,
+	"instanceVariables": [
+		{
+			"name": "dialogue_txt",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 109724161042321
+		},
+		{
+			"name": "WaitTime",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 377794707405987
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {

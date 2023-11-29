@@ -43,6 +43,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Timeline",
 			"name": "Timeline controller",
 			"author": "Scirra",
@@ -52,6 +59,13 @@
 			"type": "behavior",
 			"id": "DragnDrop",
 			"name": "Drag & Drop",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -117,7 +131,11 @@
 			"Inventory_Box",
 			"Qtip",
 			"H",
-			"Letter_Lock"
+			"Letter_Lock",
+			"H2",
+			"dialogue_box",
+			"DialogueText",
+			"stake_tmp"
 		],
 		"subfolders": []
 	},
@@ -134,7 +152,9 @@
 			"Bathroom_Scene1",
 			"Sink_Zoomed",
 			"Bathroom_Scene2",
-			"Sliding Puzzle"
+			"Sliding Puzzle",
+			"LockedPuzzle",
+			"Dialogue"
 		],
 		"subfolders": []
 	},

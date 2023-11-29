@@ -2,8 +2,16 @@
 	"name": "medCab",
 	"plugin-id": "Sprite",
 	"sid": 516913428318106,
-	"isGlobal": false,
-	"instanceVariables": [],
+	"isGlobal": true,
+	"instanceVariables": [
+		{
+			"name": "opened",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 509336167755115
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -34,6 +42,31 @@
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
+					},
+					{
+						"width": 252,
+						"height": 168,
+						"originX": 0.5,
+						"originY": 0.75,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7150099,
+						"collisionPoly": {
+							"points": [
+								0.003968253968253968,
+								0.005952380952380952,
+								0.996031746031746,
+								0.005952380952380952,
+								0.996031746031746,
+								1,
+								0.003968253968253968,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
 					}
 				],
 				"sid": 223221987716006,
@@ -42,7 +75,7 @@
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 0
 			}
 		],
 		"subfolders": []
