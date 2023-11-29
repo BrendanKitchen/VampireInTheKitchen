@@ -115,7 +115,8 @@
 			"barofsoap",
 			"Inventory",
 			"Inventory_Box",
-			"Qtip"
+			"Qtip",
+			"H"
 		],
 		"subfolders": []
 	},

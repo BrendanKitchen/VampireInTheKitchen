@@ -755,6 +755,22 @@
 						"layer": "0",
 						"opacity": "100"
 					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "Inventory",
+					"sid": 340942850841402,
+					"parameters": {
+						"layer": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "Inventory_Box",
+					"sid": 403161156404003,
+					"parameters": {
+						"layer": "1"
+					}
 				}
 			],
 			"sid": 342784255212097
