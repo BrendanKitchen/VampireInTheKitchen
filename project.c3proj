@@ -78,6 +78,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
@@ -110,11 +117,9 @@
 			"Keyboard",
 			"Resume_Game",
 			"Audio",
-			"BackTemp",
 			"MainMenuButton",
 			"Main_Menu_BG",
 			"Play_button",
-			"Credits_1",
 			"Credit_Page",
 			"portait_temp",
 			"wall_temp",
@@ -156,8 +161,12 @@
 			"G_Box",
 			"H_Box",
 			"T_Box",
-			"screwdriver",
-			"tape"
+			"back",
+			"CreditsButton",
+			"PlayButton",
+			"FadeToBlack",
+			"ToiletPaper",
+			"crappot"
 		],
 		"subfolders": []
 	},
@@ -186,7 +195,8 @@
 			"Sliding Puzzle",
 			"LockedPuzzle",
 			"Dialogue",
-			"Magazine_Zoomed"
+			"Magazine_Zoomed",
+			"Settings Page"
 		],
 		"subfolders": []
 	},
@@ -203,7 +213,24 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "Interact.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 639101509168671,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "MainMenuButtonPress.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 813548150624518,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
@@ -212,6 +239,14 @@
 					"name": "Theres_a_Vampire_in_the_Kitchen (2).webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 151081589424324,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Im_Stuck_in_the_Bathroom (1).webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 619358135818649,
 					"file-info": {
 						"purpose": "none"
 					}
