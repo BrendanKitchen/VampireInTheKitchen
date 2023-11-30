@@ -204,6 +204,15 @@
 					"parameters": {
 						"visibility": "invisible"
 					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 883459207588218,
+					"parameters": {
+						"layer": "4",
+						"interactive": false
+					}
 				}
 			],
 			"sid": 597958259212347
@@ -701,6 +710,31 @@
 					"conditions": [
 						{
 							"id": "is-boolean-instance-variable-set",
+							"objectClass": "baurbyPin",
+							"sid": 549609122247141,
+							"parameters": {
+								"instance-variable": "placed"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "baurbyPin",
+							"sid": 145991620518557,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 899493942963425
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
 							"objectClass": "stake_burned",
 							"sid": 577404925496005,
 							"parameters": {
@@ -745,6 +779,11 @@
 					"parameters": {
 						"layout": "Bathroom_Scene1"
 					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "Inventory",
+					"sid": 340685467273511
 				},
 				{
 					"id": "set-boolean-eventvar",
@@ -931,9 +970,17 @@
 					],
 					"actions": [
 						{
+							"id": "move-to-layer",
+							"objectClass": "barofsoap",
+							"sid": 870535508079623,
+							"parameters": {
+								"layer": "0"
+							}
+						},
+						{
 							"id": "set-visible",
 							"objectClass": "barofsoap",
-							"sid": 406183458467804,
+							"sid": 803430820439845,
 							"parameters": {
 								"visibility": "visible"
 							}
@@ -955,6 +1002,14 @@
 					],
 					"actions": [
 						{
+							"id": "move-to-layer",
+							"objectClass": "baurbyPin",
+							"sid": 775707143573355,
+							"parameters": {
+								"layer": "0"
+							}
+						},
+						{
 							"id": "set-visible",
 							"objectClass": "baurbyPin",
 							"sid": 708566360045455,
@@ -970,6 +1025,39 @@
 					"conditions": [
 						{
 							"id": "is-boolean-instance-variable-set",
+							"objectClass": "baurbyPin",
+							"sid": 796597673292876,
+							"parameters": {
+								"instance-variable": "placed"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-layer",
+							"objectClass": "baurbyPin",
+							"sid": 735496105107172,
+							"parameters": {
+								"layer": "4"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "baurbyPin",
+							"sid": 553693777004421,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 896762263679322
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
 							"objectClass": "stake_burned",
 							"sid": 364973741470780,
 							"parameters": {
@@ -979,15 +1067,56 @@
 					],
 					"actions": [
 						{
+							"id": "move-to-layer",
+							"objectClass": "stake_burned",
+							"sid": 213444948673405,
+							"parameters": {
+								"layer": "0"
+							}
+						},
+						{
 							"id": "set-visible",
-							"objectClass": "baurbyPin",
-							"sid": 489739744077170,
+							"objectClass": "stake_burned",
+							"sid": 605922943903343,
 							"parameters": {
 								"visibility": "visible"
 							}
 						}
 					],
 					"sid": 916070245917624
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "stake_burned",
+							"sid": 237118853460386,
+							"parameters": {
+								"instance-variable": "placed"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-layer",
+							"objectClass": "stake_burned",
+							"sid": 123185011040011,
+							"parameters": {
+								"layer": "4"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "stake_burned",
+							"sid": 917743093049541,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 648571962941582
 				}
 			]
 		},
@@ -1186,6 +1315,31 @@
 						}
 					],
 					"sid": 415840533442605
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "baurbyPin",
+							"sid": 658142897339622,
+							"parameters": {
+								"instance-variable": "placed"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "baurbyPin",
+							"sid": 824633454323072,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 692858499678904
 				},
 				{
 					"eventType": "block",
@@ -1542,17 +1696,17 @@
 				{
 					"id": "move-to-layer",
 					"objectClass": "medCab",
-					"sid": 852369260096020,
+					"sid": 914921612868184,
 					"parameters": {
-						"layer": "1"
+						"layer": "0"
 					}
 				},
 				{
 					"id": "move-to-layer",
 					"objectClass": "lock",
-					"sid": 523662029274371,
+					"sid": 505876846297423,
 					"parameters": {
-						"layer": "1"
+						"layer": "0"
 					}
 				},
 				{
@@ -1722,6 +1876,30 @@
 							"parameters": {
 								"visibility": "invisible"
 							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "plant",
+							"sid": 103096946017640,
+							"parameters": {
+								"layer": "4"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "medCab",
+							"sid": 945298253997863,
+							"parameters": {
+								"layer": "4"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "lock",
+							"sid": 233687974700316,
+							"parameters": {
+								"layer": "4"
+							}
 						}
 					],
 					"sid": 100334730312009
@@ -1755,9 +1933,125 @@
 							"parameters": {
 								"visibility": "invisible"
 							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "barofsoap",
+							"sid": 675908532890962,
+							"parameters": {
+								"layer": "4"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "plant",
+							"sid": 319352663015040,
+							"parameters": {
+								"layer": "0"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "medCab",
+							"sid": 408891744248877,
+							"parameters": {
+								"layer": "0"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "lock",
+							"sid": 631752594671101,
+							"parameters": {
+								"layer": "0"
+							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "Inventory",
+							"sid": 905141342837998
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "Inventory_Box",
+							"sid": 487839265396855
 						}
 					],
 					"sid": 600336282655855
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "barofsoap",
+							"sid": 844735225474516,
+							"parameters": {
+								"instance-variable": "placed"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-layer",
+							"objectClass": "barofsoap",
+							"sid": 489242838870242,
+							"parameters": {
+								"layer": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "barofsoap",
+							"sid": 323504896273775,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "barofsoap",
+							"sid": 144038448063867
+						}
+					],
+					"sid": 539728080928745
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "stake_burned",
+							"sid": 431431801610550,
+							"parameters": {
+								"instance-variable": "placed"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-layer",
+							"objectClass": "stake_burned",
+							"sid": 156990041354835,
+							"parameters": {
+								"layer": "1"
+							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "stake_burned",
+							"sid": 585981724365483
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "stake_burned",
+							"sid": 514492365439992,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 464715475797227
 				},
 				{
 					"eventType": "block",
@@ -1788,6 +2082,14 @@
 							"parameters": {
 								"visibility": "invisible"
 							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "baurbyPin",
+							"sid": 978966123633474,
+							"parameters": {
+								"layer": "4"
+							}
 						}
 					],
 					"sid": 127529021597887
@@ -1806,32 +2108,137 @@
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 668294728487634,
+					"children": [
 						{
-							"id": "set-animation",
-							"objectClass": "Sink_zoomed",
-							"sid": 331951205034702,
-							"parameters": {
-								"animation": "\"\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "baurbyPin",
-							"sid": 790127898045500,
-							"parameters": {
-								"visibility": "visible"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "baurbyPin",
+									"sid": 926493725020986,
+									"parameters": {
+										"instance-variable": "placed"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sink_zoomed",
+									"sid": 932187164766949,
+									"parameters": {
+										"animation": "\"\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "move-to-layer",
+									"objectClass": "baurbyPin",
+									"sid": 760861505595917,
+									"parameters": {
+										"layer": "0"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "baurbyPin",
+									"sid": 640090760762771,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "baurbyPin",
+									"sid": 814052157578068,
+									"parameters": {
+										"instance-variable": "placed",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 986497397590147
 						}
-					],
-					"sid": 668294728487634
+					]
 				},
 				{
 					"eventType": "block",
 					"conditions": [],
 					"actions": [],
 					"sid": 243640447664098
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "baurbyPin",
+							"sid": 130351788800171,
+							"parameters": {
+								"instance-variable": "placed"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "baurbyPin",
+							"sid": 620125499182260,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "baurbyPin",
+							"sid": 816104215951375,
+							"parameters": {
+								"layer": "4"
+							}
+						}
+					],
+					"sid": 950653593831577
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "baurbyPin",
+							"sid": 553669439910385,
+							"parameters": {
+								"instance-variable": "placed"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-layer",
+							"objectClass": "baurbyPin",
+							"sid": 145541388914235,
+							"parameters": {
+								"layer": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "baurbyPin",
+							"sid": 518540836170839,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "baurbyPin",
+							"sid": 797884809769328
+						}
+					],
+					"sid": 637854325758800
 				},
 				{
 					"eventType": "block",
@@ -2105,6 +2512,15 @@
 							"sid": 793283134210885,
 							"parameters": {
 								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "medCab",
+							"sid": 938597584405966,
+							"parameters": {
+								"x": "1325",
+								"y": "215"
 							}
 						},
 						{
