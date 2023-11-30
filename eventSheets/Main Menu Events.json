@@ -75,11 +75,19 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 406047219436474,
+					"sid": 763414519587770,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "BackTemp"
+						"object-clicked": "back"
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 784213885421134,
+					"parameters": {
+						"key": 27
 					}
 				}
 			],

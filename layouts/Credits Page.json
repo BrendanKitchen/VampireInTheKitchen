@@ -65,7 +65,7 @@
 					}
 				},
 				{
-					"type": "BackTemp",
+					"type": "back",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -77,10 +77,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 978,
-						"y": 995,
-						"width": 230.02717230796884,
-						"height": 92.01086892318754,
+						"x": 997,
+						"y": 993,
+						"width": 118,
+						"height": 57,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
