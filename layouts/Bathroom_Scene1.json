@@ -52,17 +52,17 @@
 					"world": {
 						"x": 1157,
 						"y": 320,
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 32,
+						"height": 180,
+						"originX": 0.4722222222222222,
+						"originY": 0.5227272727272727,
 						"color": [
 							1,
 							1,
 							1,
 							1
 						],
-						"angle": 0,
+						"angle": 0.38694307821053286,
 						"zElevation": 0
 					}
 				},
