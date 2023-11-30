@@ -81,6 +81,14 @@
 						"click-type": "clicked",
 						"object-clicked": "back"
 					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 784213885421134,
+					"parameters": {
+						"key": 27
+					}
 				}
 			],
 			"actions": [
