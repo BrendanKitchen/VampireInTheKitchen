@@ -21,7 +21,7 @@
 					"world": {
 						"x": 958,
 						"y": 538.5,
-						"width": 1925,
+						"width": 1925.0000000000002,
 						"height": 1083,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -81,10 +81,10 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 1245,
-						"y": 347,
-						"width": 646.408,
-						"height": 269,
+						"x": 1429.2265294955555,
+						"y": 435.2028874604632,
+						"width": 795.3234702111896,
+						"height": 613.0834437256433,
 						"originX": 0.5,
 						"originY": 0.75,
 						"color": [
@@ -317,7 +317,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 128,
+					"uid": 196,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -346,7 +346,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 134,
+					"uid": 194,
 					"instanceVariables": {
 						"Box_Filled": false
 					},
@@ -377,7 +377,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 135,
+					"uid": 192,
 					"instanceVariables": {
 						"Box_Filled": false
 					},
@@ -408,7 +408,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 136,
+					"uid": 193,
 					"instanceVariables": {
 						"Box_Filled": false
 					},
@@ -439,7 +439,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 137,
+					"uid": 191,
 					"instanceVariables": {
 						"Box_Filled": false
 					},
@@ -470,7 +470,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 138,
+					"uid": 195,
 					"instanceVariables": {
 						"Box_Filled": false
 					},
@@ -501,7 +501,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 159,
+					"uid": 186,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
