@@ -144,9 +144,9 @@
 				{
 					"id": "set-position",
 					"objectClass": "port_tmp",
-					"sid": 625582585099328,
+					"sid": 525920227726963,
 					"parameters": {
-						"x": "round(random(1550,1800))",
+						"x": "round(random(1500,1800))",
 						"y": "round(random(100,900))"
 					}
 				},
@@ -1647,11 +1647,19 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 332037137194720,
+					"sid": 658321967579006,
 					"parameters": {
 						"variable": "puzzlescompleted",
 						"comparison": 0,
 						"value": "4"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 124555792401173,
+					"parameters": {
+						"variable": "VolumeSlider_Correct"
 					}
 				},
 				{
@@ -1842,85 +1850,9 @@
 					"parameters": {
 						"visibility": "visible"
 					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "Inventory_Box",
-					"sid": 596173106437914,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-animation-frame",
-					"objectClass": "portait_temp",
-					"sid": 955646300569268,
-					"parameters": {
-						"frame-number": "1"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "screwdriver",
-					"sid": 280607276845403,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "tape",
-					"sid": 602247504946358,
-					"parameters": {
-						"visibility": "visible"
-					}
 				}
 			],
 			"sid": 358580676117013
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 634228915603529,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "screwdriver"
-					}
-				},
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "screwdriver",
-					"sid": 717331226473671,
-					"parameters": {
-						"object": "Inventory_Box"
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"callFunction": "AddtoInventory",
-					"sid": 264864322250546,
-					"parameters": [
-						"\"screwdriver\""
-					]
-				},
-				{
-					"id": "destroy",
-					"objectClass": "tape",
-					"sid": 600182748042539
-				},
-				{
-					"id": "destroy",
-					"objectClass": "screwdriver",
-					"sid": 598633530233381
-				}
-			],
-			"sid": 981599400103376
 		},
 		{
 			"eventType": "block",
@@ -2257,54 +2189,6 @@
 								}
 							],
 							"sid": 118789534524791
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 289522189731338,
-									"parameters": {
-										"variable": "Parameter0",
-										"comparison": 0,
-										"value": "\"screwdriver\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "create-object",
-									"objectClass": "System",
-									"sid": 348834267411569,
-									"parameters": {
-										"object-to-create": "screwdriver",
-										"layer": "1",
-										"x": "Inventory_Box.X",
-										"y": "Inventory_Box.Y",
-										"create-hierarchy": false,
-										"template-name": "\"\""
-									}
-								},
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "screwdriver",
-									"sid": 358464721982342,
-									"parameters": {
-										"instance-variable": "placed",
-										"value": "true"
-									}
-								},
-								{
-									"id": "move-to-layer",
-									"objectClass": "screwdriver",
-									"sid": 329815455510627,
-									"parameters": {
-										"layer": "1"
-									}
-								}
-							],
-							"sid": 853921106976682
 						}
 					]
 				}
