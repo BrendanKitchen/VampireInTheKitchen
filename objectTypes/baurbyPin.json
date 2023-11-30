@@ -1,0 +1,64 @@
+{
+	"name": "baurbyPin",
+	"plugin-id": "Sprite",
+	"sid": 207019149010243,
+	"isGlobal": true,
+	"instanceVariables": [
+		{
+			"name": "placed",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 483867854600855
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1413,
+						"height": 448,
+						"originX": 0.49232914923291493,
+						"originY": 0.5333333333333333,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5011520,
+						"collisionPoly": {
+							"points": [
+								0.8995046001415429,
+								0.022646103896103914,
+								0.9383943280220229,
+								0.12748917748917749,
+								0.9866175905938184,
+								0.29659090909090907,
+								0.9866175905938184,
+								0.7058170995670995,
+								0.8862820926621795,
+								0.9966720779220779,
+								0.0019296806600593562,
+								0.536715367965368,
+								0.007374242563326598,
+								0.43187229437229435
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 926222513066315,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

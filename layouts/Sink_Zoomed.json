@@ -19,10 +19,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 962,
-						"y": 541,
-						"width": 1927.52,
-						"height": 1079.744,
+						"x": 2182,
+						"y": -152,
+						"width": 7093.2427389915,
+						"height": 3723.7236212310395,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -150,6 +150,68 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "baurbyPin",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 127,
+					"instanceVariables": {
+						"placed": false
+					},
+					"behaviors": {},
+					"world": {
+						"x": 983,
+						"y": 506,
+						"width": 365.51327777775174,
+						"height": 150.36956533035692,
+						"originX": 0.49232914923291493,
+						"originY": 0.5333333333333333,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "candle",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 141,
+					"instanceVariables": {
+						"Stake_Clicked": false
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1600,
+						"y": 495,
+						"width": 322,
+						"height": 312,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 913779212959719,
@@ -198,12 +260,41 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 122,
-						"y": 573,
-						"width": 229.184,
-						"height": 196.464,
-						"originX": 0.44936708860759494,
-						"originY": 0.46564885496183206,
+						"x": 96,
+						"y": 512,
+						"width": 160,
+						"height": 288,
+						"originX": 0.5192355423181931,
+						"originY": 0.45480487978882783,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ToiletPaper",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 185,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 80,
+						"y": 80,
+						"width": 200,
+						"height": 200,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -267,6 +358,39 @@
 			"isTransparent": true,
 			"parallaxX": 1,
 			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Dialogue",
+			"overriden": 1,
+			"subLayers": [],
+			"instances": [],
+			"sid": 117246307432498,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 0,
+			"parallaxY": 0,
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
