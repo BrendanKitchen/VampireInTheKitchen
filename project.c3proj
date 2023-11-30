@@ -155,7 +155,8 @@
 			"I_Box",
 			"G_Box",
 			"H_Box",
-			"T_Box"
+			"T_Box",
+			"back"
 		],
 		"subfolders": []
 	},
@@ -201,7 +202,24 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "Interact.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 639101509168671,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "MainMenuButtonPress.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 813548150624518,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
