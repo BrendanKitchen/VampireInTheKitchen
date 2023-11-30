@@ -155,7 +155,9 @@
 			"I_Box",
 			"G_Box",
 			"H_Box",
-			"T_Box"
+			"T_Box",
+			"screwdriver",
+			"tape"
 		],
 		"subfolders": []
 	},
