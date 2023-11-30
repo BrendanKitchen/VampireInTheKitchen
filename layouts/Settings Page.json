@@ -1,5 +1,5 @@
 {
-	"name": "Credits Page",
+	"name": "Settings Page",
 	"layers": [
 		{
 			"name": "Layer 0",
@@ -15,7 +15,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 36,
+					"uid": 188,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -36,23 +36,23 @@
 					}
 				},
 				{
-					"type": "Credit_Page",
+					"type": "crappot",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Default",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 31,
+					"uid": 189,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1007,
-						"y": 544,
-						"width": 1138,
-						"height": 1076,
-						"originX": 0.5127978817299206,
+						"x": 958.7485891472531,
+						"y": 529.7485891472531,
+						"width": 1107.4848264404704,
+						"height": 1107.4848264404704,
+						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
 							1,
@@ -73,12 +73,12 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 32,
+					"uid": 190,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 997,
-						"y": 993,
+						"x": 1156,
+						"y": 931,
 						"width": 118,
 						"height": 57,
 						"originX": 0.5,
@@ -94,7 +94,7 @@
 					}
 				}
 			],
-			"sid": 555237925330288,
+			"sid": 308997084918367,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -123,11 +123,11 @@
 			"global": false
 		}
 	],
-	"sid": 277362001841023,
+	"sid": 347753749305387,
 	"nonworld-instances": [],
 	"effectTypes": [],
-	"width": 1920,
-	"height": 1080,
+	"width": 3840,
+	"height": 2160,
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,

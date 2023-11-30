@@ -21,15 +21,15 @@
 		"sink_knob_R",
 		"sink",
 		"Play_button",
-		"Credits_1",
 		"candle",
 		"candle_afterstake",
 		"Letter_Lock",
 		"portait_temp",
-		"BackTemp",
 		"Knob",
 		"Resume_Game",
 		"stake_A",
-		"stake_burned"
+		"stake_burned",
+		"CreditsButton",
+		"back"
 	]
 }

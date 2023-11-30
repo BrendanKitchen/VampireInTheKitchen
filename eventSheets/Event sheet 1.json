@@ -1129,6 +1129,16 @@
 					"parameters": {
 						"key": 27
 					}
+				},
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 637122346059783,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "ToiletPaper"
+					}
 				}
 			],
 			"actions": [
@@ -1141,7 +1151,8 @@
 					}
 				}
 			],
-			"sid": 513288361878920
+			"sid": 513288361878920,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -3114,6 +3125,92 @@
 				}
 			],
 			"sid": 756758742585929
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 821452500741938
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 678858495989298,
+					"parameters": {
+						"variable": "FadeInComplete"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "FadeToBlack",
+					"sid": 606196629243098,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "FadeToBlack",
+					"sid": 311349606552730,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"fadein\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": "2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "toggle-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 603115172477228,
+					"parameters": {
+						"variable": "FadeInComplete"
+					}
+				}
+			],
+			"sid": 853145234573684
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 916689714767103
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "H",
+					"sid": 859510635754810,
+					"parameters": {
+						"x": "10000",
+						"y": "10000"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "H2",
+					"sid": 757951000249022,
+					"parameters": {
+						"object": "H",
+						"image-point-optional": "0"
+					}
+				}
+			],
+			"sid": 869155478564606
 		}
 	],
 	"sid": 103033473827399

@@ -2,6 +2,16 @@
 	"name": "Main Menu Events",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "FadeInComplete",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Checks to see if the fade in has already been done.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 632196763184264
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -17,11 +27,49 @@
 			],
 			"actions": [
 				{
-					"id": "go-to-layout",
+					"id": "set-layer-interactive",
 					"objectClass": "System",
-					"sid": 218331615073960,
+					"sid": 680348909882359,
 					"parameters": {
-						"layout": "Bathroom_Scene1"
+						"layer": "1",
+						"interactive": false
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 678116682918232,
+					"parameters": {
+						"audio-file": "MainMenuButtonPress",
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "FadeToBlack",
+					"sid": 656752540637734,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"fadeout\"",
+						"property": "offsetOpacity",
+						"end-value": "100",
+						"time": "2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "toggle-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 269353033525395,
+					"parameters": {
+						"variable": "FadeInComplete"
 					}
 				}
 			],
@@ -33,11 +81,11 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 778902615578784,
+					"sid": 326899942396590,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "Credits_1"
+						"object-clicked": "CreditsButton"
 					}
 				}
 			],
@@ -65,9 +113,22 @@
 					"parameters": {
 						"visibility": "invisible"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 564718758155166,
+					"parameters": {
+						"audio-file": "Interact",
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
-			"sid": 949363204670841
+			"sid": 949363204670841,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -80,14 +141,6 @@
 						"mouse-button": "left",
 						"click-type": "clicked",
 						"object-clicked": "back"
-					}
-				},
-				{
-					"id": "key-is-down",
-					"objectClass": "Keyboard",
-					"sid": 784213885421134,
-					"parameters": {
-						"key": 27
 					}
 				}
 			],
@@ -115,9 +168,22 @@
 					"parameters": {
 						"visibility": "visible"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 466317859645505,
+					"parameters": {
+						"audio-file": "Interact",
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
-			"sid": 378813785028031
+			"sid": 378813785028031,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -176,6 +242,18 @@
 					"parameters": {
 						"variable": "puzzlescompleted",
 						"value": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 371225576619926,
+					"parameters": {
+						"audio-file": "Interact",
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -263,6 +341,197 @@
 				}
 			],
 			"sid": 742669866719613
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 562910191610205
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 129552676938301,
+					"parameters": {
+						"variable": "FadeInComplete"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "FadeToBlack",
+					"sid": 423881781869005,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "FadeToBlack",
+					"sid": 999883543413211,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"fadein\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": "2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "toggle-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 176243510995950,
+					"parameters": {
+						"variable": "FadeInComplete"
+					}
+				}
+			],
+			"sid": 171852834346165
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "FadeToBlack",
+					"sid": 221274657541444,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"fadein\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 584855322984539,
+					"parameters": {
+						"layer": "1",
+						"interactive": true
+					}
+				}
+			],
+			"sid": 596667704244674
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "FadeToBlack",
+					"sid": 977739958461368,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"fadeout\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 538320642477536,
+					"parameters": {
+						"layout": "Bathroom_Scene1"
+					}
+				}
+			],
+			"sid": 159653181751139
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 320089782801937
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "H",
+					"sid": 707449026954337,
+					"parameters": {
+						"x": "1707",
+						"y": "1021"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "H2",
+					"sid": 431778512188171,
+					"parameters": {
+						"object": "H",
+						"image-point-optional": "0"
+					}
+				}
+			],
+			"sid": 312317286878298
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 251135676869029,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Settings"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 846336684771164,
+					"parameters": {
+						"layout": "Settings Page"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "H",
+					"sid": 792200923372484,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "H2",
+					"sid": 453920636601059,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 737485569789304,
+					"parameters": {
+						"audio-file": "Interact",
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 980911967703008
 		}
 	],
 	"sid": 588019371100103
