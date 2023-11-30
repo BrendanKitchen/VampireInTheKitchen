@@ -27,15 +27,6 @@
 			],
 			"actions": [
 				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 680348909882359,
-					"parameters": {
-						"layer": "1",
-						"interactive": false
-					}
-				},
-				{
 					"id": "play",
 					"objectClass": "Audio",
 					"sid": 678116682918232,
@@ -414,7 +405,7 @@
 				{
 					"id": "set-layer-interactive",
 					"objectClass": "System",
-					"sid": 584855322984539,
+					"sid": 465856160930159,
 					"parameters": {
 						"layer": "1",
 						"interactive": true
@@ -443,6 +434,15 @@
 					"sid": 538320642477536,
 					"parameters": {
 						"layout": "Bathroom_Scene1"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 109444084897006,
+					"parameters": {
+						"layer": "1",
+						"interactive": true
 					}
 				}
 			],
