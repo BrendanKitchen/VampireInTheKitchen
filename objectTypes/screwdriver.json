@@ -1,0 +1,46 @@
+{
+	"name": "screwdriver",
+	"plugin-id": "Sprite",
+	"sid": 867191301733760,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "placed",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 794894217222567
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5521271,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 374852019043355,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
