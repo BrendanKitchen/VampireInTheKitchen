@@ -7,7 +7,7 @@
 	"effectTypes": [],
 	"members": [
 		"lock",
-		"Qtip",
+		"baurbyPin",
 		"plant",
 		"magazine_tmp",
 		"H",
@@ -23,6 +23,13 @@
 		"Play_button",
 		"Credits_1",
 		"candle",
-		"candle_stake"
+		"candle_afterstake",
+		"Letter_Lock",
+		"portait_temp",
+		"BackTemp",
+		"Knob",
+		"Resume_Game",
+		"stake_A",
+		"stake_burned"
 	]
 }

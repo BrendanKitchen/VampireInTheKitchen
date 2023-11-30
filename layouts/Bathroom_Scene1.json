@@ -491,46 +491,6 @@
 						"angle": 6.283145161418995,
 						"zElevation": 0
 					}
-				},
-				{
-					"type": "dialogue_box",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 213,
-					"instanceVariables": {},
-					"behaviors": {
-						"Fade": {
-							"properties": {
-								"fade-in-time": 0.5,
-								"wait-time": 3,
-								"fade-out-time": 0.5,
-								"destroy": true,
-								"enabled": true,
-								"live-preview": false
-							}
-						}
-					},
-					"world": {
-						"x": 973,
-						"y": 881,
-						"width": 1578,
-						"height": 405,
-						"originX": 0.5006337135614702,
-						"originY": 0.5012345679012346,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
 				}
 			],
 			"sid": 840462393075645,
@@ -723,7 +683,7 @@
 					"uid": 139,
 					"instanceVariables": {
 						"Value": 0,
-						"Minimum": -100,
+						"Minimum": 0,
 						"Maximum": 100,
 						"Step": 1
 					},
@@ -755,7 +715,7 @@
 				{
 					"type": "MainMenuButton2",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Default",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -775,7 +735,7 @@
 							1,
 							1,
 							1,
-							0
+							1
 						],
 						"angle": 0.0006268412643535282,
 						"zElevation": 0

@@ -152,7 +152,7 @@
 					}
 				},
 				{
-					"type": "Qtip",
+					"type": "baurbyPin",
 					"properties": {
 						"initially-visible": false,
 						"initial-animation": "Animation 1",

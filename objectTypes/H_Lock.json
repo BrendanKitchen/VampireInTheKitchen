@@ -1,18 +1,16 @@
 {
-	"name": "candle_stake",
+	"name": "H_Lock",
 	"plugin-id": "Sprite",
-	"sid": 169404732168993,
+	"sid": 759216680248313,
 	"isGlobal": false,
-	"instanceVariables": [
+	"instanceVariables": [],
+	"behaviorTypes": [
 		{
-			"name": "Stake_Clicked",
-			"type": "boolean",
-			"desc": "",
-			"show": true,
-			"sid": 585834107074596
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 363240577096862
 		}
 	],
-	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -26,13 +24,13 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9870998,
+						"imageSpriteId": 3997313,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 579609858106955,
+				"sid": 164172859938824,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

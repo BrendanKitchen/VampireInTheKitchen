@@ -2,7 +2,7 @@
 	"name": "Knob",
 	"plugin-id": "Sprite",
 	"sid": 425574893875278,
-	"isGlobal": false,
+	"isGlobal": true,
 	"instanceVariables": [
 		{
 			"name": "Value",

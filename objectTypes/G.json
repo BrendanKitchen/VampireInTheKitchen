@@ -1,30 +1,36 @@
 {
-	"name": "Letter_Lock",
+	"name": "G",
 	"plugin-id": "Sprite",
-	"sid": 641873944399600,
+	"sid": 601313244893905,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 224693761455324
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 223,
-						"height": 135,
-						"originX": 0.5381165919282511,
-						"originY": 0.9185185185185185,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9306775,
+						"imageSpriteId": 9065768,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 126978972103248,
+				"sid": 718308829170894,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

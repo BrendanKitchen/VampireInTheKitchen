@@ -42,6 +42,96 @@
 			"sid": 114310230438557
 		},
 		{
+			"eventType": "variable",
+			"name": "VolumeSlider_Correct",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Is the volume slider at the correct frequency?",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 466241525503842
+		},
+		{
+			"eventType": "variable",
+			"name": "Timer",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "time elapsed since start of the game",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 282475232829451
+		},
+		{
+			"eventType": "variable",
+			"name": "LockCombo",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 874574025544012
+		},
+		{
+			"eventType": "variable",
+			"name": "LockCombo_1",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 603450585637280
+		},
+		{
+			"eventType": "variable",
+			"name": "LockCombo_2",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 527476219901828
+		},
+		{
+			"eventType": "variable",
+			"name": "LockCombo_3",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 118200847545525
+		},
+		{
+			"eventType": "variable",
+			"name": "LockCombo_4",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 336857794488695
+		},
+		{
+			"eventType": "variable",
+			"name": "LockCombo_5",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 670794179108740
+		},
+		{
+			"eventType": "variable",
+			"name": "Volume_Value",
+			"type": "number",
+			"initialValue": "100",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 825333901192636
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -97,6 +187,28 @@
 				}
 			],
 			"sid": 597958259212347
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 889537351582403
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 102701624583979,
+					"parameters": {
+						"variable": "Timer",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 564010591569087
 		},
 		{
 			"eventType": "block",
@@ -185,7 +297,7 @@
 					"objectClass": "System",
 					"sid": 713080783227823,
 					"parameters": {
-						"object-to-create": "candle_stake",
+						"object-to-create": "candle_afterstake",
 						"layer": "0",
 						"x": "candle.X",
 						"y": "candle.Y",
@@ -211,7 +323,7 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "candle_stake"
+						"object-clicked": "candle_afterstake"
 					}
 				},
 				{
@@ -411,7 +523,7 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "Qtip",
+					"objectClass": "baurbyPin",
 					"sid": 201543933207189,
 					"parameters": {
 						"visibility": "visible"
@@ -444,6 +556,14 @@
 					}
 				},
 				{
+					"id": "set-visible",
+					"objectClass": "H2",
+					"sid": 335118409843917,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
 					"id": "move-to-layer",
 					"objectClass": "lock",
 					"sid": 969259665518887,
@@ -469,7 +589,7 @@
 				},
 				{
 					"id": "move-to-layer",
-					"objectClass": "Qtip",
+					"objectClass": "baurbyPin",
 					"sid": 339188246924775,
 					"parameters": {
 						"layer": "1"
@@ -571,7 +691,7 @@
 					"conditions": [
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Qtip",
+							"objectClass": "baurbyPin",
 							"sid": 643949159070850,
 							"parameters": {
 								"instance-variable": "placed"
@@ -581,7 +701,7 @@
 					"actions": [
 						{
 							"id": "set-visible",
-							"objectClass": "Qtip",
+							"objectClass": "baurbyPin",
 							"sid": 506316571961443,
 							"parameters": {
 								"visibility": "visible"
@@ -626,7 +746,7 @@
 				},
 				{
 					"id": "move-to-layer",
-					"objectClass": "Qtip",
+					"objectClass": "baurbyPin",
 					"sid": 679365324706090,
 					"parameters": {
 						"layer": "1"
@@ -719,6 +839,14 @@
 				},
 				{
 					"id": "set-visible",
+					"objectClass": "H2",
+					"sid": 928269048032636,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
 					"objectClass": "stake_burned",
 					"sid": 632195440234717,
 					"parameters": {
@@ -790,7 +918,7 @@
 					"conditions": [
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Qtip",
+							"objectClass": "baurbyPin",
 							"sid": 164500748403053,
 							"parameters": {
 								"instance-variable": "placed"
@@ -800,7 +928,7 @@
 					"actions": [
 						{
 							"id": "set-visible",
-							"objectClass": "Qtip",
+							"objectClass": "baurbyPin",
 							"sid": 708566360045455,
 							"parameters": {
 								"visibility": "visible"
@@ -844,7 +972,7 @@
 				},
 				{
 					"id": "move-to-layer",
-					"objectClass": "Qtip",
+					"objectClass": "baurbyPin",
 					"sid": 807076030128213,
 					"parameters": {
 						"layer": "1"
@@ -940,6 +1068,14 @@
 				},
 				{
 					"id": "set-visible",
+					"objectClass": "H2",
+					"sid": 954944112020043,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
 					"objectClass": "stake_burned",
 					"sid": 551569797764638,
 					"parameters": {
@@ -962,7 +1098,7 @@
 					"conditions": [
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Qtip",
+							"objectClass": "baurbyPin",
 							"sid": 991865759746935,
 							"parameters": {
 								"instance-variable": "placed"
@@ -972,7 +1108,7 @@
 					"actions": [
 						{
 							"id": "set-visible",
-							"objectClass": "Qtip",
+							"objectClass": "baurbyPin",
 							"sid": 497145485114793,
 							"parameters": {
 								"visibility": "visible"
@@ -1100,7 +1236,7 @@
 				},
 				{
 					"id": "move-to-layer",
-					"objectClass": "Qtip",
+					"objectClass": "baurbyPin",
 					"sid": 450278652067987,
 					"parameters": {
 						"layer": "0"
@@ -1275,7 +1411,7 @@
 				},
 				{
 					"id": "move-to-layer",
-					"objectClass": "Qtip",
+					"objectClass": "baurbyPin",
 					"sid": 466538347936282,
 					"parameters": {
 						"layer": "1"
@@ -1284,7 +1420,48 @@
 				{
 					"id": "set-visible",
 					"objectClass": "H",
-					"sid": 867337399792758,
+					"sid": 380002131963651,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "H2",
+					"sid": 514669753118813,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 342784255212097
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 497458932728015,
+					"parameters": {
+						"variable": "Paused"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "H2",
+					"sid": 936817078134762,
+					"parameters": {
+						"instance-variable": "present"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "H",
+					"sid": 232665795524933,
 					"parameters": {
 						"visibility": "invisible"
 					}
@@ -1292,13 +1469,13 @@
 				{
 					"id": "set-visible",
 					"objectClass": "H2",
-					"sid": 733255077857244,
+					"sid": 768747734742725,
 					"parameters": {
 						"visibility": "invisible"
 					}
 				}
 			],
-			"sid": 342784255212097
+			"sid": 497558431103146
 		},
 		{
 			"eventType": "block",
@@ -1408,6 +1585,14 @@
 						"comparison": 0,
 						"value": "4"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 670094220403807,
+					"parameters": {
+						"variable": "VolumeSlider_Correct"
+					}
 				}
 			],
 			"actions": [
@@ -1429,8 +1614,16 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "Inventory",
-					"sid": 401140959623338,
+					"objectClass": "Inventory_Box",
+					"sid": 573722782239761,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_burned",
+					"sid": 290298763703761,
 					"parameters": {
 						"visibility": "invisible"
 					}
@@ -1454,11 +1647,27 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 286026620647000,
+					"sid": 658321967579006,
 					"parameters": {
 						"variable": "puzzlescompleted",
 						"comparison": 0,
 						"value": "4"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 124555792401173,
+					"parameters": {
+						"variable": "VolumeSlider_Correct"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 555100093510625,
+					"parameters": {
+						"variable": "LockCombo"
 					}
 				}
 			],
@@ -1483,6 +1692,14 @@
 					"id": "set-visible",
 					"objectClass": "Inventory_Box",
 					"sid": 201599976792206,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_burned",
+					"sid": 691205815270867,
 					"parameters": {
 						"visibility": "invisible"
 					}
@@ -1686,12 +1903,12 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "Qtip"
+						"object-clicked": "baurbyPin"
 					}
 				},
 				{
 					"id": "is-overlapping-another-object",
-					"objectClass": "Qtip",
+					"objectClass": "baurbyPin",
 					"sid": 239912257307367,
 					"parameters": {
 						"object": "Inventory_Box"
@@ -1709,7 +1926,7 @@
 				},
 				{
 					"id": "destroy",
-					"objectClass": "Qtip",
+					"objectClass": "baurbyPin",
 					"sid": 975417525617910
 				}
 			],
@@ -1897,7 +2114,7 @@
 									"objectClass": "System",
 									"sid": 886549659806139,
 									"parameters": {
-										"object-to-create": "Qtip",
+										"object-to-create": "baurbyPin",
 										"layer": "1",
 										"x": "Inventory_Box.X",
 										"y": "Inventory_Box.Y",
@@ -1907,7 +2124,7 @@
 								},
 								{
 									"id": "set-boolean-instvar",
-									"objectClass": "Qtip",
+									"objectClass": "baurbyPin",
 									"sid": 672822550294005,
 									"parameters": {
 										"instance-variable": "placed",
@@ -1916,7 +2133,7 @@
 								},
 								{
 									"id": "move-to-layer",
-									"objectClass": "Qtip",
+									"objectClass": "baurbyPin",
 									"sid": 882436228762217,
 									"parameters": {
 										"layer": "1"
@@ -1992,7 +2209,7 @@
 				},
 				{
 					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Qtip",
+					"objectClass": "baurbyPin",
 					"sid": 557735753871009,
 					"parameters": {
 						"instance-variable": "placed"
@@ -2007,7 +2224,7 @@
 				},
 				{
 					"id": "destroy",
-					"objectClass": "Qtip",
+					"objectClass": "baurbyPin",
 					"sid": 778915866589678
 				},
 				{
@@ -2117,10 +2334,10 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 397298452163184,
+					"sid": 150550912216673,
 					"parameters": {
 						"object-to-create": "dialogue_box",
-						"layer": "1",
+						"layer": "3",
 						"x": "960",
 						"y": "880",
 						"create-hierarchy": false,
@@ -2157,10 +2374,10 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 211983383033741,
+					"sid": 237777389520846,
 					"parameters": {
 						"object-to-create": "dialogue_box",
-						"layer": "1",
+						"layer": "3",
 						"x": "960",
 						"y": "880",
 						"create-hierarchy": false,
@@ -2417,10 +2634,10 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "Knob",
-					"sid": 866584277080707,
+					"sid": 762212886887148,
 					"parameters": {
 						"instance-variable": "Value",
-						"value": "lerp(Self.Minimum, Self.Maximum, unlerp(Slider.ImagePointX(1), Slider.ImagePointX(2), Self.X) )"
+						"value": "round(lerp(Self.Minimum, Self.Maximum, unlerp(Slider.ImagePointX(1), Slider.ImagePointX(2), Self.X) ))"
 					}
 				}
 			],
@@ -2430,35 +2647,473 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "compare-instance-variable",
-					"objectClass": "Knob",
-					"sid": 688407478880361,
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 874088937912057
+				}
+			],
+			"actions": [],
+			"sid": 877645497308443,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Knob",
+							"sid": 924113602330992,
+							"parameters": {
+								"instance-variable": "Value",
+								"comparison": 3,
+								"value": "76"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Knob",
+							"sid": 624613785079135,
+							"parameters": {
+								"instance-variable": "Value",
+								"comparison": 5,
+								"value": "72"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton",
+							"sid": 736604123564737,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton2",
+							"sid": 180892572977890,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 154150320741214,
+							"parameters": {
+								"variable": "Volume_Value",
+								"value": "Knob.Value"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 662607688874665,
+							"parameters": {
+								"variable": "VolumeSlider_Correct",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 746865034809198
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Knob",
+							"sid": 617867494694719,
+							"parameters": {
+								"instance-variable": "Value",
+								"comparison": 5,
+								"value": "76"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton2",
+							"sid": 116850012895522,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "MainMenuButton",
+							"sid": 888267501281289
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton",
+							"sid": 938177168705940,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 708808829782599,
+							"parameters": {
+								"variable": "VolumeSlider_Correct",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 960120039152341
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Knob",
+							"sid": 375310110501588,
+							"parameters": {
+								"instance-variable": "Value",
+								"comparison": 3,
+								"value": "72"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton2",
+							"sid": 277278111799267,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "MainMenuButton",
+							"sid": 313005780850636
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton",
+							"sid": 835025368874722,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 889454746828515,
+							"parameters": {
+								"variable": "VolumeSlider_Correct",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 479686346497867
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-dragging",
+					"objectClass": "N",
+					"sid": 992475554106737,
+					"behaviorType": "DragDrop"
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "N",
+					"sid": 845830740709493,
 					"parameters": {
-						"instance-variable": "Value",
-						"comparison": 0,
-						"value": "75"
+						"object": "N_Box"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "set-visible",
-					"objectClass": "MainMenuButton",
-					"sid": 616071840308879,
+					"id": "set-position-to-another-object",
+					"objectClass": "N",
+					"sid": 230339245288025,
 					"parameters": {
-						"visibility": "invisible"
+						"object": "N_Box",
+						"image-point-optional": "0"
 					}
 				},
 				{
-					"id": "set-opacity",
-					"objectClass": "MainMenuButton2",
-					"sid": 523958978257546,
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 210087695624842,
 					"parameters": {
-						"opacity": "100"
+						"variable": "LockCombo_1",
+						"value": "true"
 					}
 				}
 			],
-			"sid": 427997060654383
+			"sid": 576119884638910
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-dragging",
+					"objectClass": "I",
+					"sid": 586401741683304,
+					"behaviorType": "DragDrop"
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "I",
+					"sid": 909921807411530,
+					"parameters": {
+						"object": "I_Box"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "I",
+					"sid": 819551607208819,
+					"parameters": {
+						"object": "I_Box",
+						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 944343580845754,
+					"parameters": {
+						"variable": "LockCombo_2",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 178952786770201
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-dragging",
+					"objectClass": "G",
+					"sid": 160744752903342,
+					"behaviorType": "DragDrop"
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "G",
+					"sid": 359873850304684,
+					"parameters": {
+						"object": "G_Box"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "G",
+					"sid": 309094719588730,
+					"parameters": {
+						"object": "G_Box",
+						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 592707414048450,
+					"parameters": {
+						"variable": "LockCombo_3",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 558456168314840
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-dragging",
+					"objectClass": "H_Lock",
+					"sid": 639211619301828,
+					"behaviorType": "DragDrop"
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "H_Lock",
+					"sid": 844868563109175,
+					"parameters": {
+						"object": "H_Box"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "H_Lock",
+					"sid": 580795868073033,
+					"parameters": {
+						"object": "H_Box",
+						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 309070384109891,
+					"parameters": {
+						"variable": "LockCombo_4",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 660493534299602
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-dragging",
+					"objectClass": "T",
+					"sid": 208792970252388,
+					"behaviorType": "DragDrop"
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "T",
+					"sid": 277863760029765,
+					"parameters": {
+						"object": "T_Box"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "T",
+					"sid": 469213598652366,
+					"parameters": {
+						"object": "T_Box",
+						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 336157492560826,
+					"parameters": {
+						"variable": "LockCombo_5",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 461799115191921
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 601193166952297,
+					"parameters": {
+						"variable": "LockCombo_1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 196525847083684,
+					"parameters": {
+						"variable": "LockCombo_2"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 557333427688766,
+					"parameters": {
+						"variable": "LockCombo_3"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 336010861691634,
+					"parameters": {
+						"variable": "LockCombo_4"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 992545829652382,
+					"parameters": {
+						"variable": "LockCombo_5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Letter_Lock",
+					"sid": 590338093841668
+				},
+				{
+					"id": "destroy",
+					"objectClass": "N",
+					"sid": 973193534709429
+				},
+				{
+					"id": "destroy",
+					"objectClass": "I",
+					"sid": 467131827743004
+				},
+				{
+					"id": "destroy",
+					"objectClass": "G",
+					"sid": 369706270133170
+				},
+				{
+					"id": "destroy",
+					"objectClass": "H_Lock",
+					"sid": 857253320502739
+				},
+				{
+					"id": "destroy",
+					"objectClass": "T",
+					"sid": 459154366904973
+				}
+			],
+			"sid": 279395620654916
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "Letter_Lock",
+					"sid": 290252105132975
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 271182687655210,
+					"parameters": {
+						"variable": "LockCombo",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 756758742585929
 		}
 	],
 	"sid": 103033473827399

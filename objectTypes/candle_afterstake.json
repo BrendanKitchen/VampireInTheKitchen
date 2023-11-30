@@ -1,9 +1,17 @@
 {
-	"name": "Letter_Lock",
+	"name": "candle_afterstake",
 	"plugin-id": "Sprite",
-	"sid": 641873944399600,
+	"sid": 169404732168993,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Stake_Clicked",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 585834107074596
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -11,20 +19,20 @@
 			{
 				"frames": [
 					{
-						"width": 223,
-						"height": 135,
-						"originX": 0.5381165919282511,
-						"originY": 0.9185185185185185,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9306775,
+						"imageSpriteId": 9870998,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 126978972103248,
+				"sid": 579609858106955,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
