@@ -1,9 +1,17 @@
 {
-	"name": "magazine_tmp",
+	"name": "stake_burned",
 	"plugin-id": "Sprite",
-	"sid": 660276054452963,
-	"isGlobal": false,
-	"instanceVariables": [],
+	"sid": 777171362855481,
+	"isGlobal": true,
+	"instanceVariables": [
+		{
+			"name": "placed",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 504458305446942
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -11,20 +19,20 @@
 			{
 				"frames": [
 					{
-						"width": 146,
-						"height": 183,
-						"originX": 0.6917808219178082,
-						"originY": 0.3879781420765027,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2896322,
+						"imageSpriteId": 7850223,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 595674269611310,
+				"sid": 720679741246389,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

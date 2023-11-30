@@ -1,7 +1,7 @@
 {
-	"name": "sink",
+	"name": "MainMenuButton2",
 	"plugin-id": "Sprite",
-	"sid": 315602360859304,
+	"sid": 753627064591089,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,24 +11,26 @@
 			{
 				"frames": [
 					{
-						"width": 2122,
-						"height": 2121,
-						"originX": 0.5488242932208258,
-						"originY": 0.12104067549612105,
+						"width": 536,
+						"height": 84,
+						"originX": 0.23694029850746268,
+						"originY": 3.0833333333333335,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9618850,
+						"imageSpriteId": 8318094,
 						"collisionPoly": {
 							"points": [
-								0,
-								0,
-								1,
-								0,
-								1,
-								0.9925563984969925,
-								0,
-								0.9925563984969925
+								0.9981343283582089,
+								0.07142857142857142,
+								0.9682835820895522,
+								0.9523809523809523,
+								0.6305970149253731,
+								0.9761904761904768,
+								0.0018656716417910447,
+								0.8452380952380952,
+								0.011194029850746268,
+								0.10714285714285782
 							]
 						},
 						"useCollisionPoly": true,
@@ -36,8 +38,8 @@
 						"tag": ""
 					}
 				],
-				"sid": 860815759230251,
-				"name": "Animation 1",
+				"sid": 455754356323216,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

@@ -1,9 +1,17 @@
 {
-	"name": "magazine_tmp",
+	"name": "candle_stake",
 	"plugin-id": "Sprite",
-	"sid": 660276054452963,
+	"sid": 169404732168993,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Stake_Clicked",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 585834107074596
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -11,20 +19,20 @@
 			{
 				"frames": [
 					{
-						"width": 146,
-						"height": 183,
-						"originX": 0.6917808219178082,
-						"originY": 0.3879781420765027,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2896322,
+						"imageSpriteId": 9870998,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 595674269611310,
+				"sid": 579609858106955,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

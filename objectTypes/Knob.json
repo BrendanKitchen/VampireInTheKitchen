@@ -1,0 +1,73 @@
+{
+	"name": "Knob",
+	"plugin-id": "Sprite",
+	"sid": 425574893875278,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Value",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 875762182220414
+		},
+		{
+			"name": "Minimum",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 195117738019150
+		},
+		{
+			"name": "Maximum",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 327315183094678
+		},
+		{
+			"name": "Step",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 811079371388913
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 901849324643729
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 31,
+						"height": 71,
+						"originX": 0.4838709677419355,
+						"originY": 0.5070422535211268,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3321652,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 866551518992703,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -88,7 +88,6 @@
 	"objectTypes": {
 		"items": [
 			"TimelineController",
-			"Sprite",
 			"Mouse",
 			"arrow",
 			"BG",
@@ -135,16 +134,33 @@
 			"H2",
 			"dialogue_box",
 			"DialogueText",
-			"stake_tmp",
+			"stake_A",
 			"magazine_tmp",
-			"portait_locked"
+			"portait_locked",
+			"volume_text_sprite",
+			"Slider",
+			"Knob",
+			"candle",
+			"stake_burned",
+			"candle_stake",
+			"magazine_zoomed",
+			"MainMenuButton2"
 		],
 		"subfolders": []
 	},
 	"autosaveData": null,
-	"containers": [],
+	"containers": [
+		{
+			"members": [
+				"Knob",
+				"Slider"
+			]
+		}
+	],
 	"families": {
-		"items": [],
+		"items": [
+			"ClickableObjects"
+		],
 		"subfolders": []
 	},
 	"layouts": {
@@ -156,7 +172,8 @@
 			"Bathroom_Scene2",
 			"Sliding Puzzle",
 			"LockedPuzzle",
-			"Dialogue"
+			"Dialogue",
+			"Magazine_Zoomed"
 		],
 		"subfolders": []
 	},

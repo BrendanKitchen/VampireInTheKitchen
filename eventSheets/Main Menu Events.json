@@ -198,6 +198,81 @@
 				}
 			],
 			"sid": 913831458670186
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 817666880770491,
+					"parameters": {
+						"object": "ClickableObjects"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-from-sprite",
+					"objectClass": "Mouse",
+					"sid": 255554797217596,
+					"parameters": {
+						"sprite": "cursor"
+					}
+				}
+			],
+			"sid": 955586119505791
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 248384538199638,
+					"parameters": {
+						"object": "ClickableObjects"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 450644913745619,
+					"parameters": {
+						"cursor-style": "normal"
+					}
+				}
+			],
+			"sid": 742669866719613
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 760832281210247,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "magazine_tmp"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 231868282966415,
+					"parameters": {
+						"layout": "Magazine_Zoomed"
+					}
+				}
+			],
+			"sid": 371155321718887
 		}
 	],
 	"sid": 588019371100103

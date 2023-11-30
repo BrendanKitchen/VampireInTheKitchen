@@ -1,7 +1,7 @@
 {
-	"name": "sink",
+	"name": "volume_text_sprite",
 	"plugin-id": "Sprite",
-	"sid": 315602360859304,
+	"sid": 883744033513708,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,24 +11,24 @@
 			{
 				"frames": [
 					{
-						"width": 2122,
-						"height": 2121,
-						"originX": 0.5488242932208258,
-						"originY": 0.12104067549612105,
+						"width": 609,
+						"height": 75,
+						"originX": 0.22824302134646962,
+						"originY": 0.4266666666666667,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9618850,
+						"imageSpriteId": 9148664,
 						"collisionPoly": {
 							"points": [
-								0,
-								0,
-								1,
-								0,
-								1,
-								0.9925563984969925,
-								0,
-								0.9925563984969925
+								0.052545155993431854,
+								0.02666666666666667,
+								0.986863711001642,
+								0.9600000000000015,
+								0.361247947454844,
+								0.9866666666666667,
+								0.031198686371100164,
+								0.8666666666666667
 							]
 						},
 						"useCollisionPoly": true,
@@ -36,7 +36,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 860815759230251,
+				"sid": 949951163008139,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

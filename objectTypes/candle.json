@@ -1,9 +1,17 @@
 {
-	"name": "Sprite",
+	"name": "candle",
 	"plugin-id": "Sprite",
-	"sid": 598356431451975,
+	"sid": 856919345058958,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Stake_Clicked",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 786909617374763
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -18,13 +26,13 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9119634,
+						"imageSpriteId": 3790243,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 967325456678652,
+				"sid": 399313207597775,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

@@ -1,0 +1,28 @@
+{
+	"name": "ClickableObjects",
+	"plugin-id": "Sprite",
+	"sid": 454412602678258,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"lock",
+		"Qtip",
+		"plant",
+		"magazine_tmp",
+		"H",
+		"H2",
+		"door",
+		"barofsoap",
+		"arrow",
+		"backarrow3",
+		"Settings",
+		"sink_knob_L",
+		"sink_knob_R",
+		"sink",
+		"Play_button",
+		"Credits_1",
+		"candle",
+		"candle_stake"
+	]
+}

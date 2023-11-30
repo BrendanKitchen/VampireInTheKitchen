@@ -166,10 +166,41 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 1000,
-						"y": 502,
-						"width": 286,
-						"height": 277,
+						"x": 995,
+						"y": 505,
+						"width": 249.5,
+						"height": 74.5,
+						"originX": 0.49232914923291493,
+						"originY": 0.5333333333333333,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "candle",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 141,
+					"instanceVariables": {
+						"Stake_Clicked": false
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1600,
+						"y": 495,
+						"width": 322,
+						"height": 312,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
