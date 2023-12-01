@@ -21,7 +21,7 @@
 					"world": {
 						"x": 958,
 						"y": 541,
-						"width": 1925,
+						"width": 1925.0000000000002,
 						"height": 1088,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -235,6 +235,101 @@
 						"height": 70.67948936170212,
 						"originX": 0.2898185483870968,
 						"originY": 0.7937466642781821,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "dialogue_box",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 186,
+					"instanceVariables": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0.5,
+								"wait-time": 3,
+								"fade-out-time": 0.5,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 916,
+						"y": 1286,
+						"width": 1578,
+						"height": 405,
+						"originX": 0.5006337135614702,
+						"originY": 0.5012345679012346,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DialogueText",
+					"properties": {
+						"text": "Text",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 32,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 191,
+					"instanceVariables": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0.5,
+								"wait-time": 3,
+								"fade-out-time": 0.5,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 914,
+						"y": 1302,
+						"width": 1358,
+						"height": 175,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

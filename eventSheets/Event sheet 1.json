@@ -152,6 +152,16 @@
 			"sid": 748729747708814
 		},
 		{
+			"eventType": "variable",
+			"name": "Start",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 583251105215153
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -213,6 +223,15 @@
 						"layer": "4",
 						"interactive": false
 					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 223842537210710,
+					"parameters": {
+						"font-face": "\"Trattatello\"",
+						"style": "normal"
+					}
 				}
 			],
 			"sid": 597958259212347
@@ -238,6 +257,465 @@
 				}
 			],
 			"sid": 564010591569087
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 459131251930044,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "plant"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 158578803121556,
+					"parameters": {
+						"variable": "Start"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 192029540243947,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 163589602190882,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 456922389758795,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 854235046560648,
+					"parameters": {
+						"text": "plant.dialogue_txt",
+						"duration": "2"
+					}
+				}
+			],
+			"sid": 866411529631508
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 917485739044332,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "barofsoap"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "barofsoap",
+					"sid": 165256152410359,
+					"parameters": {
+						"object": "Inventory_Box"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 382951220467733,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 879311725846199,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 871412503663082,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 805187239784188,
+					"parameters": {
+						"text": "\"test\"",
+						"duration": "0.5"
+					}
+				}
+			],
+			"sid": 184562942711815
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 767731072754520,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "plant"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "barofsoap",
+					"sid": 949807421485914,
+					"parameters": {
+						"object": "Inventory_Box"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 758316365609500,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 283954206622635,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 728923704545422,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 363917101535640,
+					"parameters": {
+						"text": "plant.dialogue_txt",
+						"duration": "2"
+					}
+				}
+			],
+			"sid": 111313897550426
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 775488675587244,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "lock"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 186970036722139,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 950049213031010,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 332185340096948,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 245194271306621,
+					"parameters": {
+						"text": "\"It's locked\"",
+						"duration": "0.8"
+					}
+				}
+			],
+			"sid": 512579588240718
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 282087089545028,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Letter_Lock"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 902154006895819,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 686300272732211,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 995300070534689,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 632903257243100,
+					"parameters": {
+						"text": "\"The lock needs five letters\"",
+						"duration": "1"
+					}
+				}
+			],
+			"sid": 551374633016698
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 843086349887249,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "stake_A"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 410637573148743,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 351116274941936,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 642196714672772,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 514289523854630,
+					"parameters": {
+						"text": "\"stake\"",
+						"duration": "1"
+					}
+				}
+			],
+			"sid": 693373058205693
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 124477475429638,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "magazine_zoomed"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 935809508153735,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 940297088758632,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 830307983806697,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 444385871380484,
+					"parameters": {
+						"text": "\"seven teardrops\"",
+						"duration": "1"
+					}
+				}
+			],
+			"sid": 907803462721871
 		},
 		{
 			"eventType": "block",
@@ -547,6 +1025,15 @@
 					"sid": 117772772783689,
 					"parameters": {
 						"variable": "OnScene2",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 448469367934828,
+					"parameters": {
+						"variable": "Start",
 						"value": "false"
 					}
 				},
@@ -1585,6 +2072,14 @@
 					"id": "set-visible",
 					"objectClass": "stake_burned",
 					"sid": 885736743904155,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory_Box",
+					"sid": 434585784978052,
 					"parameters": {
 						"visibility": "invisible"
 					}
@@ -3554,12 +4049,12 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 412314283033200,
+					"sid": 150477642218607,
 					"parameters": {
-						"object-to-create": "DialogueText",
-						"layer": "3",
-						"x": "dialogue_box.X",
-						"y": "dialogue_box.Y",
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
@@ -3567,79 +4062,36 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 150550912216673,
+					"sid": 144030161350601,
 					"parameters": {
-						"object-to-create": "dialogue_box",
-						"layer": "3",
-						"x": "960",
-						"y": "880",
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
 						"create-hierarchy": false,
 						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 766619504286843,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 957979668827476,
+					"parameters": {
+						"text": "\"plant moved soap test\"",
+						"duration": "2"
 					}
 				}
 			],
 			"sid": 417877426724178
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 536660009158058,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "plant"
-					}
-				},
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "barofsoap",
-					"sid": 506932715955933,
-					"parameters": {
-						"object": "Inventory_Box"
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 237777389520846,
-					"parameters": {
-						"object-to-create": "dialogue_box",
-						"layer": "3",
-						"x": "960",
-						"y": "880",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 151102757654473,
-					"parameters": {
-						"object-to-create": "DialogueText",
-						"layer": "3",
-						"x": "dialogue_box.X",
-						"y": "dialogue_box.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "DialogueText",
-					"sid": 800584305736759,
-					"parameters": {
-						"text": "plant.dialogue_txt"
-					}
-				}
-			],
-			"sid": 158192225328907
 		},
 		{
 			"eventType": "block",
@@ -3816,10 +4268,10 @@
 				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 633539294228218,
+					"sid": 752373834644076,
 					"parameters": {
 						"variable": "OnScene1",
-						"value": "false"
+						"value": "true"
 					}
 				},
 				{
@@ -4274,6 +4726,16 @@
 				}
 			],
 			"sid": 461799115191921
+		},
+		{
+			"eventType": "variable",
+			"name": "backbutton_pressed",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 176920759125363
 		},
 		{
 			"eventType": "block",

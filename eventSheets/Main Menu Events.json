@@ -56,11 +56,37 @@
 					}
 				},
 				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 568369044471162,
+					"parameters": {
+						"layout": "Bathroom_Scene1"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 920463712049262,
+					"parameters": {
+						"layer": "1",
+						"interactive": true
+					}
+				},
+				{
 					"id": "toggle-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 269353033525395,
 					"parameters": {
 						"variable": "FadeInComplete"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 172239352624557,
+					"parameters": {
+						"variable": "FadeInComplete",
+						"value": "false"
 					}
 				}
 			],
@@ -170,6 +196,15 @@
 						"volume": "-10",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 119457191475985,
+					"parameters": {
+						"variable": "OnScene1",
+						"value": "false"
 					}
 				}
 			],
@@ -434,6 +469,15 @@
 					"sid": 538320642477536,
 					"parameters": {
 						"layout": "Bathroom_Scene1"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 970095718368908,
+					"parameters": {
+						"variable": "Start",
+						"value": "true"
 					}
 				},
 				{

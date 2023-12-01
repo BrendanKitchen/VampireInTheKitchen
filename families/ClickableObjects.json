@@ -30,6 +30,7 @@
 		"stake_A",
 		"stake_burned",
 		"CreditsButton",
-		"back"
+		"back",
+		"backarrow2"
 	]
 }
