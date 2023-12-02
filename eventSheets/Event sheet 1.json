@@ -3951,6 +3951,18 @@
 					"sid": 757122095493931
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 117605549093880,
+					"parameters": {
+						"audio-file": "CrackingLock",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "destroy",
 					"objectClass": "baurbyPin",
 					"sid": 778915866589678
@@ -4028,6 +4040,18 @@
 					"id": "destroy",
 					"objectClass": "barofsoap",
 					"sid": 308760805654464
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 185275109896911,
+					"parameters": {
+						"audio-file": "PickingPuttingPotNoPrep",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				},
 				{
 					"id": "move-forward",
