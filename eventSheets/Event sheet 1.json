@@ -421,6 +421,18 @@
 						"text": "plant.dialogue_txt",
 						"duration": "2"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 553167037296241,
+					"parameters": {
+						"audio-file": "NegativeFeedback",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 244157645803083
@@ -1222,6 +1234,18 @@
 						"animation": "\"knob_turn_R\"",
 						"from": "beginning"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 269551340253868,
+					"parameters": {
+						"audio-file": "SinkDrop",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 987050434910685,
@@ -1274,6 +1298,18 @@
 					"parameters": {
 						"animation": "\"knob_turn_L\"",
 						"from": "beginning"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 661388473966994,
+					"parameters": {
+						"audio-file": "SinkDrop",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -2245,6 +2281,18 @@
 					"sid": 977279714300522,
 					"parameters": {
 						"variable": "Paused"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 222762843643156,
+					"parameters": {
+						"audio-file": "PaperInteraction",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -3755,6 +3803,18 @@
 					"id": "move-to-top",
 					"objectClass": "magazine_zoomed",
 					"sid": 329030750813905
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 449175909880795,
+					"parameters": {
+						"audio-file": "PaperInteraction",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 852912233998666
@@ -4079,6 +4139,18 @@
 					"id": "move-to-top",
 					"objectClass": "H2",
 					"sid": 993439210818705
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 260321116911323,
+					"parameters": {
+						"audio-file": "Interact",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 637375812019776
@@ -4110,6 +4182,18 @@
 					"id": "move-to-top",
 					"objectClass": "H2",
 					"sid": 182884205615650
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 188617287835048,
+					"parameters": {
+						"audio-file": "Interact",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 848044868010854
@@ -4150,6 +4234,18 @@
 					"id": "move-to-top",
 					"objectClass": "H2",
 					"sid": 287620124462640
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 719443790703449,
+					"parameters": {
+						"audio-file": "Interact",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 304974709247475
@@ -4176,6 +4272,18 @@
 					"parameters": {
 						"variable": "Paused"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 434797388237254,
+					"parameters": {
+						"audio-file": "Interact",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 123015802063559
@@ -4201,6 +4309,18 @@
 					"sid": 496434556402919,
 					"parameters": {
 						"variable": "Paused"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 563719958271086,
+					"parameters": {
+						"audio-file": "Interact",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -4277,6 +4397,18 @@
 							"parameters": {
 								"variable": "Positioned",
 								"value": "1"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 195565559582501,
+							"parameters": {
+								"audio-file": "PosFeedbackPuzzle",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -5110,6 +5242,18 @@
 						"variable": "LockCombo_1",
 						"value": "true"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 900066287251554,
+					"parameters": {
+						"audio-file": "PosFeedbackPuzzle",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 576119884638910
@@ -5149,6 +5293,18 @@
 					"parameters": {
 						"variable": "LockCombo_2",
 						"value": "true"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 428537931721581,
+					"parameters": {
+						"audio-file": "PosFeedbackPuzzle",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -5190,6 +5346,18 @@
 						"variable": "LockCombo_3",
 						"value": "true"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 469450540421069,
+					"parameters": {
+						"audio-file": "PosFeedbackPuzzle",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 558456168314840
@@ -5230,6 +5398,18 @@
 						"variable": "LockCombo_4",
 						"value": "true"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 969089625939292,
+					"parameters": {
+						"audio-file": "PosFeedbackPuzzle",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 660493534299602
@@ -5269,6 +5449,18 @@
 					"parameters": {
 						"variable": "LockCombo_5",
 						"value": "true"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 732314061393274,
+					"parameters": {
+						"audio-file": "PosFeedbackPuzzle",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -5379,6 +5571,18 @@
 					"parameters": {
 						"variable": "LockCombo",
 						"value": "true"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 255357260307105,
+					"parameters": {
+						"audio-file": "PuzzleShuffle",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
