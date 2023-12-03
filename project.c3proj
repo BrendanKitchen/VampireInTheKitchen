@@ -278,6 +278,54 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "PaperInteraction.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 595471017343488,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SettingsButtonPress.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 198821449345905,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SinkDrop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 359291176267958,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "NegativeFeedback.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 596679864216408,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "PosFeedbackPuzzle.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 162538805517127,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "PuzzleShuffle.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 560938005083471,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []

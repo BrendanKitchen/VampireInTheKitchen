@@ -26,16 +26,6 @@
 			{
 				"frames": [
 					{
-<<<<<<< Updated upstream
-						"width": 166,
-						"height": 204,
-						"originX": 0.5602409638554217,
-						"originY": 0.3872549019607843,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"imageSpriteId": 4087593,
-=======
 						"width": 1565,
 						"height": 1801,
 						"originX": 0.5709149697832865,
@@ -62,7 +52,6 @@
 								0.02387562465297057
 							]
 						},
->>>>>>> Stashed changes
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

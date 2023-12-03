@@ -29,11 +29,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 678116682918232,
+					"sid": 100290102787752,
 					"parameters": {
 						"audio-file": "MainMenuButtonPress",
 						"loop": "not-looping",
-						"volume": "-10",
+						"volume": "-5",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -131,11 +131,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 564718758155166,
+					"sid": 865853577760373,
 					"parameters": {
-						"audio-file": "Interact",
+						"audio-file": "PaperInteraction",
 						"loop": "not-looping",
-						"volume": "-10",
+						"volume": "-5",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -170,11 +170,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 466317859645505,
+					"sid": 261102780029801,
 					"parameters": {
 						"audio-file": "Interact",
 						"loop": "not-looping",
-						"volume": "-10",
+						"volume": "-5",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -267,6 +267,18 @@
 					"parameters": {
 						"variable": "puzzlescompleted",
 						"value": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 870930501599518,
+					"parameters": {
+						"audio-file": "Interact",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -496,9 +508,9 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 737485569789304,
+					"sid": 199995796860667,
 					"parameters": {
-						"audio-file": "Interact",
+						"audio-file": "SettingsButtonPress",
 						"loop": "not-looping",
 						"volume": "-10",
 						"stereo-pan": "0",
