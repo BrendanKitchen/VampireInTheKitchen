@@ -237,6 +237,18 @@
 						"variable": "puzzlescompleted",
 						"value": "1"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 371225576619926,
+					"parameters": {
+						"audio-file": "Interact",
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 799060492359263
