@@ -754,15 +754,6 @@
 						"click-type": "clicked",
 						"object-clicked": "lock"
 					}
-				},
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "baurbyPin",
-					"sid": 368480265592806,
-					"parameters": {
-						"object": "Inventory_Box"
-					},
-					"isInverted": true
 				}
 			],
 			"actions": [
