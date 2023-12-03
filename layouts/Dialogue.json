@@ -51,8 +51,8 @@
 					"properties": {
 						"text": "Text",
 						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 32,
+						"font": "Noteworthy",
+						"size": 45,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,

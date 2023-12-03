@@ -27,22 +27,13 @@
 			],
 			"actions": [
 				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 680348909882359,
-					"parameters": {
-						"layer": "1",
-						"interactive": false
-					}
-				},
-				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 678116682918232,
+					"sid": 100290102787752,
 					"parameters": {
 						"audio-file": "MainMenuButtonPress",
 						"loop": "not-looping",
-						"volume": "-10",
+						"volume": "-5",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -65,11 +56,37 @@
 					}
 				},
 				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 568369044471162,
+					"parameters": {
+						"layout": "Bathroom_Scene1"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 920463712049262,
+					"parameters": {
+						"layer": "1",
+						"interactive": true
+					}
+				},
+				{
 					"id": "toggle-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 269353033525395,
 					"parameters": {
 						"variable": "FadeInComplete"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 172239352624557,
+					"parameters": {
+						"variable": "FadeInComplete",
+						"value": "false"
 					}
 				}
 			],
@@ -100,14 +117,6 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "H",
-					"sid": 418070616460783,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
 					"objectClass": "H2",
 					"sid": 230907471268256,
 					"parameters": {
@@ -115,13 +124,18 @@
 					}
 				},
 				{
+					"id": "move-to-bottom",
+					"objectClass": "H2",
+					"sid": 699365836635481
+				},
+				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 564718758155166,
+					"sid": 865853577760373,
 					"parameters": {
-						"audio-file": "Interact",
+						"audio-file": "PaperInteraction",
 						"loop": "not-looping",
-						"volume": "-10",
+						"volume": "-5",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -154,35 +168,59 @@
 					}
 				},
 				{
-					"id": "set-visible",
-					"objectClass": "H",
-					"sid": 698193818307530,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "H2",
-					"sid": 119913740671443,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 466317859645505,
+					"sid": 261102780029801,
 					"parameters": {
 						"audio-file": "Interact",
 						"loop": "not-looping",
-						"volume": "-10",
+						"volume": "-5",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 119457191475985,
+					"parameters": {
+						"variable": "OnScene1",
+						"value": "false"
 					}
 				}
 			],
 			"sid": 378813785028031,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "H2",
+							"sid": 392072439896513,
+							"parameters": {
+								"instance-variable": "present"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-top",
+							"objectClass": "H2",
+							"sid": 469575076159466
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "H2",
+							"sid": 983948413432353,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 419491461363673
+				}
+			],
 			"isOrBlock": true
 		},
 		{
@@ -191,41 +229,15 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 397261184535616,
+					"sid": 533934428620841,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "H2"
+						"object-clicked": "pot_box"
 					}
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "H",
-					"sid": 486152906990027,
-					"parameters": {
-						"instance-variable": "clicked"
-					},
-					"isInverted": true
 				}
 			],
 			"actions": [
-				{
-					"id": "set-animation-frame",
-					"objectClass": "H",
-					"sid": 642320403802568,
-					"parameters": {
-						"frame-number": "1"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "H",
-					"sid": 269751653149746,
-					"parameters": {
-						"instance-variable": "clicked",
-						"value": "true"
-					}
-				},
 				{
 					"id": "set-boolean-instvar",
 					"objectClass": "H2",
@@ -233,6 +245,19 @@
 					"parameters": {
 						"instance-variable": "present",
 						"value": "true"
+					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "H2",
+					"sid": 170953930437516
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "H2",
+					"sid": 426349865051297,
+					"parameters": {
+						"visibility": "visible"
 					}
 				},
 				{
@@ -247,51 +272,17 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 371225576619926,
+					"sid": 870930501599518,
 					"parameters": {
 						"audio-file": "Interact",
 						"loop": "not-looping",
-						"volume": "-10",
+						"volume": "-5",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
 				}
 			],
 			"sid": 799060492359263
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "H2",
-					"sid": 437152535751838,
-					"parameters": {
-						"instance-variable": "present"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "H",
-					"sid": 926028007377523
-				},
-				{
-					"id": "move-to-top",
-					"objectClass": "H2",
-					"sid": 135588583612943
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "H2",
-					"sid": 365226716700867,
-					"parameters": {
-						"visibility": "visible"
-					}
-				}
-			],
-			"sid": 913831458670186
 		},
 		{
 			"eventType": "block",
@@ -414,7 +405,7 @@
 				{
 					"id": "set-layer-interactive",
 					"objectClass": "System",
-					"sid": 584855322984539,
+					"sid": 465856160930159,
 					"parameters": {
 						"layer": "1",
 						"interactive": true
@@ -444,6 +435,24 @@
 					"parameters": {
 						"layout": "Bathroom_Scene1"
 					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 970095718368908,
+					"parameters": {
+						"variable": "Start",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 109444084897006,
+					"parameters": {
+						"layer": "1",
+						"interactive": true
+					}
 				}
 			],
 			"sid": 159653181751139
@@ -457,26 +466,7 @@
 					"sid": 320089782801937
 				}
 			],
-			"actions": [
-				{
-					"id": "set-position",
-					"objectClass": "H",
-					"sid": 707449026954337,
-					"parameters": {
-						"x": "1707",
-						"y": "1021"
-					}
-				},
-				{
-					"id": "set-position-to-another-object",
-					"objectClass": "H2",
-					"sid": 431778512188171,
-					"parameters": {
-						"object": "H",
-						"image-point-optional": "0"
-					}
-				}
-			],
+			"actions": [],
 			"sid": 312317286878298
 		},
 		{
@@ -495,6 +485,19 @@
 			],
 			"actions": [
 				{
+					"id": "move-to-bottom",
+					"objectClass": "H2",
+					"sid": 699177575240871
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "H2",
+					"sid": 980496614238468,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 846336684771164,
@@ -503,27 +506,11 @@
 					}
 				},
 				{
-					"id": "set-visible",
-					"objectClass": "H",
-					"sid": 792200923372484,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "H2",
-					"sid": 453920636601059,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 737485569789304,
+					"sid": 199995796860667,
 					"parameters": {
-						"audio-file": "Interact",
+						"audio-file": "SettingsButtonPress",
 						"loop": "not-looping",
 						"volume": "-10",
 						"stereo-pan": "0",
@@ -531,7 +518,33 @@
 					}
 				}
 			],
-			"sid": 980911967703008
+			"sid": 980911967703008,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "H2",
+							"sid": 656078632102099,
+							"parameters": {
+								"instance-variable": "present"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "H2",
+							"sid": 118133880910204,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 563076287929471
+				}
+			]
 		}
 	],
 	"sid": 588019371100103

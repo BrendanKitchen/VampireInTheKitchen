@@ -123,13 +123,83 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "Volume_Value",
-			"type": "number",
-			"initialValue": "100",
+			"name": "OnScene1",
+			"type": "boolean",
+			"initialValue": "false",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 825333901192636
+			"sid": 449942858168858
+		},
+		{
+			"eventType": "variable",
+			"name": "OnScene2",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 748729747708814
+		},
+		{
+			"eventType": "variable",
+			"name": "Start",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 583251105215153
+		},
+		{
+			"eventType": "variable",
+			"name": "randomized_puzzle",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 706655647276785
+		},
+		{
+			"eventType": "variable",
+			"name": "Volume",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 607893237721346
+		},
+		{
+			"eventType": "variable",
+			"name": "randomizedPuzzle",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 713925754244293
+		},
+		{
+			"eventType": "variable",
+			"name": "finalpuzzle_clicked",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 649325942224383
+		},
+		{
+			"eventType": "variable",
+			"name": "magazine_clicked",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 777670113146805
 		},
 		{
 			"eventType": "block",
@@ -142,9 +212,35 @@
 			],
 			"actions": [
 				{
+					"id": "set-visible",
+					"objectClass": "DialogueText",
+					"sid": 646031698037473,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 883459207588218,
+					"parameters": {
+						"layer": "4",
+						"interactive": false
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 223842537210710,
+					"parameters": {
+						"font-face": "\"Trattatello\"",
+						"style": "normal"
+					}
+				},
+				{
 					"id": "set-position",
 					"objectClass": "port_tmp",
-					"sid": 525920227726963,
+					"sid": 698896015557882,
 					"parameters": {
 						"x": "round(random(1500,1800))",
 						"y": "round(random(100,900))"
@@ -153,7 +249,7 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "port_tmp",
-					"sid": 543032213389002,
+					"sid": 986503653892186,
 					"parameters": {
 						"instance-variable": "Sequence",
 						"value": "Self.IID"
@@ -162,7 +258,7 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "grid",
-					"sid": 988371345199633,
+					"sid": 888145511152684,
 					"parameters": {
 						"instance-variable": "Sequence",
 						"value": "port_tmp.Sequence"
@@ -171,7 +267,7 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "grid",
-					"sid": 671153594624627,
+					"sid": 377490038899406,
 					"parameters": {
 						"instance-variable": "position",
 						"value": "Self.position"
@@ -179,14 +275,63 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "DialogueText",
-					"sid": 646031698037473,
+					"objectClass": "VolumeBar",
+					"sid": 267475157671195,
 					"parameters": {
 						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 125555091646938,
+					"parameters": {
+						"variable": "Start",
+						"value": "true"
 					}
 				}
 			],
 			"sid": 597958259212347
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 992534572621589
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 190117203981091,
+					"parameters": {
+						"variable": "randomized_puzzle"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "port_tmp",
+					"sid": 816238489830717,
+					"parameters": {
+						"x": "round(random(1500,1800))",
+						"y": "round(random(100,900))"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 716583478843298,
+					"parameters": {
+						"variable": "randomized_puzzle",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 634886482762244
 		},
 		{
 			"eventType": "block",
@@ -216,6 +361,733 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
+					"sid": 638512392563549,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "plant"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 609105700113559,
+					"parameters": {
+						"variable": "Start"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 947380914984475,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 800469311332100,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 613007230234331,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 108429192681900,
+					"parameters": {
+						"text": "plant.dialogue_txt",
+						"duration": "2"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 553167037296241,
+					"parameters": {
+						"audio-file": "NegativeFeedback",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 244157645803083
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 356552177560147,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "mirror"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 309255609495986,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 369107674612911,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 347408574181995,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 504454621402325,
+					"parameters": {
+						"text": "\"mirror sample text\"",
+						"duration": "2"
+					}
+				}
+			],
+			"sid": 554713338340426
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 868872785765190,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "toilet"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 172785532509548,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 278358402338268,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 320840364490219,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 265087639364352,
+					"parameters": {
+						"text": "\"toilet text\"",
+						"duration": "2"
+					}
+				}
+			],
+			"sid": 303085239795152
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 548139144496661,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "stake_burned"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 880595031424443,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 115610662736445,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 700095524135386,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 918434410121820,
+					"parameters": {
+						"text": "\"It has a letter 'G' in it\"",
+						"duration": "2"
+					}
+				}
+			],
+			"sid": 700798948218264
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 184171116924637,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "barofsoap"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "barofsoap",
+					"sid": 824180286908465,
+					"parameters": {
+						"object": "Inventory_Box"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 505935857651866,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 645962737366353,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 137153628801228,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 889739965441350,
+					"parameters": {
+						"text": "\"Maybe it can help loosen something up\"",
+						"duration": "0.5"
+					}
+				}
+			],
+			"sid": 246578797894084
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 806121540848458,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "plant"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "barofsoap",
+					"sid": 679084471459907,
+					"parameters": {
+						"object": "Inventory_Box"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 494741147603089,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 646605876139086,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 738064935555381,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 313736421889644,
+					"parameters": {
+						"text": "plant.dialogue_txt",
+						"duration": "2"
+					}
+				}
+			],
+			"sid": 645479664573616
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 222792654782913,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "lock"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 847747263086698,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 552384846132770,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 924936582656938,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 902842001671137,
+					"parameters": {
+						"text": "\"It's locked\"",
+						"duration": "0.8"
+					}
+				}
+			],
+			"sid": 320585747195765
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 169342786449030,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "lock"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "baurbyPin",
+					"sid": 775751117157964,
+					"parameters": {
+						"object": "Inventory_Box"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 368173509486098,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 593160990040253,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 884478799484187,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 868061874491768,
+					"parameters": {
+						"text": "\"The lock broke\"",
+						"duration": "0.8"
+					}
+				}
+			],
+			"sid": 959936142320773
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 857181799934240,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Letter_Lock"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 269225069050353,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 467471429289531,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 547316184695439,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 956649960000429,
+					"parameters": {
+						"text": "\"The lock needs five letters\"",
+						"duration": "1"
+					}
+				}
+			],
+			"sid": 750194460788108
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 616252966110214,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "stake_A"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 475062510746964,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 466076880820190,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 783935159839954,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 838388376671486,
+					"parameters": {
+						"text": "\"stake\"",
+						"duration": "1"
+					}
+				}
+			],
+			"sid": 708593552122167
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 149992941505183,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "magazine_zoomed"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 287587178996095,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 597027988093704,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 560120864956728,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 148532337665061,
+					"parameters": {
+						"text": "\"seven teardrops\"",
+						"duration": "1"
+					}
+				}
+			],
+			"sid": 588619696942537
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
 					"sid": 608787168074447,
 					"parameters": {
 						"mouse-button": "left",
@@ -231,6 +1103,24 @@
 					"sid": 390853926250775,
 					"parameters": {
 						"layout": "Sink_Zoomed"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 474868187104364,
+					"parameters": {
+						"variable": "OnScene1",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 419257471608904,
+					"parameters": {
+						"variable": "OnScene2",
+						"value": "true"
 					}
 				},
 				{
@@ -267,104 +1157,34 @@
 					}
 				}
 			],
-			"sid": 447762618549237
-		},
-		{
-			"eventType": "block",
-			"conditions": [
+			"sid": 447762618549237,
+			"children": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 891291435609395,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "candle"
-					}
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "stake_A",
-					"sid": 977750380211541,
-					"parameters": {
-						"instance-variable": "placed"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "baurbyPin",
+							"sid": 644762930833182,
+							"parameters": {
+								"instance-variable": "placed"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "baurbyPin",
+							"sid": 905245320633558,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 415650517495382
 				}
-			],
-			"actions": [
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 713080783227823,
-					"parameters": {
-						"object-to-create": "candle_afterstake",
-						"layer": "0",
-						"x": "candle.X",
-						"y": "candle.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "candle",
-					"sid": 779798417000698
-				}
-			],
-			"sid": 973813436085861
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 715544869929917,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "candle_afterstake"
-					}
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "stake_A",
-					"sid": 892049430067957,
-					"parameters": {
-						"instance-variable": "placed"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 767008994000344,
-					"parameters": {
-						"object-to-create": "stake_burned",
-						"layer": "0",
-						"x": "stake_A.X",
-						"y": "stake_A.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "stake_A",
-					"sid": 425190042733098
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 458351134317567,
-					"parameters": {
-						"variable": "puzzlescompleted",
-						"value": "1"
-					}
-				}
-			],
-			"sid": 295420398390994
+			]
 		},
 		{
 			"eventType": "block",
@@ -413,6 +1233,18 @@
 					"parameters": {
 						"animation": "\"knob_turn_R\"",
 						"from": "beginning"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 269551340253868,
+					"parameters": {
+						"audio-file": "SinkDrop",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -466,6 +1298,18 @@
 					"parameters": {
 						"animation": "\"knob_turn_L\"",
 						"from": "beginning"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 661388473966994,
+					"parameters": {
+						"audio-file": "SinkDrop",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -556,6 +1400,57 @@
 					}
 				},
 				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 486011365864401,
+					"parameters": {
+						"variable": "OnScene1",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 117772772783689,
+					"parameters": {
+						"variable": "OnScene2",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 448469367934828,
+					"parameters": {
+						"variable": "Start",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "plant",
+					"sid": 117931032638870,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "lock",
+					"sid": 674714101851405,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "medCab",
+					"sid": 395249395211100,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
 					"id": "set-visible",
 					"objectClass": "H2",
 					"sid": 335118409843917,
@@ -637,32 +1532,8 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "plant",
-					"sid": 409464170014711,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "medCab",
-					"sid": 858502399338179,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "lock",
-					"sid": 654601092715306,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
 					"objectClass": "stake_A",
-					"sid": 516639648259430,
+					"sid": 658484521271845,
 					"parameters": {
 						"visibility": "invisible"
 					}
@@ -709,6 +1580,55 @@
 						}
 					],
 					"sid": 789589997512925
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "baurbyPin",
+							"sid": 549609122247141,
+							"parameters": {
+								"instance-variable": "placed"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "baurbyPin",
+							"sid": 145991620518557,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 899493942963425
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "stake_burned",
+							"sid": 577404925496005,
+							"parameters": {
+								"instance-variable": "placed"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "baurbyPin",
+							"sid": 873189870519344,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 332079729555688
 				}
 			],
 			"isOrBlock": true
@@ -734,6 +1654,29 @@
 					"sid": 621310367265708,
 					"parameters": {
 						"layout": "Bathroom_Scene1"
+					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "Inventory",
+					"sid": 340685467273511
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 412494710656376,
+					"parameters": {
+						"variable": "OnScene2",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 407009249580362,
+					"parameters": {
+						"variable": "OnScene1",
+						"value": "false"
 					}
 				},
 				{
@@ -903,9 +1846,17 @@
 					],
 					"actions": [
 						{
+							"id": "move-to-layer",
+							"objectClass": "barofsoap",
+							"sid": 870535508079623,
+							"parameters": {
+								"layer": "0"
+							}
+						},
+						{
 							"id": "set-visible",
 							"objectClass": "barofsoap",
-							"sid": 406183458467804,
+							"sid": 803430820439845,
 							"parameters": {
 								"visibility": "visible"
 							}
@@ -927,6 +1878,14 @@
 					],
 					"actions": [
 						{
+							"id": "move-to-layer",
+							"objectClass": "baurbyPin",
+							"sid": 775707143573355,
+							"parameters": {
+								"layer": "0"
+							}
+						},
+						{
 							"id": "set-visible",
 							"objectClass": "baurbyPin",
 							"sid": 708566360045455,
@@ -936,6 +1895,104 @@
 						}
 					],
 					"sid": 775063737007823
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "baurbyPin",
+							"sid": 796597673292876,
+							"parameters": {
+								"instance-variable": "placed"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-layer",
+							"objectClass": "baurbyPin",
+							"sid": 735496105107172,
+							"parameters": {
+								"layer": "4"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "baurbyPin",
+							"sid": 553693777004421,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 896762263679322
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "stake_burned",
+							"sid": 364973741470780,
+							"parameters": {
+								"instance-variable": "placed"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-layer",
+							"objectClass": "stake_burned",
+							"sid": 213444948673405,
+							"parameters": {
+								"layer": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "stake_burned",
+							"sid": 605922943903343,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 916070245917624
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "stake_burned",
+							"sid": 237118853460386,
+							"parameters": {
+								"instance-variable": "placed"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-layer",
+							"objectClass": "stake_burned",
+							"sid": 123185011040011,
+							"parameters": {
+								"layer": "4"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "stake_burned",
+							"sid": 917743093049541,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 648571962941582
 				}
 			]
 		},
@@ -960,6 +2017,24 @@
 					"sid": 926429476778464,
 					"parameters": {
 						"layout": "Bathroom_Scene2"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 816825576449839,
+					"parameters": {
+						"variable": "OnScene1",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 576430082205596,
+					"parameters": {
+						"variable": "OnScene2",
+						"value": "false"
 					}
 				},
 				{
@@ -1089,6 +2164,15 @@
 					"parameters": {
 						"layer": "1"
 					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 896234792651002,
+					"parameters": {
+						"variable": "magazine_clicked",
+						"value": "false"
+					}
 				}
 			],
 			"sid": 278442730890185,
@@ -1116,6 +2200,55 @@
 						}
 					],
 					"sid": 415840533442605
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "baurbyPin",
+							"sid": 658142897339622,
+							"parameters": {
+								"instance-variable": "placed"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "baurbyPin",
+							"sid": 824633454323072,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 692858499678904
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "stake_burned",
+							"sid": 517176869995577,
+							"parameters": {
+								"instance-variable": "placed"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "baurbyPin",
+							"sid": 769568923453156,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 252356090542115
 				}
 			]
 		},
@@ -1148,6 +2281,18 @@
 					"sid": 977279714300522,
 					"parameters": {
 						"variable": "Paused"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 222762843643156,
+					"parameters": {
+						"audio-file": "PaperInteraction",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -1276,9 +2421,253 @@
 					"parameters": {
 						"layer": "0"
 					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "medCab",
+					"sid": 689998691021804,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "plant",
+					"sid": 226195826586545,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "lock",
+					"sid": 541146859214291,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "barofsoap",
+					"sid": 868524015672404,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory",
+					"sid": 179494995004712,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "baurbyPin",
+					"sid": 248844549557004,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_A",
+					"sid": 152335652220396,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_burned",
+					"sid": 885736743904155,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory_Box",
+					"sid": 434585784978052,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "VolumeBar",
+					"sid": 855817878935699,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "VolumeBar",
+					"sid": 591460957767124,
+					"parameters": {
+						"x": "1120",
+						"y": "430"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 871797678207977,
+					"parameters": {
+						"variable": "Volume",
+						"value": "VolumeBar.Value"
+					}
+				},
+				{
+					"id": "set-value",
+					"objectClass": "VolumeBar",
+					"sid": 329291678520299,
+					"parameters": {
+						"value": "Volume"
+					}
 				}
 			],
 			"sid": 647355673441920
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 395391526005541
+				}
+			],
+			"actions": [],
+			"sid": 728693271950850,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "VolumeBar",
+							"sid": 688098898327941,
+							"parameters": {
+								"comparison": 0,
+								"value": "75"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Value",
+							"sid": 118863326134974,
+							"parameters": {
+								"text": "VolumeBar.Value & \"%\"\n"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton",
+							"sid": 160996614431432,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton2",
+							"sid": 161681210235153,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 385784226309607,
+							"parameters": {
+								"variable": "Volume",
+								"value": "VolumeBar.Value"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 120647523219328,
+							"parameters": {
+								"variable": "VolumeSlider_Correct",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 601641608635235
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 873381857562745
+				}
+			],
+			"actions": [],
+			"sid": 978042510986343,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "VolumeBar",
+							"sid": 538298829661547,
+							"parameters": {
+								"comparison": 0,
+								"value": "75"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Value",
+							"sid": 687221048261994,
+							"parameters": {
+								"text": "VolumeBar.Value & \"%\"\n"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton",
+							"sid": 236658831079630,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton2",
+							"sid": 250457682008126,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 441919952306776,
+							"parameters": {
+								"variable": "Volume",
+								"value": "VolumeBar.Value"
+							}
+						}
+					],
+					"sid": 883035192120911
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -1291,6 +2680,15 @@
 						"variable": "Paused"
 					},
 					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 515110848576875,
+					"parameters": {
+						"variable": "portaitpuzzleplayed"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -1301,6 +2699,15 @@
 					"parameters": {
 						"layer": "2",
 						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 779678749043866,
+					"parameters": {
+						"layer": "1",
+						"interactive": false
 					}
 				},
 				{
@@ -1375,17 +2782,17 @@
 				{
 					"id": "move-to-layer",
 					"objectClass": "medCab",
-					"sid": 852369260096020,
+					"sid": 914921612868184,
 					"parameters": {
-						"layer": "1"
+						"layer": "0"
 					}
 				},
 				{
 					"id": "move-to-layer",
 					"objectClass": "lock",
-					"sid": 523662029274371,
+					"sid": 505876846297423,
 					"parameters": {
-						"layer": "1"
+						"layer": "0"
 					}
 				},
 				{
@@ -1430,22 +2837,1222 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "H",
-					"sid": 380002131963651,
+					"objectClass": "H2",
+					"sid": 514669753118813,
 					"parameters": {
 						"visibility": "visible"
 					}
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "H2",
-					"sid": 514669753118813,
+					"objectClass": "medCab",
+					"sid": 399704858175280,
 					"parameters": {
 						"visibility": "visible"
 					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "plant",
+					"sid": 421518127822987,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "lock",
+					"sid": 806524283708715,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "barofsoap",
+					"sid": 950121124927381,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory",
+					"sid": 893335472782280,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "baurbyPin",
+					"sid": 645836461683381,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_A",
+					"sid": 562057677439353,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_burned",
+					"sid": 637022197039400,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory_Box",
+					"sid": 210368703859211,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 392298829100574,
+					"parameters": {
+						"variable": "Volume",
+						"value": "VolumeBar.Value"
+					}
 				}
 			],
-			"sid": 342784255212097
+			"sid": 342784255212097,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 737133877661104,
+							"parameters": {
+								"variable": "OnScene1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "plant",
+							"sid": 169139149107622,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "medCab",
+							"sid": 443307510763914,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "lock",
+							"sid": 217255736457444,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "plant",
+							"sid": 103096946017640,
+							"parameters": {
+								"layer": "4"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "medCab",
+							"sid": 945298253997863,
+							"parameters": {
+								"layer": "4"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "lock",
+							"sid": 233687974700316,
+							"parameters": {
+								"layer": "4"
+							}
+						}
+					],
+					"sid": 100334730312009
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 932753071752154,
+							"parameters": {
+								"variable": "OnScene2"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "barofsoap",
+							"sid": 818493356375906,
+							"parameters": {
+								"instance-variable": "placed"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "barofsoap",
+							"sid": 502635560474742,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "barofsoap",
+							"sid": 675908532890962,
+							"parameters": {
+								"layer": "4"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "plant",
+							"sid": 319352663015040,
+							"parameters": {
+								"layer": "0"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "medCab",
+							"sid": 408891744248877,
+							"parameters": {
+								"layer": "0"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "lock",
+							"sid": 631752594671101,
+							"parameters": {
+								"layer": "0"
+							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "Inventory",
+							"sid": 905141342837998
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "Inventory_Box",
+							"sid": 487839265396855
+						}
+					],
+					"sid": 600336282655855
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "barofsoap",
+							"sid": 844735225474516,
+							"parameters": {
+								"instance-variable": "placed"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 412027938855868,
+							"parameters": {
+								"variable": "magazine_clicked"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-layer",
+							"objectClass": "barofsoap",
+							"sid": 883030474450489,
+							"parameters": {
+								"layer": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "barofsoap",
+							"sid": 418248397455646,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 539728080928745
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "barofsoap",
+							"sid": 527545803981441,
+							"parameters": {
+								"instance-variable": "placed"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 158194734966373,
+							"parameters": {
+								"variable": "magazine_clicked"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-layer",
+							"objectClass": "barofsoap",
+							"sid": 619427488060614,
+							"parameters": {
+								"layer": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "barofsoap",
+							"sid": 310329436631536,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "barofsoap",
+							"sid": 130411074642531
+						}
+					],
+					"sid": 155941248615691
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "stake_burned",
+							"sid": 431431801610550,
+							"parameters": {
+								"instance-variable": "placed"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-layer",
+							"objectClass": "stake_burned",
+							"sid": 156990041354835,
+							"parameters": {
+								"layer": "1"
+							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "stake_burned",
+							"sid": 585981724365483
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "stake_burned",
+							"sid": 514492365439992,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 464715475797227
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 417411779638341,
+							"parameters": {
+								"variable": "OnScene1"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "baurbyPin",
+							"sid": 485689440676173,
+							"parameters": {
+								"instance-variable": "placed"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "baurbyPin",
+							"sid": 446392406162529,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "baurbyPin",
+							"sid": 978966123633474,
+							"parameters": {
+								"layer": "4"
+							}
+						}
+					],
+					"sid": 127529021597887
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 268553837303614,
+							"parameters": {
+								"variable": "knob_clicked",
+								"comparison": 0,
+								"value": "7"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 668294728487634,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "baurbyPin",
+									"sid": 926493725020986,
+									"parameters": {
+										"instance-variable": "placed"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sink_zoomed",
+									"sid": 932187164766949,
+									"parameters": {
+										"animation": "\"\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "move-to-layer",
+									"objectClass": "baurbyPin",
+									"sid": 760861505595917,
+									"parameters": {
+										"layer": "0"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "baurbyPin",
+									"sid": 640090760762771,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "baurbyPin",
+									"sid": 814052157578068,
+									"parameters": {
+										"instance-variable": "placed",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 986497397590147
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "baurbyPin",
+							"sid": 130351788800171,
+							"parameters": {
+								"instance-variable": "placed"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "baurbyPin",
+							"sid": 620125499182260,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "baurbyPin",
+							"sid": 816104215951375,
+							"parameters": {
+								"layer": "4"
+							}
+						}
+					],
+					"sid": 950653593831577
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "baurbyPin",
+							"sid": 553669439910385,
+							"parameters": {
+								"instance-variable": "placed"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-layer",
+							"objectClass": "baurbyPin",
+							"sid": 145541388914235,
+							"parameters": {
+								"layer": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "baurbyPin",
+							"sid": 518540836170839,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "baurbyPin",
+							"sid": 797884809769328
+						}
+					],
+					"sid": 637854325758800
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 201275142079828,
+							"parameters": {
+								"variable": "puzzlescompleted",
+								"comparison": 5,
+								"value": "5"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 938352056240609,
+							"parameters": {
+								"variable": "LockCombo"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Inventory",
+							"sid": 276967543913049,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Inventory_Box",
+							"sid": 835218736357733,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "stake_burned",
+							"sid": 410283141233806,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 777758261808875
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 215644989453658,
+							"parameters": {
+								"variable": "Final_Puzzle_Completed"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Inventory",
+							"sid": 689706855678805,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Inventory_Box",
+							"sid": 813343026864039,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "stake_burned",
+							"sid": 604830796196310,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 482139919094513
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 897446260159490,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "candle"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "stake_A",
+							"sid": 787381787992422,
+							"parameters": {
+								"instance-variable": "placed"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "stake_A",
+							"sid": 983961817320835,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 943178163736334
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 168621663428191,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Letter_Lock"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 715198804537964,
+							"parameters": {
+								"variable": "puzzlescompleted",
+								"comparison": 5,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 408393580325004,
+							"parameters": {
+								"layout": "LockedPuzzle"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Inventory",
+							"sid": 102889588691469,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Inventory_Box",
+							"sid": 825564337118307,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "stake_burned",
+							"sid": 838727446842228,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 236992164651552
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "medCab",
+							"sid": 468771782881795,
+							"parameters": {
+								"instance-variable": "opened"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "medCab",
+							"sid": 793283134210885,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "medCab",
+							"sid": 938597584405966,
+							"parameters": {
+								"x": "1325",
+								"y": "215"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "stake_A",
+							"sid": 993709029718464,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 730920322025603
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "medCab",
+							"sid": 371099306764695,
+							"parameters": {
+								"instance-variable": "opened"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "medCab",
+							"sid": 384492659272753,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "stake_A",
+							"sid": 192348466520703,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 582653620759161
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 413341460695563,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "candle"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "stake_A",
+							"sid": 957211727331683,
+							"parameters": {
+								"instance-variable": "placed"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 162848018378852,
+							"parameters": {
+								"object-to-create": "candle_afterstake",
+								"layer": "0",
+								"x": "candle.X",
+								"y": "candle.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "candle",
+							"sid": 159838128533950
+						}
+					],
+					"sid": 869486169407902
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 856683806646516,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "candle_afterstake"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "stake_A",
+							"sid": 933801965285674,
+							"parameters": {
+								"instance-variable": "placed"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 612326114635900,
+							"parameters": {
+								"object-to-create": "stake_burned",
+								"layer": "0",
+								"x": "stake_A.X",
+								"y": "stake_A.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "stake_A",
+							"sid": 707869915317099
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 653861753992749,
+							"parameters": {
+								"variable": "puzzlescompleted",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 686119116215469
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 469304487121871,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "magazine_tmp"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 616550585328391,
+					"parameters": {
+						"variable": "magazine_clicked",
+						"value": "true"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 523808836016719,
+					"parameters": {
+						"layout": "Magazine_Zoomed"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 274611198064787,
+					"parameters": {
+						"variable": "OnScene1",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 169359805958439,
+					"parameters": {
+						"variable": "OnScene2",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "baurbyPin",
+					"sid": 543177353504706,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_A",
+					"sid": 109187936482363,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "floor_bg",
+					"sid": 219529383996938
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "magazine_zoomed",
+					"sid": 329030750813905
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 449175909880795,
+					"parameters": {
+						"audio-file": "PaperInteraction",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 852912233998666
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 727720005333113,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Letter_Lock"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 540771294300325,
+					"parameters": {
+						"variable": "puzzlescompleted",
+						"comparison": 5,
+						"value": "4"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 890303364953567,
+					"parameters": {
+						"variable": "VolumeSlider_Correct"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 726304517498207,
+					"parameters": {
+						"layout": "LockedPuzzle"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 515212791929501,
+					"parameters": {
+						"variable": "portaitpuzzleplayed",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory",
+					"sid": 592253663058326,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory_Box",
+					"sid": 684823583480106,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_burned",
+					"sid": 176012833100890,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 495193582881049
+		},
+		{
+			"eventType": "variable",
+			"name": "portaitpuzzleplayed",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 466936858818959
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 895793561105765,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "portait_temp"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 549387046572312,
+					"parameters": {
+						"variable": "puzzlescompleted",
+						"comparison": 5,
+						"value": "4"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 836106016325385,
+					"parameters": {
+						"variable": "LockCombo"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 734559204604636,
+					"parameters": {
+						"variable": "finalpuzzle_clicked",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory",
+					"sid": 986903233655145,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory_Box",
+					"sid": 529372511323426,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_burned",
+					"sid": 809687780919143,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "portait_temp",
+					"sid": 241632426717742,
+					"parameters": {
+						"layer": "4"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "portait_temp",
+					"sid": 759227449600921
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 352440490368066,
+					"parameters": {
+						"variable": "portaitpuzzleplayed",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 495677436281407
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 888560180699224,
+					"parameters": {
+						"variable": "finalpuzzle_clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 258134228546498,
+					"parameters": {
+						"variable": "finalpuzzle_clicked",
+						"value": "false"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 891647766265157,
+					"parameters": {
+						"layout": "Sliding Puzzle"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory",
+					"sid": 417101166686640,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory_Box",
+					"sid": 184043571499767,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_burned",
+					"sid": 153738200517522,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 413444523255220
 		},
 		{
 			"eventType": "block",
@@ -1469,14 +4076,6 @@
 				}
 			],
 			"actions": [
-				{
-					"id": "set-visible",
-					"objectClass": "H",
-					"sid": 232665795524933,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
 				{
 					"id": "set-visible",
 					"objectClass": "H2",
@@ -1518,9 +4117,138 @@
 					"parameters": {
 						"variable": "Paused"
 					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "VolumeBar",
+					"sid": 887229553350371,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "VolumeBar",
+					"sid": 171577150134139,
+					"parameters": {
+						"x": "10000",
+						"y": "10000"
+					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "H2",
+					"sid": 993439210818705
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 260321116911323,
+					"parameters": {
+						"audio-file": "Interact",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 637375812019776
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 501539916848242,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "MainMenuButton"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "H2",
+					"sid": 507172309608808,
+					"parameters": {
+						"instance-variable": "present"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-top",
+					"objectClass": "H2",
+					"sid": 182884205615650
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 188617287835048,
+					"parameters": {
+						"audio-file": "Interact",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 848044868010854
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 734298575299902,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "MainMenuButton"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "H2",
+					"sid": 661441332900128,
+					"parameters": {
+						"instance-variable": "present"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "H2",
+					"sid": 854955885157372,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "H2",
+					"sid": 287620124462640
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 719443790703449,
+					"parameters": {
+						"audio-file": "Interact",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 304974709247475
 		},
 		{
 			"eventType": "block",
@@ -1543,6 +4271,18 @@
 					"sid": 939247158851238,
 					"parameters": {
 						"variable": "Paused"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 434797388237254,
+					"parameters": {
+						"audio-file": "Interact",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -1570,153 +4310,21 @@
 					"parameters": {
 						"variable": "Paused"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 563719958271086,
+					"parameters": {
+						"audio-file": "Interact",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 532256240976223
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 569721469800201,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "Letter_Lock"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 829578633767563,
-					"parameters": {
-						"variable": "puzzlescompleted",
-						"comparison": 0,
-						"value": "4"
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 670094220403807,
-					"parameters": {
-						"variable": "VolumeSlider_Correct"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 139194936048926,
-					"parameters": {
-						"layout": "LockedPuzzle"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "Inventory",
-					"sid": 512425337248080,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "Inventory_Box",
-					"sid": 573722782239761,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "stake_burned",
-					"sid": 290298763703761,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				}
-			],
-			"sid": 628031077048820
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 313605636780149,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "portait_temp"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 658321967579006,
-					"parameters": {
-						"variable": "puzzlescompleted",
-						"comparison": 0,
-						"value": "4"
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 124555792401173,
-					"parameters": {
-						"variable": "VolumeSlider_Correct"
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 555100093510625,
-					"parameters": {
-						"variable": "LockCombo"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 408921708816930,
-					"parameters": {
-						"layout": "Sliding Puzzle"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "Inventory",
-					"sid": 305082109147844,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "Inventory_Box",
-					"sid": 201599976792206,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "stake_burned",
-					"sid": 691205815270867,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				}
-			],
-			"sid": 937872410910749
 		},
 		{
 			"eventType": "block",
@@ -1736,8 +4344,8 @@
 					"conditions": [
 						{
 							"id": "is-overlapping-another-object",
-							"objectClass": "grid",
-							"sid": 746976455914073,
+							"objectClass": "portait_box",
+							"sid": 817506943126706,
 							"parameters": {
 								"object": "port_tmp"
 							}
@@ -1772,43 +4380,51 @@
 								"x": "grid.X",
 								"y": "grid.Y"
 							}
-						}
-					],
-					"sid": 315383642690976
-				},
-				{
-					"eventType": "block",
-					"conditions": [
+						},
 						{
-							"id": "compare-instance-variable",
-							"objectClass": "grid",
-							"sid": 756871853582860,
+							"id": "set-enabled",
+							"objectClass": "port_tmp",
+							"sid": 640616451053696,
+							"behaviorType": "DragDrop",
 							"parameters": {
-								"instance-variable": "position",
-								"comparison": 0,
-								"value": "port_tmp.Position"
+								"state": "disabled"
 							}
 						},
 						{
-							"id": "trigger-once-while-true",
-							"objectClass": "System",
-							"sid": 931234497848337
-						}
-					],
-					"actions": [
-						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 315958884328548,
+							"sid": 279489080480958,
 							"parameters": {
 								"variable": "Positioned",
 								"value": "1"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 195565559582501,
+							"parameters": {
+								"audio-file": "PosFeedbackPuzzle",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
-					"sid": 159660199852277
+					"sid": 315383642690976
 				}
 			]
+		},
+		{
+			"eventType": "variable",
+			"name": "Final_Puzzle_Completed",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 837235021495469
 		},
 		{
 			"eventType": "block",
@@ -1855,11 +4471,52 @@
 					}
 				},
 				{
-					"id": "set-visible",
-					"objectClass": "portait_temp",
-					"sid": 601152502578612,
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 786067523906369,
 					"parameters": {
-						"visibility": "visible"
+						"object-to-create": "portait_temp",
+						"layer": "0",
+						"x": "984",
+						"y": "545",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "portait_temp",
+					"sid": 150263142939750,
+					"parameters": {
+						"x": "984",
+						"y": "545"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "portait_temp",
+					"sid": 343910099121534,
+					"parameters": {
+						"width": "960",
+						"height": "970"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 452517964016664,
+					"parameters": {
+						"variable": "Final_Puzzle_Completed",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 553846908920144,
+					"parameters": {
+						"variable": "portaitpuzzleplayed",
+						"value": "false"
 					}
 				}
 			],
@@ -2234,6 +4891,18 @@
 					"sid": 757122095493931
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 117605549093880,
+					"parameters": {
+						"audio-file": "CrackingLock",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "destroy",
 					"objectClass": "baurbyPin",
 					"sid": 778915866589678
@@ -2313,6 +4982,18 @@
 					"sid": 308760805654464
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 185275109896911,
+					"parameters": {
+						"audio-file": "PickingPuttingPotNoPrep",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "move-forward",
 					"objectClass": "plant",
 					"sid": 671520273728778,
@@ -2332,12 +5013,12 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 412314283033200,
+					"sid": 150477642218607,
 					"parameters": {
-						"object-to-create": "DialogueText",
-						"layer": "3",
-						"x": "dialogue_box.X",
-						"y": "dialogue_box.Y",
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
@@ -2345,79 +5026,36 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 150550912216673,
+					"sid": 144030161350601,
 					"parameters": {
-						"object-to-create": "dialogue_box",
-						"layer": "3",
-						"x": "960",
-						"y": "880",
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
 						"create-hierarchy": false,
 						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 766619504286843,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 957979668827476,
+					"parameters": {
+						"text": "\"plant moved soap test\"",
+						"duration": "2"
 					}
 				}
 			],
 			"sid": 417877426724178
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 536660009158058,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "plant"
-					}
-				},
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "barofsoap",
-					"sid": 506932715955933,
-					"parameters": {
-						"object": "Inventory_Box"
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 237777389520846,
-					"parameters": {
-						"object-to-create": "dialogue_box",
-						"layer": "3",
-						"x": "960",
-						"y": "880",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 151102757654473,
-					"parameters": {
-						"object-to-create": "DialogueText",
-						"layer": "3",
-						"x": "dialogue_box.X",
-						"y": "dialogue_box.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "DialogueText",
-					"sid": 800584305736759,
-					"parameters": {
-						"text": "plant.dialogue_txt"
-					}
-				}
-			],
-			"sid": 158192225328907
 		},
 		{
 			"eventType": "block",
@@ -2572,264 +5210,6 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 240833410166123,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "magazine_tmp"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 568939757000419,
-					"parameters": {
-						"layout": "Magazine_Zoomed"
-					}
-				}
-			],
-			"sid": 942388179873892
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-dragging",
-					"objectClass": "Knob",
-					"sid": 415447037812663,
-					"behaviorType": "DragDrop"
-				}
-			],
-			"actions": [
-				{
-					"id": "set-x",
-					"objectClass": "Knob",
-					"sid": 122505416234375,
-					"parameters": {
-						"x": "clamp(Self.X, Slider.ImagePointX(1), Slider.ImagePointX(2)) "
-					}
-				}
-			],
-			"sid": 538329044269338
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-dragging",
-					"objectClass": "Knob",
-					"sid": 552902413548220,
-					"behaviorType": "DragDrop"
-				}
-			],
-			"actions": [
-				{
-					"id": "set-x",
-					"objectClass": "Knob",
-					"sid": 527915665424261,
-					"parameters": {
-						"x": "clamp(Self.X, Slider.ImagePointX(1), Slider.ImagePointX(2)) "
-					}
-				}
-			],
-			"sid": 813764974783010
-		},
-		{
-			"eventType": "block",
-			"conditions": [],
-			"actions": [
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Knob",
-					"sid": 762212886887148,
-					"parameters": {
-						"instance-variable": "Value",
-						"value": "round(lerp(Self.Minimum, Self.Maximum, unlerp(Slider.ImagePointX(1), Slider.ImagePointX(2), Self.X) ))"
-					}
-				}
-			],
-			"sid": 682468003922197
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 874088937912057
-				}
-			],
-			"actions": [],
-			"sid": 877645497308443,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Knob",
-							"sid": 924113602330992,
-							"parameters": {
-								"instance-variable": "Value",
-								"comparison": 3,
-								"value": "76"
-							}
-						},
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Knob",
-							"sid": 624613785079135,
-							"parameters": {
-								"instance-variable": "Value",
-								"comparison": 5,
-								"value": "72"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "MainMenuButton",
-							"sid": 736604123564737,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "MainMenuButton2",
-							"sid": 180892572977890,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 154150320741214,
-							"parameters": {
-								"variable": "Volume_Value",
-								"value": "Knob.Value"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 662607688874665,
-							"parameters": {
-								"variable": "VolumeSlider_Correct",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 746865034809198
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Knob",
-							"sid": 617867494694719,
-							"parameters": {
-								"instance-variable": "Value",
-								"comparison": 5,
-								"value": "76"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "MainMenuButton2",
-							"sid": 116850012895522,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "move-to-top",
-							"objectClass": "MainMenuButton",
-							"sid": 888267501281289
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "MainMenuButton",
-							"sid": 938177168705940,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 708808829782599,
-							"parameters": {
-								"variable": "VolumeSlider_Correct",
-								"value": "false"
-							}
-						}
-					],
-					"sid": 960120039152341
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Knob",
-							"sid": 375310110501588,
-							"parameters": {
-								"instance-variable": "Value",
-								"comparison": 3,
-								"value": "72"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "MainMenuButton2",
-							"sid": 277278111799267,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "move-to-top",
-							"objectClass": "MainMenuButton",
-							"sid": 313005780850636
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "MainMenuButton",
-							"sid": 835025368874722,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 889454746828515,
-							"parameters": {
-								"variable": "VolumeSlider_Correct",
-								"value": "false"
-							}
-						}
-					],
-					"sid": 479686346497867
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "is-dragging",
 					"objectClass": "N",
 					"sid": 992475554106737,
@@ -2861,6 +5241,18 @@
 					"parameters": {
 						"variable": "LockCombo_1",
 						"value": "true"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 900066287251554,
+					"parameters": {
+						"audio-file": "PosFeedbackPuzzle",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -2902,6 +5294,18 @@
 						"variable": "LockCombo_2",
 						"value": "true"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 428537931721581,
+					"parameters": {
+						"audio-file": "PosFeedbackPuzzle",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 178952786770201
@@ -2941,6 +5345,18 @@
 					"parameters": {
 						"variable": "LockCombo_3",
 						"value": "true"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 469450540421069,
+					"parameters": {
+						"audio-file": "PosFeedbackPuzzle",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -2982,6 +5398,18 @@
 						"variable": "LockCombo_4",
 						"value": "true"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 969089625939292,
+					"parameters": {
+						"audio-file": "PosFeedbackPuzzle",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 660493534299602
@@ -3022,9 +5450,31 @@
 						"variable": "LockCombo_5",
 						"value": "true"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 732314061393274,
+					"parameters": {
+						"audio-file": "PosFeedbackPuzzle",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 461799115191921
+		},
+		{
+			"eventType": "variable",
+			"name": "backbutton_pressed",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 176920759125363
 		},
 		{
 			"eventType": "block",
@@ -3122,6 +5572,18 @@
 						"variable": "LockCombo",
 						"value": "true"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 255357260307105,
+					"parameters": {
+						"audio-file": "PuzzleShuffle",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 756758742585929
@@ -3185,32 +5647,32 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-start-of-layout",
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 298636952230061,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "backarrow3"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 916689714767103
+					"sid": 157713808754796,
+					"parameters": {
+						"variable": "Final_Puzzle_Completed"
+					}
 				}
 			],
 			"actions": [
 				{
-					"id": "set-position",
-					"objectClass": "H",
-					"sid": 859510635754810,
-					"parameters": {
-						"x": "10000",
-						"y": "10000"
-					}
-				},
-				{
-					"id": "set-position-to-another-object",
-					"objectClass": "H2",
-					"sid": 757951000249022,
-					"parameters": {
-						"object": "H",
-						"image-point-optional": "0"
-					}
+					"id": "destroy",
+					"objectClass": "portait_temp",
+					"sid": 989611728792433
 				}
 			],
-			"sid": 869155478564606
+			"sid": 873933852045793
 		}
 	],
 	"sid": 103033473827399

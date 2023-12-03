@@ -1,17 +1,9 @@
 {
-	"name": "H2",
+	"name": "pot_box",
 	"plugin-id": "Sprite",
-	"sid": 754735964401074,
-	"isGlobal": true,
-	"instanceVariables": [
-		{
-			"name": "present",
-			"type": "boolean",
-			"desc": "",
-			"show": true,
-			"sid": 681337152920742
-		}
-	],
+	"sid": 541682818872481,
+	"isGlobal": false,
+	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -19,20 +11,20 @@
 			{
 				"frames": [
 					{
-						"width": 58,
-						"height": 115,
+						"width": 250,
+						"height": 250,
 						"originX": 0.5,
-						"originY": 0.5043478260869565,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2637174,
+						"imageSpriteId": 720668,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 726403416846299,
+				"sid": 976498533585423,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

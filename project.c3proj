@@ -56,6 +56,20 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "progressbar",
+			"name": "Progress bar",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "sliderbar",
+			"name": "Slider bar",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "DragnDrop",
 			"name": "Drag & Drop",
@@ -66,6 +80,13 @@
 			"type": "behavior",
 			"id": "Fade",
 			"name": "Fade",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Persist",
+			"name": "Persist",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -134,7 +155,6 @@
 			"Inventory",
 			"Inventory_Box",
 			"baurbyPin",
-			"H",
 			"Letter_Lock",
 			"H2",
 			"dialogue_box",
@@ -166,7 +186,11 @@
 			"PlayButton",
 			"FadeToBlack",
 			"ToiletPaper",
-			"crappot"
+			"crappot",
+			"pot_box",
+			"VolumeBar",
+			"ProgressBar",
+			"portait_box"
 		],
 		"subfolders": []
 	},
@@ -226,6 +250,78 @@
 					"name": "MainMenuButtonPress.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 813548150624518,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "PickingPuttingPotNoPrep.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 731217626962528,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "PickingPuttingPotwPrep.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 784447712542851,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "CrackingLock.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 365744736165599,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "PaperInteraction.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 595471017343488,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SettingsButtonPress.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 198821449345905,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SinkDrop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 359291176267958,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "NegativeFeedback.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 596679864216408,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "PosFeedbackPuzzle.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 162538805517127,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "PuzzleShuffle.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 560938005083471,
 					"file-info": {
 						"purpose": "none"
 					}
