@@ -1192,36 +1192,49 @@
 				{
 					"id": "set-animation-speed",
 					"objectClass": "sink_faucet",
-					"sid": 128371713357996,
+					"sid": 543115618537590,
 					"parameters": {
-						"speed": "10"
+						"speed": "13"
 					}
 				},
 				{
-					"id": "set-animation",
+					"id": "start-animation",
 					"objectClass": "sink_faucet",
-					"sid": 903158291380176,
+					"sid": 853278035011249,
 					"parameters": {
-						"animation": "\"water drop\"",
-						"from": "beginning"
+						"from": "current-frame"
+					}
+<<<<<<< Updated upstream
+=======
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 102750068042565,
+					"parameters": {
+						"audio-file": "SinkDrop",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				},
 				{
 					"id": "set-animation-speed",
 					"objectClass": "sink_knob_R",
-					"sid": 106046524950673,
+					"sid": 138771460597642,
 					"parameters": {
-						"speed": "5"
+						"speed": "8"
 					}
 				},
 				{
-					"id": "set-animation",
+					"id": "start-animation",
 					"objectClass": "sink_knob_R",
-					"sid": 179102840893356,
+					"sid": 258671458723824,
 					"parameters": {
-						"animation": "\"knob_turn_R\"",
-						"from": "beginning"
+						"from": "current-frame"
 					}
+>>>>>>> Stashed changes
 				}
 			],
 			"sid": 987050434910685,
@@ -1245,36 +1258,49 @@
 				{
 					"id": "set-animation-speed",
 					"objectClass": "sink_faucet",
-					"sid": 792231312004889,
+					"sid": 246237118622102,
 					"parameters": {
-						"speed": "10"
+						"speed": "13"
 					}
 				},
 				{
-					"id": "set-animation",
+					"id": "start-animation",
 					"objectClass": "sink_faucet",
-					"sid": 814345078251166,
+					"sid": 766389154534896,
 					"parameters": {
-						"animation": "\"water drop\"",
-						"from": "beginning"
+						"from": "current-frame"
+					}
+<<<<<<< Updated upstream
+=======
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 152325082408653,
+					"parameters": {
+						"audio-file": "SinkDrop",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				},
 				{
 					"id": "set-animation-speed",
 					"objectClass": "sink_knob_L",
-					"sid": 474286058956583,
+					"sid": 100001124517791,
 					"parameters": {
-						"speed": "5"
+						"speed": "8"
 					}
 				},
 				{
-					"id": "set-animation",
+					"id": "start-animation",
 					"objectClass": "sink_knob_L",
-					"sid": 562613181853255,
+					"sid": 534634161639537,
 					"parameters": {
-						"animation": "\"knob_turn_L\"",
-						"from": "beginning"
+						"from": "current-frame"
 					}
+>>>>>>> Stashed changes
 				}
 			],
 			"sid": 769138577598035,
@@ -1301,9 +1327,65 @@
 						"variable": "knob_clicked",
 						"value": "1"
 					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "sink_faucet",
+					"sid": 898956913434912,
+					"parameters": {
+						"frame-number": "0"
+					}
 				}
 			],
 			"sid": 440707638525572
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "sink_knob_L",
+					"sid": 784597459314710,
+					"parameters": {
+						"animation": "\"knob_turn_L\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "sink_knob_L",
+					"sid": 537788676524776,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 431107098672524
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "sink_knob_R",
+					"sid": 667723888106314,
+					"parameters": {
+						"animation": "\"knob_turn_R\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "sink_knob_R",
+					"sid": 859539383501589,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 890357020721427
 		},
 		{
 			"eventType": "block",
@@ -3531,10 +3613,10 @@
 						{
 							"id": "set-position",
 							"objectClass": "medCab",
-							"sid": 938597584405966,
+							"sid": 365085961623797,
 							"parameters": {
-								"x": "1325",
-								"y": "215"
+								"x": "1220",
+								"y": "265"
 							}
 						},
 						{
@@ -3544,9 +3626,87 @@
 							"parameters": {
 								"visibility": "visible"
 							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "Volume_Hint",
+							"sid": 871320925445242,
+							"parameters": {
+								"layer": "0"
+							}
 						}
 					],
 					"sid": 730920322025603
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 498632610643056,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Volume_Hint"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "medCab",
+							"sid": 330532766661029,
+							"parameters": {
+								"instance-variable": "opened"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 746144612341135,
+							"parameters": {
+								"object-to-create": "dialogue_box",
+								"layer": "1",
+								"x": "960",
+								"y": "880",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 372204003789861,
+							"parameters": {
+								"object-to-create": "DialogueText",
+								"layer": "1",
+								"x": "dialogue_box.X",
+								"y": "dialogue_box.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-font-face",
+							"objectClass": "DialogueText",
+							"sid": 665926325009812,
+							"parameters": {
+								"font-face": "\"Noteworthy\"",
+								"style": "normal"
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "DialogueText",
+							"sid": 673971110920496,
+							"parameters": {
+								"text": "\"75%\"",
+								"duration": "2"
+							}
+						}
+					],
+					"sid": 315311142088725
 				},
 				{
 					"eventType": "block",
@@ -3580,6 +3740,45 @@
 						}
 					],
 					"sid": 582653620759161
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 806402818014346,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "medCab"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "medCab",
+							"sid": 669781180467575,
+							"parameters": {
+								"instance-variable": "opened"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 378170661126145,
+							"parameters": {
+								"audio-file": "NegativeFeedback",
+								"loop": "not-looping",
+								"volume": "-5",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 299098165362655
 				},
 				{
 					"eventType": "block",

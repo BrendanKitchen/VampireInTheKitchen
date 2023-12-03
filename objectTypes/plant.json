@@ -26,6 +26,7 @@
 			{
 				"frames": [
 					{
+<<<<<<< Updated upstream
 						"width": 166,
 						"height": 204,
 						"originX": 0.5602409638554217,
@@ -34,6 +35,34 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"imageSpriteId": 4087593,
+=======
+						"width": 1565,
+						"height": 1801,
+						"originX": 0.5709149697832865,
+						"originY": 0.22661702104495324,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9219387,
+						"collisionPoly": {
+							"points": [
+								0.708626198083067,
+								0.03053858967240422,
+								0.9993610223642172,
+								0.6079955580233204,
+								0.6996805111821086,
+								0.9777901166018879,
+								0.46134185303514375,
+								0.9988895058300944,
+								0.2869009584664537,
+								0.9766796224319823,
+								0.0019169329073482429,
+								0.4147695724597446,
+								0.04536741214057508,
+								0.02387562465297057
+							]
+						},
+>>>>>>> Stashed changes
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

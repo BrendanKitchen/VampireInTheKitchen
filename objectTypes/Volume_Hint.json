@@ -1,7 +1,7 @@
 {
-	"name": "toilet",
+	"name": "Volume_Hint",
 	"plugin-id": "Sprite",
-	"sid": 475601961742827,
+	"sid": 925818453307167,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,27 +11,20 @@
 			{
 				"frames": [
 					{
-<<<<<<< Updated upstream
-						"width": 212,
-						"height": 142,
-						"originX": 0.5047169811320755,
-						"originY": 0.11267605633802817,
-=======
-						"width": 1643,
-						"height": 1833,
-						"originX": 0.46770174209625753,
-						"originY": -0.2145947150442206,
->>>>>>> Stashed changes
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 3661717,
+						"imageSpriteId": 1645124,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 223588984319750,
+				"sid": 819548502921151,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

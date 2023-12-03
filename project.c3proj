@@ -190,7 +190,8 @@
 			"pot_box",
 			"VolumeBar",
 			"ProgressBar",
-			"portait_box"
+			"portait_box",
+			"Volume_Hint"
 		],
 		"subfolders": []
 	},
