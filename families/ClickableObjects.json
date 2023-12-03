@@ -10,7 +10,6 @@
 		"baurbyPin",
 		"plant",
 		"magazine_tmp",
-		"H",
 		"H2",
 		"door",
 		"barofsoap",
@@ -30,6 +29,8 @@
 		"stake_A",
 		"stake_burned",
 		"CreditsButton",
-		"back"
+		"back",
+		"backarrow2",
+		"ToiletPaper"
 	]
 }

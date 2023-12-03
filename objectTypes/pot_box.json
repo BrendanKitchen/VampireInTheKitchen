@@ -1,7 +1,7 @@
 {
-	"name": "toilet",
+	"name": "pot_box",
 	"plugin-id": "Sprite",
-	"sid": 475601961742827,
+	"sid": 541682818872481,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,32 +11,20 @@
 			{
 				"frames": [
 					{
-						"width": 2000,
-						"height": 2757,
-						"originX": 0.5047169811320755,
-						"originY": 0.11267605633802817,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7974276,
-						"collisionPoly": {
-							"points": [
-								0,
-								0,
-								1,
-								0,
-								1,
-								0.9929577464788732,
-								0,
-								0.9929577464788732
-							]
-						},
+						"imageSpriteId": 720668,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 223588984319750,
+				"sid": 976498533585423,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
