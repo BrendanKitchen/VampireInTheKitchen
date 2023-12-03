@@ -19,73 +19,36 @@
 			{
 				"frames": [
 					{
-						"width": 2696,
-						"height": 2278,
-						"originX": 0.5,
-						"originY": 0.75,
+						"width": 1984,
+						"height": 1608,
+						"originX": 0.49899193548387094,
+						"originY": 0.5286069651741293,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1106599,
-						"collisionPoly": {
-							"points": [
-								0.003968253968253968,
-								0.005952380952380952,
-								0.996031746031746,
-								0.005952380952380952,
-								0.996031746031746,
-								1,
-								0.003968253968253968,
-								1
-							]
-						},
+						"imageSpriteId": 2640131,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					},
 					{
-						"width": 3672,
-						"height": 2515,
-						"originX": 0.5,
-						"originY": 0.75,
+						"width": 2609,
+						"height": 2021,
+						"originX": 0.30192031819262816,
+						"originY": 0.6042711821014264,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 514222,
+						"imageSpriteId": 7243891,
 						"collisionPoly": {
 							"points": [
-								0.003968253968253968,
-								0.005952380952380952,
-								0.996031746031746,
-								0.005952380952380952,
-								0.996031746031746,
+								0,
+								0,
 								1,
-								0.003968253968253968,
-								1
-							]
-						},
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
-					},
-					{
-						"width": 252,
-						"height": 168,
-						"originX": 0.5,
-						"originY": 0.75,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"imageSpriteId": 7150099,
-						"collisionPoly": {
-							"points": [
-								0.003968253968253968,
-								0.005952380952380952,
-								0.996031746031746,
-								0.005952380952380952,
-								0.996031746031746,
+								0.033810501853252385,
 								1,
-								0.003968253968253968,
+								1,
+								0,
 								1
 							]
 						},
