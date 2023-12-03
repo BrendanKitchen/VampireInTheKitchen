@@ -189,7 +189,8 @@
 			"crappot",
 			"pot_box",
 			"VolumeBar",
-			"ProgressBar"
+			"ProgressBar",
+			"portait_box"
 		],
 		"subfolders": []
 	},
