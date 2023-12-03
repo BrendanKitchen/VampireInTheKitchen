@@ -192,6 +192,16 @@
 			"sid": 649325942224383
 		},
 		{
+			"eventType": "variable",
+			"name": "magazine_clicked",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 777670113146805
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -2118,6 +2128,15 @@
 					"parameters": {
 						"layer": "1"
 					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 896234792651002,
+					"parameters": {
+						"variable": "magazine_clicked",
+						"value": "false"
+					}
 				}
 			],
 			"sid": 278442730890185,
@@ -3009,13 +3028,62 @@
 							"parameters": {
 								"instance-variable": "placed"
 							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 412027938855868,
+							"parameters": {
+								"variable": "magazine_clicked"
+							}
 						}
 					],
 					"actions": [
 						{
 							"id": "move-to-layer",
 							"objectClass": "barofsoap",
-							"sid": 489242838870242,
+							"sid": 883030474450489,
+							"parameters": {
+								"layer": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "barofsoap",
+							"sid": 418248397455646,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 539728080928745
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "barofsoap",
+							"sid": 527545803981441,
+							"parameters": {
+								"instance-variable": "placed"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 158194734966373,
+							"parameters": {
+								"variable": "magazine_clicked"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-layer",
+							"objectClass": "barofsoap",
+							"sid": 619427488060614,
 							"parameters": {
 								"layer": "1"
 							}
@@ -3023,7 +3091,7 @@
 						{
 							"id": "set-visible",
 							"objectClass": "barofsoap",
-							"sid": 323504896273775,
+							"sid": 310329436631536,
 							"parameters": {
 								"visibility": "visible"
 							}
@@ -3031,10 +3099,10 @@
 						{
 							"id": "move-to-top",
 							"objectClass": "barofsoap",
-							"sid": 144038448063867
+							"sid": 130411074642531
 						}
 					],
-					"sid": 539728080928745
+					"sid": 155941248615691
 				},
 				{
 					"eventType": "block",
@@ -3183,12 +3251,6 @@
 							"sid": 986497397590147
 						}
 					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [],
-					"sid": 243640447664098
 				},
 				{
 					"eventType": "block",
@@ -3630,31 +3692,24 @@
 						"click-type": "clicked",
 						"object-clicked": "magazine_tmp"
 					}
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "barofsoap",
-					"sid": 693610547629826,
-					"parameters": {
-						"instance-variable": "placed"
-					}
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 616550585328391,
+					"parameters": {
+						"variable": "magazine_clicked",
+						"value": "true"
+					}
+				},
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 523808836016719,
 					"parameters": {
 						"layout": "Magazine_Zoomed"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "barofsoap",
-					"sid": 397843459685913,
-					"parameters": {
-						"visibility": "invisible"
 					}
 				},
 				{
@@ -3690,6 +3745,16 @@
 					"parameters": {
 						"visibility": "invisible"
 					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "floor_bg",
+					"sid": 219529383996938
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "magazine_zoomed",
+					"sid": 329030750813905
 				}
 			],
 			"sid": 852912233998666
