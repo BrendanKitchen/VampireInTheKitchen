@@ -189,7 +189,8 @@
 			"crappot",
 			"pot_box",
 			"VolumeBar",
-			"ProgressBar"
+			"ProgressBar",
+			"portait_box"
 		],
 		"subfolders": []
 	},
@@ -249,6 +250,30 @@
 					"name": "MainMenuButtonPress.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 813548150624518,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "PickingPuttingPotNoPrep.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 731217626962528,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "PickingPuttingPotwPrep.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 784447712542851,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "CrackingLock.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 365744736165599,
 					"file-info": {
 						"purpose": "none"
 					}

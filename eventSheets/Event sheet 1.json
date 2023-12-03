@@ -163,7 +163,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "Volume_Bar_Value",
+			"name": "Volume",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
@@ -531,6 +531,15 @@
 						"click-type": "clicked",
 						"object-clicked": "lock"
 					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "stake_A",
+					"sid": 734153536388648,
+					"parameters": {
+						"object": "Inventory_Box"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -580,6 +589,76 @@
 				}
 			],
 			"sid": 320585747195765
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 169342786449030,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "lock"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "stake_A",
+					"sid": 175009950704231,
+					"parameters": {
+						"object": "Inventory_Box"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 368173509486098,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 593160990040253,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 884478799484187,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 868061874491768,
+					"parameters": {
+						"text": "\"The lock broke\"",
+						"duration": "0.8"
+					}
+				}
+			],
+			"sid": 959936142320773
 		},
 		{
 			"eventType": "block",
@@ -3484,8 +3563,8 @@
 					"conditions": [
 						{
 							"id": "is-overlapping-another-object",
-							"objectClass": "grid",
-							"sid": 746976455914073,
+							"objectClass": "portait_box",
+							"sid": 817506943126706,
 							"parameters": {
 								"object": "port_tmp"
 							}
@@ -3520,41 +3599,27 @@
 								"x": "grid.X",
 								"y": "grid.Y"
 							}
-						}
-					],
-					"sid": 315383642690976
-				},
-				{
-					"eventType": "block",
-					"conditions": [
+						},
 						{
-							"id": "compare-instance-variable",
-							"objectClass": "grid",
-							"sid": 756871853582860,
+							"id": "set-enabled",
+							"objectClass": "port_tmp",
+							"sid": 640616451053696,
+							"behaviorType": "DragDrop",
 							"parameters": {
-								"instance-variable": "position",
-								"comparison": 0,
-								"value": "port_tmp.Position"
+								"state": "disabled"
 							}
 						},
 						{
-							"id": "trigger-once-while-true",
-							"objectClass": "System",
-							"sid": 931234497848337
-						}
-					],
-					"actions": [
-						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 315958884328548,
+							"sid": 279489080480958,
 							"parameters": {
 								"variable": "Positioned",
 								"value": "1"
 							}
 						}
 					],
-					"sid": 159660199852277
+					"sid": 315383642690976
 				}
 			]
 		},
@@ -4001,6 +4066,18 @@
 					"sid": 757122095493931
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 117605549093880,
+					"parameters": {
+						"audio-file": "CrackingLock",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "destroy",
 					"objectClass": "baurbyPin",
 					"sid": 778915866589678
@@ -4078,6 +4155,18 @@
 					"id": "destroy",
 					"objectClass": "barofsoap",
 					"sid": 308760805654464
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 185275109896911,
+					"parameters": {
+						"audio-file": "PickingPuttingPotNoPrep",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				},
 				{
 					"id": "move-forward",
@@ -4759,15 +4848,6 @@
 								"variable": "VolumeSlider_Correct",
 								"value": "true"
 							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 995653371544588,
-							"parameters": {
-								"variable": "Volume_Bar_Value",
-								"value": "VolumeBar.Value"
-							}
 						}
 					],
 					"sid": 498816240983790
@@ -4823,24 +4903,6 @@
 							"sid": 507617537711773,
 							"parameters": {
 								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 110579397602529,
-							"parameters": {
-								"variable": "VolumeSlider_Correct",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 485131110395340,
-							"parameters": {
-								"variable": "Volume_Bar_Value",
-								"value": "VolumeBar.Value"
 							}
 						}
 					],

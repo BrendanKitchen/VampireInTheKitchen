@@ -124,6 +124,11 @@
 					}
 				},
 				{
+					"id": "move-to-bottom",
+					"objectClass": "H2",
+					"sid": 699365836635481
+				},
+				{
 					"id": "play",
 					"objectClass": "Audio",
 					"sid": 564718758155166,
@@ -169,6 +174,11 @@
 					"parameters": {
 						"visibility": "visible"
 					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "H2",
+					"sid": 454545653822933
 				},
 				{
 					"id": "play",
@@ -256,11 +266,6 @@
 				}
 			],
 			"actions": [
-				{
-					"id": "move-to-top",
-					"objectClass": "H2",
-					"sid": 135588583612943
-				},
 				{
 					"id": "set-visible",
 					"objectClass": "H2",
@@ -487,6 +492,11 @@
 					"parameters": {
 						"visibility": "invisible"
 					}
+				},
+				{
+					"id": "move-to-bottom",
+					"objectClass": "H2",
+					"sid": 158728261885661
 				},
 				{
 					"id": "play",
