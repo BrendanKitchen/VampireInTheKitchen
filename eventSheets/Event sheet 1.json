@@ -172,6 +172,36 @@
 			"sid": 607893237721346
 		},
 		{
+			"eventType": "variable",
+			"name": "resetnumber",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 331613353907160
+		},
+		{
+			"eventType": "variable",
+			"name": "resetnumber2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 840845163934449
+		},
+		{
+			"eventType": "variable",
+			"name": "resetpuzzlelayout",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 572559165532407
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -208,83 +238,16 @@
 					}
 				},
 				{
-					"id": "set-position",
-					"objectClass": "port_tmp",
-					"sid": 698896015557882,
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 896448983965539,
 					"parameters": {
-						"x": "round(random(1500,1800))",
-						"y": "round(random(100,900))"
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "port_tmp",
-					"sid": 986503653892186,
-					"parameters": {
-						"instance-variable": "Sequence",
-						"value": "Self.IID"
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "grid",
-					"sid": 888145511152684,
-					"parameters": {
-						"instance-variable": "Sequence",
-						"value": "port_tmp.Sequence"
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "grid",
-					"sid": 377490038899406,
-					"parameters": {
-						"instance-variable": "position",
-						"value": "Self.position"
+						"variable": "resetnumber",
+						"value": "1"
 					}
 				}
 			],
 			"sid": 597958259212347
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 992534572621589
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 190117203981091,
-					"parameters": {
-						"variable": "randomized_puzzle"
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"id": "set-position",
-					"objectClass": "port_tmp",
-					"sid": 816238489830717,
-					"parameters": {
-						"x": "round(random(1500,1800))",
-						"y": "round(random(100,900))"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 716583478843298,
-					"parameters": {
-						"variable": "randomized_puzzle",
-						"value": "true"
-					}
-				}
-			],
-			"sid": 634886482762244
 		},
 		{
 			"eventType": "block",
@@ -534,8 +497,8 @@
 				},
 				{
 					"id": "is-overlapping-another-object",
-					"objectClass": "stake_A",
-					"sid": 734153536388648,
+					"objectClass": "baurbyPin",
+					"sid": 368480265592806,
 					"parameters": {
 						"object": "Inventory_Box"
 					},
@@ -605,8 +568,8 @@
 				},
 				{
 					"id": "is-overlapping-another-object",
-					"objectClass": "stake_A",
-					"sid": 175009950704231,
+					"objectClass": "baurbyPin",
+					"sid": 775751117157964,
 					"parameters": {
 						"object": "Inventory_Box"
 					}
@@ -3083,6 +3046,51 @@
 							}
 						},
 						{
+							"id": "set-instvar-value",
+							"objectClass": "port_tmp",
+							"sid": 274887983459355,
+							"parameters": {
+								"instance-variable": "Sequence",
+								"value": "Self.IID"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "port_tmp",
+							"sid": 230973416579506,
+							"parameters": {
+								"x": "round(random(1500,1800))",
+								"y": "round(random(100,900))"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "grid",
+							"sid": 374462941474099,
+							"parameters": {
+								"instance-variable": "position",
+								"value": "Self.position"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 795847424747092,
+							"parameters": {
+								"variable": "resetpuzzlelayout",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 226473007794925,
+							"parameters": {
+								"variable": "LockCombo",
+								"value": "false"
+							}
+						},
+						{
 							"id": "set-visible",
 							"objectClass": "Inventory",
 							"sid": 354817878555774,
@@ -3286,6 +3294,212 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 430036987477670,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Letter_Lock"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 292054203024689,
+					"parameters": {
+						"variable": "puzzlescompleted",
+						"comparison": 5,
+						"value": "4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 687907470395523,
+					"parameters": {
+						"layout": "LockedPuzzle"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory",
+					"sid": 882339727009291,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory_Box",
+					"sid": 348156216510772,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_burned",
+					"sid": 739168554287017,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 424977615828695
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 113926018589480,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "portait_temp"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 322002583977813,
+					"parameters": {
+						"variable": "puzzlescompleted",
+						"comparison": 5,
+						"value": "4"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 629779278312820,
+					"parameters": {
+						"variable": "LockCombo"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 872747636805162,
+					"parameters": {
+						"layout": "Sliding Puzzle"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory",
+					"sid": 222515821717252,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory_Box",
+					"sid": 497146387180961,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_burned",
+					"sid": 356197915252078,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 225516992370634
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-dragging",
+					"objectClass": "port_tmp",
+					"sid": 495434063223298,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"actions": [],
+			"sid": 864925898465071,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "portait_box",
+							"sid": 769896939177145,
+							"parameters": {
+								"object": "port_tmp"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "grid",
+							"sid": 231765091915410,
+							"parameters": {
+								"instance-variable": "Sequence",
+								"comparison": 0,
+								"value": "port_tmp.Sequence"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 196242659283410,
+							"parameters": {
+								"first-value": "distance(grid.X,grid.Y,port_tmp.X, port_tmp.Y)",
+								"comparison": 2,
+								"second-value": "20"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "port_tmp",
+							"sid": 379985530851127,
+							"parameters": {
+								"x": "grid.X",
+								"y": "grid.Y"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "port_tmp",
+							"sid": 795721588750238,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 580297112603617,
+							"parameters": {
+								"variable": "Positioned",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 694287284390827
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 497458932728015,
@@ -3417,19 +3631,11 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 972033545117959,
+					"sid": 629513035666649,
 					"parameters": {
 						"variable": "puzzlescompleted",
-						"comparison": 5,
+						"comparison": 0,
 						"value": "4"
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 684481382514847,
-					"parameters": {
-						"variable": "VolumeSlider_Correct"
 					}
 				}
 			],
@@ -3465,6 +3671,15 @@
 					"parameters": {
 						"visibility": "invisible"
 					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 785455476718119,
+					"parameters": {
+						"variable": "puzzlescompleted",
+						"value": "1"
+					}
 				}
 			],
 			"sid": 628031077048820
@@ -3473,23 +3688,13 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 313605636780149,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "portait_temp"
-					}
-				},
-				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 897037520066769,
+					"sid": 346027836035225,
 					"parameters": {
 						"variable": "puzzlescompleted",
-						"comparison": 5,
-						"value": "4"
+						"comparison": 0,
+						"value": "5"
 					}
 				},
 				{
@@ -3501,12 +3706,9 @@
 					}
 				},
 				{
-					"id": "compare-boolean-eventvar",
+					"id": "trigger-once-while-true",
 					"objectClass": "System",
-					"sid": 288906050403138,
-					"parameters": {
-						"variable": "VolumeSlider_Correct"
-					}
+					"sid": 136867713539709
 				}
 			],
 			"actions": [
@@ -3516,6 +3718,14 @@
 					"sid": 408921708816930,
 					"parameters": {
 						"layout": "Sliding Puzzle"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "portait_temp",
+					"sid": 753744049480705,
+					"parameters": {
+						"layer": "4"
 					}
 				},
 				{
@@ -3669,6 +3879,19 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 315991527497371,
+					"parameters": {
+						"object-to-create": "portait_temp",
+						"layer": "0",
+						"x": "port_tmp.X",
+						"y": "port_tmp.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
 				{
 					"id": "set-visible",
 					"objectClass": "port_tmp",
