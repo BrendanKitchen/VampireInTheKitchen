@@ -168,19 +168,6 @@
 					}
 				},
 				{
-					"id": "set-visible",
-					"objectClass": "H2",
-					"sid": 119913740671443,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "move-to-top",
-					"objectClass": "H2",
-					"sid": 454545653822933
-				},
-				{
 					"id": "play",
 					"objectClass": "Audio",
 					"sid": 466317859645505,
@@ -203,6 +190,37 @@
 				}
 			],
 			"sid": 378813785028031,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "H2",
+							"sid": 392072439896513,
+							"parameters": {
+								"instance-variable": "present"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-top",
+							"objectClass": "H2",
+							"sid": 469575076159466
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "H2",
+							"sid": 983948413432353,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 419491461363673
+				}
+			],
 			"isOrBlock": true
 		},
 		{
@@ -230,6 +248,19 @@
 					}
 				},
 				{
+					"id": "move-to-top",
+					"objectClass": "H2",
+					"sid": 170953930437516
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "H2",
+					"sid": 426349865051297,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
 					"sid": 554666645249435,
@@ -237,45 +268,9 @@
 						"variable": "puzzlescompleted",
 						"value": "1"
 					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 371225576619926,
-					"parameters": {
-						"audio-file": "Interact",
-						"loop": "not-looping",
-						"volume": "-10",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
-					}
 				}
 			],
 			"sid": 799060492359263
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "H2",
-					"sid": 437152535751838,
-					"parameters": {
-						"instance-variable": "present"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-visible",
-					"objectClass": "H2",
-					"sid": 365226716700867,
-					"parameters": {
-						"visibility": "visible"
-					}
-				}
-			],
-			"sid": 913831458670186
 		},
 		{
 			"eventType": "block",
@@ -478,25 +473,25 @@
 			],
 			"actions": [
 				{
+					"id": "move-to-bottom",
+					"objectClass": "H2",
+					"sid": 699177575240871
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "H2",
+					"sid": 980496614238468,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 846336684771164,
 					"parameters": {
 						"layout": "Settings Page"
 					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "H2",
-					"sid": 453920636601059,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "move-to-bottom",
-					"objectClass": "H2",
-					"sid": 158728261885661
 				},
 				{
 					"id": "play",
@@ -511,7 +506,33 @@
 					}
 				}
 			],
-			"sid": 980911967703008
+			"sid": 980911967703008,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "H2",
+							"sid": 656078632102099,
+							"parameters": {
+								"instance-variable": "present"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "H2",
+							"sid": 118133880910204,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 563076287929471
+				}
+			]
 		}
 	],
 	"sid": 588019371100103
