@@ -270,6 +270,15 @@
 					"parameters": {
 						"visibility": "invisible"
 					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 125555091646938,
+					"parameters": {
+						"variable": "Start",
+						"value": "true"
+					}
 				}
 			],
 			"sid": 597958259212347
@@ -412,6 +421,192 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
+					"sid": 356552177560147,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "mirror"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 309255609495986,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 369107674612911,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 347408574181995,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 504454621402325,
+					"parameters": {
+						"text": "\"mirror sample text\"",
+						"duration": "2"
+					}
+				}
+			],
+			"sid": 554713338340426
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 868872785765190,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "toilet"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 172785532509548,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 278358402338268,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 320840364490219,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 265087639364352,
+					"parameters": {
+						"text": "\"toilet text\"",
+						"duration": "2"
+					}
+				}
+			],
+			"sid": 303085239795152
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 548139144496661,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "stake_burned"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 880595031424443,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 115610662736445,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 700095524135386,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 918434410121820,
+					"parameters": {
+						"text": "\"It has a letter 'G' in it\"",
+						"duration": "2"
+					}
+				}
+			],
+			"sid": 700798948218264
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
 					"sid": 184171116924637,
 					"parameters": {
 						"mouse-button": "left",
@@ -467,9 +662,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 286942696143748,
+					"sid": 889739965441350,
 					"parameters": {
-						"text": "\"test\"",
+						"text": "\"Maybe it can help loosen something up\"",
 						"duration": "0.5"
 					}
 				}
@@ -2257,6 +2452,23 @@
 						"x": "1120",
 						"y": "430"
 					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 871797678207977,
+					"parameters": {
+						"variable": "Volume",
+						"value": "VolumeBar.Value"
+					}
+				},
+				{
+					"id": "set-value",
+					"objectClass": "VolumeBar",
+					"sid": 329291678520299,
+					"parameters": {
+						"value": "Volume"
+					}
 				}
 			],
 			"sid": 647355673441920
@@ -2309,6 +2521,15 @@
 							"sid": 161681210235153,
 							"parameters": {
 								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 385784226309607,
+							"parameters": {
+								"variable": "Volume",
+								"value": "VolumeBar.Value"
 							}
 						},
 						{
@@ -2374,6 +2595,15 @@
 							"sid": 250457682008126,
 							"parameters": {
 								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 441919952306776,
+							"parameters": {
+								"variable": "Volume",
+								"value": "VolumeBar.Value"
 							}
 						}
 					],
@@ -2625,6 +2855,15 @@
 					"sid": 210368703859211,
 					"parameters": {
 						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 392298829100574,
+					"parameters": {
+						"variable": "Volume",
+						"value": "VolumeBar.Value"
 					}
 				}
 			],
@@ -3387,6 +3626,82 @@
 					"sid": 686119116215469
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 469304487121871,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "magazine_tmp"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "barofsoap",
+					"sid": 693610547629826,
+					"parameters": {
+						"instance-variable": "placed"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 523808836016719,
+					"parameters": {
+						"layout": "Magazine_Zoomed"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "barofsoap",
+					"sid": 397843459685913,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 274611198064787,
+					"parameters": {
+						"variable": "OnScene1",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 169359805958439,
+					"parameters": {
+						"variable": "OnScene2",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "baurbyPin",
+					"sid": 543177353504706,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_A",
+					"sid": 109187936482363,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 852912233998666
 		},
 		{
 			"eventType": "block",
@@ -4702,50 +5017,6 @@
 				}
 			],
 			"sid": 708638185652792
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 240833410166123,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "magazine_tmp"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 568939757000419,
-					"parameters": {
-						"layout": "Magazine_Zoomed"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 752373834644076,
-					"parameters": {
-						"variable": "OnScene1",
-						"value": "true"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 248781983321065,
-					"parameters": {
-						"variable": "OnScene2",
-						"value": "false"
-					}
-				}
-			],
-			"sid": 942388179873892
 		},
 		{
 			"eventType": "block",
