@@ -2,7 +2,7 @@
 	"name": "VolumeBar",
 	"plugin-id": "sliderbar",
 	"sid": 485820339699386,
-	"isGlobal": true,
+	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
