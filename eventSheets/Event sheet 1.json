@@ -289,9 +289,155 @@
 						"variable": "Start",
 						"value": "true"
 					}
+				},
+				{
+					"id": "set-value",
+					"objectClass": "VolumeBar",
+					"sid": 121987484834988,
+					"parameters": {
+						"value": "Volume"
+					}
 				}
 			],
 			"sid": 597958259212347
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 991515784612791
+				}
+			],
+			"actions": [],
+			"sid": 621020860570464,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "VolumeBar",
+							"sid": 693584407314443,
+							"parameters": {
+								"comparison": 0,
+								"value": "75"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Value",
+							"sid": 554346965718119,
+							"parameters": {
+								"text": "VolumeBar.Value & \"%\"\n"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton",
+							"sid": 482215991534132,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton2",
+							"sid": 680403022661510,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 921177948692929,
+							"parameters": {
+								"variable": "VolumeSlider_Correct",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 591571341388676,
+							"parameters": {
+								"variable": "Volume",
+								"value": "VolumeBar.Value"
+							}
+						}
+					],
+					"sid": 860073975402281
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 338417994950185
+				}
+			],
+			"actions": [],
+			"sid": 591657142052206,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "VolumeBar",
+							"sid": 566794001657151,
+							"parameters": {
+								"comparison": 0,
+								"value": "75"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Value",
+							"sid": 665333928758562,
+							"parameters": {
+								"text": "VolumeBar.Value & \"%\"\n"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton",
+							"sid": 881006167802793,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton2",
+							"sid": 922104287049504,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 153901334757035,
+							"parameters": {
+								"variable": "Volume",
+								"value": "VolumeBar.Value"
+							}
+						}
+					],
+					"sid": 134302845607858
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -970,6 +1116,14 @@
 						"click-type": "clicked",
 						"object-clicked": "stake_A"
 					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "stake_A",
+					"sid": 189227659849360,
+					"parameters": {
+						"object": "Inventory_Box"
+					}
 				}
 			],
 			"actions": [
@@ -1204,35 +1358,45 @@
 				{
 					"id": "set-animation-speed",
 					"objectClass": "sink_faucet",
-					"sid": 128371713357996,
+					"sid": 543115618537590,
 					"parameters": {
-						"speed": "10"
+						"speed": "13"
 					}
 				},
 				{
-					"id": "set-animation",
+					"id": "start-animation",
 					"objectClass": "sink_faucet",
-					"sid": 903158291380176,
+					"sid": 853278035011249,
 					"parameters": {
-						"animation": "\"water drop\"",
-						"from": "beginning"
+						"from": "current-frame"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 102750068042565,
+					"parameters": {
+						"audio-file": "SinkDrop",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				},
 				{
 					"id": "set-animation-speed",
 					"objectClass": "sink_knob_R",
-					"sid": 106046524950673,
+					"sid": 395508255195408,
 					"parameters": {
-						"speed": "5"
+						"speed": "6"
 					}
 				},
 				{
-					"id": "set-animation",
+					"id": "start-animation",
 					"objectClass": "sink_knob_R",
-					"sid": 179102840893356,
+					"sid": 258671458723824,
 					"parameters": {
-						"animation": "\"knob_turn_R\"",
-						"from": "beginning"
+						"from": "current-frame"
 					}
 				},
 				{
@@ -1269,35 +1433,45 @@
 				{
 					"id": "set-animation-speed",
 					"objectClass": "sink_faucet",
-					"sid": 792231312004889,
+					"sid": 246237118622102,
 					"parameters": {
-						"speed": "10"
+						"speed": "13"
 					}
 				},
 				{
-					"id": "set-animation",
+					"id": "start-animation",
 					"objectClass": "sink_faucet",
-					"sid": 814345078251166,
+					"sid": 766389154534896,
 					"parameters": {
-						"animation": "\"water drop\"",
-						"from": "beginning"
+						"from": "current-frame"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 152325082408653,
+					"parameters": {
+						"audio-file": "SinkDrop",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				},
 				{
 					"id": "set-animation-speed",
 					"objectClass": "sink_knob_L",
-					"sid": 474286058956583,
+					"sid": 808319863804981,
 					"parameters": {
-						"speed": "5"
+						"speed": "6"
 					}
 				},
 				{
-					"id": "set-animation",
+					"id": "start-animation",
 					"objectClass": "sink_knob_L",
-					"sid": 562613181853255,
+					"sid": 534634161639537,
 					"parameters": {
-						"animation": "\"knob_turn_L\"",
-						"from": "beginning"
+						"from": "current-frame"
 					}
 				},
 				{
@@ -1337,9 +1511,113 @@
 						"variable": "knob_clicked",
 						"value": "1"
 					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "sink_faucet",
+					"sid": 712713297971460,
+					"parameters": {
+						"frame-number": "0"
+					}
 				}
 			],
 			"sid": 440707638525572
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "sink_knob_L",
+					"sid": 784597459314710,
+					"parameters": {
+						"animation": "\"knob_turn_L\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "sink_knob_L",
+					"sid": 368001324655139,
+					"parameters": {
+						"frame-number": "3"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "sink_knob_L",
+					"sid": 420082634182726,
+					"parameters": {
+						"frame-number": "2"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "sink_knob_L",
+					"sid": 466614533155316,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "sink_knob_L",
+					"sid": 537788676524776,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 431107098672524
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "sink_knob_R",
+					"sid": 667723888106314,
+					"parameters": {
+						"animation": "\"knob_turn_R\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "sink_knob_R",
+					"sid": 483202715157863,
+					"parameters": {
+						"frame-number": "3"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "sink_knob_R",
+					"sid": 183938708092888,
+					"parameters": {
+						"frame-number": "2"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "sink_knob_R",
+					"sid": 714006740010610,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "sink_knob_R",
+					"sid": 858706781174810,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 890357020721427
 		},
 		{
 			"eventType": "block",
@@ -1629,6 +1907,39 @@
 						}
 					],
 					"sid": 332079729555688
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "stake_burned",
+							"sid": 724302209197727,
+							"parameters": {
+								"instance-variable": "placed"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-layer",
+							"objectClass": "stake_A",
+							"sid": 428667699236515,
+							"parameters": {
+								"layer": "4"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "baurbyPin",
+							"sid": 958953641619394,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 346622870995871
 				}
 			],
 			"isOrBlock": true
@@ -2510,164 +2821,9 @@
 						"x": "1120",
 						"y": "430"
 					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 871797678207977,
-					"parameters": {
-						"variable": "Volume",
-						"value": "VolumeBar.Value"
-					}
-				},
-				{
-					"id": "set-value",
-					"objectClass": "VolumeBar",
-					"sid": 329291678520299,
-					"parameters": {
-						"value": "Volume"
-					}
 				}
 			],
 			"sid": 647355673441920
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 395391526005541
-				}
-			],
-			"actions": [],
-			"sid": 728693271950850,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-value",
-							"objectClass": "VolumeBar",
-							"sid": 688098898327941,
-							"parameters": {
-								"comparison": 0,
-								"value": "75"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-text",
-							"objectClass": "Value",
-							"sid": 118863326134974,
-							"parameters": {
-								"text": "VolumeBar.Value & \"%\"\n"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "MainMenuButton",
-							"sid": 160996614431432,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "MainMenuButton2",
-							"sid": 161681210235153,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 385784226309607,
-							"parameters": {
-								"variable": "Volume",
-								"value": "VolumeBar.Value"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 120647523219328,
-							"parameters": {
-								"variable": "VolumeSlider_Correct",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 601641608635235
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 873381857562745
-				}
-			],
-			"actions": [],
-			"sid": 978042510986343,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-value",
-							"objectClass": "VolumeBar",
-							"sid": 538298829661547,
-							"parameters": {
-								"comparison": 0,
-								"value": "75"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-text",
-							"objectClass": "Value",
-							"sid": 687221048261994,
-							"parameters": {
-								"text": "VolumeBar.Value & \"%\"\n"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "MainMenuButton",
-							"sid": 236658831079630,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "MainMenuButton2",
-							"sid": 250457682008126,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 441919952306776,
-							"parameters": {
-								"variable": "Volume",
-								"value": "VolumeBar.Value"
-							}
-						}
-					],
-					"sid": 883035192120911
-				}
-			]
 		},
 		{
 			"eventType": "block",
@@ -2913,15 +3069,6 @@
 					"sid": 210368703859211,
 					"parameters": {
 						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 392298829100574,
-					"parameters": {
-						"variable": "Volume",
-						"value": "VolumeBar.Value"
 					}
 				}
 			],
@@ -3188,6 +3335,31 @@
 						}
 					],
 					"sid": 464715475797227
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "stake_burned",
+							"sid": 430810074291033,
+							"parameters": {
+								"instance-variable": "placed"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-layer",
+							"objectClass": "stake_A",
+							"sid": 812938510793315,
+							"parameters": {
+								"layer": "4"
+							}
+						}
+					],
+					"sid": 462305874623122
 				},
 				{
 					"eventType": "block",
@@ -3579,10 +3751,18 @@
 						{
 							"id": "set-position",
 							"objectClass": "medCab",
-							"sid": 938597584405966,
+							"sid": 365085961623797,
 							"parameters": {
-								"x": "1325",
-								"y": "215"
+								"x": "1220",
+								"y": "265"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "stake_A",
+							"sid": 668822166631199,
+							"parameters": {
+								"layer": "0"
 							}
 						},
 						{
@@ -3592,9 +3772,87 @@
 							"parameters": {
 								"visibility": "visible"
 							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "Volume_Hint",
+							"sid": 871320925445242,
+							"parameters": {
+								"layer": "0"
+							}
 						}
 					],
 					"sid": 730920322025603
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 498632610643056,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Volume_Hint"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "medCab",
+							"sid": 330532766661029,
+							"parameters": {
+								"instance-variable": "opened"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 746144612341135,
+							"parameters": {
+								"object-to-create": "dialogue_box",
+								"layer": "1",
+								"x": "960",
+								"y": "880",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 372204003789861,
+							"parameters": {
+								"object-to-create": "DialogueText",
+								"layer": "1",
+								"x": "dialogue_box.X",
+								"y": "dialogue_box.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-font-face",
+							"objectClass": "DialogueText",
+							"sid": 665926325009812,
+							"parameters": {
+								"font-face": "\"Noteworthy\"",
+								"style": "normal"
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "DialogueText",
+							"sid": 673971110920496,
+							"parameters": {
+								"text": "\"75%\"",
+								"duration": "2"
+							}
+						}
+					],
+					"sid": 315311142088725
 				},
 				{
 					"eventType": "block",
@@ -3628,6 +3886,45 @@
 						}
 					],
 					"sid": 582653620759161
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 806402818014346,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "medCab"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "medCab",
+							"sid": 669781180467575,
+							"parameters": {
+								"instance-variable": "opened"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 378170661126145,
+							"parameters": {
+								"audio-file": "NegativeFeedback",
+								"loop": "not-looping",
+								"volume": "-5",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 299098165362655
 				},
 				{
 					"eventType": "block",
@@ -3707,6 +4004,14 @@
 								"y": "stake_A.Y",
 								"create-hierarchy": false,
 								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "rotate-clockwise",
+							"objectClass": "stake_burned",
+							"sid": 255828908998973,
+							"parameters": {
+								"degrees": "65"
 							}
 						},
 						{

@@ -50,8 +50,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 1336,
-						"y": 275,
+						"x": 1319,
+						"y": 346,
 						"width": 32,
 						"height": 180,
 						"originX": 0.4722222222222222,
@@ -62,7 +62,7 @@
 							1,
 							1
 						],
-						"angle": 0.38694307821053286,
+						"angle": 1.4156600129999473,
 						"zElevation": 0
 					}
 				},
@@ -170,10 +170,10 @@
 					"world": {
 						"x": 1402,
 						"y": 639,
-						"width": 679.9689895959634,
-						"height": 901.611945707451,
-						"originX": 0.5047169811320755,
-						"originY": 0.11267605633802817,
+						"width": 558.5945249530839,
+						"height": 599.4394981798179,
+						"originX": 0.46770174209625753,
+						"originY": -0.2145947150442206,
 						"color": [
 							1,
 							1,
@@ -202,10 +202,10 @@
 					"world": {
 						"x": 1303,
 						"y": 614,
-						"width": 285.0014011056798,
-						"height": 342.3269342271943,
-						"originX": 0.5602409638554217,
-						"originY": 0.3872549019607843,
+						"width": 223.01359636519445,
+						"height": 246.61232341727077,
+						"originX": 0.5709149697832865,
+						"originY": 0.22661702104495324,
 						"color": [
 							1,
 							1,
@@ -940,7 +940,37 @@
 			"name": "uniteractable",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "Volume_Hint",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 98,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1099,
+						"y": 292,
+						"width": 186,
+						"height": 152,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 444312919059571,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
