@@ -191,7 +191,9 @@
 			"VolumeBar",
 			"ProgressBar",
 			"portait_box",
-			"Volume_Hint"
+			"Volume_Hint",
+			"Sprite",
+			"window_temp"
 		],
 		"subfolders": []
 	},
