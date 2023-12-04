@@ -483,23 +483,94 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "every-tick",
+					"id": "compare-time",
 					"objectClass": "System",
-					"sid": 889537351582403
+					"sid": 981689083902139,
+					"parameters": {
+						"comparison": 3,
+						"time-seconds": "20"
+					}
 				}
 			],
 			"actions": [
 				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 102701624583979,
+					"id": "set-animation-frame",
+					"objectClass": "window_temp",
+					"sid": 392825609620369,
 					"parameters": {
-						"variable": "Timer",
-						"value": "1"
+						"frame-number": "0"
 					}
 				}
 			],
 			"sid": 564010591569087
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-time",
+					"objectClass": "System",
+					"sid": 417007129846072,
+					"parameters": {
+						"comparison": 5,
+						"time-seconds": "21"
+					}
+				},
+				{
+					"id": "compare-time",
+					"objectClass": "System",
+					"sid": 958132081896471,
+					"parameters": {
+						"comparison": 3,
+						"time-seconds": "40"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "window_temp",
+					"sid": 729062759030841,
+					"parameters": {
+						"frame-number": "1"
+					}
+				}
+			],
+			"sid": 514613951878076
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-time",
+					"objectClass": "System",
+					"sid": 791927394198068,
+					"parameters": {
+						"comparison": 5,
+						"time-seconds": "40"
+					}
+				},
+				{
+					"id": "compare-time",
+					"objectClass": "System",
+					"sid": 239574797968698,
+					"parameters": {
+						"comparison": 3,
+						"time-seconds": "60"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "window_temp",
+					"sid": 810661450874251,
+					"parameters": {
+						"frame-number": "2"
+					}
+				}
+			],
+			"sid": 174622153110811
 		},
 		{
 			"eventType": "block",
