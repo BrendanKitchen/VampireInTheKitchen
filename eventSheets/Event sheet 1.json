@@ -4545,6 +4545,14 @@
 				},
 				{
 					"id": "set-visible",
+					"objectClass": "backarrow3",
+					"sid": 691447070391431,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
 					"objectClass": "Inventory",
 					"sid": 417101166686640,
 					"parameters": {
@@ -5058,6 +5066,22 @@
 					"parameters": {
 						"variable": "portaitpuzzleplayed",
 						"value": "false"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "backarrow3",
+					"sid": 372942073649025,
+					"parameters": {
+						"layer": "0"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "backarrow3",
+					"sid": 568007191385160,
+					"parameters": {
+						"visibility": "visible"
 					}
 				}
 			],
