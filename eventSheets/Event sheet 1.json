@@ -145,7 +145,7 @@
 			"eventType": "variable",
 			"name": "Start",
 			"type": "boolean",
-			"initialValue": "false",
+			"initialValue": "true",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -200,6 +200,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 777670113146805
+		},
+		{
+			"eventType": "variable",
+			"name": "plant_moved",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 819875110260253
 		},
 		{
 			"eventType": "block",
@@ -279,15 +289,6 @@
 					"sid": 267475157671195,
 					"parameters": {
 						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 125555091646938,
-					"parameters": {
-						"variable": "Start",
-						"value": "true"
 					}
 				},
 				{
@@ -722,6 +723,68 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
+					"sid": 648535078434708,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "T_textbox"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 692656884235561,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 138124012078220,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 543462411215962,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 580125762374785,
+					"parameters": {
+						"text": "\"There was a letter 'T' underneath the plant\"",
+						"duration": "2"
+					}
+				}
+			],
+			"sid": 218212939697103
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
 					"sid": 868872785765190,
 					"parameters": {
 						"mouse-button": "left",
@@ -980,6 +1043,76 @@
 				}
 			],
 			"sid": 645479664573616
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 583139113958890,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "plant"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 256764007495948,
+					"parameters": {
+						"variable": "plant_moved"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 424143889365468,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 478397914899318,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 306388900758996,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 796144621086404,
+					"parameters": {
+						"text": "\"plant moved test\"",
+						"duration": "2"
+					}
+				}
+			],
+			"sid": 319620981540408
 		},
 		{
 			"eventType": "block",
@@ -2241,6 +2374,15 @@
 							"sid": 803430820439845,
 							"parameters": {
 								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 859649568300693,
+							"parameters": {
+								"variable": "Start",
+								"value": "false"
 							}
 						}
 					],
@@ -4137,24 +4279,6 @@
 					}
 				},
 				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 274611198064787,
-					"parameters": {
-						"variable": "OnScene1",
-						"value": "true"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 169359805958439,
-					"parameters": {
-						"variable": "OnScene2",
-						"value": "false"
-					}
-				},
-				{
 					"id": "set-visible",
 					"objectClass": "baurbyPin",
 					"sid": 543177353504706,
@@ -4190,6 +4314,22 @@
 						"volume": "-5",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory",
+					"sid": 454735849673769,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory_Box",
+					"sid": 807935450704949,
+					"parameters": {
+						"visibility": "invisible"
 					}
 				}
 			],
@@ -4495,6 +4635,15 @@
 					}
 				},
 				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 887679934640002,
+					"parameters": {
+						"layer": "1",
+						"interactive": true
+					}
+				},
+				{
 					"id": "set-visible",
 					"objectClass": "VolumeBar",
 					"sid": 887229553350371,
@@ -4515,6 +4664,22 @@
 					"id": "move-to-top",
 					"objectClass": "H2",
 					"sid": 993439210818705
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "H2",
+					"sid": 857249504014019,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "H2",
+					"sid": 389149562259569,
+					"parameters": {
+						"layer": "0"
+					}
 				},
 				{
 					"id": "play",
@@ -5358,6 +5523,15 @@
 					"sid": 308760805654464
 				},
 				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 266555672357863,
+					"parameters": {
+						"variable": "plant_moved",
+						"value": "true"
+					}
+				},
+				{
 					"id": "play",
 					"objectClass": "Audio",
 					"sid": 185275109896911,
@@ -5429,6 +5603,19 @@
 						"text": "\"plant moved soap test\"",
 						"duration": "2"
 					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "T_textbox",
+					"sid": 967634641863075,
+					"parameters": {
+						"layer": "0"
+					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "T_textbox",
+					"sid": 233852890057571
 				}
 			],
 			"sid": 417877426724178

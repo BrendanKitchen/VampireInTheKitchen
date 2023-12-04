@@ -88,6 +88,22 @@
 						"variable": "FadeInComplete",
 						"value": "false"
 					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "H2",
+					"sid": 318827375078539,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "H2",
+					"sid": 119010433567377,
+					"parameters": {
+						"layer": "4"
+					}
 				}
 			],
 			"sid": 702250222680533
