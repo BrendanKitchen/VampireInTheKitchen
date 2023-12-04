@@ -78,11 +78,11 @@
 					"behaviors": {},
 					"world": {
 						"x": 1728,
-						"y": 448,
-						"width": 694,
-						"height": 966,
-						"originX": 0.5,
-						"originY": 0.5,
+						"y": 439,
+						"width": 355.328,
+						"height": 753.48,
+						"originX": 0.453125,
+						"originY": 0.35384615384615387,
 						"color": [
 							1,
 							1,
@@ -219,10 +219,10 @@
 					"world": {
 						"x": 1468,
 						"y": 977,
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 139,
+						"height": 129,
+						"originX": 0.5971223021582733,
+						"originY": 0.3953488372093023,
 						"color": [
 							1,
 							1,

@@ -193,7 +193,8 @@
 			"portait_box",
 			"Volume_Hint",
 			"Sprite",
-			"window_temp"
+			"window_temp",
+			"T_textbox"
 		],
 		"subfolders": []
 	},
