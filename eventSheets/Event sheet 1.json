@@ -222,6 +222,26 @@
 			"sid": 506070500909089
 		},
 		{
+			"eventType": "variable",
+			"name": "lock_broke",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 348138573784304
+		},
+		{
+			"eventType": "variable",
+			"name": "behind_portait",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 540867709010754
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -313,6 +333,19 @@
 					"id": "move-to-top",
 					"objectClass": "stake_A",
 					"sid": 706835440040180
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "screwdriver",
+					"sid": 145017273954913
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "screwdriver",
+					"sid": 532374167145871,
+					"parameters": {
+						"visibility": "visible"
+					}
 				}
 			],
 			"sid": 597958259212347
@@ -2201,6 +2234,11 @@
 					"parameters": {
 						"layer": "1"
 					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "stake_A",
+					"sid": 666500674660853
 				},
 				{
 					"id": "move-to-layer",
@@ -4703,6 +4741,15 @@
 					"id": "on-destroyed",
 					"objectClass": "Letter_Lock",
 					"sid": 723299982448529
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 946923298285406,
+					"parameters": {
+						"variable": "lock_broke"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -4756,6 +4803,15 @@
 					"sid": 415764640874642,
 					"parameters": {
 						"layer": "0"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 340828074505908,
+					"parameters": {
+						"variable": "lock_broke",
+						"value": "true"
 					}
 				}
 			],
@@ -5386,9 +5442,20 @@
 					}
 				},
 				{
-					"id": "destroy",
+					"id": "set-opacity",
 					"objectClass": "portait_temp",
-					"sid": 106693913156840
+					"sid": 581128349338258,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "portait_temp",
+					"sid": 913100737570698,
+					"parameters": {
+						"layer": "4"
+					}
 				}
 			],
 			"sid": 358580676117013
@@ -5403,15 +5470,33 @@
 					"parameters": {
 						"variable": "Final_Puzzle_Completed"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 849711898569584,
+					"parameters": {
+						"variable": "behind_portait"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
 				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 921934952477457,
+					"parameters": {
+						"variable": "behind_portait",
+						"value": "true"
+					}
+				},
+				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 536288433270423,
+					"sid": 944741595525249,
 					"parameters": {
-						"seconds": "2"
+						"seconds": "1"
 					}
 				},
 				{
@@ -5472,11 +5557,33 @@
 					}
 				},
 				{
-					"id": "move-to-layer",
-					"objectClass": "screwdriver",
-					"sid": 245098338953209,
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 180553344117999,
 					"parameters": {
-						"layer": "0"
+						"object-to-create": "screwdriver",
+						"layer": "0",
+						"x": "988",
+						"y": "486",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "screwdriver",
+					"sid": 361283678311205,
+					"parameters": {
+						"width": "341",
+						"height": "405"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "screwdriver",
+					"sid": 116336105601996,
+					"parameters": {
+						"angle": "331"
 					}
 				},
 				{
@@ -5485,14 +5592,6 @@
 					"sid": 825883470070344,
 					"parameters": {
 						"layer": "0"
-					}
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "screwdriver",
-					"sid": 244746050385562,
-					"parameters": {
-						"opacity": "100"
 					}
 				},
 				{
@@ -5534,68 +5633,6 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 531072751418721,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "tape"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "tape",
-					"sid": 969892763669310
-				}
-			],
-			"sid": 716855475178478
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 397303270746816,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "screwdriver"
-					}
-				},
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "screwdriver",
-					"sid": 497522255132687,
-					"parameters": {
-						"object": "Inventory_Box"
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"callFunction": "AddtoInventory",
-					"sid": 381757196662078,
-					"parameters": [
-						"\"screwdriver\""
-					]
-				},
-				{
-					"id": "destroy",
-					"objectClass": "screwdriver",
-					"sid": 595935244765176
-				}
-			],
-			"sid": 331142274378568
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "is-boolean-instance-variable-set",
 					"objectClass": "screwdriver",
 					"sid": 592010373543138,
@@ -5623,6 +5660,45 @@
 				}
 			],
 			"sid": 169217133077857
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 717537927417380,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "screwdriver"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "screwdriver",
+					"sid": 644494382387359,
+					"parameters": {
+						"object": "Inventory_Box"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "AddtoInventory",
+					"sid": 555842489525885,
+					"parameters": [
+						"\"sd\""
+					]
+				},
+				{
+					"id": "destroy",
+					"objectClass": "screwdriver",
+					"sid": 623741492348547
+				}
+			],
+			"sid": 702877075689507
 		},
 		{
 			"eventType": "block",
@@ -5979,11 +6055,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 629499685434647,
+									"sid": 413289937411864,
 									"parameters": {
 										"variable": "Parameter0",
 										"comparison": 0,
-										"value": "\"screwdriver\""
+										"value": "\"sd\""
 									}
 								}
 							],
@@ -6004,10 +6080,18 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "screwdriver",
-									"sid": 317957552202258,
+									"sid": 276735851131605,
 									"parameters": {
 										"instance-variable": "placed",
 										"value": "true"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "screwdriver",
+									"sid": 326042693755734,
+									"parameters": {
+										"visibility": "visible"
 									}
 								},
 								{
@@ -6241,6 +6325,35 @@
 				}
 			],
 			"sid": 417877426724178
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 792245229113710,
+					"parameters": {
+						"variable": "plant_moved"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-layer",
+					"objectClass": "T_textbox",
+					"sid": 189231119821238,
+					"parameters": {
+						"layer": "0"
+					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "T_textbox",
+					"sid": 245660352307968
+				}
+			],
+			"sid": 869248649239219
 		},
 		{
 			"eventType": "block",
@@ -6982,9 +7095,12 @@
 			],
 			"actions": [
 				{
-					"id": "destroy",
+					"id": "move-to-layer",
 					"objectClass": "portait_temp",
-					"sid": 989611728792433
+					"sid": 196923501996217,
+					"parameters": {
+						"layer": "4"
+					}
 				}
 			],
 			"sid": 873933852045793
