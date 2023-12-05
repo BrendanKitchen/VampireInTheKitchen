@@ -99,13 +99,6 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Tween",
-			"name": "Tween",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
@@ -184,7 +177,6 @@
 			"back",
 			"CreditsButton",
 			"PlayButton",
-			"FadeToBlack",
 			"ToiletPaper",
 			"crappot",
 			"pot_box",
@@ -192,9 +184,9 @@
 			"ProgressBar",
 			"portait_box",
 			"Volume_Hint",
-			"Sprite",
 			"window_temp",
-			"T_textbox"
+			"T_textbox",
+			"FadeToBlack"
 		],
 		"subfolders": []
 	},
@@ -347,6 +339,14 @@
 					"name": "Im_Stuck_in_the_Bathroom (1).webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 619358135818649,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Im_Stuck_in_the_Bathroom (2).webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 536216891334136,
 					"file-info": {
 						"purpose": "none"
 					}
