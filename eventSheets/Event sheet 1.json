@@ -938,9 +938,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 580125762374785,
+					"sid": 345703417836045,
 					"parameters": {
-						"text": "\"There was a letter 'T' underneath the plant\"",
+						"text": "\"There was a letter 'T' underneath the plant\" & newline& \"Letters found \" & puzzlescompleted & \"/ 5\"",
 						"duration": "2"
 					}
 				}
@@ -1062,9 +1062,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 918434410121820,
+					"sid": 552930407113857,
 					"parameters": {
-						"text": "\"It has a letter 'G' in it\"",
+						"text": "\"It has a letter 'G' in it\" &newline& \"Letters found \" & puzzlescompleted & \"/ 5\"",
 						"duration": "2"
 					}
 				}
@@ -1218,6 +1218,76 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
+					"sid": 608978796887157,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "door"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "screwdriver",
+					"sid": 310883242368114,
+					"parameters": {
+						"object": "Inventory_Box"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 692291223875137,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 887586167645033,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 150278097717479,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 399213604887826,
+					"parameters": {
+						"text": "\"The door opens\"",
+						"duration": "2"
+					}
+				}
+			],
+			"sid": 129368568007524
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
 					"sid": 583139113958890,
 					"parameters": {
 						"mouse-button": "left",
@@ -1273,9 +1343,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 796144621086404,
+					"sid": 532423270961586,
 					"parameters": {
-						"text": "\"plant moved test\"",
+						"text": "\"plant moved test (1 Letter Obtained)\"",
 						"duration": "2"
 					}
 				}
@@ -4246,9 +4316,9 @@
 						{
 							"id": "typewriter-text",
 							"objectClass": "DialogueText",
-							"sid": 673971110920496,
+							"sid": 152556758339941,
 							"parameters": {
-								"text": "\"75%\"",
+								"text": "\"75%\"  & newline & \"Letters found \" & puzzlescompleted & \"/ 5\"",
 								"duration": "2"
 							}
 						}
@@ -4565,6 +4635,14 @@
 					}
 				},
 				{
+					"id": "move-to-layer",
+					"objectClass": "Letter_Lock",
+					"sid": 104586319899471,
+					"parameters": {
+						"layer": "4"
+					}
+				},
+				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 515212791929501,
@@ -4596,6 +4674,14 @@
 					"parameters": {
 						"visibility": "invisible"
 					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "portait_temp",
+					"sid": 974788253622507,
+					"parameters": {
+						"layer": "4"
+					}
 				}
 			],
 			"sid": 495193582881049
@@ -4614,17 +4700,9 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 716957297992668,
-					"parameters": {
-						"variable": "LockCombo"
-					}
-				},
-				{
-					"id": "trigger-once-while-true",
-					"objectClass": "System",
-					"sid": 644692544194196
+					"id": "on-destroyed",
+					"objectClass": "Letter_Lock",
+					"sid": 723299982448529
 				}
 			],
 			"actions": [
@@ -4670,6 +4748,14 @@
 					"parameters": {
 						"text": "\"The lock broke\"",
 						"duration": "0.8"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "portait_temp",
+					"sid": 415764640874642,
+					"parameters": {
+						"layer": "0"
 					}
 				}
 			],
@@ -4826,6 +4912,30 @@
 					"sid": 153738200517522,
 					"parameters": {
 						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "portait_locked",
+					"sid": 484648319786236,
+					"parameters": {
+						"layer": "4"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "screwdriver",
+					"sid": 368438382983388,
+					"parameters": {
+						"layer": "4"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "tape",
+					"sid": 925770388841420,
+					"parameters": {
+						"layer": "4"
 					}
 				}
 			],
@@ -5276,9 +5386,229 @@
 					}
 				},
 				{
+					"id": "destroy",
+					"objectClass": "portait_temp",
+					"sid": 106693913156840
+				}
+			],
+			"sid": 358580676117013
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 249521157706971,
+					"parameters": {
+						"variable": "Final_Puzzle_Completed"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 536288433270423,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "port_tmp",
+					"sid": 872058251029702
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 423303397194570,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 275949273950700,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 697318115989124,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 151458864492365,
+					"parameters": {
+						"text": "\"There's something behind the portrait\"",
+						"duration": "2"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "portait_locked",
+					"sid": 103769726306287,
+					"parameters": {
+						"layer": "0"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "screwdriver",
+					"sid": 245098338953209,
+					"parameters": {
+						"layer": "0"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "tape",
+					"sid": 825883470070344,
+					"parameters": {
+						"layer": "0"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "screwdriver",
+					"sid": 244746050385562,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "tape",
+					"sid": 516782205353619,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "portait_locked",
+					"sid": 410500157698486,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory",
+					"sid": 412646508699714,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inventory_Box",
+					"sid": 624442279398914,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 237286645919391
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 531072751418721,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "tape"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "tape",
+					"sid": 969892763669310
+				}
+			],
+			"sid": 716855475178478
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 397303270746816,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "screwdriver"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "screwdriver",
+					"sid": 497522255132687,
+					"parameters": {
+						"object": "Inventory_Box"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "AddtoInventory",
+					"sid": 381757196662078,
+					"parameters": [
+						"\"screwdriver\""
+					]
+				},
+				{
+					"id": "destroy",
+					"objectClass": "screwdriver",
+					"sid": 595935244765176
+				}
+			],
+			"sid": 331142274378568
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "screwdriver",
+					"sid": 592010373543138,
+					"parameters": {
+						"instance-variable": "placed"
+					}
+				}
+			],
+			"actions": [
+				{
 					"id": "move-to-layer",
 					"objectClass": "backarrow3",
-					"sid": 372942073649025,
+					"sid": 582296129373990,
 					"parameters": {
 						"layer": "0"
 					}
@@ -5286,18 +5616,13 @@
 				{
 					"id": "set-opacity",
 					"objectClass": "backarrow3",
-					"sid": 374098449193100,
+					"sid": 945261482546611,
 					"parameters": {
 						"opacity": "100"
 					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "portait_temp",
-					"sid": 106693913156840
 				}
 			],
-			"sid": 358580676117013
+			"sid": 169217133077857
 		},
 		{
 			"eventType": "block",
@@ -5647,6 +5972,54 @@
 								}
 							],
 							"sid": 118789534524791
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 629499685434647,
+									"parameters": {
+										"variable": "Parameter0",
+										"comparison": 0,
+										"value": "\"screwdriver\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 988579321841987,
+									"parameters": {
+										"object-to-create": "screwdriver",
+										"layer": "1",
+										"x": "Inventory_Box.X",
+										"y": "Inventory_Box.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "screwdriver",
+									"sid": 317957552202258,
+									"parameters": {
+										"instance-variable": "placed",
+										"value": "true"
+									}
+								},
+								{
+									"id": "move-to-layer",
+									"objectClass": "screwdriver",
+									"sid": 731150395347355,
+									"parameters": {
+										"layer": "1"
+									}
+								}
+							],
+							"sid": 987207099005408
 						}
 					]
 				}
@@ -6066,9 +6439,46 @@
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "N",
+					"sid": 131538538331658,
+					"parameters": {
+						"where": "in-front",
+						"object": "Letter_Lock"
+					}
 				}
 			],
 			"sid": 576119884638910
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-dragging",
+					"objectClass": "N",
+					"sid": 619135788845409,
+					"behaviorType": "DragDrop"
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "N",
+					"sid": 413826330145097,
+					"parameters": {
+						"object": "N_Box"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "drop",
+					"objectClass": "N",
+					"sid": 816129054533734,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"sid": 521123825536015
 		},
 		{
 			"eventType": "block",
@@ -6118,9 +6528,46 @@
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "I",
+					"sid": 917443949989511,
+					"parameters": {
+						"where": "in-front",
+						"object": "Letter_Lock"
+					}
 				}
 			],
 			"sid": 178952786770201
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-dragging",
+					"objectClass": "I",
+					"sid": 523983669448632,
+					"behaviorType": "DragDrop"
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "I",
+					"sid": 296389059729782,
+					"parameters": {
+						"object": "I_Box"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "drop",
+					"objectClass": "I",
+					"sid": 896655910840135,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"sid": 253690341109903
 		},
 		{
 			"eventType": "block",
@@ -6170,9 +6617,46 @@
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "G",
+					"sid": 201073284397306,
+					"parameters": {
+						"where": "in-front",
+						"object": "Letter_Lock"
+					}
 				}
 			],
 			"sid": 558456168314840
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-dragging",
+					"objectClass": "G",
+					"sid": 770771358844559,
+					"behaviorType": "DragDrop"
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "G",
+					"sid": 164991640998297,
+					"parameters": {
+						"object": "G_Box"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "drop",
+					"objectClass": "G",
+					"sid": 402026215142366,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"sid": 280325682666140
 		},
 		{
 			"eventType": "block",
@@ -6222,9 +6706,46 @@
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "H_Lock",
+					"sid": 468504398102879,
+					"parameters": {
+						"where": "in-front",
+						"object": "Letter_Lock"
+					}
 				}
 			],
 			"sid": 660493534299602
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-dragging",
+					"objectClass": "H_Lock",
+					"sid": 836415298960528,
+					"behaviorType": "DragDrop"
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "H_Lock",
+					"sid": 966613037523769,
+					"parameters": {
+						"object": "H_Box"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "drop",
+					"objectClass": "H_Lock",
+					"sid": 581795331621403,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"sid": 693942272850944
 		},
 		{
 			"eventType": "block",
@@ -6274,9 +6795,46 @@
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "T",
+					"sid": 710292195792273,
+					"parameters": {
+						"where": "in-front",
+						"object": "Letter_Lock"
+					}
 				}
 			],
 			"sid": 461799115191921
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-dragging",
+					"objectClass": "T",
+					"sid": 756360379456141,
+					"behaviorType": "DragDrop"
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "T",
+					"sid": 886358134537505,
+					"parameters": {
+						"object": "T_Box"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "drop",
+					"objectClass": "T",
+					"sid": 514418957414316,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"sid": 475401884180970
 		},
 		{
 			"eventType": "variable",
