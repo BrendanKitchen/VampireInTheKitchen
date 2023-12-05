@@ -32,6 +32,9 @@
 		"back",
 		"backarrow2",
 		"ToiletPaper",
-		"Volume_Hint"
+		"Volume_Hint",
+		"T_textbox",
+		"toilet",
+		"mirror"
 	]
 }
