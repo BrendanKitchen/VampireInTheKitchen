@@ -394,6 +394,15 @@
 					}
 				},
 				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 354051504666909,
+					"parameters": {
+						"tag": "\"menumusic\"",
+						"db": "(Volume-100)/3"
+					}
+				},
+				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 531172348241112,
@@ -404,6 +413,79 @@
 				}
 			],
 			"sid": 312317286878298
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 501691410957786
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 192218436193478,
+					"parameters": {
+						"variable": "LockMusicMenu"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 552264747613525,
+					"parameters": {
+						"variable": "Volume",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 729269255819805,
+					"parameters": {
+						"audio-file": "Theres_a_Vampire_in_the_Kitchen (2)",
+						"loop": "looping",
+						"volume": "-100",
+						"stereo-pan": "0",
+						"tag-optional": "\"menumusic\""
+					}
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 917854122511859,
+					"parameters": {
+						"tag": "\"menumusic\"",
+						"db": "-2.5",
+						"duration": "2",
+						"ending": "keep-playing"
+					}
+				},
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 437499063890443,
+					"parameters": {
+						"tag": "\"menumusic\"",
+						"db": "-200"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 386604288635038,
+					"parameters": {
+						"variable": "LockMusicMenu",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 482966739040070
 		},
 		{
 			"eventType": "block",
