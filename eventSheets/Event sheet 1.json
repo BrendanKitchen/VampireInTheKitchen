@@ -212,6 +212,16 @@
 			"sid": 819875110260253
 		},
 		{
+			"eventType": "variable",
+			"name": "LockMusic",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 506070500909089
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -4635,11 +4645,12 @@
 					}
 				},
 				{
-					"id": "toggle-boolean-eventvar",
+					"id": "set-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 783848516807384,
+					"sid": 505737507926941,
 					"parameters": {
-						"variable": "Paused"
+						"variable": "LockMusic",
+						"value": "false"
 					}
 				},
 				{
@@ -4649,6 +4660,15 @@
 					"parameters": {
 						"layer": "1",
 						"interactive": true
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 786486658162461,
+					"parameters": {
+						"variable": "Paused",
+						"value": "false"
 					}
 				},
 				{
@@ -4700,6 +4720,11 @@
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
+				},
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 360941900837895
 				}
 			],
 			"sid": 637375812019776
@@ -4731,18 +4756,6 @@
 					"id": "move-to-top",
 					"objectClass": "H2",
 					"sid": 182884205615650
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 188617287835048,
-					"parameters": {
-						"audio-file": "Interact",
-						"loop": "not-looping",
-						"volume": "-5",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
-					}
 				}
 			],
 			"sid": 848044868010854
@@ -4783,18 +4796,6 @@
 					"id": "move-to-top",
 					"objectClass": "H2",
 					"sid": 287620124462640
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 719443790703449,
-					"parameters": {
-						"audio-file": "Interact",
-						"loop": "not-looping",
-						"volume": "-5",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
-					}
 				}
 			],
 			"sid": 304974709247475
@@ -4815,23 +4816,24 @@
 			],
 			"actions": [
 				{
-					"id": "toggle-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 939247158851238,
-					"parameters": {
-						"variable": "Paused"
-					}
-				},
-				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 434797388237254,
+					"sid": 432755177677770,
 					"parameters": {
-						"audio-file": "Interact",
+						"audio-file": "SettingsButtonPress",
 						"loop": "not-looping",
 						"volume": "-5",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 417147413970101,
+					"parameters": {
+						"variable": "Paused",
+						"value": "false"
 					}
 				}
 			],
@@ -4853,23 +4855,24 @@
 			],
 			"actions": [
 				{
-					"id": "toggle-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 496434556402919,
-					"parameters": {
-						"variable": "Paused"
-					}
-				},
-				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 563719958271086,
+					"sid": 323956098644319,
 					"parameters": {
-						"audio-file": "Interact",
+						"audio-file": "PaperInteraction",
 						"loop": "not-looping",
 						"volume": "-5",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 532281597483215,
+					"parameters": {
+						"variable": "Paused",
+						"value": "false"
 					}
 				}
 			],
@@ -5082,6 +5085,18 @@
 					"sid": 568007191385160,
 					"parameters": {
 						"visibility": "visible"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 533194070371592,
+					"parameters": {
+						"audio-file": "PosFeedbackPuzzle",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -6182,52 +6197,9 @@
 					"id": "on-start-of-layout",
 					"objectClass": "System",
 					"sid": 821452500741938
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 678858495989298,
-					"parameters": {
-						"variable": "FadeInComplete"
-					},
-					"isInverted": true
 				}
 			],
-			"actions": [
-				{
-					"id": "set-opacity",
-					"objectClass": "FadeToBlack",
-					"sid": 606196629243098,
-					"parameters": {
-						"opacity": "100"
-					}
-				},
-				{
-					"id": "tween-one-property",
-					"objectClass": "FadeToBlack",
-					"sid": 311349606552730,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"fadein\"",
-						"property": "offsetOpacity",
-						"end-value": "0",
-						"time": "2",
-						"ease": "default",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no",
-						"repeat-count": "1"
-					}
-				},
-				{
-					"id": "toggle-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 603115172477228,
-					"parameters": {
-						"variable": "FadeInComplete"
-					}
-				}
-			],
+			"actions": [],
 			"sid": 853145234573684
 		},
 		{
@@ -6260,6 +6232,81 @@
 				}
 			],
 			"sid": 873933852045793
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 105056884155260
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 670043195468361,
+					"parameters": {
+						"variable": "LockMusic"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 427669153842912,
+					"parameters": {
+						"audio-file": "Im_Stuck_in_the_Bathroom (2)",
+						"loop": "looping",
+						"volume": "-100",
+						"stereo-pan": "0",
+						"tag-optional": "\"bgmusic\""
+					}
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 104263476866714,
+					"parameters": {
+						"tag": "\"bgmusic\"",
+						"db": "-5",
+						"duration": "2",
+						"ending": "keep-playing"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "FadeToBlack",
+					"sid": 407209009076557,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 958364423980082,
+					"parameters": {
+						"variable": "LockMusic",
+						"value": "true"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 646791932921340,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "FadeToBlack",
+					"sid": 857719022311658
+				}
+			],
+			"sid": 957937856766902
 		}
 	],
 	"sid": 103033473827399
