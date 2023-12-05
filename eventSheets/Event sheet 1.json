@@ -165,7 +165,7 @@
 			"eventType": "variable",
 			"name": "Volume",
 			"type": "number",
-			"initialValue": "0",
+			"initialValue": "100",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -298,6 +298,11 @@
 					"parameters": {
 						"value": "Volume"
 					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "stake_A",
+					"sid": 706835440040180
 				}
 			],
 			"sid": 597958259212347
@@ -3165,6 +3170,11 @@
 					}
 				},
 				{
+					"id": "move-to-top",
+					"objectClass": "stake_A",
+					"sid": 473569452477685
+				},
+				{
 					"id": "move-to-layer",
 					"objectClass": "stake_burned",
 					"sid": 328690066225019,
@@ -3323,6 +3333,11 @@
 							"parameters": {
 								"layer": "4"
 							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "stake_A",
+							"sid": 619339700783032
 						}
 					],
 					"sid": 100334730312009
@@ -3398,6 +3413,11 @@
 							"id": "move-to-top",
 							"objectClass": "Inventory_Box",
 							"sid": 487839265396855
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "stake_A",
+							"sid": 672503887773869
 						}
 					],
 					"sid": 600336282655855
@@ -3949,10 +3969,15 @@
 						{
 							"id": "move-to-layer",
 							"objectClass": "stake_A",
-							"sid": 668822166631199,
+							"sid": 933113610171043,
 							"parameters": {
-								"layer": "0"
+								"layer": "1"
 							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "stake_A",
+							"sid": 816596980785176
 						},
 						{
 							"id": "set-visible",
@@ -5176,6 +5201,14 @@
 					"id": "destroy",
 					"objectClass": "stake_A",
 					"sid": 295685527777478
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "stake_A",
+					"sid": 877176715667260,
+					"parameters": {
+						"layer": "1"
+					}
 				}
 			],
 			"sid": 455841973636841
@@ -5395,6 +5428,11 @@
 									"parameters": {
 										"layer": "1"
 									}
+								},
+								{
+									"id": "move-to-top",
+									"objectClass": "stake_A",
+									"sid": 540879315469084
 								}
 							],
 							"sid": 118789534524791
@@ -6155,6 +6193,7 @@
 			"eventType": "block",
 			"conditions": [
 				{
+<<<<<<< Updated upstream
 					"id": "on-start-of-layout",
 					"objectClass": "System",
 					"sid": 821452500741938
@@ -6210,6 +6249,8 @@
 			"eventType": "block",
 			"conditions": [
 				{
+=======
+>>>>>>> Stashed changes
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
 					"sid": 298636952230061,
