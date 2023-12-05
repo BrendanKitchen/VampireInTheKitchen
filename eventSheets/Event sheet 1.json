@@ -5040,45 +5040,6 @@
 			],
 			"actions": [
 				{
-					"id": "set-visible",
-					"objectClass": "port_tmp",
-					"sid": 998785209560825,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 786067523906369,
-					"parameters": {
-						"object-to-create": "portait_temp",
-						"layer": "0",
-						"x": "984",
-						"y": "545",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "set-position",
-					"objectClass": "portait_temp",
-					"sid": 150263142939750,
-					"parameters": {
-						"x": "984",
-						"y": "545"
-					}
-				},
-				{
-					"id": "set-size",
-					"objectClass": "portait_temp",
-					"sid": 343910099121534,
-					"parameters": {
-						"width": "960",
-						"height": "970"
-					}
-				},
-				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 452517964016664,
@@ -5105,24 +5066,17 @@
 					}
 				},
 				{
-					"id": "set-visible",
+					"id": "set-opacity",
 					"objectClass": "backarrow3",
-					"sid": 568007191385160,
+					"sid": 374098449193100,
 					"parameters": {
-						"visibility": "visible"
+						"opacity": "100"
 					}
 				},
 				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 533194070371592,
-					"parameters": {
-						"audio-file": "PosFeedbackPuzzle",
-						"loop": "not-looping",
-						"volume": "-5",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
-					}
+					"id": "destroy",
+					"objectClass": "portait_temp",
+					"sid": 106693913156840
 				}
 			],
 			"sid": 358580676117013
@@ -6232,21 +6186,6 @@
 			"eventType": "block",
 			"conditions": [
 				{
-<<<<<<< Updated upstream
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 821452500741938
-				}
-			],
-			"actions": [],
-			"sid": 853145234573684
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-=======
->>>>>>> Stashed changes
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
 					"sid": 298636952230061,
