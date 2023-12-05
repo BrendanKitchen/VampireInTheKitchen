@@ -35,6 +35,8 @@
 		"Volume_Hint",
 		"T_textbox",
 		"toilet",
-		"mirror"
+		"mirror",
+		"magazine_zoomed",
+		"portait_locked"
 	]
 }
