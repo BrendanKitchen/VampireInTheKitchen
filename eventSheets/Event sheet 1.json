@@ -384,6 +384,15 @@
 								"variable": "Volume",
 								"value": "VolumeBar.Value"
 							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 274034152639799,
+							"parameters": {
+								"tag": "\"bgmusic\"",
+								"db": "(Volume-100)/3"
+							}
 						}
 					],
 					"sid": 860073975402281
@@ -449,9 +458,91 @@
 								"variable": "Volume",
 								"value": "VolumeBar.Value"
 							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 200802780458913,
+							"parameters": {
+								"tag": "\"bgmusic\"",
+								"db": "(Volume-100)/3"
+							}
 						}
 					],
 					"sid": 134302845607858
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 189202220957290
+				}
+			],
+			"actions": [],
+			"sid": 375676978837433,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "VolumeBar",
+							"sid": 689172941788723,
+							"parameters": {
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Value",
+							"sid": 686693950409352,
+							"parameters": {
+								"text": "VolumeBar.Value & \"%\"\n"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton",
+							"sid": 215693279631625,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton2",
+							"sid": 437671282735593,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 431298388270504,
+							"parameters": {
+								"variable": "Volume",
+								"value": "VolumeBar.Value"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 155502702324626,
+							"parameters": {
+								"tag": "\"bgmusic\"",
+								"db": "-100"
+							}
+						}
+					],
+					"sid": 587894057370996
 				}
 			]
 		},
