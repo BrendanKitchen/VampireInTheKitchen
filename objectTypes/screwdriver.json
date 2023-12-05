@@ -1,7 +1,7 @@
 {
 	"name": "screwdriver",
 	"plugin-id": "Sprite",
-	"sid": 867191301733760,
+	"sid": 518081490917397,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
@@ -9,7 +9,7 @@
 			"type": "boolean",
 			"desc": "",
 			"show": true,
-			"sid": 794894217222567
+			"sid": 203105306098063
 		}
 	],
 	"behaviorTypes": [],
@@ -26,13 +26,13 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5521271,
+						"imageSpriteId": 7973587,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 374852019043355,
+				"sid": 496324545833656,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

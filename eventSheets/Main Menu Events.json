@@ -444,29 +444,6 @@
 			],
 			"actions": [
 				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 729269255819805,
-					"parameters": {
-						"audio-file": "Theres_a_Vampire_in_the_Kitchen (2)",
-						"loop": "looping",
-						"volume": "-100",
-						"stereo-pan": "0",
-						"tag-optional": "\"menumusic\""
-					}
-				},
-				{
-					"id": "fade-volume",
-					"objectClass": "Audio",
-					"sid": 917854122511859,
-					"parameters": {
-						"tag": "\"menumusic\"",
-						"db": "-2.5",
-						"duration": "2",
-						"ending": "keep-playing"
-					}
-				},
-				{
 					"id": "set-volume",
 					"objectClass": "Audio",
 					"sid": 437499063890443,

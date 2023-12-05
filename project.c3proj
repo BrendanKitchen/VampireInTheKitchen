@@ -186,7 +186,9 @@
 			"Volume_Hint",
 			"window_temp",
 			"T_textbox",
-			"FadeToBlack"
+			"FadeToBlack",
+			"screwdriver",
+			"tape"
 		],
 		"subfolders": []
 	},
