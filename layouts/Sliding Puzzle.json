@@ -3869,37 +3869,6 @@
 					}
 				},
 				{
-					"type": "screwdriver",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 223,
-					"instanceVariables": {
-						"placed": false
-					},
-					"behaviors": {},
-					"world": {
-						"x": 988,
-						"y": 486,
-						"width": 341,
-						"height": 405,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							0
-						],
-						"angle": 5.777876582378493,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "tape",
 					"properties": {
 						"initially-visible": true,
