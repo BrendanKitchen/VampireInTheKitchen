@@ -707,10 +707,10 @@
 				{
 					"id": "compare-time",
 					"objectClass": "System",
-					"sid": 981689083902139,
+					"sid": 429904474466716,
 					"parameters": {
 						"comparison": 3,
-						"time-seconds": "20"
+						"time-seconds": "30"
 					}
 				}
 			],
@@ -732,19 +732,19 @@
 				{
 					"id": "compare-time",
 					"objectClass": "System",
-					"sid": 417007129846072,
+					"sid": 356182252820405,
 					"parameters": {
 						"comparison": 5,
-						"time-seconds": "21"
+						"time-seconds": "31"
 					}
 				},
 				{
 					"id": "compare-time",
 					"objectClass": "System",
-					"sid": 958132081896471,
+					"sid": 213135727669480,
 					"parameters": {
 						"comparison": 3,
-						"time-seconds": "40"
+						"time-seconds": "50"
 					}
 				}
 			],
@@ -766,10 +766,10 @@
 				{
 					"id": "compare-time",
 					"objectClass": "System",
-					"sid": 791927394198068,
+					"sid": 659326308490254,
 					"parameters": {
 						"comparison": 5,
-						"time-seconds": "40"
+						"time-seconds": "51"
 					}
 				},
 				{
@@ -1649,6 +1649,15 @@
 						"click-type": "clicked",
 						"object-clicked": "lock"
 					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "baurbyPin",
+					"sid": 707520344243575,
+					"parameters": {
+						"object": "Inventory_Box"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -1690,10 +1699,10 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 442198237525769,
+					"sid": 669398445608427,
 					"parameters": {
 						"text": "\"That's a big lock for a small cabinet...\" &newline& \"Maybe there's something important in there?\"",
-						"duration": "2"
+						"duration": "2.3"
 					}
 				}
 			],
@@ -1760,10 +1769,10 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 884660175473680,
+					"sid": 674541367639865,
 					"parameters": {
 						"text": "\"Mom said watching LockPickingLegislator on YouToob\" &newline& \"would never come in handy. Well look at me now.\"",
-						"duration": "2.0"
+						"duration": "2.5"
 					}
 				}
 			],

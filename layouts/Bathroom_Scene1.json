@@ -7,7 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "BG",
+					"type": "BG1",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -15,20 +15,14 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 6,
+					"uid": 243,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
 						"x": 958,
-<<<<<<< Updated upstream
-						"y": 541,
-						"width": 1925.0000000000002,
-						"height": 1088,
-=======
 						"y": 540.5,
 						"width": 1926.509881195258,
 						"height": 1084.9695840789836,
->>>>>>> Stashed changes
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -505,8 +499,6 @@
 						"angle": 0,
 						"zElevation": 0
 					}
-<<<<<<< Updated upstream
-=======
 				},
 				{
 					"type": "candle",
@@ -569,7 +561,6 @@
 						"angle": 0,
 						"zElevation": 0
 					}
->>>>>>> Stashed changes
 				}
 			],
 			"sid": 437585931578339,

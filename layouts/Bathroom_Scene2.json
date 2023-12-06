@@ -7,8 +7,6 @@
 			"subLayers": [],
 			"instances": [
 				{
-<<<<<<< Updated upstream
-=======
 					"type": "window_temp",
 					"properties": {
 						"initially-visible": true,
@@ -38,7 +36,6 @@
 					}
 				},
 				{
->>>>>>> Stashed changes
 					"type": "angry_nox",
 					"properties": {
 						"initially-visible": true,
@@ -91,15 +88,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 958,
+						"x": 955.5,
 						"y": 541,
-<<<<<<< Updated upstream
-						"width": 1925.0000000000002,
-						"height": 1088,
-=======
 						"width": 1935.9958765818153,
 						"height": 1087.964518031416,
->>>>>>> Stashed changes
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -125,8 +117,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 952.5,
-						"y": 896.6880733944954,
+						"x": 934,
+						"y": -647,
 						"width": 1943,
 						"height": 160,
 						"originX": 0.5,
@@ -154,21 +146,12 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-<<<<<<< Updated upstream
-						"x": 1728,
-						"y": 439,
-						"width": 355.328,
-						"height": 753.48,
-						"originX": 0.453125,
-						"originY": 0.35384615384615387,
-=======
 						"x": 1693,
 						"y": 447,
 						"width": 355.4655542722946,
 						"height": 765.1520026709967,
 						"originX": 0.3676643192488263,
 						"originY": 0.30731028460719845,
->>>>>>> Stashed changes
 						"color": [
 							1,
 							1,
@@ -192,19 +175,12 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-<<<<<<< Updated upstream
-						"x": 852.5,
-						"y": 636.5,
-						"width": 1585,
-						"height": 382,
-=======
 						"x": 936,
 						"y": 302,
 						"width": 1166.3169419309938,
 						"height": 500.22594814568555,
->>>>>>> Stashed changes
 						"originX": 0.5,
-						"originY": -0.05,
+						"originY": -0.4992283950617284,
 						"color": [
 							1,
 							1,
@@ -250,12 +226,12 @@
 						}
 					},
 					"world": {
-						"x": 320,
-						"y": 224,
-						"width": 300,
-						"height": 350,
+						"x": 223,
+						"y": 329,
+						"width": 386.2084142737494,
+						"height": 433.68790831693707,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 0.5036,
 						"color": [
 							1,
 							1,
@@ -279,12 +255,12 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 333,
-						"y": 272,
-						"width": 302.38800000000003,
-						"height": 135,
-						"originX": 0.5381165919282511,
-						"originY": 0.9185185185185185,
+						"x": 239.74594800013392,
+						"y": 567.0199740837262,
+						"width": 317.00391187251614,
+						"height": 47.982127390167335,
+						"originX": 0.5482980783139904,
+						"originY": 4.2178649237472765,
 						"color": [
 							1,
 							1,
@@ -310,12 +286,12 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 1468,
-						"y": 977,
-						"width": 139,
-						"height": 129,
-						"originX": 0.5971223021582733,
-						"originY": 0.3953488372093023,
+						"x": 1295.096930635555,
+						"y": 704.0822658353825,
+						"width": 140.98761676940254,
+						"height": 66.51269770011172,
+						"originX": 0.6166038076555298,
+						"originY": 0.29585782177104125,
 						"color": [
 							1,
 							1,
@@ -345,35 +321,6 @@
 						"height": 268.28,
 						"originX": 0.6917808219178082,
 						"originY": 0.3879781420765027,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "window_temp",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 221,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 998,
-						"y": 248,
-						"width": 568,
-						"height": 334,
-						"originX": 0.4977973568281938,
-						"originY": 0.53125,
 						"color": [
 							1,
 							1,
