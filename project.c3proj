@@ -178,7 +178,6 @@
 			"Volume_Hint",
 			"window_temp",
 			"T_textbox",
-			"FadeToBlack",
 			"screwdriver",
 			"tape",
 			"screwdriver2",
@@ -320,6 +319,30 @@
 					"name": "PuzzleShuffle.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 560938005083471,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "ItemGet.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 128308575686086,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "MetalStuck.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 721263798823956,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "ToiletPaperPause1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 726225629338397,
 					"file-info": {
 						"purpose": "none"
 					}

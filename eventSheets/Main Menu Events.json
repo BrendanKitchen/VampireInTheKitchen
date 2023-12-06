@@ -49,13 +49,13 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 100290102787752,
+					"sid": 784638986705991,
 					"parameters": {
 						"audio-file": "MainMenuButtonPress",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"menubuttonpress\""
 					}
 				},
 				{
@@ -80,6 +80,42 @@
 					"sid": 229595687672296,
 					"parameters": {
 						"tag": "\"exitingmenu\""
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 312673980643700,
+					"parameters": {
+						"layer": "1",
+						"interactive": false
+					}
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 927930627234356,
+					"parameters": {
+						"tag": "\"menumusic\"",
+						"db": "-100",
+						"duration": "2",
+						"ending": "stop"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 489472965037914,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 159117951805314,
+					"parameters": {
+						"layout": "Bathroom_Scene1"
 					}
 				}
 			],
@@ -124,13 +160,13 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 865853577760373,
+					"sid": 755801884275277,
 					"parameters": {
 						"audio-file": "PaperInteraction",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"paperinteraction\""
 					}
 				},
 				{
@@ -180,13 +216,13 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 574288522780369,
+					"sid": 995135706739013,
 					"parameters": {
 						"audio-file": "PaperInteraction",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"paperinteraction\""
 					}
 				},
 				{
@@ -290,13 +326,13 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 870930501599518,
+					"sid": 263799561326454,
 					"parameters": {
 						"audio-file": "Interact",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"interact\""
 					}
 				}
 			],
@@ -503,13 +539,13 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 927178680841678,
+					"sid": 632273249112853,
 					"parameters": {
 						"audio-file": "SettingsButtonPress",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"settingspress\""
 					}
 				},
 				{
@@ -584,13 +620,13 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 961301584592297,
+					"sid": 552630960440649,
 					"parameters": {
 						"audio-file": "SettingsButtonPress",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"settingspress\""
 					}
 				},
 				{
@@ -649,13 +685,6 @@
 			"eventType": "block",
 			"conditions": [
 				{
-<<<<<<< Updated upstream
-					"id": "on-signal",
-					"objectClass": "System",
-					"sid": 698730723094833,
-					"parameters": {
-						"tag": "\"exitingmenu\""
-=======
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
 					"sid": 330682567175678,
@@ -671,78 +700,11 @@
 					"sid": 498346235741625,
 					"parameters": {
 						"variable": "OnSettings"
->>>>>>> Stashed changes
 					}
 				}
 			],
 			"actions": [
 				{
-<<<<<<< Updated upstream
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 819248287784704,
-					"parameters": {
-						"layer": "1",
-						"interactive": false
-					}
-				},
-				{
-					"id": "fade-volume",
-					"objectClass": "Audio",
-					"sid": 291023543417733,
-					"parameters": {
-						"tag": "\"menumusic\"",
-						"db": "-100",
-						"duration": "2",
-						"ending": "stop"
-					}
-				},
-				{
-					"id": "set-fade-in-time",
-					"objectClass": "FadeToBlack",
-					"sid": 755170054902305,
-					"behaviorType": "Fade",
-					"parameters": {
-						"fade-in-time": "2"
-					}
-				},
-				{
-					"id": "set-fade-out-time",
-					"objectClass": "FadeToBlack",
-					"sid": 270302593595275,
-					"behaviorType": "Fade",
-					"parameters": {
-						"fade-out-time": "0"
-					}
-				},
-				{
-					"id": "restart-fade",
-					"objectClass": "FadeToBlack",
-					"sid": 607251527723396,
-					"behaviorType": "Fade"
-				}
-			],
-			"sid": 924718700248788
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-fade-in-finished",
-					"objectClass": "FadeToBlack",
-					"sid": 985701071251783,
-					"behaviorType": "Fade"
-				}
-			],
-			"actions": [
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 360992763198957,
-					"parameters": {
-						"layer": "1",
-						"interactive": true
-=======
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 534557644147195,
@@ -753,43 +715,25 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 123069928154876,
+					"sid": 870077884479419,
 					"parameters": {
 						"audio-file": "SettingsButtonPress",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
->>>>>>> Stashed changes
+						"tag-optional": "\"settingspress\""
 					}
 				},
 				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
-<<<<<<< Updated upstream
-					"sid": 637994308148139,
-					"parameters": {
-						"variable": "LockMusicMenu",
-=======
 					"sid": 886804898421816,
 					"parameters": {
 						"variable": "OnScene1",
->>>>>>> Stashed changes
 						"value": "false"
 					}
 				},
 				{
-<<<<<<< Updated upstream
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 313787120615135,
-					"parameters": {
-						"layout": "Bathroom_Scene1"
-					}
-				}
-			],
-			"sid": 263554292793966
-=======
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 747969789003067,
@@ -1133,10 +1077,10 @@
 						{
 							"id": "compare-value",
 							"objectClass": "SFXBar",
-							"sid": 475626461031670,
+							"sid": 591951928260834,
 							"parameters": {
 								"comparison": 5,
-								"value": "0"
+								"value": "1"
 							}
 						},
 						{
@@ -1170,14 +1114,143 @@
 						{
 							"id": "set-volume",
 							"objectClass": "Audio",
-							"sid": 904543887179177,
+							"sid": 793715567339172,
 							"parameters": {
-								"tag": "\"SettingsButtonPress\"",
-								"db": "(Volume-100)/3"
+								"tag": "\"paperinteraction\"",
+								"db": "(SFX_Volume-100)/3"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 824718204872008,
+							"parameters": {
+								"tag": "\"menubuttonpress\"",
+								"db": "(SFX_Volume-100)/3"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 852276178404283,
+							"parameters": {
+								"tag": "\"settingspress\"",
+								"db": "(SFX_Volume-100)/3"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 708434044220429,
+							"parameters": {
+								"tag": "\"settingspress\"",
+								"db": "(SFX_Volume-100)/3"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 236912038790418,
+							"parameters": {
+								"tag": "\"interact\"",
+								"db": "(SFX_Volume-100)/3"
 							}
 						}
 					],
 					"sid": 685610599537452
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 315738917334559
+				}
+			],
+			"actions": [],
+			"sid": 291944122031608,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "SFXBar",
+							"sid": 746730880751018,
+							"parameters": {
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Value_SFX",
+							"sid": 515304531496836,
+							"parameters": {
+								"text": "SFXBar.Value & \"%\"\n"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 223363274496680,
+							"parameters": {
+								"variable": "SFX_Volume",
+								"value": "SFXBar.Value"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 244374141268131,
+							"parameters": {
+								"tag": "\"paperinteraction\"",
+								"db": "-200"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 156193838158064,
+							"parameters": {
+								"tag": "\"menubuttonpress\"",
+								"db": "-200"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 960941770031000,
+							"parameters": {
+								"tag": "\"settingspress\"",
+								"db": "-200"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 188175025423953,
+							"parameters": {
+								"tag": "\"settingspress\"",
+								"db": "-200"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 956752908346509,
+							"parameters": {
+								"tag": "\"interact\"",
+								"db": "-200"
+							}
+						}
+					],
+					"sid": 341051260259885
 				}
 			]
 		},
@@ -1209,7 +1282,6 @@
 				}
 			],
 			"sid": 405598974792999
->>>>>>> Stashed changes
 		}
 	],
 	"sid": 588019371100103

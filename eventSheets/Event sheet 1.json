@@ -165,7 +165,7 @@
 			"eventType": "variable",
 			"name": "Volume",
 			"type": "number",
-			"initialValue": "100",
+			"initialValue": "50",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -255,7 +255,7 @@
 			"eventType": "variable",
 			"name": "SFX_Volume",
 			"type": "number",
-			"initialValue": "100",
+			"initialValue": "50",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -465,7 +465,34 @@
 							}
 						}
 					],
-					"sid": 860073975402281
+					"sid": 860073975402281,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 974318088373977
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 123811094989599,
+									"parameters": {
+										"audio-file": "Interact",
+										"loop": "not-looping",
+										"volume": "(SFX_Volume-100)/3",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 975778360773058
+						}
+					]
 				}
 			]
 		},
@@ -819,20 +846,20 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 108429192681900,
+					"sid": 249204424232124,
 					"parameters": {
-						"text": "plant.dialogue_txt",
+						"text": "\"Some sticky substance shackles snappy shrub to shitter.\" &newline& \"I have a sneaking suspicion its supply of sunlight is scarce.\"",
 						"duration": "2"
 					}
 				},
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 553167037296241,
+					"sid": 352281863539350,
 					"parameters": {
 						"audio-file": "NegativeFeedback",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -893,9 +920,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 504454621402325,
+					"sid": 113552735262413,
 					"parameters": {
-						"text": "\"mirror sample text\"",
+						"text": "\"Despite everything, it's still you.\"",
 						"duration": "2"
 					}
 				}
@@ -955,9 +982,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 239679370721276,
+					"sid": 347172465674548,
 					"parameters": {
-						"text": "\"door text\"",
+						"text": "\"There's nothing to grab hold of.\" &newline& \"Why am I such a silly goose?\"",
 						"duration": "2"
 					}
 				}
@@ -1017,9 +1044,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 345703417836045,
+					"sid": 480621643112516,
 					"parameters": {
-						"text": "\"There was a letter 'T' underneath the plant\" & newline& \"Letters found \" & puzzlescompleted & \"/ 5\"",
+						"text": "\"'T' for 'That's dried blood under this plant.'\" & newline& \"Letters found: \" & puzzlescompleted & \"/5\"",
 						"duration": "2"
 					}
 				}
@@ -1079,9 +1106,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 265087639364352,
+					"sid": 797893295269081,
 					"parameters": {
-						"text": "\"toilet text\"",
+						"text": "\"An ornate toilet adorned by potted venus fly traps.\"",
 						"duration": "2"
 					}
 				}
@@ -1141,9 +1168,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 552930407113857,
+					"sid": 197456900926575,
 					"parameters": {
-						"text": "\"It has a letter 'G' in it\" &newline& \"Letters found \" & puzzlescompleted & \"/ 5\"",
+						"text": "\"'G' for 'Get stabbed, idiot.'\" &newline& \"Letters found: \" & puzzlescompleted & \"/5\"",
 						"duration": "2"
 					}
 				}
@@ -1211,10 +1238,10 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 889739965441350,
+					"sid": 383339563291781,
 					"parameters": {
-						"text": "\"Maybe it can help loosen something up\"",
-						"duration": "0.5"
+						"text": "\"Good at cleaning people or dirty surfaces, usually not both.\" &newline& \"Desperate times call for desperate measures.\"",
+						"duration": "2"
 					}
 				}
 			],
@@ -1352,9 +1379,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 399213604887826,
+					"sid": 734064142957406,
 					"parameters": {
-						"text": "\"The door opens\"",
+						"text": "\"It's open!\"",
 						"duration": "2"
 					}
 				},
@@ -1427,9 +1454,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 532423270961586,
+					"sid": 709724565113065,
 					"parameters": {
-						"text": "\"plant moved test (1 Letter Obtained)\"",
+						"text": "\"The snappy shrubbery sheds its sticky shackles.\"",
 						"duration": "2"
 					}
 				}
@@ -1489,10 +1516,10 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 902842001671137,
+					"sid": 442198237525769,
 					"parameters": {
-						"text": "\"It's locked\"",
-						"duration": "0.8"
+						"text": "\"That's a big lock for a small cabinet...\" &newline& \"Maybe there's something important in there?\"",
+						"duration": "2"
 					}
 				}
 			],
@@ -1559,10 +1586,10 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 868061874491768,
+					"sid": 884660175473680,
 					"parameters": {
-						"text": "\"The lock broke\"",
-						"duration": "0.8"
+						"text": "\"Mom said watching LockPickingLegislator on YouToob\" &newline& \"would never come in handy. Well look at me now.\"",
+						"duration": "2.0"
 					}
 				}
 			],
@@ -1621,10 +1648,10 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 956649960000429,
+					"sid": 907712355527390,
 					"parameters": {
-						"text": "\"The lock needs five letters\"",
-						"duration": "1"
+						"text": "\"A letter input lock?\" &newline& \"Never seen one of these before.\"",
+						"duration": "2"
 					}
 				}
 			],
@@ -1691,10 +1718,10 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 838388376671486,
+					"sid": 730037405348876,
 					"parameters": {
-						"text": "\"stake\"",
-						"duration": "1"
+						"text": "\"Why would a vampire keep a stake in their medicine cabinet?\" &newline& \"It's like having garlic in the fridge.\"",
+						"duration": "2"
 					}
 				}
 			],
@@ -1753,10 +1780,10 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 148532337665061,
+					"sid": 348622496253058,
 					"parameters": {
-						"text": "\"seven teardrops\"",
-						"duration": "1"
+						"text": "\"I'll be crying more than seven tears\" &newline& \"if I don't get out of here soon.\"\n",
+						"duration": "2"
 					}
 				}
 			],
@@ -1898,18 +1925,6 @@
 					}
 				},
 				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 102750068042565,
-					"parameters": {
-						"audio-file": "SinkDrop",
-						"loop": "not-looping",
-						"volume": "-5",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
-					}
-				},
-				{
 					"id": "set-animation-speed",
 					"objectClass": "sink_knob_R",
 					"sid": 395508255195408,
@@ -1924,22 +1939,9 @@
 					"parameters": {
 						"from": "current-frame"
 					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 269551340253868,
-					"parameters": {
-						"audio-file": "SinkDrop",
-						"loop": "not-looping",
-						"volume": "-5",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
-					}
 				}
 			],
-			"sid": 987050434910685,
-			"isOrBlock": true
+			"sid": 987050434910685
 		},
 		{
 			"eventType": "block",
@@ -1973,18 +1975,6 @@
 					}
 				},
 				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 152325082408653,
-					"parameters": {
-						"audio-file": "SinkDrop",
-						"loop": "not-looping",
-						"volume": "-5",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
-					}
-				},
-				{
 					"id": "set-animation-speed",
 					"objectClass": "sink_knob_L",
 					"sid": 808319863804981,
@@ -1998,18 +1988,6 @@
 					"sid": 534634161639537,
 					"parameters": {
 						"from": "current-frame"
-					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 661388473966994,
-					"parameters": {
-						"audio-file": "SinkDrop",
-						"loop": "not-looping",
-						"volume": "-5",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -2146,6 +2124,16 @@
 			"sid": 890357020721427
 		},
 		{
+			"eventType": "variable",
+			"name": "KnobDone",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Checks to see if the knobclicked = 7 event is complete",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 276725635500097
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -2157,6 +2145,15 @@
 						"comparison": 0,
 						"value": "7"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 443147466873112,
+					"parameters": {
+						"variable": "KnobDone"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -2178,7 +2175,43 @@
 					}
 				}
 			],
-			"sid": 495103061141859
+			"sid": 495103061141859,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 926551601086552
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 980765591759124,
+							"parameters": {
+								"audio-file": "MetalStuck",
+								"loop": "not-looping",
+								"volume": "(SFX_Volume-100)/3",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 864671932719637,
+							"parameters": {
+								"variable": "KnobDone",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 464769013283867
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -3137,11 +3170,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 222762843643156,
+					"sid": 599989598261134,
 					"parameters": {
-						"audio-file": "PaperInteraction",
+						"audio-file": "ToiletPaperPause1",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -4466,7 +4499,7 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 746144612341135,
+							"sid": 291135920182145,
 							"parameters": {
 								"object-to-create": "dialogue_box",
 								"layer": "1",
@@ -4501,9 +4534,9 @@
 						{
 							"id": "typewriter-text",
 							"objectClass": "DialogueText",
-							"sid": 152556758339941,
+							"sid": 482799975114911,
 							"parameters": {
-								"text": "\"75%\"  & newline & \"Letters found \" & puzzlescompleted & \"/ 5\"",
+								"text": "\"75%? Of what? Toilet paper?\"  & newline & \"Letters found: \" & puzzlescompleted & \"/5\"",
 								"duration": "2"
 							}
 						}
@@ -4570,11 +4603,11 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 378170661126145,
+							"sid": 139027396998510,
 							"parameters": {
 								"audio-file": "NegativeFeedback",
 								"loop": "not-looping",
-								"volume": "-5",
+								"volume": "(SFX_Volume-100)/3",
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
 							}
@@ -5776,9 +5809,9 @@
 						{
 							"id": "typewriter-text",
 							"objectClass": "DialogueText",
-							"sid": 513380018380416,
+							"sid": 750550226794905,
 							"parameters": {
-								"text": "\"75%\"  & newline & \"Letters found \" & puzzlescompleted & \"/ 5\"",
+								"text": "\"75%? Of what? Toilet paper?\"  & newline & \"Letters found: \" & puzzlescompleted & \"/5\"",
 								"duration": "2"
 							}
 						}
@@ -5845,11 +5878,11 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 659475757547036,
+							"sid": 864709104762462,
 							"parameters": {
 								"audio-file": "NegativeFeedback",
 								"loop": "not-looping",
-								"volume": "-5",
+								"volume": "(SFX_Volume-100)/3",
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
 							}
@@ -6025,11 +6058,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 449175909880795,
+					"sid": 914352273648487,
 					"parameters": {
 						"audio-file": "PaperInteraction",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -6213,10 +6246,10 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 265395986912255,
+					"sid": 759177901525447,
 					"parameters": {
-						"text": "\"The lock broke\"",
-						"duration": "0.8"
+						"text": "\"I think 'Nox' means 'Night.'\" &newline& \"They should work on their password security.\"",
+						"duration": "2"
 					}
 				},
 				{
@@ -6417,7 +6450,34 @@
 					}
 				}
 			],
-			"sid": 413444523255220
+			"sid": 413444523255220,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 358921042758230
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 204977061786195,
+							"parameters": {
+								"audio-file": "PuzzleShuffle",
+								"loop": "not-looping",
+								"volume": "(SFX_Volume-100)/3",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 423654432290235
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -6543,11 +6603,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 260321116911323,
+					"sid": 727947593480976,
 					"parameters": {
 						"audio-file": "Interact",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -6649,11 +6709,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 432755177677770,
+					"sid": 355216442003081,
 					"parameters": {
 						"audio-file": "SettingsButtonPress",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -6688,11 +6748,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 323956098644319,
+					"sid": 275123062453180,
 					"parameters": {
-						"audio-file": "PaperInteraction",
+						"audio-file": "ToiletPaperPause1",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -6785,11 +6845,11 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 195565559582501,
+							"sid": 141595673886374,
 							"parameters": {
 								"audio-file": "PosFeedbackPuzzle",
 								"loop": "not-looping",
-								"volume": "0",
+								"volume": "(SFX_Volume-100)/3",
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
 							}
@@ -6964,9 +7024,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 151458864492365,
+					"sid": 192980036721317,
 					"parameters": {
-						"text": "\"There's something behind the portrait\"",
+						"text": "\"Usually people hang FINISHED puzzles on their wall, Nox.\" &newline& \"Wait... what's that there?\"",
 						"duration": "2"
 					}
 				},
@@ -7155,6 +7215,18 @@
 						"x": "10000",
 						"y": "10000"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 224352508181481,
+					"parameters": {
+						"audio-file": "ItemGet",
+						"loop": "not-looping",
+						"volume": "(SFX_Volume-100)/3",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 702877075689507
@@ -7194,6 +7266,18 @@
 					"id": "destroy",
 					"objectClass": "barofsoap",
 					"sid": 924787298816882
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 295336412777523,
+					"parameters": {
+						"audio-file": "ItemGet",
+						"loop": "not-looping",
+						"volume": "(SFX_Volume-100)/3",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 963832440813612
@@ -7233,6 +7317,18 @@
 					"id": "destroy",
 					"objectClass": "baurbyPin",
 					"sid": 975417525617910
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 628920509207744,
+					"parameters": {
+						"audio-file": "ItemGet",
+						"loop": "not-looping",
+						"volume": "(SFX_Volume-100)/3",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 302364419187409
@@ -7279,6 +7375,18 @@
 					"sid": 877176715667260,
 					"parameters": {
 						"layer": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 953152574144941,
+					"parameters": {
+						"audio-file": "ItemGet",
+						"loop": "not-looping",
+						"volume": "(SFX_Volume-100)/3",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -7599,11 +7707,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 117605549093880,
+					"sid": 722383937563881,
 					"parameters": {
 						"audio-file": "CrackingLock",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -7699,11 +7807,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 185275109896911,
+					"sid": 566248083951006,
 					"parameters": {
 						"audio-file": "PickingPuttingPotNoPrep",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -7763,9 +7871,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 957979668827476,
+					"sid": 323530432699802,
 					"parameters": {
-						"text": "\"plant moved soap test\"",
+						"text": "\"There's something hidden beneath the snappy shrubbery...\"",
 						"duration": "2"
 					}
 				},
@@ -8003,11 +8111,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 900066287251554,
+					"sid": 827914198312116,
 					"parameters": {
 						"audio-file": "PosFeedbackPuzzle",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -8092,11 +8200,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 428537931721581,
+					"sid": 322118998455949,
 					"parameters": {
 						"audio-file": "PosFeedbackPuzzle",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -8181,11 +8289,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 469450540421069,
+					"sid": 523083904773651,
 					"parameters": {
 						"audio-file": "PosFeedbackPuzzle",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -8270,11 +8378,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 969089625939292,
+					"sid": 277967743088453,
 					"parameters": {
 						"audio-file": "PosFeedbackPuzzle",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -8359,11 +8467,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 732314061393274,
+					"sid": 695323120954085,
 					"parameters": {
 						"audio-file": "PosFeedbackPuzzle",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -8514,18 +8622,6 @@
 						"variable": "LockCombo",
 						"value": "true"
 					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 255357260307105,
-					"parameters": {
-						"audio-file": "PuzzleShuffle",
-						"loop": "not-looping",
-						"volume": "-5",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
-					}
 				}
 			],
 			"sid": 756758742585929
@@ -8607,14 +8703,6 @@
 					}
 				},
 				{
-					"id": "set-opacity",
-					"objectClass": "FadeToBlack",
-					"sid": 407209009076557,
-					"parameters": {
-						"opacity": "100"
-					}
-				},
-				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 958364423980082,
@@ -8630,11 +8718,6 @@
 					"parameters": {
 						"seconds": "2"
 					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "FadeToBlack",
-					"sid": 857719022311658
 				}
 			],
 			"sid": 957937856766902
@@ -8686,6 +8769,110 @@
 				}
 			],
 			"sid": 932874369279309
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "sink_faucet",
+					"sid": 516579472709386,
+					"parameters": {
+						"comparison": 0,
+						"number": "1"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 449907337756421
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 685952367062811,
+					"parameters": {
+						"audio-file": "SinkDrop",
+						"loop": "not-looping",
+						"volume": "(SFX_Volume-100)/3",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 647624015312836
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 507361059310714,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "screwdriver2"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "screwdriver2",
+					"sid": 720976592710317,
+					"parameters": {
+						"instance-variable": "placed"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 166773551017249,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 982639385241176,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 853205627184470,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 323069110514390,
+					"parameters": {
+						"text": "\"If you have a hammer, everything looks like a nail.\" &newline&\r\n\"If you have a screwdriver... make lemonade.\"",
+						"duration": "2"
+					}
+				}
+			],
+			"sid": 263811196298964
 		}
 	],
 	"sid": 103033473827399
