@@ -335,11 +335,6 @@
 					"sid": 706835440040180
 				},
 				{
-					"id": "move-to-top",
-					"objectClass": "screwdriver",
-					"sid": 145017273954913
-				},
-				{
 					"id": "set-visible",
 					"objectClass": "screwdriver",
 					"sid": 532374167145871,
@@ -5724,9 +5719,16 @@
 			],
 			"actions": [
 				{
+					"callFunction": "AddtoInventory",
+					"sid": 429860254402065,
+					"parameters": [
+						"\"sd\""
+					]
+				},
+				{
 					"id": "destroy",
-					"objectClass": "screwdriver",
-					"sid": 834192526321790
+					"objectClass": "screwdriver2",
+					"sid": 445788285306317
 				},
 				{
 					"id": "set-position",
@@ -5736,13 +5738,6 @@
 						"x": "10000",
 						"y": "10000"
 					}
-				},
-				{
-					"callFunction": "AddtoInventory",
-					"sid": 555842489525885,
-					"parameters": [
-						"\"sd\""
-					]
 				}
 			],
 			"sid": 702877075689507
