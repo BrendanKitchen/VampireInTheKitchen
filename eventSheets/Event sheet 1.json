@@ -262,6 +262,16 @@
 			"sid": 559915360085989
 		},
 		{
+			"eventType": "variable",
+			"name": "letterlock_clicked",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 233289781381998
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -1790,6 +1800,15 @@
 						"click-type": "clicked",
 						"object-clicked": "Letter_Lock"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 668424378744264,
+					"parameters": {
+						"variable": "letterlock_clicked"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -4556,9 +4575,26 @@
 								"comparison": 5,
 								"value": "5"
 							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 483318460134573,
+							"parameters": {
+								"variable": "letterlock_clicked"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
+						{
+							"id": "move-to-layer",
+							"objectClass": "Letter_Lock",
+							"sid": 944436272732252,
+							"parameters": {
+								"layer": "4"
+							}
+						},
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
@@ -4590,9 +4626,87 @@
 							"parameters": {
 								"visibility": "invisible"
 							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 582118245401364,
+							"parameters": {
+								"variable": "letterlock_clicked",
+								"value": "true"
+							}
 						}
 					],
 					"sid": 236992164651552
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 555269100603562,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Letter_Lock"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 302938618443181,
+							"parameters": {
+								"variable": "puzzlescompleted",
+								"comparison": 5,
+								"value": "5"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 574512234268557,
+							"parameters": {
+								"variable": "letterlock_clicked"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Inventory",
+							"sid": 223784209100837,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Inventory_Box",
+							"sid": 524011549960495,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "stake_burned",
+							"sid": 861768269690648,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 671906672792371,
+							"parameters": {
+								"variable": "letterlock_clicked",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 113689167109323
 				},
 				{
 					"eventType": "block",
@@ -5831,9 +5945,27 @@
 								"comparison": 5,
 								"value": "5"
 							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 254208894129203,
+							"parameters": {
+								"variable": "letterlock_clicked"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 254622669673814,
+							"parameters": {
+								"variable": "letterlock_clicked",
+								"value": "true"
+							}
+						},
 						{
 							"id": "move-to-layer",
 							"objectClass": "Letter_Lock",
@@ -6307,6 +6439,15 @@
 					"parameters": {
 						"variable": "VolumeSlider_Correct"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 217435694680096,
+					"parameters": {
+						"variable": "letterlock_clicked"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -6348,6 +6489,15 @@
 					"sid": 515212791929501,
 					"parameters": {
 						"variable": "portaitpuzzleplayed",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 184158771428692,
+					"parameters": {
+						"variable": "letterlock_clicked",
 						"value": "true"
 					}
 				},
