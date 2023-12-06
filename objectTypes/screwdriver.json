@@ -2,7 +2,7 @@
 	"name": "screwdriver",
 	"plugin-id": "Sprite",
 	"sid": 518081490917397,
-	"isGlobal": true,
+	"isGlobal": false,
 	"instanceVariables": [
 		{
 			"name": "placed",
