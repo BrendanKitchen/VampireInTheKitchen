@@ -57,13 +57,6 @@
 		},
 		{
 			"type": "plugin",
-			"id": "progressbar",
-			"name": "Progress bar",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "sliderbar",
 			"name": "Slider bar",
 			"author": "Scirra",
@@ -94,13 +87,6 @@
 			"type": "behavior",
 			"id": "TileMovement",
 			"name": "Tile movement",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Tween",
-			"name": "Tween",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -170,7 +156,7 @@
 			"candle_afterstake",
 			"magazine_zoomed",
 			"MainMenuButton2",
-			"Value",
+			"Value_BGMusic",
 			"N",
 			"I",
 			"G",
@@ -184,13 +170,25 @@
 			"back",
 			"CreditsButton",
 			"PlayButton",
-			"FadeToBlack",
 			"ToiletPaper",
 			"crappot",
 			"pot_box",
 			"VolumeBar",
-			"ProgressBar",
-			"portait_box"
+			"portait_box",
+			"Volume_Hint",
+			"window_temp",
+			"T_textbox",
+			"screwdriver",
+			"tape",
+			"screwdriver2",
+			"neutral_nox",
+			"angry_nox",
+			"confused_nox",
+			"happy_nox",
+			"back_button_pot",
+			"Value_SFX",
+			"SFXBar",
+			"BG1"
 		],
 		"subfolders": []
 	},
@@ -325,6 +323,30 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "ItemGet.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 128308575686086,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "MetalStuck.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 721263798823956,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "ToiletPaperPause1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 726225629338397,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
@@ -343,6 +365,14 @@
 					"name": "Im_Stuck_in_the_Bathroom (1).webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 619358135818649,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Im_Stuck_in_the_Bathroom (2).webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 536216891334136,
 					"file-info": {
 						"purpose": "none"
 					}

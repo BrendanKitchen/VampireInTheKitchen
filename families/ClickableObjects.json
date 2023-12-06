@@ -10,7 +10,6 @@
 		"baurbyPin",
 		"plant",
 		"magazine_tmp",
-		"H2",
 		"door",
 		"barofsoap",
 		"arrow",
@@ -31,6 +30,16 @@
 		"CreditsButton",
 		"back",
 		"backarrow2",
-		"ToiletPaper"
+		"ToiletPaper",
+		"Volume_Hint",
+		"T_textbox",
+		"toilet",
+		"mirror",
+		"magazine_zoomed",
+		"portait_locked",
+		"MainMenuButton",
+		"MainMenuButton2",
+		"back_button_pot",
+		"pot_box"
 	]
 }

@@ -92,66 +92,6 @@
 						"angle": 0,
 						"zElevation": 0
 					}
-				},
-				{
-					"type": "H2",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 45,
-					"instanceVariables": {
-						"present": false
-					},
-					"behaviors": {},
-					"world": {
-						"x": 1271,
-						"y": 90,
-						"width": 60.29107,
-						"height": 115.196333,
-						"originX": 0.5,
-						"originY": 0.5043478260869565,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0.06858924129638311,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "pot_box",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 125,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 1325.5,
-						"y": 156.5,
-						"width": 389,
-						"height": 205,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
 				}
 			],
 			"sid": 694784549473573,
@@ -231,10 +171,10 @@
 					"world": {
 						"x": 235,
 						"y": 748,
-						"width": 578.3701237097227,
-						"height": 578.3701237097227,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 282.9436576421665,
+						"height": 299.5874022093528,
+						"originX": 0.5563725490196079,
+						"originY": 0.5208333333333334,
 						"color": [
 							1,
 							1,
@@ -307,7 +247,7 @@
 			"sid": 842624113461990,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
-			"isInitiallyInteractive": false,
+			"isInitiallyInteractive": true,
 			"color": [
 				1,
 				1,
@@ -336,43 +276,7 @@
 			"name": "FadeToBlack",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [
-				{
-					"type": "FadeToBlack",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 35,
-					"instanceVariables": {},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 957.5,
-						"y": 539.5,
-						"width": 1931,
-						"height": 1087,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							0
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				}
-			],
+			"instances": [],
 			"sid": 361615345342193,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -400,6 +304,72 @@
 			"blendMode": "normal",
 			"zElevation": 0,
 			"global": true
+		},
+		{
+			"name": "Layer1",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 744662701726820,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.5019607843137255,
+				0.5019607843137255,
+				0.5019607843137255,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "uninteractable",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 972640146815535,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.5019607843137255,
+				0.5019607843137255,
+				0.5019607843137255,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
 		}
 	],
 	"sid": 169258270175575,

@@ -1,0 +1,62 @@
+{
+	"name": "neutral_nox",
+	"plugin-id": "Sprite",
+	"sid": 182627452072654,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 519650203928039
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 450,
+						"height": 801,
+						"originX": 0.5249537892791127,
+						"originY": 0.5031120331950207,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5463528,
+						"collisionPoly": {
+							"points": [
+								0.45286506469500926,
+								0.001037344398340249,
+								0.6506469500924215,
+								0.006224066390041493,
+								0.7855822550831792,
+								0.06742738589211618,
+								0.9926062846580407,
+								0.5,
+								0.9944547134935305,
+								0.6317427385892116,
+								0.5009242144177449,
+								0.9989626556016596,
+								0.0018484288354898336,
+								0.9450207468879668
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 526696214286960,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

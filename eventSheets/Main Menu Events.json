@@ -3,13 +3,33 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "FadeInComplete",
+			"name": "LockMusicMenu",
 			"type": "boolean",
 			"initialValue": "false",
-			"comment": "Checks to see if the fade in has already been done.",
+			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 632196763184264
+			"sid": 425820054740510
+		},
+		{
+			"eventType": "variable",
+			"name": "OnCredits",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 117181595511186
+		},
+		{
+			"eventType": "variable",
+			"name": "OnSettings",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 102773782645599
 		},
 		{
 			"eventType": "block",
@@ -17,7 +37,7 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 228532506421118,
+					"sid": 878075830432528,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
@@ -29,68 +49,77 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 100290102787752,
+					"sid": 765741407814938,
 					"parameters": {
 						"audio-file": "MainMenuButtonPress",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"menubuttonpress\""
 					}
 				},
 				{
-					"id": "tween-one-property",
-					"objectClass": "FadeToBlack",
-					"sid": 656752540637734,
-					"behaviorType": "Tween",
+					"id": "set-visible",
+					"objectClass": "H2",
+					"sid": 508695290720429,
 					"parameters": {
-						"tags": "\"fadeout\"",
-						"property": "offsetOpacity",
-						"end-value": "100",
-						"time": "2",
-						"ease": "default",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no",
-						"repeat-count": "1"
+						"visibility": "invisible"
 					}
 				},
 				{
-					"id": "go-to-layout",
+					"id": "move-to-layer",
+					"objectClass": "H2",
+					"sid": 473093382670204,
+					"parameters": {
+						"layer": "4"
+					}
+				},
+				{
+					"id": "signal",
 					"objectClass": "System",
-					"sid": 568369044471162,
+					"sid": 855354282443463,
 					"parameters": {
-						"layout": "Bathroom_Scene1"
+						"tag": "\"exitingmenu\""
 					}
 				},
 				{
 					"id": "set-layer-interactive",
 					"objectClass": "System",
-					"sid": 920463712049262,
+					"sid": 232232447889078,
 					"parameters": {
 						"layer": "1",
-						"interactive": true
+						"interactive": false
 					}
 				},
 				{
-					"id": "toggle-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 269353033525395,
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 540191158106421,
 					"parameters": {
-						"variable": "FadeInComplete"
+						"tag": "\"menumusic\"",
+						"db": "-100",
+						"duration": "2",
+						"ending": "stop"
 					}
 				},
 				{
-					"id": "set-boolean-eventvar",
+					"id": "wait",
 					"objectClass": "System",
-					"sid": 172239352624557,
+					"sid": 161328492081398,
 					"parameters": {
-						"variable": "FadeInComplete",
-						"value": "false"
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 696792674612792,
+					"parameters": {
+						"layout": "Bathroom_Scene1"
 					}
 				}
 			],
-			"sid": 702250222680533
+			"sid": 832354036822409
 		},
 		{
 			"eventType": "block",
@@ -98,7 +127,7 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 326899942396590,
+					"sid": 939971890582486,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
@@ -110,7 +139,7 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 570673831503397,
+					"sid": 817902467736706,
 					"parameters": {
 						"layout": "Credits Page"
 					}
@@ -118,7 +147,7 @@
 				{
 					"id": "set-visible",
 					"objectClass": "H2",
-					"sid": 230907471268256,
+					"sid": 716312126343035,
 					"parameters": {
 						"visibility": "invisible"
 					}
@@ -126,22 +155,31 @@
 				{
 					"id": "move-to-bottom",
 					"objectClass": "H2",
-					"sid": 699365836635481
+					"sid": 444252879593200
 				},
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 865853577760373,
+					"sid": 912859089339714,
 					"parameters": {
 						"audio-file": "PaperInteraction",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"paperinteraction\""
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 906323572729538,
+					"parameters": {
+						"variable": "OnCredits",
+						"value": "true"
 					}
 				}
 			],
-			"sid": 949363204670841,
+			"sid": 697850398356820,
 			"isOrBlock": true
 		},
 		{
@@ -150,11 +188,19 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 763414519587770,
+					"sid": 892129152476978,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
 						"object-clicked": "back"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 867662253472363,
+					"parameters": {
+						"variable": "OnCredits"
 					}
 				}
 			],
@@ -162,7 +208,7 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 737063352489875,
+					"sid": 829143192778983,
 					"parameters": {
 						"layout": "Main_Menu"
 					}
@@ -170,26 +216,35 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 261102780029801,
+					"sid": 864156711692957,
 					"parameters": {
-						"audio-file": "Interact",
+						"audio-file": "PaperInteraction",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"paperinteraction\""
 					}
 				},
 				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 119457191475985,
+					"sid": 153920884155867,
 					"parameters": {
 						"variable": "OnScene1",
 						"value": "false"
 					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 555615314639571,
+					"parameters": {
+						"variable": "OnCredits",
+						"value": "false"
+					}
 				}
 			],
-			"sid": 378813785028031,
+			"sid": 259474686041927,
 			"children": [
 				{
 					"eventType": "block",
@@ -197,7 +252,7 @@
 						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "H2",
-							"sid": 392072439896513,
+							"sid": 910031441892720,
 							"parameters": {
 								"instance-variable": "present"
 							}
@@ -207,21 +262,20 @@
 						{
 							"id": "move-to-top",
 							"objectClass": "H2",
-							"sid": 469575076159466
+							"sid": 546935720999488
 						},
 						{
 							"id": "set-visible",
 							"objectClass": "H2",
-							"sid": 983948413432353,
+							"sid": 603609907731657,
 							"parameters": {
-								"visibility": "visible"
+								"visibility": "invisible"
 							}
 						}
 					],
-					"sid": 419491461363673
+					"sid": 295496165878460
 				}
-			],
-			"isOrBlock": true
+			]
 		},
 		{
 			"eventType": "block",
@@ -229,7 +283,7 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 533934428620841,
+					"sid": 803107435427055,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
@@ -241,7 +295,7 @@
 				{
 					"id": "set-boolean-instvar",
 					"objectClass": "H2",
-					"sid": 886710296244363,
+					"sid": 584317254581938,
 					"parameters": {
 						"instance-variable": "present",
 						"value": "true"
@@ -250,12 +304,12 @@
 				{
 					"id": "move-to-top",
 					"objectClass": "H2",
-					"sid": 170953930437516
+					"sid": 964926863313936
 				},
 				{
 					"id": "set-visible",
 					"objectClass": "H2",
-					"sid": 426349865051297,
+					"sid": 464092410379242,
 					"parameters": {
 						"visibility": "visible"
 					}
@@ -263,26 +317,31 @@
 				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
-					"sid": 554666645249435,
+					"sid": 649022227249209,
 					"parameters": {
 						"variable": "puzzlescompleted",
 						"value": "1"
 					}
 				},
 				{
+					"id": "destroy",
+					"objectClass": "pot_box",
+					"sid": 475640111537449
+				},
+				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 870930501599518,
+					"sid": 921407781812671,
 					"parameters": {
 						"audio-file": "Interact",
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"interact\""
 					}
 				}
 			],
-			"sid": 799060492359263
+			"sid": 848107555620748
 		},
 		{
 			"eventType": "block",
@@ -290,7 +349,7 @@
 				{
 					"id": "cursor-is-over-object",
 					"objectClass": "Mouse",
-					"sid": 817666880770491,
+					"sid": 701872849337051,
 					"parameters": {
 						"object": "ClickableObjects"
 					}
@@ -300,13 +359,13 @@
 				{
 					"id": "set-cursor-from-sprite",
 					"objectClass": "Mouse",
-					"sid": 255554797217596,
+					"sid": 534131109727365,
 					"parameters": {
 						"sprite": "cursor"
 					}
 				}
 			],
-			"sid": 955586119505791
+			"sid": 384917865779279
 		},
 		{
 			"eventType": "block",
@@ -314,7 +373,7 @@
 				{
 					"id": "cursor-is-over-object",
 					"objectClass": "Mouse",
-					"sid": 248384538199638,
+					"sid": 576940098913822,
 					"parameters": {
 						"object": "ClickableObjects"
 					},
@@ -325,13 +384,13 @@
 				{
 					"id": "set-cursor-style",
 					"objectClass": "Mouse",
-					"sid": 450644913745619,
+					"sid": 832477833007444,
 					"parameters": {
 						"cursor-style": "normal"
 					}
 				}
 			],
-			"sid": 742669866719613
+			"sid": 170727111829471
 		},
 		{
 			"eventType": "block",
@@ -339,123 +398,62 @@
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
-					"sid": 562910191610205
+					"sid": 987725642492229
 				},
 				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 129552676938301,
+					"sid": 597883082557918,
 					"parameters": {
-						"variable": "FadeInComplete"
+						"variable": "LockMusicMenu"
 					},
 					"isInverted": true
 				}
 			],
 			"actions": [
 				{
-					"id": "set-opacity",
-					"objectClass": "FadeToBlack",
-					"sid": 423881781869005,
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 951640408977177,
 					"parameters": {
-						"opacity": "100"
+						"audio-file": "Theres_a_Vampire_in_the_Kitchen (2)",
+						"loop": "looping",
+						"volume": "-100",
+						"stereo-pan": "0",
+						"tag-optional": "\"menumusic\""
 					}
 				},
 				{
-					"id": "tween-one-property",
-					"objectClass": "FadeToBlack",
-					"sid": 999883543413211,
-					"behaviorType": "Tween",
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 886118884410549,
 					"parameters": {
-						"tags": "\"fadein\"",
-						"property": "offsetOpacity",
-						"end-value": "0",
-						"time": "2",
-						"ease": "default",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no",
-						"repeat-count": "1"
+						"tag": "\"menumusic\"",
+						"db": "-2.5",
+						"duration": "2",
+						"ending": "keep-playing"
 					}
 				},
 				{
-					"id": "toggle-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 176243510995950,
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 873025726201191,
 					"parameters": {
-						"variable": "FadeInComplete"
-					}
-				}
-			],
-			"sid": 171852834346165
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-tweens-finished",
-					"objectClass": "FadeToBlack",
-					"sid": 221274657541444,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"fadein\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 465856160930159,
-					"parameters": {
-						"layer": "1",
-						"interactive": true
-					}
-				}
-			],
-			"sid": 596667704244674
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-tweens-finished",
-					"objectClass": "FadeToBlack",
-					"sid": 977739958461368,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"fadeout\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 538320642477536,
-					"parameters": {
-						"layout": "Bathroom_Scene1"
+						"tag": "\"menumusic\"",
+						"db": "(Volume-100)/3"
 					}
 				},
 				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 970095718368908,
+					"sid": 535503393740955,
 					"parameters": {
-						"variable": "Start",
+						"variable": "LockMusicMenu",
 						"value": "true"
-					}
-				},
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 109444084897006,
-					"parameters": {
-						"layer": "1",
-						"interactive": true
 					}
 				}
 			],
-			"sid": 159653181751139
+			"sid": 799150465050739
 		},
 		{
 			"eventType": "block",
@@ -463,11 +461,49 @@
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
-					"sid": 320089782801937
+					"sid": 186118769944832
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 556036958484778,
+					"parameters": {
+						"variable": "LockMusicMenu"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 648286210087520,
+					"parameters": {
+						"variable": "Volume",
+						"comparison": 0,
+						"value": "0"
+					}
 				}
 			],
-			"actions": [],
-			"sid": 312317286878298
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 317677113433706,
+					"parameters": {
+						"tag": "\"menumusic\"",
+						"db": "-200"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 775334152536632,
+					"parameters": {
+						"variable": "LockMusicMenu",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 602154813781415
 		},
 		{
 			"eventType": "block",
@@ -475,7 +511,7 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 251135676869029,
+					"sid": 240840765509019,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
@@ -487,12 +523,12 @@
 				{
 					"id": "move-to-bottom",
 					"objectClass": "H2",
-					"sid": 699177575240871
+					"sid": 212062549271472
 				},
 				{
 					"id": "set-visible",
 					"objectClass": "H2",
-					"sid": 980496614238468,
+					"sid": 174455694833779,
 					"parameters": {
 						"visibility": "invisible"
 					}
@@ -500,7 +536,7 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 846336684771164,
+					"sid": 271319054409767,
 					"parameters": {
 						"layout": "Settings Page"
 					}
@@ -508,17 +544,26 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 199995796860667,
+					"sid": 521256571317173,
 					"parameters": {
 						"audio-file": "SettingsButtonPress",
 						"loop": "not-looping",
-						"volume": "-10",
+						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"settingspress\""
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 282375687112708,
+					"parameters": {
+						"variable": "OnSettings",
+						"value": "true"
 					}
 				}
 			],
-			"sid": 980911967703008,
+			"sid": 234392430991629,
 			"children": [
 				{
 					"eventType": "block",
@@ -526,7 +571,7 @@
 						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "H2",
-							"sid": 656078632102099,
+							"sid": 988727134970018,
 							"parameters": {
 								"instance-variable": "present"
 							}
@@ -534,17 +579,672 @@
 					],
 					"actions": [
 						{
+							"id": "destroy",
+							"objectClass": "pot_box",
+							"sid": 629030198198771
+						},
+						{
 							"id": "set-visible",
 							"objectClass": "H2",
-							"sid": 118133880910204,
+							"sid": 652337256396847,
 							"parameters": {
-								"visibility": "invisible"
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "H2",
+							"sid": 380136602447839
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "H2",
+							"sid": 998804565849496,
+							"parameters": {
+								"visibility": "visible"
 							}
 						}
 					],
-					"sid": 563076287929471
+					"sid": 252804848766434
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 399222828807910,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "back_button_pot"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 974905951212695,
+					"parameters": {
+						"variable": "OnSettings"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 252855305976584,
+					"parameters": {
+						"layout": "Main_Menu"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 344444911755099,
+					"parameters": {
+						"audio-file": "SettingsButtonPress",
+						"loop": "not-looping",
+						"volume": "(SFX_Volume-100)/3",
+						"stereo-pan": "0",
+						"tag-optional": "\"settingspress\""
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 790293542031430,
+					"parameters": {
+						"variable": "OnScene1",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 850457027962092,
+					"parameters": {
+						"variable": "OnSettings",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 996822305027859,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "H2",
+							"sid": 627450486961509,
+							"parameters": {
+								"instance-variable": "present"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-top",
+							"objectClass": "H2",
+							"sid": 294904171136965
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "H2",
+							"sid": 425341955281191,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "pot_box",
+							"sid": 861325700555270
+						}
+					],
+					"sid": 460846263004525
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 248026667103534
+				}
+			],
+			"actions": [],
+			"sid": 201409085301578,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "VolumeBar",
+							"sid": 725623678760716,
+							"parameters": {
+								"comparison": 0,
+								"value": "75"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Value_BGMusic",
+							"sid": 596129416866967,
+							"parameters": {
+								"text": "VolumeBar.Value & \"%\"\n"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton",
+							"sid": 134637457242982,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton2",
+							"sid": 401718238163183,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 113009309933392,
+							"parameters": {
+								"variable": "VolumeSlider_Correct",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 576697127476479,
+							"parameters": {
+								"variable": "Volume",
+								"value": "VolumeBar.Value"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 316776618622388,
+							"parameters": {
+								"tag": "\"bgmusic\"",
+								"db": "(Volume-100)/3"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 333774669377373,
+							"parameters": {
+								"tag": "\"menumusic\"",
+								"db": "(Volume-100)/3"
+							}
+						}
+					],
+					"sid": 150369613615879,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 384543661195547
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 876062966339089,
+									"parameters": {
+										"audio-file": "Interact",
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 340509645530646
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 575058681793735
+				}
+			],
+			"actions": [],
+			"sid": 371138405375468,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "VolumeBar",
+							"sid": 373156938058710,
+							"parameters": {
+								"comparison": 0,
+								"value": "75"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Value_BGMusic",
+							"sid": 786661390084260,
+							"parameters": {
+								"text": "VolumeBar.Value & \"%\"\n"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton",
+							"sid": 506387359623125,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton2",
+							"sid": 929333135057918,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 795947677570751,
+							"parameters": {
+								"variable": "Volume",
+								"value": "VolumeBar.Value"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 471291499672591,
+							"parameters": {
+								"tag": "\"bgmusic\"",
+								"db": "(Volume-100)/3"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 207274179250703,
+							"parameters": {
+								"tag": "\"menumusic\"",
+								"db": "(Volume-100)/3"
+							}
+						}
+					],
+					"sid": 772918604596653
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 239218318415783
+				}
+			],
+			"actions": [],
+			"sid": 643577461413527,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "VolumeBar",
+							"sid": 844228643471022,
+							"parameters": {
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Value_BGMusic",
+							"sid": 628245264604761,
+							"parameters": {
+								"text": "VolumeBar.Value & \"%\"\n"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton",
+							"sid": 761712418061371,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MainMenuButton2",
+							"sid": 733890313911238,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 782604782845382,
+							"parameters": {
+								"variable": "Volume",
+								"value": "VolumeBar.Value"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 137843226586895,
+							"parameters": {
+								"tag": "\"bgmusic\"",
+								"db": "-100"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 234538542160081,
+							"parameters": {
+								"tag": "\"menumusic\"",
+								"db": "-100"
+							}
+						}
+					],
+					"sid": 253012986218276
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 190495512660788
+				}
+			],
+			"actions": [],
+			"sid": 995502174172603,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "SFXBar",
+							"sid": 738428924709541,
+							"parameters": {
+								"comparison": 5,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-value",
+							"objectClass": "SFXBar",
+							"sid": 875473498203001,
+							"parameters": {
+								"comparison": 3,
+								"value": "100"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Value_SFX",
+							"sid": 223902138627666,
+							"parameters": {
+								"text": "SFXBar.Value & \"%\"\n"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 169896408169815,
+							"parameters": {
+								"variable": "SFX_Volume",
+								"value": "SFXBar.Value"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 486486161777267,
+							"parameters": {
+								"tag": "\"paperinteraction\"",
+								"db": "(SFX_Volume-100)/3"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 815307405654868,
+							"parameters": {
+								"tag": "\"menubuttonpress\"",
+								"db": "(SFX_Volume-100)/3"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 262736490600017,
+							"parameters": {
+								"tag": "\"settingspress\"",
+								"db": "(SFX_Volume-100)/3"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 478461534403384,
+							"parameters": {
+								"tag": "\"settingspress\"",
+								"db": "(SFX_Volume-100)/3"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 500736977182091,
+							"parameters": {
+								"tag": "\"interact\"",
+								"db": "(SFX_Volume-100)/3"
+							}
+						}
+					],
+					"sid": 181497550325684
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 915956199360197
+				}
+			],
+			"actions": [],
+			"sid": 337482408816261,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "SFXBar",
+							"sid": 845708645951178,
+							"parameters": {
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Value_SFX",
+							"sid": 571620843743867,
+							"parameters": {
+								"text": "SFXBar.Value & \"%\"\n"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 513163118347968,
+							"parameters": {
+								"variable": "SFX_Volume",
+								"value": "SFXBar.Value"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 785752728501550,
+							"parameters": {
+								"tag": "\"paperinteraction\"",
+								"db": "-200"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 214757748763673,
+							"parameters": {
+								"tag": "\"menubuttonpress\"",
+								"db": "-200"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 225246786329401,
+							"parameters": {
+								"tag": "\"settingspress\"",
+								"db": "-200"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 168073246722172,
+							"parameters": {
+								"tag": "\"settingspress\"",
+								"db": "-200"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 527515834707850,
+							"parameters": {
+								"tag": "\"interact\"",
+								"db": "-200"
+							}
+						}
+					],
+					"sid": 747454651860807
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 940215611122868
+				}
+			],
+			"actions": [
+				{
+					"id": "set-value",
+					"objectClass": "VolumeBar",
+					"sid": 902750238838569,
+					"parameters": {
+						"value": "Volume"
+					}
+				},
+				{
+					"id": "set-value",
+					"objectClass": "SFXBar",
+					"sid": 678340508773886,
+					"parameters": {
+						"value": "SFX_Volume"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 189286992821591,
+					"parameters": {
+						"layer": "1",
+						"interactive": true
+					}
+				}
+			],
+			"sid": 559156541194931
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "H2",
+					"sid": 494263163148518,
+					"parameters": {
+						"instance-variable": "present"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "pot_box",
+					"sid": 311231825593909
+				}
+			],
+			"sid": 293789138099398
 		}
 	],
 	"sid": 588019371100103
