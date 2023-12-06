@@ -1653,7 +1653,7 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 222792654782913,
+					"sid": 908095196340370,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
@@ -1661,11 +1661,19 @@
 					}
 				},
 				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "baurbyPin",
-					"sid": 707520344243575,
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 968806660945837,
 					"parameters": {
-						"object": "Inventory_Box"
+						"variable": "Start"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 379451839901094,
+					"parameters": {
+						"variable": "lock_broke"
 					},
 					"isInverted": true
 				}
@@ -1674,7 +1682,7 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 847747263086698,
+					"sid": 879650047121616,
 					"parameters": {
 						"object-to-create": "dialogue_box",
 						"layer": "1",
@@ -1687,7 +1695,7 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 552384846132770,
+					"sid": 213836954049400,
 					"parameters": {
 						"object-to-create": "DialogueText",
 						"layer": "1",
@@ -1700,7 +1708,7 @@
 				{
 					"id": "set-font-face",
 					"objectClass": "DialogueText",
-					"sid": 924936582656938,
+					"sid": 147270907291556,
 					"parameters": {
 						"font-face": "\"Noteworthy\"",
 						"style": "normal"
@@ -1709,14 +1717,26 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 669398445608427,
+					"sid": 139596569662587,
 					"parameters": {
 						"text": "\"That's a big lock for a small cabinet...\" &newline& \"Maybe there's something important in there?\"",
-						"duration": "2.3"
+						"duration": "2"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 341268650853880,
+					"parameters": {
+						"audio-file": "NegativeFeedback",
+						"loop": "not-looping",
+						"volume": "(SFX_Volume-100)/3",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
-			"sid": 320585747195765
+			"sid": 879025768112743
 		},
 		{
 			"eventType": "block",
@@ -8111,6 +8131,15 @@
 					"parameters": {
 						"variable": "puzzlescompleted",
 						"value": "1"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 169341102706929,
+					"parameters": {
+						"variable": "lock_broke",
+						"value": "true"
 					}
 				}
 			],
