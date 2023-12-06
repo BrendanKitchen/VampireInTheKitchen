@@ -272,6 +272,26 @@
 			"sid": 233289781381998
 		},
 		{
+			"eventType": "variable",
+			"name": "plant_clicked_nox_dialogue",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 497908236830538
+		},
+		{
+			"eventType": "variable",
+			"name": "soap_placed",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 935107717093750
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -1125,6 +1145,15 @@
 						"click-type": "clicked",
 						"object-clicked": "door"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 993963829059575,
+					"parameters": {
+						"variable": "screwdriver_inplace"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -1437,6 +1466,76 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
+					"sid": 420237239572437,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "baurbyPin"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "baurbyPin",
+					"sid": 896617882801639,
+					"parameters": {
+						"object": "Inventory_Box"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 134674928215301,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 968466882024566,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 529089647073787,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 688122184327560,
+					"parameters": {
+						"text": "\"BOBBY PIN (IN INVENTORY) SAMPLE TEXT .\"",
+						"duration": "2"
+					}
+				}
+			],
+			"sid": 594643127390462
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
 					"sid": 806121540848458,
 					"parameters": {
 						"mouse-button": "left",
@@ -1521,6 +1620,14 @@
 					"sid": 358064637301975,
 					"parameters": {
 						"object": "Inventory_Box"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 361311741426902,
+					"parameters": {
+						"variable": "screwdriver_inplace"
 					}
 				}
 			],
@@ -6842,6 +6949,63 @@
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
 							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 289968665398741,
+							"parameters": {
+								"object-to-create": "dialogue_box",
+								"layer": "1",
+								"x": "960",
+								"y": "880",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 382832048621554,
+							"parameters": {
+								"object-to-create": "confused_nox",
+								"layer": "1",
+								"x": "1608",
+								"y": "450",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 819217870921735,
+							"parameters": {
+								"object-to-create": "DialogueText",
+								"layer": "1",
+								"x": "dialogue_box.X",
+								"y": "dialogue_box.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-font-face",
+							"objectClass": "DialogueText",
+							"sid": 806121977234062,
+							"parameters": {
+								"font-face": "\"Bangla MN\"",
+								"style": "normal"
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "DialogueText",
+							"sid": 436263184511026,
+							"parameters": {
+								"text": "\"NOX SAMPLE DIALOGUE PORTAIT PUZZLE.\"",
+								"duration": "2"
+							}
 						}
 					],
 					"sid": 423654432290235
@@ -7757,6 +7921,63 @@
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 228161932034324,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 937306801635093,
+					"parameters": {
+						"object-to-create": "confused_nox",
+						"layer": "1",
+						"x": "1608",
+						"y": "450",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 169809711509260,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 519501023494022,
+					"parameters": {
+						"font-face": "\"Bangla MN\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 286738390961385,
+					"parameters": {
+						"text": "\"NOX SAMPLE DIALOGUE STAKE.\"",
+						"duration": "2"
+					}
 				}
 			],
 			"sid": 455841973636841
@@ -8165,6 +8386,15 @@
 					"parameters": {
 						"instance-variable": "placed"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 756060481463564,
+					"parameters": {
+						"variable": "plant_clicked_nox_dialogue"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -8172,6 +8402,15 @@
 					"id": "destroy",
 					"objectClass": "barofsoap",
 					"sid": 308760805654464
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 304285284903277,
+					"parameters": {
+						"variable": "soap_placed",
+						"value": "true"
+					}
 				},
 				{
 					"id": "set-boolean-eventvar",
@@ -8203,18 +8442,9 @@
 					}
 				},
 				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 938997410503879,
-					"parameters": {
-						"variable": "puzzlescompleted",
-						"value": "1"
-					}
-				},
-				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 150477642218607,
+					"sid": 141064293064107,
 					"parameters": {
 						"object-to-create": "dialogue_box",
 						"layer": "1",
@@ -8227,7 +8457,20 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 144030161350601,
+					"sid": 781668514713540,
+					"parameters": {
+						"object-to-create": "confused_nox",
+						"layer": "1",
+						"x": "1608",
+						"y": "450",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 897442416510397,
 					"parameters": {
 						"object-to-create": "DialogueText",
 						"layer": "1",
@@ -8240,19 +8483,37 @@
 				{
 					"id": "set-font-face",
 					"objectClass": "DialogueText",
-					"sid": 766619504286843,
+					"sid": 771082325206866,
 					"parameters": {
-						"font-face": "\"Noteworthy\"",
+						"font-face": "\"Bangla MN\"",
 						"style": "normal"
 					}
 				},
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 323530432699802,
+					"sid": 400564463113499,
 					"parameters": {
-						"text": "\"There's something hidden beneath the snappy shrubbery...\"",
+						"text": "\"NOX SAMPLE DIALOGUE PLANT MOVED.\"",
 						"duration": "2"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 602818668962373,
+					"parameters": {
+						"variable": "plant_clicked_nox_dialogue",
+						"value": "true"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 938997410503879,
+					"parameters": {
+						"variable": "puzzlescompleted",
+						"value": "1"
 					}
 				},
 				{
@@ -8270,6 +8531,158 @@
 				}
 			],
 			"sid": 417877426724178
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 315799981673280,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "plant"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "barofsoap",
+					"sid": 436790719151340,
+					"parameters": {
+						"instance-variable": "placed"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 553156450530405,
+					"parameters": {
+						"variable": "plant_clicked_nox_dialogue"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 732328474566225,
+					"parameters": {
+						"variable": "plant_clicked_nox_dialogue",
+						"value": "false"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "barofsoap",
+					"sid": 390892115110252
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 522253751409384,
+					"parameters": {
+						"variable": "plant_moved",
+						"value": "true"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 661863316324220,
+					"parameters": {
+						"audio-file": "PickingPuttingPotNoPrep",
+						"loop": "not-looping",
+						"volume": "(SFX_Volume-100)/3",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "move-forward",
+					"objectClass": "plant",
+					"sid": 917768239333131,
+					"parameters": {
+						"distance": "150"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 438949176552936,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 702663845946045,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 968064491448519,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 568157436427651,
+					"parameters": {
+						"text": "\"There's something hidden beneath the snappy shrubbery...\"",
+						"duration": "2"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 218186514719829,
+					"parameters": {
+						"variable": "puzzlescompleted",
+						"value": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "T_textbox",
+					"sid": 440151924349742,
+					"parameters": {
+						"layer": "0"
+					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "T_textbox",
+					"sid": 396976381124007
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "barofsoap",
+					"sid": 719861481095246,
+					"parameters": {
+						"instance-variable": "placed",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 508213957463225
 		},
 		{
 			"eventType": "block",
@@ -9183,6 +9596,16 @@
 			"sid": 647624015312836
 		},
 		{
+			"eventType": "variable",
+			"name": "screwdriver_inplace",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 625397503053924
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -9247,6 +9670,15 @@
 					"parameters": {
 						"text": "\"If you have a hammer, everything looks like a nail.\" &newline&\r\n\"If you have a screwdriver... make lemonade.\"",
 						"duration": "2"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 490170027609343,
+					"parameters": {
+						"variable": "screwdriver_inplace",
+						"value": "true"
 					}
 				}
 			],
