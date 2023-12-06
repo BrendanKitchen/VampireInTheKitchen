@@ -6311,6 +6311,14 @@
 			],
 			"actions": [
 				{
+					"id": "move-to-layer",
+					"objectClass": "Letter_Lock",
+					"sid": 930326941156257,
+					"parameters": {
+						"layer": "4"
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 726304517498207,
