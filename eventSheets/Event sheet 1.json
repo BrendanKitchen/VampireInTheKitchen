@@ -6320,6 +6320,14 @@
 				},
 				{
 					"id": "move-to-layer",
+					"objectClass": "portait_temp",
+					"sid": 548780449646926,
+					"parameters": {
+						"layer": "4"
+					}
+				},
+				{
+					"id": "move-to-layer",
 					"objectClass": "Letter_Lock",
 					"sid": 104586319899471,
 					"parameters": {
@@ -6357,14 +6365,6 @@
 					"sid": 176012833100890,
 					"parameters": {
 						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "move-to-layer",
-					"objectClass": "portait_temp",
-					"sid": 974788253622507,
-					"parameters": {
-						"layer": "4"
 					}
 				}
 			],
