@@ -7,6 +7,38 @@
 			"subLayers": [],
 			"instances": [
 				{
+<<<<<<< Updated upstream
+=======
+					"type": "window_temp",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 221,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 941,
+						"y": 553,
+						"width": 1890.8841832169849,
+						"height": 1109.1785811546722,
+						"originX": 0.4977973568281938,
+						"originY": 0.53125,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+>>>>>>> Stashed changes
 					"type": "angry_nox",
 					"properties": {
 						"initially-visible": true,
@@ -61,8 +93,13 @@
 					"world": {
 						"x": 958,
 						"y": 541,
+<<<<<<< Updated upstream
 						"width": 1925.0000000000002,
 						"height": 1088,
+=======
+						"width": 1935.9958765818153,
+						"height": 1087.964518031416,
+>>>>>>> Stashed changes
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -117,12 +154,21 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
+<<<<<<< Updated upstream
 						"x": 1728,
 						"y": 439,
 						"width": 355.328,
 						"height": 753.48,
 						"originX": 0.453125,
 						"originY": 0.35384615384615387,
+=======
+						"x": 1693,
+						"y": 447,
+						"width": 355.4655542722946,
+						"height": 765.1520026709967,
+						"originX": 0.3676643192488263,
+						"originY": 0.30731028460719845,
+>>>>>>> Stashed changes
 						"color": [
 							1,
 							1,
@@ -146,10 +192,17 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
+<<<<<<< Updated upstream
 						"x": 852.5,
 						"y": 636.5,
 						"width": 1585,
 						"height": 382,
+=======
+						"x": 936,
+						"y": 302,
+						"width": 1166.3169419309938,
+						"height": 500.22594814568555,
+>>>>>>> Stashed changes
 						"originX": 0.5,
 						"originY": -0.05,
 						"color": [

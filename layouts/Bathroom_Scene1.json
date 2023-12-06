@@ -20,9 +20,15 @@
 					"behaviors": {},
 					"world": {
 						"x": 958,
+<<<<<<< Updated upstream
 						"y": 541,
 						"width": 1925.0000000000002,
 						"height": 1088,
+=======
+						"y": 540.5,
+						"width": 1926.509881195258,
+						"height": 1084.9695840789836,
+>>>>>>> Stashed changes
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -499,6 +505,71 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+<<<<<<< Updated upstream
+=======
+				},
+				{
+					"type": "candle",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 241,
+					"instanceVariables": {
+						"Stake_Clicked": false
+					},
+					"behaviors": {},
+					"world": {
+						"x": 181.92794905133695,
+						"y": 376.61387426122945,
+						"width": 110.03262927012257,
+						"height": 105.83535369820669,
+						"originX": 0.5113821138211382,
+						"originY": 0.29074529074529076,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "candle",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 242,
+					"instanceVariables": {
+						"Stake_Clicked": false
+					},
+					"behaviors": {},
+					"world": {
+						"x": 930.8998766369048,
+						"y": 377.26699563492065,
+						"width": 109.34781922593578,
+						"height": 105.17666623682943,
+						"originX": 0.5113821138211382,
+						"originY": 0.29074529074529076,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+>>>>>>> Stashed changes
 				}
 			],
 			"sid": 437585931578339,

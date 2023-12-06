@@ -19,10 +19,17 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
+<<<<<<< Updated upstream
 						"x": 958,
 						"y": 541,
 						"width": 1925.0000000000002,
 						"height": 1088,
+=======
+						"x": -2396.5,
+						"y": 450,
+						"width": 8678,
+						"height": 4015,
+>>>>>>> Stashed changes
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

@@ -882,6 +882,171 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
+					"sid": 175491250497641,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "candle"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "stake_A",
+					"sid": 552913536793572,
+					"parameters": {
+						"instance-variable": "placed"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 894018011167012,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 918731015504999,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 486725418037937,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 348812359746903,
+					"parameters": {
+						"text": "\"candle text\"",
+						"duration": "2"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 784050507965624,
+					"parameters": {
+						"audio-file": "NegativeFeedback",
+						"loop": "not-looping",
+						"volume": "(SFX_Volume-100)/3",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 647216646268181
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 391596958037432,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "candle"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "stake_A",
+					"sid": 505203775668845,
+					"parameters": {
+						"instance-variable": "placed"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 501864174512347,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 995588928923626,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 738145823712542,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 749981321281502,
+					"parameters": {
+						"text": "\"candle used text\"",
+						"duration": "2"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 334368138765718,
+					"parameters": {
+						"audio-file": "NegativeFeedback",
+						"loop": "not-looping",
+						"volume": "(SFX_Volume-100)/3",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 190771115795292
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
 					"sid": 356552177560147,
 					"parameters": {
 						"mouse-button": "left",
@@ -4650,9 +4815,9 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 162848018378852,
+							"sid": 795374693625279,
 							"parameters": {
-								"object-to-create": "candle_afterstake",
+								"object-to-create": "candle",
 								"layer": "0",
 								"x": "candle.X",
 								"y": "candle.Y",
@@ -4674,11 +4839,11 @@
 						{
 							"id": "on-object-clicked",
 							"objectClass": "Mouse",
-							"sid": 856683806646516,
+							"sid": 365709703982679,
 							"parameters": {
 								"mouse-button": "left",
 								"click-type": "clicked",
-								"object-clicked": "candle_afterstake"
+								"object-clicked": "candle"
 							}
 						},
 						{
@@ -5661,6 +5826,14 @@
 					],
 					"actions": [
 						{
+							"id": "move-to-layer",
+							"objectClass": "Letter_Lock",
+							"sid": 648887056574455,
+							"parameters": {
+								"layer": "4"
+							}
+						},
+						{
 							"id": "go-to-layout",
 							"objectClass": "System",
 							"sid": 578193348461487,
@@ -5925,9 +6098,9 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 133663838675825,
+							"sid": 906019219941442,
 							"parameters": {
-								"object-to-create": "candle_afterstake",
+								"object-to-create": "candle",
 								"layer": "0",
 								"x": "candle.X",
 								"y": "candle.Y",
@@ -5949,11 +6122,11 @@
 						{
 							"id": "on-object-clicked",
 							"objectClass": "Mouse",
-							"sid": 856890025530611,
+							"sid": 396283479205173,
 							"parameters": {
 								"mouse-button": "left",
 								"click-type": "clicked",
-								"object-clicked": "candle_afterstake"
+								"object-clicked": "candle"
 							}
 						},
 						{
