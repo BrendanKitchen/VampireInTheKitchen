@@ -10,7 +10,6 @@
 		"baurbyPin",
 		"plant",
 		"magazine_tmp",
-		"H2",
 		"door",
 		"barofsoap",
 		"arrow",
@@ -39,6 +38,8 @@
 		"magazine_zoomed",
 		"portait_locked",
 		"MainMenuButton",
-		"MainMenuButton2"
+		"MainMenuButton2",
+		"back_button_pot",
+		"pot_box"
 	]
 }
