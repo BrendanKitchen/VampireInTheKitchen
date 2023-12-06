@@ -9222,6 +9222,38 @@
 				}
 			],
 			"sid": 263811196298964
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 652006624218800,
+					"parameters": {
+						"variable": "VolumeSlider_Correct"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "MainMenuButton",
+					"sid": 514075833425717,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "MainMenuButton2",
+					"sid": 963065148645358,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 739335330065715
 		}
 	],
 	"sid": 103033473827399
