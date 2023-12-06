@@ -81,6 +81,42 @@
 					"parameters": {
 						"tag": "\"exitingmenu\""
 					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 312673980643700,
+					"parameters": {
+						"layer": "1",
+						"interactive": false
+					}
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 927930627234356,
+					"parameters": {
+						"tag": "\"menumusic\"",
+						"db": "-100",
+						"duration": "2",
+						"ending": "stop"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 489472965037914,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 159117951805314,
+					"parameters": {
+						"layout": "Bathroom_Scene1"
+					}
 				}
 			],
 			"sid": 702250222680533
@@ -644,106 +680,6 @@
 					"sid": 561166852883517
 				}
 			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-signal",
-					"objectClass": "System",
-					"sid": 698730723094833,
-					"parameters": {
-						"tag": "\"exitingmenu\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 819248287784704,
-					"parameters": {
-						"layer": "1",
-						"interactive": false
-					}
-				},
-				{
-					"id": "fade-volume",
-					"objectClass": "Audio",
-					"sid": 291023543417733,
-					"parameters": {
-						"tag": "\"menumusic\"",
-						"db": "-100",
-						"duration": "2",
-						"ending": "stop"
-					}
-				},
-				{
-					"id": "set-fade-in-time",
-					"objectClass": "FadeToBlack",
-					"sid": 755170054902305,
-					"behaviorType": "Fade",
-					"parameters": {
-						"fade-in-time": "2"
-					}
-				},
-				{
-					"id": "set-fade-out-time",
-					"objectClass": "FadeToBlack",
-					"sid": 270302593595275,
-					"behaviorType": "Fade",
-					"parameters": {
-						"fade-out-time": "0"
-					}
-				},
-				{
-					"id": "restart-fade",
-					"objectClass": "FadeToBlack",
-					"sid": 607251527723396,
-					"behaviorType": "Fade"
-				}
-			],
-			"sid": 924718700248788
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-fade-in-finished",
-					"objectClass": "FadeToBlack",
-					"sid": 985701071251783,
-					"behaviorType": "Fade"
-				}
-			],
-			"actions": [
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 360992763198957,
-					"parameters": {
-						"layer": "1",
-						"interactive": true
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 637994308148139,
-					"parameters": {
-						"variable": "LockMusicMenu",
-						"value": "false"
-					}
-				},
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 313787120615135,
-					"parameters": {
-						"layout": "Bathroom_Scene1"
-					}
-				}
-			],
-			"sid": 263554292793966
 		}
 	],
 	"sid": 588019371100103

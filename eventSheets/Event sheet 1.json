@@ -165,7 +165,7 @@
 			"eventType": "variable",
 			"name": "Volume",
 			"type": "number",
-			"initialValue": "100",
+			"initialValue": "50",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -438,7 +438,34 @@
 							}
 						}
 					],
-					"sid": 860073975402281
+					"sid": 860073975402281,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 974318088373977
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 393861932696537,
+									"parameters": {
+										"audio-file": "Interact",
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 975778360773058
+						}
+					]
 				}
 			]
 		},
@@ -1862,18 +1889,6 @@
 					}
 				},
 				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 102750068042565,
-					"parameters": {
-						"audio-file": "SinkDrop",
-						"loop": "not-looping",
-						"volume": "-5",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
-					}
-				},
-				{
 					"id": "set-animation-speed",
 					"objectClass": "sink_knob_R",
 					"sid": 395508255195408,
@@ -1888,22 +1903,9 @@
 					"parameters": {
 						"from": "current-frame"
 					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 269551340253868,
-					"parameters": {
-						"audio-file": "SinkDrop",
-						"loop": "not-looping",
-						"volume": "-5",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
-					}
 				}
 			],
-			"sid": 987050434910685,
-			"isOrBlock": true
+			"sid": 987050434910685
 		},
 		{
 			"eventType": "block",
@@ -1937,18 +1939,6 @@
 					}
 				},
 				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 152325082408653,
-					"parameters": {
-						"audio-file": "SinkDrop",
-						"loop": "not-looping",
-						"volume": "-5",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
-					}
-				},
-				{
 					"id": "set-animation-speed",
 					"objectClass": "sink_knob_L",
 					"sid": 808319863804981,
@@ -1962,18 +1952,6 @@
 					"sid": 534634161639537,
 					"parameters": {
 						"from": "current-frame"
-					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 661388473966994,
-					"parameters": {
-						"audio-file": "SinkDrop",
-						"loop": "not-looping",
-						"volume": "-5",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -2107,7 +2085,25 @@
 					}
 				}
 			],
-			"sid": 890357020721427
+			"sid": 890357020721427,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 268869226929353
+				}
+			]
+		},
+		{
+			"eventType": "variable",
+			"name": "KnobDone",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Checks to see if the knobclicked = 7 event is complete",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 276725635500097
 		},
 		{
 			"eventType": "block",
@@ -2121,6 +2117,15 @@
 						"comparison": 0,
 						"value": "7"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 443147466873112,
+					"parameters": {
+						"variable": "KnobDone"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -2142,7 +2147,43 @@
 					}
 				}
 			],
-			"sid": 495103061141859
+			"sid": 495103061141859,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 926551601086552
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 960650876934267,
+							"parameters": {
+								"audio-file": "MetalStuck",
+								"loop": "not-looping",
+								"volume": "5",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 864671932719637,
+							"parameters": {
+								"variable": "KnobDone",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 464769013283867
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -7119,6 +7160,18 @@
 						"x": "10000",
 						"y": "10000"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 775071775416206,
+					"parameters": {
+						"audio-file": "ItemGet",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 702877075689507
@@ -7158,6 +7211,18 @@
 					"id": "destroy",
 					"objectClass": "barofsoap",
 					"sid": 924787298816882
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 953505876431869,
+					"parameters": {
+						"audio-file": "ItemGet",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 963832440813612
@@ -7197,6 +7262,18 @@
 					"id": "destroy",
 					"objectClass": "baurbyPin",
 					"sid": 975417525617910
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 321858674543717,
+					"parameters": {
+						"audio-file": "ItemGet",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 302364419187409
@@ -7243,6 +7320,18 @@
 					"sid": 877176715667260,
 					"parameters": {
 						"layer": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 342124513389101,
+					"parameters": {
+						"audio-file": "ItemGet",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -8571,14 +8660,6 @@
 					}
 				},
 				{
-					"id": "set-opacity",
-					"objectClass": "FadeToBlack",
-					"sid": 407209009076557,
-					"parameters": {
-						"opacity": "100"
-					}
-				},
-				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 958364423980082,
@@ -8594,11 +8675,6 @@
 					"parameters": {
 						"seconds": "2"
 					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "FadeToBlack",
-					"sid": 857719022311658
 				}
 			],
 			"sid": 957937856766902
@@ -8650,6 +8726,40 @@
 				}
 			],
 			"sid": 932874369279309
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "sink_faucet",
+					"sid": 516579472709386,
+					"parameters": {
+						"comparison": 0,
+						"number": "1"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 449907337756421
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 544193439128636,
+					"parameters": {
+						"audio-file": "SinkDrop",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 647624015312836
 		}
 	],
 	"sid": 103033473827399

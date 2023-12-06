@@ -37,6 +37,8 @@
 		"toilet",
 		"mirror",
 		"magazine_zoomed",
-		"portait_locked"
+		"portait_locked",
+		"MainMenuButton",
+		"MainMenuButton2"
 	]
 }
