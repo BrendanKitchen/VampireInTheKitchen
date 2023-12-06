@@ -187,7 +187,8 @@
 			"happy_nox",
 			"back_button_pot",
 			"Value_SFX",
-			"SFXBar"
+			"SFXBar",
+			"BG1"
 		],
 		"subfolders": []
 	},
