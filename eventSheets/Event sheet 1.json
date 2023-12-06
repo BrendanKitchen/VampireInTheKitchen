@@ -810,9 +810,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 108429192681900,
+					"sid": 249204424232124,
 					"parameters": {
-						"text": "plant.dialogue_txt",
+						"text": "\"Some sticky substance shackles snappy shrub to shitter.\" &newline& \"I have a sneaking suspicion its supply of sunlight is scarce.\"",
 						"duration": "2"
 					}
 				},
@@ -884,9 +884,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 504454621402325,
+					"sid": 113552735262413,
 					"parameters": {
-						"text": "\"mirror sample text\"",
+						"text": "\"Despite everything, it's still you.\"",
 						"duration": "2"
 					}
 				}
@@ -946,9 +946,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 239679370721276,
+					"sid": 347172465674548,
 					"parameters": {
-						"text": "\"door text\"",
+						"text": "\"There's nothing to grab hold of.\" &newline& \"Why am I such a silly goose?\"",
 						"duration": "2"
 					}
 				}
@@ -1008,9 +1008,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 345703417836045,
+					"sid": 480621643112516,
 					"parameters": {
-						"text": "\"There was a letter 'T' underneath the plant\" & newline& \"Letters found \" & puzzlescompleted & \"/ 5\"",
+						"text": "\"'T' for 'That's dried blood under this plant.'\" & newline& \"Letters found: \" & puzzlescompleted & \"/5\"",
 						"duration": "2"
 					}
 				}
@@ -1070,9 +1070,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 265087639364352,
+					"sid": 797893295269081,
 					"parameters": {
-						"text": "\"toilet text\"",
+						"text": "\"An ornate toilet adorned by potted venus fly traps.\"",
 						"duration": "2"
 					}
 				}
@@ -1132,9 +1132,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 552930407113857,
+					"sid": 197456900926575,
 					"parameters": {
-						"text": "\"It has a letter 'G' in it\" &newline& \"Letters found \" & puzzlescompleted & \"/ 5\"",
+						"text": "\"'G' for 'Get stabbed, idiot.'\" &newline& \"Letters found: \" & puzzlescompleted & \"/5\"",
 						"duration": "2"
 					}
 				}
@@ -1202,10 +1202,10 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 889739965441350,
+					"sid": 383339563291781,
 					"parameters": {
-						"text": "\"Maybe it can help loosen something up\"",
-						"duration": "0.5"
+						"text": "\"Good at cleaning people or dirty surfaces, usually not both.\" &newline& \"Desperate times call for desperate measures.\"",
+						"duration": "2"
 					}
 				}
 			],
@@ -1343,9 +1343,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 399213604887826,
+					"sid": 734064142957406,
 					"parameters": {
-						"text": "\"The door opens\"",
+						"text": "\"It's open!\"",
 						"duration": "2"
 					}
 				},
@@ -1418,9 +1418,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 532423270961586,
+					"sid": 709724565113065,
 					"parameters": {
-						"text": "\"plant moved test (1 Letter Obtained)\"",
+						"text": "\"The snappy shrubbery sheds its sticky shackles.\"",
 						"duration": "2"
 					}
 				}
@@ -1480,10 +1480,10 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 902842001671137,
+					"sid": 442198237525769,
 					"parameters": {
-						"text": "\"It's locked\"",
-						"duration": "0.8"
+						"text": "\"That's a big lock for a small cabinet...\" &newline& \"Maybe there's something important in there?\"",
+						"duration": "2"
 					}
 				}
 			],
@@ -1550,10 +1550,10 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 868061874491768,
+					"sid": 884660175473680,
 					"parameters": {
-						"text": "\"The lock broke\"",
-						"duration": "0.8"
+						"text": "\"Mom said watching LockPickingLegislator on YouToob\" &newline& \"would never come in handy. Well look at me now.\"",
+						"duration": "2.0"
 					}
 				}
 			],
@@ -1612,10 +1612,10 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 956649960000429,
+					"sid": 907712355527390,
 					"parameters": {
-						"text": "\"The lock needs five letters\"",
-						"duration": "1"
+						"text": "\"A letter input lock?\" &newline& \"Never seen one of these before.\"",
+						"duration": "2"
 					}
 				}
 			],
@@ -1682,10 +1682,10 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 838388376671486,
+					"sid": 730037405348876,
 					"parameters": {
-						"text": "\"stake\"",
-						"duration": "1"
+						"text": "\"Why would a vampire keep a stake in their medicine cabinet?\" &newline& \"It's like having garlic in the fridge.\"",
+						"duration": "2"
 					}
 				}
 			],
@@ -1744,10 +1744,10 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 148532337665061,
+					"sid": 348622496253058,
 					"parameters": {
-						"text": "\"seven teardrops\"",
-						"duration": "1"
+						"text": "\"I'll be crying more than seven tears\" &newline& \"if I don't get out of here soon.\"\n",
+						"duration": "2"
 					}
 				}
 			],
@@ -2085,15 +2085,7 @@
 					}
 				}
 			],
-			"sid": 890357020721427,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [],
-					"sid": 268869226929353
-				}
-			]
+			"sid": 890357020721427
 		},
 		{
 			"eventType": "variable",
@@ -3142,9 +3134,9 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 222762843643156,
+					"sid": 702664690523846,
 					"parameters": {
-						"audio-file": "PaperInteraction",
+						"audio-file": "ToiletPaperPause1",
 						"loop": "not-looping",
 						"volume": "-5",
 						"stereo-pan": "0",
@@ -4471,7 +4463,7 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 746144612341135,
+							"sid": 291135920182145,
 							"parameters": {
 								"object-to-create": "dialogue_box",
 								"layer": "1",
@@ -4506,9 +4498,9 @@
 						{
 							"id": "typewriter-text",
 							"objectClass": "DialogueText",
-							"sid": 152556758339941,
+							"sid": 482799975114911,
 							"parameters": {
-								"text": "\"75%\"  & newline & \"Letters found \" & puzzlescompleted & \"/ 5\"",
+								"text": "\"75%? Of what? Toilet paper?\"  & newline & \"Letters found: \" & puzzlescompleted & \"/5\"",
 								"duration": "2"
 							}
 						}
@@ -5781,9 +5773,9 @@
 						{
 							"id": "typewriter-text",
 							"objectClass": "DialogueText",
-							"sid": 513380018380416,
+							"sid": 750550226794905,
 							"parameters": {
-								"text": "\"75%\"  & newline & \"Letters found \" & puzzlescompleted & \"/ 5\"",
+								"text": "\"75%? Of what? Toilet paper?\"  & newline & \"Letters found: \" & puzzlescompleted & \"/5\"",
 								"duration": "2"
 							}
 						}
@@ -6218,10 +6210,10 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 265395986912255,
+					"sid": 759177901525447,
 					"parameters": {
-						"text": "\"The lock broke\"",
-						"duration": "0.8"
+						"text": "\"I think 'Nox' means 'Night.'\" &newline& \"They should work on their password security.\"",
+						"duration": "2"
 					}
 				},
 				{
@@ -6422,7 +6414,34 @@
 					}
 				}
 			],
-			"sid": 413444523255220
+			"sid": 413444523255220,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 358921042758230
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 845354129412957,
+							"parameters": {
+								"audio-file": "PuzzleShuffle",
+								"loop": "not-looping",
+								"volume": "-5",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 423654432290235
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -6693,9 +6712,9 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 323956098644319,
+					"sid": 513555395504628,
 					"parameters": {
-						"audio-file": "PaperInteraction",
+						"audio-file": "ToiletPaperPause1",
 						"loop": "not-looping",
 						"volume": "-5",
 						"stereo-pan": "0",
@@ -6969,9 +6988,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 151458864492365,
+					"sid": 192980036721317,
 					"parameters": {
-						"text": "\"There's something behind the portrait\"",
+						"text": "\"Usually people hang FINISHED puzzles on their wall, Nox.\" &newline& \"Wait... what's that there?\"",
 						"duration": "2"
 					}
 				},
@@ -7816,9 +7835,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 957979668827476,
+					"sid": 323530432699802,
 					"parameters": {
-						"text": "\"plant moved soap test\"",
+						"text": "\"There's something hidden beneath the snappy shrubbery...\"",
 						"duration": "2"
 					}
 				},
@@ -8567,18 +8586,6 @@
 						"variable": "LockCombo",
 						"value": "true"
 					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 255357260307105,
-					"parameters": {
-						"audio-file": "PuzzleShuffle",
-						"loop": "not-looping",
-						"volume": "-5",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
-					}
 				}
 			],
 			"sid": 756758742585929
@@ -8760,6 +8767,76 @@
 				}
 			],
 			"sid": 647624015312836
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 507361059310714,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "screwdriver2"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "screwdriver",
+					"sid": 659821842744666,
+					"parameters": {
+						"instance-variable": "placed"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 166773551017249,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 982639385241176,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 853205627184470,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 323069110514390,
+					"parameters": {
+						"text": "\"If you have a hammer, everything looks like a nail.\" &newline&\r\n\"If you have a screwdriver... make lemonade.\"",
+						"duration": "2"
+					}
+				}
+			],
+			"sid": 263811196298964
 		}
 	],
 	"sid": 103033473827399
