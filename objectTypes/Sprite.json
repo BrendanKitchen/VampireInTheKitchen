@@ -1,21 +1,10 @@
 {
-	"name": "FadeToBlack",
+	"name": "Sprite",
 	"plugin-id": "Sprite",
-	"sid": 809385862096916,
-	"isGlobal": true,
+	"sid": 395839252458129,
+	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Fade",
-			"name": "Fade",
-			"sid": 536482421094499
-		},
-		{
-			"behaviorId": "Persist",
-			"name": "Persist",
-			"sid": 622077372241156
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -29,13 +18,13 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2452389,
+						"imageSpriteId": 7376368,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 409608999130387,
+				"sid": 250071006222064,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
