@@ -1,0 +1,62 @@
+{
+	"name": "confused_nox",
+	"plugin-id": "Sprite",
+	"sid": 328731409330733,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 580005758943382
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 400,
+						"height": 815,
+						"originX": 0.701715170012466,
+						"originY": 0.5065985434135087,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1010209,
+						"collisionPoly": {
+							"points": [
+								0.4090928630325957,
+								0,
+								1,
+								0,
+								1,
+								0.018487112825192394,
+								1,
+								0.5031120331950207,
+								1,
+								0.6507076324443449,
+								0.604174401019176,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 930710561152192,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

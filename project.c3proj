@@ -57,13 +57,6 @@
 		},
 		{
 			"type": "plugin",
-			"id": "progressbar",
-			"name": "Progress bar",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "sliderbar",
 			"name": "Slider bar",
 			"author": "Scirra",
@@ -163,7 +156,7 @@
 			"candle_afterstake",
 			"magazine_zoomed",
 			"MainMenuButton2",
-			"Value",
+			"Value_BGMusic",
 			"N",
 			"I",
 			"G",
@@ -181,14 +174,20 @@
 			"crappot",
 			"pot_box",
 			"VolumeBar",
-			"ProgressBar",
 			"portait_box",
 			"Volume_Hint",
 			"window_temp",
 			"T_textbox",
 			"screwdriver",
 			"tape",
-			"screwdriver2"
+			"screwdriver2",
+			"neutral_nox",
+			"angry_nox",
+			"confused_nox",
+			"happy_nox",
+			"back_button_pot",
+			"Value_SFX",
+			"SFXBar"
 		],
 		"subfolders": []
 	},

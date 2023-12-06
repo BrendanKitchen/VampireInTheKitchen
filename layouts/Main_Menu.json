@@ -92,66 +92,6 @@
 						"angle": 0,
 						"zElevation": 0
 					}
-				},
-				{
-					"type": "H2",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 45,
-					"instanceVariables": {
-						"present": false
-					},
-					"behaviors": {},
-					"world": {
-						"x": 1271,
-						"y": 90,
-						"width": 60.29107,
-						"height": 115.196333,
-						"originX": 0.5,
-						"originY": 0.5043478260869565,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0.06858924129638311,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "pot_box",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 125,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 1325.5,
-						"y": 156.5,
-						"width": 389,
-						"height": 205,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
 				}
 			],
 			"sid": 694784549473573,
