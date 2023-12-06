@@ -175,8 +175,8 @@
 				{
 					"type": "SFXBar",
 					"properties": {
-						"value": 0,
-						"minimum": 0,
+						"value": 10,
+						"minimum": 10,
 						"maximum": 100,
 						"step": 1,
 						"tooltip": "",

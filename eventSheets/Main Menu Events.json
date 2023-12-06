@@ -1279,6 +1279,15 @@
 					"parameters": {
 						"value": "SFX_Volume"
 					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 689099940671922,
+					"parameters": {
+						"layer": "1",
+						"interactive": true
+					}
 				}
 			],
 			"sid": 405598974792999

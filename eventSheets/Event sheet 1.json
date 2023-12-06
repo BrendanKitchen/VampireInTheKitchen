@@ -646,6 +646,15 @@
 								"tag": "\"bgmusic\"",
 								"db": "-100"
 							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 525517953302557,
+							"parameters": {
+								"tag": "\"menumusic\"",
+								"db": "-100"
+							}
 						}
 					],
 					"sid": 587894057370996
