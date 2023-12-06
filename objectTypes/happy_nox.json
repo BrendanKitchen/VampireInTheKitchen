@@ -1,0 +1,62 @@
+{
+	"name": "happy_nox",
+	"plugin-id": "Sprite",
+	"sid": 650216600436953,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 331280653426043
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 450,
+						"height": 801,
+						"originX": 0.6135143723029508,
+						"originY": 0.5065985434135087,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6024066,
+						"collisionPoly": {
+							"points": [
+								0.35767268801186275,
+								0,
+								1,
+								0,
+								1,
+								0.018487112825192394,
+								1,
+								0.5031120331950207,
+								1,
+								0.6507076324443449,
+								0.5282338108725882,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 962245690350580,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,17 +1,9 @@
 {
-	"name": "Inventory_Box",
+	"name": "back_button_pot",
 	"plugin-id": "Sprite",
-	"sid": 386953986172212,
-	"isGlobal": true,
-	"instanceVariables": [
-		{
-			"name": "Box_Filled",
-			"type": "boolean",
-			"desc": "Is there something in the Inventory Box? - Checks to see if the box is empty or occupied.",
-			"show": true,
-			"sid": 954289818740501
-		}
-	],
+	"sid": 464715092817730,
+	"isGlobal": false,
+	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -19,20 +11,20 @@
 			{
 				"frames": [
 					{
-						"width": 200,
-						"height": 150,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 150,
+						"height": 105,
+						"originX": 0.5076923076923077,
+						"originY": -2.8351648351648353,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6183459,
+						"imageSpriteId": 4690371,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 587913648190622,
+				"sid": 994648550105347,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

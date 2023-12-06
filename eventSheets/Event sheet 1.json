@@ -252,6 +252,16 @@
 			"sid": 140492180642175
 		},
 		{
+			"eventType": "variable",
+			"name": "SFX_Volume",
+			"type": "number",
+			"initialValue": "100",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 559915360085989
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -340,6 +350,14 @@
 					}
 				},
 				{
+					"id": "set-value",
+					"objectClass": "SFXBar",
+					"sid": 930017479128516,
+					"parameters": {
+						"value": "SFX_Volume"
+					}
+				},
+				{
 					"id": "move-to-top",
 					"objectClass": "stake_A",
 					"sid": 706835440040180
@@ -388,7 +406,7 @@
 					"actions": [
 						{
 							"id": "set-text",
-							"objectClass": "Value",
+							"objectClass": "Value_BGMusic",
 							"sid": 554346965718119,
 							"parameters": {
 								"text": "VolumeBar.Value & \"%\"\n"
@@ -436,6 +454,15 @@
 								"tag": "\"bgmusic\"",
 								"db": "(Volume-100)/3"
 							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 128189639842995,
+							"parameters": {
+								"tag": "\"menumusic\"",
+								"db": "(Volume-100)/3"
+							}
 						}
 					],
 					"sid": 860073975402281
@@ -471,7 +498,7 @@
 					"actions": [
 						{
 							"id": "set-text",
-							"objectClass": "Value",
+							"objectClass": "Value_BGMusic",
 							"sid": 665333928758562,
 							"parameters": {
 								"text": "VolumeBar.Value & \"%\"\n"
@@ -510,6 +537,15 @@
 								"tag": "\"bgmusic\"",
 								"db": "(Volume-100)/3"
 							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 596007622470260,
+							"parameters": {
+								"tag": "\"menumusic\"",
+								"db": "(Volume-100)/3"
+							}
 						}
 					],
 					"sid": 134302845607858
@@ -544,7 +580,7 @@
 					"actions": [
 						{
 							"id": "set-text",
-							"objectClass": "Value",
+							"objectClass": "Value_BGMusic",
 							"sid": 686693950409352,
 							"parameters": {
 								"text": "VolumeBar.Value & \"%\"\n"

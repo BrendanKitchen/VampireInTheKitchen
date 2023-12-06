@@ -1,0 +1,14 @@
+{
+	"name": "SFXBar",
+	"plugin-id": "sliderbar",
+	"sid": 988506841420443,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 320932417727505
+		}
+	]
+}

@@ -1,0 +1,62 @@
+{
+	"name": "angry_nox",
+	"plugin-id": "Sprite",
+	"sid": 297665689617903,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 423451766742000
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 450,
+						"height": 705,
+						"originX": 2.39537917531867,
+						"originY": 0.5148806634673092,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5294831,
+						"collisionPoly": {
+							"points": [
+								0.19110346717245266,
+								0,
+								1,
+								0,
+								1,
+								0,
+								1,
+								0.5105045922060056,
+								1,
+								0.6957582756011905,
+								1,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 819870767280340,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
