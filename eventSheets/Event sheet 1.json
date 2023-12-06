@@ -346,6 +346,11 @@
 					"parameters": {
 						"visibility": "visible"
 					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "screwdriver2",
+					"sid": 765012562992314
 				}
 			],
 			"sid": 597958259212347
@@ -1260,8 +1265,8 @@
 				},
 				{
 					"id": "is-overlapping-another-object",
-					"objectClass": "screwdriver",
-					"sid": 310883242368114,
+					"objectClass": "screwdriver2",
+					"sid": 358064637301975,
 					"parameters": {
 						"object": "Inventory_Box"
 					}
@@ -1311,6 +1316,11 @@
 						"text": "\"The door opens\"",
 						"duration": "2"
 					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "screwdriver2",
+					"sid": 392201119653742
 				}
 			],
 			"sid": 129368568007524
@@ -5559,9 +5569,9 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 180553344117999,
+					"sid": 788282591443442,
 					"parameters": {
-						"object-to-create": "screwdriver",
+						"object-to-create": "screwdriver2",
 						"layer": "0",
 						"x": "988",
 						"y": "486",
@@ -5627,21 +5637,49 @@
 					}
 				}
 			],
-			"sid": 237286645919391
+			"sid": 237286645919391,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "screwdriver2",
+							"sid": 777268029044565,
+							"parameters": {
+								"instance-variable": "placed"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "screwdriver",
+							"sid": 952875422433203
+						}
+					],
+					"sid": 536525202869654
+				}
+			]
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
 					"id": "is-boolean-instance-variable-set",
-					"objectClass": "screwdriver",
-					"sid": 592010373543138,
+					"objectClass": "screwdriver2",
+					"sid": 201403776377784,
 					"parameters": {
 						"instance-variable": "placed"
 					}
 				}
 			],
 			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "screwdriver",
+					"sid": 953772611334906
+				},
 				{
 					"id": "move-to-layer",
 					"objectClass": "backarrow3",
@@ -5667,17 +5705,17 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 717537927417380,
+					"sid": 535976404915243,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "screwdriver"
+						"object-clicked": "screwdriver2"
 					}
 				},
 				{
 					"id": "is-overlapping-another-object",
-					"objectClass": "screwdriver",
-					"sid": 644494382387359,
+					"objectClass": "screwdriver2",
+					"sid": 181014889920850,
 					"parameters": {
 						"object": "Inventory_Box"
 					},
@@ -5686,16 +5724,25 @@
 			],
 			"actions": [
 				{
+					"id": "destroy",
+					"objectClass": "screwdriver",
+					"sid": 834192526321790
+				},
+				{
+					"id": "set-position",
+					"objectClass": "screwdriver",
+					"sid": 602368178254218,
+					"parameters": {
+						"x": "10000",
+						"y": "10000"
+					}
+				},
+				{
 					"callFunction": "AddtoInventory",
 					"sid": 555842489525885,
 					"parameters": [
 						"\"sd\""
 					]
-				},
-				{
-					"id": "destroy",
-					"objectClass": "screwdriver",
-					"sid": 623741492348547
 				}
 			],
 			"sid": 702877075689507
@@ -6067,9 +6114,9 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 988579321841987,
+									"sid": 725223642953644,
 									"parameters": {
-										"object-to-create": "screwdriver",
+										"object-to-create": "screwdriver2",
 										"layer": "1",
 										"x": "Inventory_Box.X",
 										"y": "Inventory_Box.Y",
@@ -6079,8 +6126,8 @@
 								},
 								{
 									"id": "set-boolean-instvar",
-									"objectClass": "screwdriver",
-									"sid": 276735851131605,
+									"objectClass": "screwdriver2",
+									"sid": 435569793342084,
 									"parameters": {
 										"instance-variable": "placed",
 										"value": "true"
@@ -6088,16 +6135,16 @@
 								},
 								{
 									"id": "set-visible",
-									"objectClass": "screwdriver",
-									"sid": 326042693755734,
+									"objectClass": "screwdriver2",
+									"sid": 654339999717092,
 									"parameters": {
 										"visibility": "visible"
 									}
 								},
 								{
 									"id": "move-to-layer",
-									"objectClass": "screwdriver",
-									"sid": 731150395347355,
+									"objectClass": "screwdriver2",
+									"sid": 399572103891078,
 									"parameters": {
 										"layer": "1"
 									}
