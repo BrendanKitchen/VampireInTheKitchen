@@ -242,6 +242,16 @@
 			"sid": 540867709010754
 		},
 		{
+			"eventType": "variable",
+			"name": "volume_puzzle_complete",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 140492180642175
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -7221,6 +7231,54 @@
 				}
 			],
 			"sid": 957937856766902
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 201497601982691,
+					"parameters": {
+						"variable": "VolumeSlider_Correct"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 263251955947668,
+					"parameters": {
+						"variable": "volume_puzzle_complete"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 620610706399486
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 633688849105097,
+					"parameters": {
+						"variable": "puzzlescompleted",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 398335172692757,
+					"parameters": {
+						"variable": "volume_puzzle_complete",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 932874369279309
 		}
 	],
 	"sid": 103033473827399
