@@ -7015,10 +7015,10 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 233503924813070,
+					"sid": 355880621185230,
 					"parameters": {
 						"object-to-create": "happy_nox",
-						"layer": "1",
+						"layer": "4",
 						"x": "1608",
 						"y": "450",
 						"create-hierarchy": false,
@@ -7028,10 +7028,10 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 761773361293998,
+					"sid": 642035720601084,
 					"parameters": {
 						"object-to-create": "dialogue_box",
-						"layer": "1",
+						"layer": "4",
 						"x": "977",
 						"y": "878",
 						"create-hierarchy": false,
@@ -7041,10 +7041,10 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 487285347697218,
+					"sid": 139709465318289,
 					"parameters": {
 						"object-to-create": "DialogueText",
-						"layer": "1",
+						"layer": "4",
 						"x": "dialogue_box.X",
 						"y": "dialogue_box.Y",
 						"create-hierarchy": false,
@@ -7823,10 +7823,10 @@
 				{
 					"id": "set-size",
 					"objectClass": "screwdriver",
-					"sid": 361283678311205,
+					"sid": 385108849043182,
 					"parameters": {
-						"width": "341",
-						"height": "405"
+						"width": "40",
+						"height": "200"
 					}
 				},
 				{
@@ -7886,30 +7886,7 @@
 					}
 				}
 			],
-			"sid": 237286645919391,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "screwdriver2",
-							"sid": 777268029044565,
-							"parameters": {
-								"instance-variable": "placed"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "destroy",
-							"objectClass": "screwdriver",
-							"sid": 952875422433203
-						}
-					],
-					"sid": 536525202869654
-				}
-			]
+			"sid": 237286645919391
 		},
 		{
 			"eventType": "block",
