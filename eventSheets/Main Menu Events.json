@@ -675,6 +675,54 @@
 						"variable": "OnSettings",
 						"value": "false"
 					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "medCab",
+					"sid": 689752380103131,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "lock",
+					"sid": 821371414918073,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "medCab",
+					"sid": 658683717399424,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "lock",
+					"sid": 113973754482089,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "medCab",
+					"sid": 639221172560333,
+					"parameters": {
+						"layer": "4"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "lock",
+					"sid": 284570516759048,
+					"parameters": {
+						"layer": "4"
+					}
 				}
 			],
 			"sid": 996822305027859,
@@ -709,6 +757,54 @@
 							"id": "destroy",
 							"objectClass": "pot_box",
 							"sid": 861325700555270
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "medCab",
+							"sid": 697217685604484,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "lock",
+							"sid": 679549236561850,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "medCab",
+							"sid": 793541448733869,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "lock",
+							"sid": 645895427768197,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "medCab",
+							"sid": 270219262176576,
+							"parameters": {
+								"layer": "4"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "lock",
+							"sid": 843031851492642,
+							"parameters": {
+								"layer": "4"
+							}
 						}
 					],
 					"sid": 460846263004525
