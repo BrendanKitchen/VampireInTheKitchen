@@ -1,0 +1,58 @@
+{
+	"name": "dialogue_boxNoFade",
+	"plugin-id": "Sprite",
+	"sid": 299053262761879,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1578,
+						"height": 405,
+						"originX": 0.5006337135614702,
+						"originY": 0.5012345679012346,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7451939,
+						"collisionPoly": {
+							"points": [
+								0.4068441064638783,
+								0.0024691358024691358,
+								0.5931558935361216,
+								0.0024691358024691358,
+								0.9961977186311787,
+								0.18024691358024691,
+								0.9987325728770595,
+								0.725925925925926,
+								0.9670468948035488,
+								0.9975308641975309,
+								0.020278833967046894,
+								0.9728395061728395,
+								0.0012674271229404308,
+								0.725925925925926,
+								0.035487959442332066,
+								0.1037037037037037
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 152926173807952,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

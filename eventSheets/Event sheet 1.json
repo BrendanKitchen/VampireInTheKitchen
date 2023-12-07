@@ -461,16 +461,34 @@
 							"id": "trigger-once-while-true",
 							"objectClass": "System",
 							"sid": 579721672290820
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 585831683576267,
+							"parameters": {
+								"variable": "FirstTime"
+							}
 						}
 					],
 					"actions": [
 						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 942599198571110,
+							"disabled": true,
+							"parameters": {
+								"layer": "1",
+								"interactive": false
+							}
+						},
+						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 355445930643925,
+							"sid": 442253058317808,
 							"parameters": {
 								"object-to-create": "dialogue_box",
-								"layer": "1",
+								"layer": "3",
 								"x": "960",
 								"y": "880",
 								"create-hierarchy": false,
@@ -480,10 +498,10 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 189017639540308,
+							"sid": 175218622186407,
 							"parameters": {
 								"object-to-create": "DialogueText",
-								"layer": "1",
+								"layer": "3",
 								"x": "dialogue_box.X",
 								"y": "dialogue_box.Y",
 								"create-hierarchy": false,
@@ -506,6 +524,33 @@
 							"parameters": {
 								"text": "\"How did I break the door handle? I can't tell Nox!\" &newline& \"They'll hate me! I'll find a way out of here.\"",
 								"duration": "2"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 872710795518153,
+							"parameters": {
+								"variable": "FirstTime",
+								"value": "false"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 240689995599936,
+							"parameters": {
+								"seconds": "3"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 146241097024138,
+							"disabled": true,
+							"parameters": {
+								"layer": "1",
+								"interactive": true
 							}
 						}
 					],

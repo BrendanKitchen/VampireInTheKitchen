@@ -111,6 +111,7 @@
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 933384755668342,
+					"disabled": true,
 					"parameters": {
 						"object-to-create": "dialogue_box",
 						"layer": "1",
@@ -124,6 +125,7 @@
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 718035646398000,
+					"disabled": true,
 					"parameters": {
 						"object-to-create": "DialogueText",
 						"layer": "1",
@@ -137,6 +139,7 @@
 					"id": "set-font-face",
 					"objectClass": "DialogueText",
 					"sid": 757507872595752,
+					"disabled": true,
 					"parameters": {
 						"font-face": "\"Noteworthy\"",
 						"style": "normal"
@@ -146,6 +149,7 @@
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
 					"sid": 971201589117153,
+					"disabled": true,
 					"parameters": {
 						"text": "\"Hi! Welcome to my home. Come on in!\"",
 						"duration": "2"
@@ -186,6 +190,7 @@
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 197816568889765,
+					"disabled": true,
 					"parameters": {
 						"object-to-create": "dialogue_box",
 						"layer": "1",
@@ -199,6 +204,7 @@
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 921809553802658,
+					"disabled": true,
 					"parameters": {
 						"object-to-create": "DialogueText",
 						"layer": "1",
@@ -212,6 +218,7 @@
 					"id": "set-font-face",
 					"objectClass": "DialogueText",
 					"sid": 360776581653347,
+					"disabled": true,
 					"parameters": {
 						"font-face": "\"Noteworthy\"",
 						"style": "normal"
@@ -221,6 +228,7 @@
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
 					"sid": 174221725142034,
+					"disabled": true,
 					"parameters": {
 						"text": "\"Dinner's almost ready! I cooked something special\" &newline& \"just for you.\"",
 						"duration": "2"
@@ -261,6 +269,7 @@
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 950954954166430,
+					"disabled": true,
 					"parameters": {
 						"object-to-create": "dialogue_box",
 						"layer": "1",
@@ -274,6 +283,7 @@
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 953293932515849,
+					"disabled": true,
 					"parameters": {
 						"object-to-create": "DialogueText",
 						"layer": "1",
@@ -287,6 +297,7 @@
 					"id": "set-font-face",
 					"objectClass": "DialogueText",
 					"sid": 645640114190502,
+					"disabled": true,
 					"parameters": {
 						"font-face": "\"Noteworthy\"",
 						"style": "normal"
@@ -296,6 +307,7 @@
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
 					"sid": 810918836859425,
+					"disabled": true,
 					"parameters": {
 						"text": "\"I know it was a long drive. The bathroom's down the hall\" &newline& \"and to the left. I'll be waiting!\"",
 						"duration": "2"
@@ -374,6 +386,15 @@
 					"id": "set-font-face",
 					"objectClass": "DialogueText",
 					"sid": 974421228348073,
+					"parameters": {
+						"font-face": "\"Trattatello\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueTextNoFade",
+					"sid": 273159352206693,
 					"parameters": {
 						"font-face": "\"Trattatello\"",
 						"style": "normal"

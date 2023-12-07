@@ -193,7 +193,9 @@
 			"Cutscene3",
 			"Cutscene4",
 			"EndCutscene",
-			"dialogue"
+			"dialogue",
+			"DialogueTextNoFade",
+			"dialogue_boxNoFade"
 		],
 		"subfolders": []
 	},
