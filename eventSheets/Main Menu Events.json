@@ -108,6 +108,30 @@
 						"variable": "game_start",
 						"value": "true"
 					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "medCab",
+					"sid": 301257684954933,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "lock",
+					"sid": 726713481273973,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_A",
+					"sid": 683630144256645,
+					"parameters": {
+						"visibility": "visible"
+					}
 				}
 			],
 			"sid": 832354036822409
@@ -1201,6 +1225,14 @@
 					"sid": 516415262334600,
 					"parameters": {
 						"tag": "\"bgmusic\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_A",
+					"sid": 779140701317115,
+					"parameters": {
+						"visibility": "invisible"
 					}
 				}
 			],
