@@ -303,6 +303,22 @@
 			"actions": [
 				{
 					"id": "set-visible",
+					"objectClass": "H2",
+					"sid": 904754098162500,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 162638166814295,
+					"parameters": {
+						"tag": "\"menumusic2\""
+					}
+				},
+				{
+					"id": "set-visible",
 					"objectClass": "DialogueText",
 					"sid": 646031698037473,
 					"parameters": {
@@ -504,6 +520,14 @@
 									"id": "trigger-once-while-true",
 									"objectClass": "System",
 									"sid": 974318088373977
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 186478005221640,
+									"parameters": {
+										"variable": "VolumeSlider_Correct"
+									}
 								}
 							],
 							"actions": [
@@ -3949,9 +3973,9 @@
 				{
 					"id": "set-visible",
 					"objectClass": "H2",
-					"sid": 514669753118813,
+					"sid": 135109665907375,
 					"parameters": {
-						"visibility": "visible"
+						"visibility": "invisible"
 					}
 				},
 				{
@@ -5319,9 +5343,9 @@
 				{
 					"id": "set-visible",
 					"objectClass": "H2",
-					"sid": 130030276471453,
+					"sid": 226334094011334,
 					"parameters": {
-						"visibility": "visible"
+						"visibility": "invisible"
 					}
 				},
 				{
@@ -6870,6 +6894,63 @@
 					}
 				},
 				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 239158033867993,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 660198619969462,
+					"parameters": {
+						"object-to-create": "happy_nox",
+						"layer": "1",
+						"x": "1608",
+						"y": "450",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 926172130190333,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 285425271478877,
+					"parameters": {
+						"font-face": "\"Bangla MN\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 576326145832363,
+					"parameters": {
+						"text": "\"I put the food in the fridge.\" &newline& \"Text me if you need anything!\"",
+						"duration": "2"
+					}
+				},
+				{
 					"id": "set-visible",
 					"objectClass": "backarrow3",
 					"sid": 691447070391431,
@@ -6949,6 +7030,7 @@
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
 							}
+<<<<<<< Updated upstream
 						},
 						{
 							"id": "create-object",
@@ -7006,6 +7088,8 @@
 								"text": "\"NOX SAMPLE DIALOGUE PORTAIT PUZZLE.\"",
 								"duration": "2"
 							}
+=======
+>>>>>>> Stashed changes
 						}
 					],
 					"sid": 423654432290235
@@ -7120,9 +7204,9 @@
 				{
 					"id": "set-visible",
 					"objectClass": "H2",
-					"sid": 857249504014019,
+					"sid": 154227047104628,
 					"parameters": {
-						"visibility": "visible"
+						"visibility": "invisible"
 					}
 				},
 				{
@@ -7149,6 +7233,26 @@
 					"id": "stop-all",
 					"objectClass": "Audio",
 					"sid": 360941900837895
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 254114503172667,
+					"parameters": {
+						"tag": "\"bgmusic\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 203227937111799,
+					"parameters": {
+						"audio-file": "Theres_a_Vampire_in_the_Kitchen (2)",
+						"loop": "not-looping",
+						"volume": "(Volume-100)/3",
+						"stereo-pan": "0",
+						"tag-optional": "\"menumusic2\""
+					}
 				}
 			],
 			"sid": 637375812019776
@@ -7640,6 +7744,14 @@
 					"parameters": {
 						"visibility": "visible"
 					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 951131454909789,
+					"parameters": {
+						"seconds": "1"
+					}
 				}
 			],
 			"sid": 237286645919391,
@@ -7925,12 +8037,12 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 228161932034324,
+					"sid": 487625068478626,
 					"parameters": {
-						"object-to-create": "dialogue_box",
+						"object-to-create": "angry_nox",
 						"layer": "1",
-						"x": "960",
-						"y": "880",
+						"x": "2288",
+						"y": "450",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
@@ -7938,12 +8050,12 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 937306801635093,
+					"sid": 228161932034324,
 					"parameters": {
-						"object-to-create": "confused_nox",
+						"object-to-create": "dialogue_box",
 						"layer": "1",
-						"x": "1608",
-						"y": "450",
+						"x": "960",
+						"y": "880",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
@@ -9473,11 +9585,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 427669153842912,
+					"sid": 122154096182306,
 					"parameters": {
 						"audio-file": "Im_Stuck_in_the_Bathroom (2)",
 						"loop": "looping",
-						"volume": "-100",
+						"volume": "(Volume-100)/3",
 						"stereo-pan": "0",
 						"tag-optional": "\"bgmusic\""
 					}
@@ -9715,6 +9827,28 @@
 				}
 			],
 			"sid": 739335330065715
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 878344453960902
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 630154427069184,
+					"parameters": {
+						"variable": "Timer",
+						"value": "0.017"
+					}
+				}
+			],
+			"sid": 834931925779335
 		}
 	],
 	"sid": 103033473827399
