@@ -80,6 +80,16 @@
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
 							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "dialogue_box",
+							"sid": 651203520749650
+						},
+						{
+							"id": "destroy",
+							"objectClass": "DialogueText",
+							"sid": 725826550791078
 						}
 					],
 					"sid": 455285661995246,
@@ -108,13 +118,20 @@
 			],
 			"actions": [
 				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 685370797300840,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 933384755668342,
-					"disabled": true,
+					"sid": 698180565660428,
 					"parameters": {
 						"object-to-create": "dialogue_box",
-						"layer": "1",
+						"layer": "3",
 						"x": "960",
 						"y": "880",
 						"create-hierarchy": false,
@@ -124,11 +141,10 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 718035646398000,
-					"disabled": true,
+					"sid": 458966288356172,
 					"parameters": {
 						"object-to-create": "DialogueText",
-						"layer": "1",
+						"layer": "3",
 						"x": "dialogue_box.X",
 						"y": "dialogue_box.Y",
 						"create-hierarchy": false,
@@ -139,7 +155,6 @@
 					"id": "set-font-face",
 					"objectClass": "DialogueText",
 					"sid": 757507872595752,
-					"disabled": true,
 					"parameters": {
 						"font-face": "\"Noteworthy\"",
 						"style": "normal"
@@ -149,7 +164,6 @@
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
 					"sid": 971201589117153,
-					"disabled": true,
 					"parameters": {
 						"text": "\"Hi! Welcome to my home. Come on in!\"",
 						"duration": "2"
@@ -179,21 +193,33 @@
 			],
 			"actions": [
 				{
-					"id": "go-to-layout",
+					"id": "create-object",
 					"objectClass": "System",
-					"sid": 253737230069825,
+					"sid": 818626271780411,
 					"parameters": {
-						"layout": "Cutscene 2"
+						"object-to-create": "Cutscene2",
+						"layer": "1",
+						"x": "960.173208",
+						"y": "540.432",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 935371045167060,
+					"parameters": {
+						"seconds": "0.5"
 					}
 				},
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 197816568889765,
-					"disabled": true,
+					"sid": 868398639299751,
 					"parameters": {
 						"object-to-create": "dialogue_box",
-						"layer": "1",
+						"layer": "3",
 						"x": "960",
 						"y": "880",
 						"create-hierarchy": false,
@@ -203,11 +229,10 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 921809553802658,
-					"disabled": true,
+					"sid": 194815049552539,
 					"parameters": {
 						"object-to-create": "DialogueText",
-						"layer": "1",
+						"layer": "3",
 						"x": "dialogue_box.X",
 						"y": "dialogue_box.Y",
 						"create-hierarchy": false,
@@ -218,7 +243,6 @@
 					"id": "set-font-face",
 					"objectClass": "DialogueText",
 					"sid": 360776581653347,
-					"disabled": true,
 					"parameters": {
 						"font-face": "\"Noteworthy\"",
 						"style": "normal"
@@ -228,7 +252,6 @@
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
 					"sid": 174221725142034,
-					"disabled": true,
 					"parameters": {
 						"text": "\"Dinner's almost ready! I cooked something special\" &newline& \"just for you.\"",
 						"duration": "2"
@@ -258,21 +281,33 @@
 			],
 			"actions": [
 				{
-					"id": "go-to-layout",
+					"id": "create-object",
 					"objectClass": "System",
-					"sid": 752811817165111,
+					"sid": 541712587272095,
 					"parameters": {
-						"layout": "Cutscene 3"
+						"object-to-create": "Cutscene4",
+						"layer": "2",
+						"x": "960.173208",
+						"y": "540.432",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 389023987261651,
+					"parameters": {
+						"seconds": "0.5"
 					}
 				},
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 950954954166430,
-					"disabled": true,
+					"sid": 460897021883926,
 					"parameters": {
 						"object-to-create": "dialogue_box",
-						"layer": "1",
+						"layer": "3",
 						"x": "960",
 						"y": "880",
 						"create-hierarchy": false,
@@ -282,11 +317,10 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 953293932515849,
-					"disabled": true,
+					"sid": 185836811215667,
 					"parameters": {
 						"object-to-create": "DialogueText",
-						"layer": "1",
+						"layer": "3",
 						"x": "dialogue_box.X",
 						"y": "dialogue_box.Y",
 						"create-hierarchy": false,
@@ -297,7 +331,6 @@
 					"id": "set-font-face",
 					"objectClass": "DialogueText",
 					"sid": 645640114190502,
-					"disabled": true,
 					"parameters": {
 						"font-face": "\"Noteworthy\"",
 						"style": "normal"
@@ -307,7 +340,6 @@
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
 					"sid": 810918836859425,
-					"disabled": true,
 					"parameters": {
 						"text": "\"I know it was a long drive. The bathroom's down the hall\" &newline& \"and to the left. I'll be waiting!\"",
 						"duration": "2"

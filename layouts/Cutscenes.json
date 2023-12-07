@@ -1,13 +1,13 @@
 {
-	"name": "Cutscene 3",
+	"name": "Cutscenes",
 	"layers": [
 		{
-			"name": "Layer 0",
+			"name": "Cutscene 1",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Cutscene4",
+					"type": "Cutscene3",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -15,14 +15,14 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 48,
+					"uid": 22,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 960.4084073267824,
-						"y": 540.5642681856078,
-						"width": 1921.8168146535647,
-						"height": 1081.1285363712157,
+						"x": 960.0251664718982,
+						"y": 540.3486739513606,
+						"width": 1921.0503329437963,
+						"height": 1080.6973479027213,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -36,7 +36,7 @@
 					}
 				}
 			],
-			"sid": 746679743552431,
+			"sid": 309522517233018,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -65,11 +65,77 @@
 			"global": false
 		},
 		{
+			"name": "Cutscene 2",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 937934272310176,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Cutscene 3",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 588480892765376,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
 			"name": "CutsceneDialogue",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [],
-			"sid": 204383627299681,
+			"sid": 957246458810089,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -98,7 +164,7 @@
 			"global": false
 		}
 	],
-	"sid": 280023010772065,
+	"sid": 626169767549283,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 3840,
