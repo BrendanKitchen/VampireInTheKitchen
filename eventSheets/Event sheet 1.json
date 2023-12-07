@@ -2197,6 +2197,24 @@
 					}
 				},
 				{
+					"id": "set-wait-time",
+					"objectClass": "dialogue_box",
+					"sid": 453021905114510,
+					"behaviorType": "Fade",
+					"parameters": {
+						"wait-time": "4"
+					}
+				},
+				{
+					"id": "set-wait-time",
+					"objectClass": "DialogueText",
+					"sid": 392800291126310,
+					"behaviorType": "Fade",
+					"parameters": {
+						"wait-time": "4"
+					}
+				},
+				{
 					"id": "set-font-face",
 					"objectClass": "DialogueText",
 					"sid": 884478799484187,
@@ -2208,10 +2226,10 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 674541367639865,
+					"sid": 446672297652738,
 					"parameters": {
 						"text": "\"Mom said watching LockPickingLegislator on YouToob\" &newline& \"would never come in handy. Well look at me now.\"",
-						"duration": "2.5"
+						"duration": "3"
 					}
 				}
 			],
@@ -7882,6 +7900,15 @@
 					}
 				},
 				{
+					"id": "set-size",
+					"objectClass": "screwdriver",
+					"sid": 477764048163209,
+					"parameters": {
+						"width": "50",
+						"height": "244"
+					}
+				},
+				{
 					"id": "set-angle",
 					"objectClass": "screwdriver",
 					"sid": 116336105601996,
@@ -8562,6 +8589,15 @@
 										"y": "Inventory_Box.Y",
 										"create-hierarchy": false,
 										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "screwdriver2",
+									"sid": 739891154513106,
+									"parameters": {
+										"width": "35",
+										"height": "171"
 									}
 								},
 								{
