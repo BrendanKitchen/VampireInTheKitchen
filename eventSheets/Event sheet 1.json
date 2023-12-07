@@ -2017,6 +2017,18 @@
 					"sid": 392201119653742
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 911102295972024,
+					"parameters": {
+						"audio-file": "CrackingLock",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "wait",
 					"objectClass": "System",
 					"sid": 435369246865247,
