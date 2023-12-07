@@ -883,12 +883,13 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "compare-time",
+					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 371949085585888,
+					"sid": 530742822964716,
 					"parameters": {
-						"comparison": 3,
-						"time-seconds": "40"
+						"variable": "puzzlescompleted",
+						"comparison": 2,
+						"value": "3"
 					}
 				}
 			],
@@ -908,21 +909,13 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "compare-time",
+					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 555966361598103,
+					"sid": 865137039315061,
 					"parameters": {
+						"variable": "puzzlescompleted",
 						"comparison": 5,
-						"time-seconds": "41"
-					}
-				},
-				{
-					"id": "compare-time",
-					"objectClass": "System",
-					"sid": 278139990694564,
-					"parameters": {
-						"comparison": 3,
-						"time-seconds": "70"
+						"value": "3"
 					}
 				}
 			],
@@ -942,12 +935,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "compare-time",
+					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 891597489782006,
+					"sid": 291883967245131,
 					"parameters": {
-						"comparison": 5,
-						"time-seconds": "71"
+						"variable": "Final_Puzzle_Completed"
 					}
 				}
 			],
