@@ -147,99 +147,108 @@
 					}
 				}
 			],
-			"sid": 832354036822409
-		},
-		{
-			"eventType": "block",
-			"conditions": [
+			"sid": 832354036822409,
+			"children": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 595184457423950,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "Play_button"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 623590754493867,
-					"parameters": {
-						"variable": "puzzlescompleted",
-						"comparison": 5,
-						"value": "5"
-					}
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "H2",
-					"sid": 373595259314413,
-					"parameters": {
-						"instance-variable": "present"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 534443363917495,
+							"parameters": {
+								"variable": "br2tomenu"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "lock",
+							"sid": 434971005594824,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "medCab",
+							"sid": 772976130394429,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "medCab",
+							"sid": 765896187679474,
+							"parameters": {
+								"layer": "0"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "lock",
+							"sid": 551891159060061,
+							"parameters": {
+								"layer": "0"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "lock",
+							"sid": 560972925969585,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "medCab",
+							"sid": 396122158334635,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "stake_A",
+							"sid": 454048921304069,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 191291330355975,
+							"parameters": {
+								"variable": "br2tomenu",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 217628742556747,
+							"parameters": {
+								"variable": "OnScene1",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 279290121588872,
+							"parameters": {
+								"variable": "OnScene2",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 730713983531542
 				}
-			],
-			"actions": [
-				{
-					"id": "set-visible",
-					"objectClass": "lock",
-					"sid": 233621596099516,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "medCab",
-					"sid": 715665751886622,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "move-to-layer",
-					"objectClass": "medCab",
-					"sid": 406709735679922,
-					"parameters": {
-						"layer": "0"
-					}
-				},
-				{
-					"id": "move-to-layer",
-					"objectClass": "lock",
-					"sid": 880662124303133,
-					"parameters": {
-						"layer": "0"
-					}
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "lock",
-					"sid": 292994355929428,
-					"parameters": {
-						"opacity": "100"
-					}
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "medCab",
-					"sid": 664675753093569,
-					"parameters": {
-						"opacity": "100"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "stake_A",
-					"sid": 251129051889225,
-					"parameters": {
-						"visibility": "visible"
-					}
-				}
-			],
-			"sid": 612393533006461
+			]
 		},
 		{
 			"eventType": "block",
@@ -1441,6 +1450,98 @@
 				}
 			],
 			"sid": 293789138099398
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 566401833667216,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Play_button"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 132892687328990,
+					"parameters": {
+						"variable": "puzzlescompleted",
+						"comparison": 5,
+						"value": "5"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "H2",
+					"sid": 221649371502527,
+					"parameters": {
+						"instance-variable": "present"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "lock",
+					"sid": 905444268830296,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "medCab",
+					"sid": 296738003540653,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "medCab",
+					"sid": 710056911215586,
+					"parameters": {
+						"layer": "0"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "lock",
+					"sid": 473060430885629,
+					"parameters": {
+						"layer": "0"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "lock",
+					"sid": 449804813551308,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "medCab",
+					"sid": 668266594327612,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "stake_A",
+					"sid": 725889543117239,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 236671426865299
 		}
 	],
 	"sid": 588019371100103

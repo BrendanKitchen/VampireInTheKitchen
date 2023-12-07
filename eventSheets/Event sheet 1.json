@@ -302,6 +302,16 @@
 			"sid": 511149629488731
 		},
 		{
+			"eventType": "variable",
+			"name": "br2tomenu",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 641974141534751
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -4517,6 +4527,22 @@
 							"sid": 408891744248877,
 							"parameters": {
 								"layer": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "medCab",
+							"sid": 851675152998333,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "lock",
+							"sid": 505907198695341,
+							"parameters": {
+								"visibility": "visible"
 							}
 						},
 						{
@@ -10127,6 +10153,94 @@
 				}
 			],
 			"sid": 400606604051211
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 716455936176690,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "MainMenuButton"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 190428549526116,
+					"parameters": {
+						"variable": "OnScene1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 984598995798875,
+					"parameters": {
+						"variable": "OnScene2"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 865324725311111,
+					"parameters": {
+						"variable": "br2tomenu",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 298020232789846
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 176363457152650,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "MainMenuButton2"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 861402431502976,
+					"parameters": {
+						"variable": "OnScene1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 162989196148037,
+					"parameters": {
+						"variable": "OnScene2"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 650237393430679,
+					"parameters": {
+						"variable": "br2tomenu",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 772547958481340
 		}
 	],
 	"sid": 103033473827399
