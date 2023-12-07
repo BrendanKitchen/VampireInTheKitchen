@@ -430,54 +430,6 @@
 					"id": "move-to-top",
 					"objectClass": "screwdriver2",
 					"sid": 765012562992314
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "lock",
-					"sid": 183271107950336,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "medCab",
-					"sid": 188720517979943,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "move-to-layer",
-					"objectClass": "medCab",
-					"sid": 238506323621288,
-					"parameters": {
-						"layer": "0"
-					}
-				},
-				{
-					"id": "move-to-layer",
-					"objectClass": "lock",
-					"sid": 719679885488889,
-					"parameters": {
-						"layer": "0"
-					}
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "lock",
-					"sid": 148071942650486,
-					"parameters": {
-						"opacity": "100"
-					}
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "medCab",
-					"sid": 527884156489947,
-					"parameters": {
-						"opacity": "100"
-					}
 				}
 			],
 			"sid": 597958259212347
@@ -7078,6 +7030,30 @@
 				},
 				{
 					"id": "set-visible",
+					"objectClass": "medCab",
+					"sid": 134602512264258,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "medCab",
+					"sid": 875926053779060,
+					"parameters": {
+						"layer": "4"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "medCab",
+					"sid": 468747860094772,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-visible",
 					"objectClass": "Inventory",
 					"sid": 986903233655145,
 					"parameters": {
@@ -7139,15 +7115,6 @@
 			],
 			"actions": [
 				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 258134228546498,
-					"parameters": {
-						"variable": "finalpuzzle_clicked",
-						"value": "false"
-					}
-				},
-				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 891647766265157,
@@ -7158,7 +7125,7 @@
 				{
 					"id": "set-visible",
 					"objectClass": "medCab",
-					"sid": 425661743270746,
+					"sid": 739978987566787,
 					"parameters": {
 						"visibility": "invisible"
 					}
@@ -7166,7 +7133,7 @@
 				{
 					"id": "move-to-layer",
 					"objectClass": "medCab",
-					"sid": 381050912606051,
+					"sid": 428505373393436,
 					"parameters": {
 						"layer": "4"
 					}
@@ -7174,7 +7141,7 @@
 				{
 					"id": "set-opacity",
 					"objectClass": "medCab",
-					"sid": 521908423150829,
+					"sid": 613332502028190,
 					"parameters": {
 						"opacity": "0"
 					}
@@ -10054,6 +10021,51 @@
 				}
 			],
 			"sid": 442250048026014
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 719638404870060
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 310782508069376,
+					"parameters": {
+						"variable": "finalpuzzle_clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "medCab",
+					"sid": 330371167760901,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "medCab",
+					"sid": 436635128120337,
+					"parameters": {
+						"layer": "4"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "medCab",
+					"sid": 178892228642452,
+					"parameters": {
+						"opacity": "0"
+					}
+				}
+			],
+			"sid": 400606604051211
 		}
 	],
 	"sid": 103033473827399

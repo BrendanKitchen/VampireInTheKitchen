@@ -111,18 +111,50 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "medCab",
-					"sid": 301257684954933,
+					"objectClass": "lock",
+					"sid": 760277852666511,
 					"parameters": {
 						"visibility": "visible"
 					}
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "lock",
-					"sid": 726713481273973,
+					"objectClass": "medCab",
+					"sid": 194818176883802,
 					"parameters": {
 						"visibility": "visible"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "medCab",
+					"sid": 144317367533426,
+					"parameters": {
+						"layer": "0"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "lock",
+					"sid": 809674643557897,
+					"parameters": {
+						"layer": "0"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "lock",
+					"sid": 841484928768725,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "medCab",
+					"sid": 656911264814160,
+					"parameters": {
+						"opacity": "100"
 					}
 				},
 				{
