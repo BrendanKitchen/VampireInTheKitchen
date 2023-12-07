@@ -472,6 +472,45 @@
 			"sid": 107617783726853
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 208337672606906
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 686549551738393,
+					"parameters": {
+						"variable": "puzzlescompleted",
+						"comparison": 5,
+						"value": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "lock",
+					"sid": 534949487133059,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "medCab",
+					"sid": 480059588127486,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 194270122630733
+		},
+		{
 			"eventType": "variable",
 			"name": "VolumeSliderSoundOnce",
 			"type": "boolean",
@@ -7840,15 +7879,6 @@
 						"y": "486",
 						"create-hierarchy": false,
 						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "set-size",
-					"objectClass": "screwdriver",
-					"sid": 385108849043182,
-					"parameters": {
-						"width": "40",
-						"height": "200"
 					}
 				},
 				{
