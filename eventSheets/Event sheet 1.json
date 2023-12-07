@@ -885,11 +885,11 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 530742822964716,
+					"sid": 575811431681212,
 					"parameters": {
 						"variable": "puzzlescompleted",
 						"comparison": 2,
-						"value": "3"
+						"value": "4"
 					}
 				}
 			],
@@ -911,11 +911,11 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 865137039315061,
+					"sid": 558852200212185,
 					"parameters": {
 						"variable": "puzzlescompleted",
 						"comparison": 5,
-						"value": "3"
+						"value": "4"
 					}
 				}
 			],
@@ -4309,14 +4309,6 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "barofsoap",
-					"sid": 950121124927381,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
 					"objectClass": "Inventory",
 					"sid": 893335472782280,
 					"parameters": {
@@ -6793,6 +6785,14 @@
 					}
 				},
 				{
+					"id": "move-to-layer",
+					"objectClass": "barofsoap",
+					"sid": 843052943332200,
+					"parameters": {
+						"layer": "4"
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 523808836016719,
@@ -6801,9 +6801,25 @@
 					}
 				},
 				{
+					"id": "move-to-layer",
+					"objectClass": "barofsoap",
+					"sid": 757436656165826,
+					"parameters": {
+						"layer": "4"
+					}
+				},
+				{
 					"id": "set-visible",
 					"objectClass": "baurbyPin",
 					"sid": 734624067216689,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "barofsoap",
+					"sid": 416175347713196,
 					"parameters": {
 						"visibility": "invisible"
 					}
@@ -6850,7 +6866,42 @@
 					}
 				}
 			],
-			"sid": 852912233998666
+			"sid": 852912233998666,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "barofsoap",
+							"sid": 903599655824004,
+							"parameters": {
+								"instance-variable": "placed"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "barofsoap",
+							"sid": 474259789308562,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "barofsoap",
+							"sid": 613449764136613,
+							"parameters": {
+								"layer": "4"
+							}
+						}
+					],
+					"sid": 222441661356700
+				}
+			]
 		},
 		{
 			"eventType": "block",
