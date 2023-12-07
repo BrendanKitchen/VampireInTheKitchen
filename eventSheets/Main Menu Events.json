@@ -679,15 +679,6 @@
 				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 790293542031430,
-					"parameters": {
-						"variable": "OnScene1",
-						"value": "false"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
 					"sid": 850457027962092,
 					"parameters": {
 						"variable": "OnSettings",

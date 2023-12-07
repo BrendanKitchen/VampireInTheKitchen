@@ -2930,6 +2930,11 @@
 					"parameters": {
 						"layer": "1"
 					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "stake_burned",
+					"sid": 529943159046020
 				}
 			],
 			"sid": 454492011013732,
@@ -3213,6 +3218,11 @@
 					"parameters": {
 						"layer": "1"
 					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "stake_burned",
+					"sid": 404224623424988
 				}
 			],
 			"sid": 638907505839565,
@@ -3583,6 +3593,11 @@
 					"parameters": {
 						"layer": "1"
 					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "stake_burned",
+					"sid": 747207942965061
 				},
 				{
 					"id": "set-boolean-eventvar",
@@ -9637,6 +9652,23 @@
 					"id": "destroy",
 					"objectClass": "T",
 					"sid": 459154366904973
+				},
+				{
+					"id": "add-child",
+					"objectClass": "portait_temp",
+					"sid": 444231234124112,
+					"parameters": {
+						"child": "ClickableObjects",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": true,
+						"transform-h": true,
+						"transform-a": true,
+						"transform-o": false,
+						"transform-z-elevation": true,
+						"transform-visibility": false,
+						"destroy-with-parent": false
+					}
 				}
 			],
 			"sid": 279395620654916
@@ -9983,6 +10015,50 @@
 				}
 			],
 			"sid": 834931925779335
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "medCab",
+					"sid": 149229791547330
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 647239934135439,
+					"parameters": {
+						"variable": "Timer",
+						"value": "0.017"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 187893992066978,
+					"parameters": {
+						"object-to-create": "medCab",
+						"layer": "0",
+						"x": "1425",
+						"y": "213",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "medCab",
+					"sid": 739297757708642,
+					"parameters": {
+						"width": "496",
+						"height": "402"
+					}
+				}
+			],
+			"sid": 442250048026014
 		}
 	],
 	"sid": 103033473827399
