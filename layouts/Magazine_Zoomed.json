@@ -5,7 +5,37 @@
 			"name": "Layer 0",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "BG",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 6,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 190,
+						"y": -1829,
+						"width": 11750,
+						"height": 5855,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 333620833456627,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -39,35 +69,6 @@
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
-				{
-					"type": "floor_bg",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 142,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 966.5,
-						"y": -186.19266055045873,
-						"width": 2030,
-						"height": 1123,
-						"originX": 0.5,
-						"originY": -0.1559633027522936,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
 				{
 					"type": "magazine_zoomed",
 					"properties": {

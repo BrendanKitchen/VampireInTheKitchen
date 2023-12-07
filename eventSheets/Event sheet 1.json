@@ -6800,11 +6800,6 @@
 				},
 				{
 					"id": "move-to-top",
-					"objectClass": "floor_bg",
-					"sid": 868717130288332
-				},
-				{
-					"id": "move-to-top",
 					"objectClass": "magazine_zoomed",
 					"sid": 449020775824582
 				},
