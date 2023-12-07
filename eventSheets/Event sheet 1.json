@@ -425,6 +425,16 @@
 			"sid": 597958259212347
 		},
 		{
+			"eventType": "variable",
+			"name": "VolumeSliderSoundOnce",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 942091704102268
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -528,6 +538,15 @@
 									"parameters": {
 										"variable": "VolumeSlider_Correct"
 									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 641014777283894,
+									"parameters": {
+										"variable": "VolumeSliderSoundOnce"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -541,6 +560,15 @@
 										"volume": "(SFX_Volume-100)/3",
 										"stereo-pan": "0",
 										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 511206143068161,
+									"parameters": {
+										"variable": "VolumeSliderSoundOnce",
+										"value": "true"
 									}
 								}
 							],
