@@ -1,7 +1,7 @@
 {
-	"name": "Credit_Page",
+	"name": "Cutscene",
 	"plugin-id": "Sprite",
-	"sid": 658060446536429,
+	"sid": 184502279720214,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,33 +11,21 @@
 			{
 				"frames": [
 					{
-						"width": 664,
+						"width": 1127,
 						"height": 634,
-						"originX": 0.5127978817299206,
+						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6526741,
-						"collisionPoly": {
-							"points": [
-								0.03000882612533098,
-								0.0009242144177449168,
-								0.9982347749338041,
-								0.012014787430683918,
-								0.9752868490732568,
-								0.9990757855822551,
-								0.00176522506619594,
-								0.9990757855822551
-							]
-						},
+						"imageSpriteId": 9872239,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 825966267992854,
-				"name": "Animation 1",
+				"sid": 401573789185307,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

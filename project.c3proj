@@ -187,7 +187,13 @@
 			"back_button_pot",
 			"Value_SFX",
 			"SFXBar",
-			"BG1"
+			"BG1",
+			"Cutscene",
+			"Cutscene2",
+			"Cutscene3",
+			"Cutscene4",
+			"EndCutscene",
+			"dialogue"
 		],
 		"subfolders": []
 	},
@@ -217,14 +223,20 @@
 			"LockedPuzzle",
 			"Dialogue",
 			"Magazine_Zoomed",
-			"Settings Page"
+			"Settings Page",
+			"Cutscene 1",
+			"Cutscene 2",
+			"Cutscene 3",
+			"Cutscene End"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
 			"Event sheet 1",
-			"Main Menu Events"
+			"Main Menu Events",
+			"Cutscene Events",
+			"End Events"
 		],
 		"subfolders": []
 	},
@@ -343,6 +355,22 @@
 					"name": "ToiletPaperPause1.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 726225629338397,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Dracula_Sound_Effect.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 139291353871004,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Knocking.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 306189584807211,
 					"file-info": {
 						"purpose": "none"
 					}

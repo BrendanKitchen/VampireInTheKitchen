@@ -1,0 +1,59 @@
+{
+	"name": "End Events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 477973093153577
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 857700319431134,
+					"parameters": {
+						"audio-file": "Dracula_Sound_Effect",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 699701876469503,
+					"parameters": {
+						"seconds": "7"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 263277352151228,
+					"parameters": {
+						"layout": "Main_Menu"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 264673692051780,
+					"parameters": {
+						"audio-file": "Theres_a_Vampire_in_the_Kitchen (2)",
+						"loop": "looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"menumusic2\""
+					}
+				}
+			],
+			"sid": 182724059451581
+		}
+	],
+	"sid": 624394594848793
+}

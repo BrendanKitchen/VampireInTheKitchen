@@ -1,0 +1,387 @@
+{
+	"name": "Cutscene Events",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "CutsceneNumber",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "Checks to see which cutscene the player is on",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 891013228674885
+		},
+		{
+			"eventType": "variable",
+			"name": "CutscenesDone",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Checks to see if the cutscenes are done",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 604286305390396
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 660561020259797,
+					"parameters": {
+						"variable": "CutsceneNumber",
+						"comparison": 2,
+						"value": "4"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 107189333770069,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "Mouse",
+							"sid": 920758458668919,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked"
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 416356695363090,
+							"parameters": {
+								"key": 32
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 726926527393976,
+							"parameters": {
+								"variable": "CutsceneNumber",
+								"value": "1"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 429711720705229,
+							"parameters": {
+								"audio-file": "MainMenuButtonPress",
+								"loop": "not-looping",
+								"volume": "-5",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 455285661995246,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 330152941187980,
+					"parameters": {
+						"variable": "CutsceneNumber",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 671256977745194
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 933384755668342,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 718035646398000,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 757507872595752,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 971201589117153,
+					"parameters": {
+						"text": "\"Hi! Welcome to my home. Come on in!\"",
+						"duration": "2"
+					}
+				}
+			],
+			"sid": 575447941509658
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 836072678712810,
+					"parameters": {
+						"variable": "CutsceneNumber",
+						"comparison": 0,
+						"value": "2"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 408720980133306
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 253737230069825,
+					"parameters": {
+						"layout": "Cutscene 2"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 197816568889765,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 921809553802658,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 360776581653347,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 174221725142034,
+					"parameters": {
+						"text": "\"Dinner's almost ready! I cooked something special\" &newline& \"just for you.\"",
+						"duration": "2"
+					}
+				}
+			],
+			"sid": 358157931991459
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 846537800455133,
+					"parameters": {
+						"variable": "CutsceneNumber",
+						"comparison": 0,
+						"value": "3"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 413165402682415
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 752811817165111,
+					"parameters": {
+						"layout": "Cutscene 3"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 950954954166430,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 953293932515849,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 645640114190502,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 810918836859425,
+					"parameters": {
+						"text": "\"I know it was a long drive. The bathroom's down the hall\" &newline& \"and to the left. I'll be waiting!\"",
+						"duration": "2"
+					}
+				}
+			],
+			"sid": 745812701629548
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 402501000586970,
+					"parameters": {
+						"variable": "CutsceneNumber",
+						"comparison": 5,
+						"value": "4"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 882881363772113
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 452184922673459,
+					"parameters": {
+						"tag": "\"menumusic\""
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 898836051690765,
+					"parameters": {
+						"variable": "CutscenesDone",
+						"value": "true"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 450733576775180,
+					"parameters": {
+						"layout": "Bathroom_Scene1"
+					}
+				}
+			],
+			"sid": 718985092952089
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 573930405418992
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "DialogueText",
+					"sid": 451014152257027,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 974421228348073,
+					"parameters": {
+						"font-face": "\"Trattatello\"",
+						"style": "normal"
+					}
+				}
+			],
+			"sid": 295236658158488
+		}
+	],
+	"sid": 685275689860583
+}
