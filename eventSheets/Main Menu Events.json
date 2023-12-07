@@ -75,22 +75,6 @@
 					}
 				},
 				{
-					"id": "stop",
-					"objectClass": "Audio",
-					"sid": 735443928324882,
-					"parameters": {
-						"tag": "\"menumusic\""
-					}
-				},
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 696792674612792,
-					"parameters": {
-						"layout": "Bathroom_Scene1"
-					}
-				},
-				{
 					"id": "set-visible",
 					"objectClass": "lock",
 					"sid": 760277852666511,
@@ -247,6 +231,55 @@
 						}
 					],
 					"sid": 730713983531542
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 666007986615785,
+							"parameters": {
+								"variable": "CutscenesDone"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 872758318776699,
+							"parameters": {
+								"layout": "Cutscene 1"
+							}
+						}
+					],
+					"sid": 620125736574580
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 581692265672631,
+							"parameters": {
+								"variable": "CutscenesDone"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 632010053579431,
+							"parameters": {
+								"layout": "Bathroom_Scene1"
+							}
+						}
+					],
+					"sid": 309729771090109
 				}
 			]
 		},
