@@ -2039,13 +2039,13 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 921868597560569,
+					"sid": 268152520711480,
 					"parameters": {
 						"audio-file": "NegativeFeedback",
 						"loop": "not-looping",
 						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
-						"tag-optional": "\"NF\""
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -6957,23 +6957,6 @@
 						"variable": "lock_broke",
 						"value": "true"
 					}
-				},
-				{
-					"id": "add-child",
-					"objectClass": "ClickableObjects",
-					"sid": 752474852335909,
-					"parameters": {
-						"child": "portait_temp",
-						"transform-x": true,
-						"transform-y": true,
-						"transform-w": true,
-						"transform-h": true,
-						"transform-a": true,
-						"transform-o": false,
-						"transform-z-elevation": true,
-						"transform-visibility": false,
-						"destroy-with-parent": false
-					}
 				}
 			],
 			"sid": 139149565772145
@@ -7011,6 +6994,63 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 947863124253051,
+					"parameters": {
+						"object-to-create": "happy_nox",
+						"layer": "4",
+						"x": "1608",
+						"y": "450",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 823941850461262,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "4",
+						"x": "977",
+						"y": "878",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 952716088750193,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "4",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 464101161788142,
+					"parameters": {
+						"font-face": "\"Bangla MN\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 375819956702094,
+					"parameters": {
+						"text": "\"I put the food in the fridge.\" &newline& \"Text me if you need anything!\"",
+						"duration": "2"
+					}
+				},
 				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
@@ -7050,6 +7090,14 @@
 					"sid": 241632426717742,
 					"parameters": {
 						"layer": "4"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 938404218886793,
+					"parameters": {
+						"seconds": "3"
 					}
 				},
 				{
@@ -8066,63 +8114,6 @@
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 815078182481982,
-					"parameters": {
-						"object-to-create": "happy_nox",
-						"layer": "1",
-						"x": "1608",
-						"y": "450",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 840966932293711,
-					"parameters": {
-						"object-to-create": "dialogue_box",
-						"layer": "1",
-						"x": "977",
-						"y": "878",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 124031792847188,
-					"parameters": {
-						"object-to-create": "DialogueText",
-						"layer": "1",
-						"x": "dialogue_box.X",
-						"y": "dialogue_box.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "set-font-face",
-					"objectClass": "DialogueText",
-					"sid": 654692384656181,
-					"parameters": {
-						"font-face": "\"Bangla MN\"",
-						"style": "normal"
-					}
-				},
-				{
-					"id": "typewriter-text",
-					"objectClass": "DialogueText",
-					"sid": 772741176540046,
-					"parameters": {
-						"text": "\"I put the food in the fridge.\" &newline& \"Text me if you need anything!\"",
-						"duration": "2"
-					}
 				}
 			],
 			"sid": 302364419187409
@@ -8221,21 +8212,6 @@
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
-				},
-				{
-					"id": "move-to-top",
-					"objectClass": "angry_nox",
-					"sid": 314271586587785
-				},
-				{
-					"id": "move-to-top",
-					"objectClass": "dialogue_box",
-					"sid": 150037792980846
-				},
-				{
-					"id": "move-to-top",
-					"objectClass": "DialogueText",
-					"sid": 816113441105050
 				},
 				{
 					"id": "set-font-face",
@@ -8424,15 +8400,6 @@
 									"sid": 882436228762217,
 									"parameters": {
 										"layer": "1"
-									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 167308032224989,
-									"parameters": {
-										"variable": "lock_broke",
-										"value": "true"
 									}
 								}
 							],
@@ -8773,21 +8740,6 @@
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
-				},
-				{
-					"id": "move-to-top",
-					"objectClass": "confused_nox",
-					"sid": 378227331939209
-				},
-				{
-					"id": "move-to-top",
-					"objectClass": "dialogue_box",
-					"sid": 833662923616306
-				},
-				{
-					"id": "move-to-top",
-					"objectClass": "DialogueText",
-					"sid": 430635615607540
 				},
 				{
 					"id": "set-font-face",
