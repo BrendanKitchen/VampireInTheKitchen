@@ -446,9 +446,78 @@
 					"parameters": {
 						"visibility": "visible"
 					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "medCab",
+					"sid": 238506323621288,
+					"parameters": {
+						"layer": "0"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "lock",
+					"sid": 719679885488889,
+					"parameters": {
+						"layer": "0"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "lock",
+					"sid": 148071942650486,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "medCab",
+					"sid": 527884156489947,
+					"parameters": {
+						"opacity": "100"
+					}
 				}
 			],
 			"sid": 597958259212347
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 110959178504094
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "H2",
+					"sid": 898657452963278,
+					"parameters": {
+						"instance-variable": "present"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "lock",
+					"sid": 188184220617897,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "medCab",
+					"sid": 983952996878714,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 107617783726853
 		},
 		{
 			"eventType": "variable",
@@ -5710,22 +5779,6 @@
 							}
 						},
 						{
-							"id": "set-visible",
-							"objectClass": "medCab",
-							"sid": 344651800089853,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "lock",
-							"sid": 976775701512502,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
 							"id": "move-to-layer",
 							"objectClass": "plant",
 							"sid": 525457141992489,
@@ -7100,6 +7153,30 @@
 					"sid": 891647766265157,
 					"parameters": {
 						"layout": "Sliding Puzzle"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "medCab",
+					"sid": 425661743270746,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "medCab",
+					"sid": 381050912606051,
+					"parameters": {
+						"layer": "4"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "medCab",
+					"sid": 521908423150829,
+					"parameters": {
+						"opacity": "0"
 					}
 				},
 				{
