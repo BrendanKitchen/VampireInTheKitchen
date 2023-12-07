@@ -796,34 +796,7 @@
 							}
 						}
 					],
-					"sid": 150369613615879,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "trigger-once-while-true",
-									"objectClass": "System",
-									"sid": 384543661195547
-								}
-							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 876062966339089,
-									"parameters": {
-										"audio-file": "Interact",
-										"loop": "not-looping",
-										"volume": "-5",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
-								}
-							],
-							"sid": 340509645530646
-						}
-					]
+					"sid": 150369613615879
 				}
 			]
 		},
