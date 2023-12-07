@@ -243,15 +243,6 @@
 				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 153920884155867,
-					"parameters": {
-						"variable": "OnScene1",
-						"value": "false"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
 					"sid": 555615314639571,
 					"parameters": {
 						"variable": "OnCredits",

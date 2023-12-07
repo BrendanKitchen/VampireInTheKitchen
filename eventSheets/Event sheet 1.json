@@ -945,19 +945,19 @@
 				{
 					"id": "set-wait-time",
 					"objectClass": "dialogue_box",
-					"sid": 756061837087683,
+					"sid": 561365343983110,
 					"behaviorType": "Fade",
 					"parameters": {
-						"wait-time": "3.5"
+						"wait-time": "4"
 					}
 				},
 				{
 					"id": "set-wait-time",
 					"objectClass": "DialogueText",
-					"sid": 966718470278356,
+					"sid": 467812536570323,
 					"behaviorType": "Fade",
 					"parameters": {
-						"wait-time": "3.5"
+						"wait-time": "4"
 					}
 				},
 				{
@@ -972,10 +972,10 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 841603383058149,
+					"sid": 195551232060280,
 					"parameters": {
 						"text": "\"Some sticky substance shackles snappy shrub to shitter.\" &newline& \"I have a sneaking suspicion its supply of sunlight is scarce.\"",
-						"duration": "3"
+						"duration": "3.5"
 					}
 				},
 				{
@@ -1732,19 +1732,19 @@
 				{
 					"id": "set-wait-time",
 					"objectClass": "dialogue_box",
-					"sid": 549764215102739,
+					"sid": 398952777031105,
 					"behaviorType": "Fade",
 					"parameters": {
-						"wait-time": "3.5"
+						"wait-time": "4"
 					}
 				},
 				{
 					"id": "set-wait-time",
 					"objectClass": "DialogueText",
-					"sid": 511944429527599,
+					"sid": 497657626165892,
 					"behaviorType": "Fade",
 					"parameters": {
-						"wait-time": "3.5"
+						"wait-time": "4"
 					}
 				},
 				{
@@ -1759,10 +1759,10 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 487077751519718,
+					"sid": 456366469028432,
 					"parameters": {
 						"text": "\"Some sticky substance shackles snappy shrub to shitter.\" &newline& \"I have a sneaking suspicion its supply of sunlight is scarce.\"",
-						"duration": "3"
+						"duration": "3.5"
 					}
 				}
 			],
