@@ -386,11 +386,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 951640408977177,
+					"sid": 631126418140789,
 					"parameters": {
 						"audio-file": "Theres_a_Vampire_in_the_Kitchen (2)",
 						"loop": "looping",
-						"volume": "-100",
+						"volume": "(Volume-100)/3",
 						"stereo-pan": "0",
 						"tag-optional": "\"menumusic\""
 					}
@@ -1193,6 +1193,14 @@
 						"layer": "1",
 						"interactive": true
 					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 516415262334600,
+					"parameters": {
+						"tag": "\"bgmusic\""
+					}
 				}
 			],
 			"sid": 559156541194931
@@ -1217,6 +1225,28 @@
 				}
 			],
 			"sid": 293789138099398
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 486922438811301
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 157585980878057,
+					"parameters": {
+						"variable": "Timer",
+						"value": "0.017"
+					}
+				}
+			],
+			"sid": 439863594745795
 		}
 	],
 	"sid": 588019371100103
