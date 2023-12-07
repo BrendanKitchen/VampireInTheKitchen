@@ -430,6 +430,22 @@
 					"id": "move-to-top",
 					"objectClass": "screwdriver2",
 					"sid": 765012562992314
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "lock",
+					"sid": 183271107950336,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "medCab",
+					"sid": 188720517979943,
+					"parameters": {
+						"visibility": "visible"
+					}
 				}
 			],
 			"sid": 597958259212347
@@ -3658,14 +3674,6 @@
 		{
 			"eventType": "block",
 			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 684975132364819,
-					"parameters": {
-						"key": 27
-					}
-				},
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
@@ -6972,6 +6980,63 @@
 			],
 			"actions": [
 				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 947863124253051,
+					"parameters": {
+						"object-to-create": "happy_nox",
+						"layer": "4",
+						"x": "1608",
+						"y": "450",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 823941850461262,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "4",
+						"x": "977",
+						"y": "878",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 952716088750193,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "4",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 464101161788142,
+					"parameters": {
+						"font-face": "\"Bangla MN\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 375819956702094,
+					"parameters": {
+						"text": "\"I put the food in the fridge.\" &newline& \"Text me if you need anything!\"",
+						"duration": "2"
+					}
+				},
+				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 734559204604636,
@@ -7013,6 +7078,14 @@
 					}
 				},
 				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 938404218886793,
+					"parameters": {
+						"seconds": "3"
+					}
+				},
+				{
 					"id": "destroy",
 					"objectClass": "portait_temp",
 					"sid": 301403707733532
@@ -7049,6 +7122,14 @@
 					"parameters": {
 						"variable": "finalpuzzle_clicked",
 						"value": "false"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 498039654954326,
+					"parameters": {
+						"seconds": "3"
 					}
 				},
 				{
@@ -7966,63 +8047,6 @@
 						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 691724668980831,
-					"parameters": {
-						"object-to-create": "happy_nox",
-						"layer": "4",
-						"x": "1608",
-						"y": "450",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 397251037103934,
-					"parameters": {
-						"object-to-create": "dialogue_box",
-						"layer": "4",
-						"x": "977",
-						"y": "878",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 370133093474755,
-					"parameters": {
-						"object-to-create": "DialogueText",
-						"layer": "4",
-						"x": "dialogue_box.X",
-						"y": "dialogue_box.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "set-font-face",
-					"objectClass": "DialogueText",
-					"sid": 100980852561796,
-					"parameters": {
-						"font-face": "\"Bangla MN\"",
-						"style": "normal"
-					}
-				},
-				{
-					"id": "typewriter-text",
-					"objectClass": "DialogueText",
-					"sid": 360747760647580,
-					"parameters": {
-						"text": "\"I put the food in the fridge.\" &newline& \"Text me if you need anything!\"",
-						"duration": "2"
 					}
 				}
 			],
