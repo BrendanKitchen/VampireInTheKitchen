@@ -9210,6 +9210,26 @@
 				{
 					"id": "is-dragging",
 					"objectClass": "N",
+					"sid": 595605914898864,
+					"behaviorType": "DragDrop",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-top",
+					"objectClass": "N",
+					"sid": 366921334898103
+				}
+			],
+			"sid": 837307564949288
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-dragging",
+					"objectClass": "N",
 					"sid": 619135788845409,
 					"behaviorType": "DragDrop"
 				},
@@ -9315,6 +9335,26 @@
 				{
 					"id": "is-dragging",
 					"objectClass": "I",
+					"sid": 991032336985654,
+					"behaviorType": "DragDrop",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-top",
+					"objectClass": "I",
+					"sid": 723942754848063
+				}
+			],
+			"sid": 324307355077877
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-dragging",
+					"objectClass": "I",
 					"sid": 523983669448632,
 					"behaviorType": "DragDrop"
 				},
@@ -9342,111 +9382,6 @@
 			"conditions": [
 				{
 					"id": "is-dragging",
-					"objectClass": "G",
-					"sid": 160744752903342,
-					"behaviorType": "DragDrop"
-				},
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "G",
-					"sid": 359873850304684,
-					"parameters": {
-						"object": "G_Box"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-position-to-another-object",
-					"objectClass": "G",
-					"sid": 309094719588730,
-					"parameters": {
-						"object": "G_Box",
-						"image-point-optional": "0"
-					}
-				},
-				{
-					"id": "set-animation-frame",
-					"objectClass": "G",
-					"sid": 287106956419990,
-					"parameters": {
-						"frame-number": "1"
-					}
-				},
-				{
-					"id": "move-to-layer",
-					"objectClass": "G",
-					"sid": 981756853156421,
-					"parameters": {
-						"layer": "4"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 592707414048450,
-					"parameters": {
-						"variable": "LockCombo_3",
-						"value": "true"
-					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 523083904773651,
-					"parameters": {
-						"audio-file": "PosFeedbackPuzzle",
-						"loop": "not-looping",
-						"volume": "(SFX_Volume-100)/3",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
-					}
-				},
-				{
-					"id": "move-to-object",
-					"objectClass": "G",
-					"sid": 201073284397306,
-					"parameters": {
-						"where": "in-front",
-						"object": "Letter_Lock"
-					}
-				}
-			],
-			"sid": 558456168314840
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-dragging",
-					"objectClass": "G",
-					"sid": 770771358844559,
-					"behaviorType": "DragDrop"
-				},
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "G",
-					"sid": 164991640998297,
-					"parameters": {
-						"object": "G_Box"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "drop",
-					"objectClass": "G",
-					"sid": 402026215142366,
-					"behaviorType": "DragDrop"
-				}
-			],
-			"sid": 280325682666140
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-dragging",
 					"objectClass": "H_Lock",
 					"sid": 639211619301828,
 					"behaviorType": "DragDrop"
@@ -9468,6 +9403,14 @@
 					"parameters": {
 						"object": "H_Box",
 						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "H_Lock",
+					"sid": 558998524803463,
+					"parameters": {
+						"frame-number": "1"
 					}
 				},
 				{
@@ -9517,6 +9460,26 @@
 				{
 					"id": "is-dragging",
 					"objectClass": "H_Lock",
+					"sid": 886825250113126,
+					"behaviorType": "DragDrop",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-top",
+					"objectClass": "H_Lock",
+					"sid": 382571210850370
+				}
+			],
+			"sid": 328149138277710
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-dragging",
+					"objectClass": "H_Lock",
 					"sid": 836415298960528,
 					"behaviorType": "DragDrop"
 				},
@@ -9538,111 +9501,6 @@
 				}
 			],
 			"sid": 693942272850944
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-dragging",
-					"objectClass": "T",
-					"sid": 208792970252388,
-					"behaviorType": "DragDrop"
-				},
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "T",
-					"sid": 277863760029765,
-					"parameters": {
-						"object": "T_Box"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-position-to-another-object",
-					"objectClass": "T",
-					"sid": 469213598652366,
-					"parameters": {
-						"object": "T_Box",
-						"image-point-optional": "0"
-					}
-				},
-				{
-					"id": "set-animation-frame",
-					"objectClass": "T",
-					"sid": 486681322690697,
-					"parameters": {
-						"frame-number": "1"
-					}
-				},
-				{
-					"id": "move-to-layer",
-					"objectClass": "T",
-					"sid": 979834176653495,
-					"parameters": {
-						"layer": "4"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 336157492560826,
-					"parameters": {
-						"variable": "LockCombo_5",
-						"value": "true"
-					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 695323120954085,
-					"parameters": {
-						"audio-file": "PosFeedbackPuzzle",
-						"loop": "not-looping",
-						"volume": "(SFX_Volume-100)/3",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
-					}
-				},
-				{
-					"id": "move-to-object",
-					"objectClass": "T",
-					"sid": 710292195792273,
-					"parameters": {
-						"where": "in-front",
-						"object": "Letter_Lock"
-					}
-				}
-			],
-			"sid": 461799115191921
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-dragging",
-					"objectClass": "T",
-					"sid": 756360379456141,
-					"behaviorType": "DragDrop"
-				},
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "T",
-					"sid": 886358134537505,
-					"parameters": {
-						"object": "T_Box"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "drop",
-					"objectClass": "T",
-					"sid": 514418957414316,
-					"behaviorType": "DragDrop"
-				}
-			],
-			"sid": 475401884180970
 		},
 		{
 			"eventType": "variable",
@@ -9676,25 +9534,9 @@
 				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 557333427688766,
-					"parameters": {
-						"variable": "LockCombo_3"
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
 					"sid": 336010861691634,
 					"parameters": {
 						"variable": "LockCombo_4"
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 992545829652382,
-					"parameters": {
-						"variable": "LockCombo_5"
 					}
 				}
 			],

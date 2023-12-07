@@ -1238,17 +1238,10 @@
 					},
 					"uid": 149,
 					"instanceVariables": {},
-					"behaviors": {
-						"DragDrop": {
-							"properties": {
-								"axes": "both",
-								"enabled": true
-							}
-						}
-					},
+					"behaviors": {},
 					"world": {
-						"x": 1766,
-						"y": 63,
+						"x": 1033,
+						"y": 628,
 						"width": 96,
 						"height": 96,
 						"originX": 0.5,
@@ -1382,17 +1375,10 @@
 					},
 					"uid": 151,
 					"instanceVariables": {},
-					"behaviors": {
-						"DragDrop": {
-							"properties": {
-								"axes": "both",
-								"enabled": true
-							}
-						}
-					},
+					"behaviors": {},
 					"world": {
-						"x": 1763,
-						"y": 430,
+						"x": 1343,
+						"y": 631,
 						"width": 96,
 						"height": 96,
 						"originX": 0.5,
