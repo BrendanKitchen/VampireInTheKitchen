@@ -1723,9 +1723,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 313736421889644,
+					"sid": 943411671879665,
 					"parameters": {
-						"text": "plant.dialogue_txt",
+						"text": "\"Some sticky substance shackles snappy shrub to shitter.\" &newline& \"I have a sneaking suspicion its supply of sunlight is scarce.\"",
 						"duration": "2"
 					}
 				}
@@ -6979,63 +6979,6 @@
 			],
 			"actions": [
 				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 947863124253051,
-					"parameters": {
-						"object-to-create": "happy_nox",
-						"layer": "4",
-						"x": "1608",
-						"y": "450",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 823941850461262,
-					"parameters": {
-						"object-to-create": "dialogue_box",
-						"layer": "4",
-						"x": "977",
-						"y": "878",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 952716088750193,
-					"parameters": {
-						"object-to-create": "DialogueText",
-						"layer": "4",
-						"x": "dialogue_box.X",
-						"y": "dialogue_box.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "set-font-face",
-					"objectClass": "DialogueText",
-					"sid": 464101161788142,
-					"parameters": {
-						"font-face": "\"Bangla MN\"",
-						"style": "normal"
-					}
-				},
-				{
-					"id": "typewriter-text",
-					"objectClass": "DialogueText",
-					"sid": 375819956702094,
-					"parameters": {
-						"text": "\"I put the food in the fridge.\" &newline& \"Text me if you need anything!\"",
-						"duration": "2"
-					}
-				},
-				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 734559204604636,
@@ -7077,14 +7020,6 @@
 					}
 				},
 				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 938404218886793,
-					"parameters": {
-						"seconds": "3"
-					}
-				},
-				{
 					"id": "destroy",
 					"objectClass": "portait_temp",
 					"sid": 301403707733532
@@ -7121,14 +7056,6 @@
 					"parameters": {
 						"variable": "finalpuzzle_clicked",
 						"value": "false"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 498039654954326,
-					"parameters": {
-						"seconds": "3"
 					}
 				},
 				{
@@ -8097,6 +8024,63 @@
 						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 172048592291325,
+					"parameters": {
+						"object-to-create": "happy_nox",
+						"layer": "4",
+						"x": "1608",
+						"y": "450",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 775299530886277,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "4",
+						"x": "977",
+						"y": "878",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 904905499138109,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "4",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 698358946376577,
+					"parameters": {
+						"font-face": "\"Bangla MN\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 967701975480277,
+					"parameters": {
+						"text": "\"I put the food in the fridge.\" &newline& \"Text me if you need anything!\"",
+						"duration": "2"
 					}
 				}
 			],
