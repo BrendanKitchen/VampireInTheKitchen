@@ -75,39 +75,11 @@
 					}
 				},
 				{
-					"id": "signal",
-					"objectClass": "System",
-					"sid": 855354282443463,
-					"parameters": {
-						"tag": "\"exitingmenu\""
-					}
-				},
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 232232447889078,
-					"parameters": {
-						"layer": "1",
-						"interactive": false
-					}
-				},
-				{
-					"id": "fade-volume",
+					"id": "stop",
 					"objectClass": "Audio",
-					"sid": 540191158106421,
+					"sid": 735443928324882,
 					"parameters": {
-						"tag": "\"menumusic\"",
-						"db": "-100",
-						"duration": "2",
-						"ending": "stop"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 161328492081398,
-					"parameters": {
-						"seconds": "2"
+						"tag": "\"menumusic\""
 					}
 				},
 				{

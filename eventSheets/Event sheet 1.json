@@ -968,9 +968,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 348812359746903,
+					"sid": 491273739144187,
 					"parameters": {
-						"text": "\"candle text\"",
+						"text": "\"Seems like a fire hazard to have candles lit all the time.\" &newline& \"Is that a red flag?\"",
 						"duration": "2"
 					}
 				},
@@ -1050,9 +1050,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 749981321281502,
+					"sid": 586299098493700,
 					"parameters": {
-						"text": "\"candle used text\"",
+						"text": "\"I thought about lighting the stake like a torch,\" &newline& \"and I accidentally revealed a letter!\"",
 						"duration": "2"
 					}
 				},
@@ -1521,9 +1521,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 688122184327560,
+					"sid": 634991714572128,
 					"parameters": {
-						"text": "\"BOBBY PIN (IN INVENTORY) SAMPLE TEXT .\"",
+						"text": "\"Not strong enough to crack open a door, but\" &newline& \"perhaps strong enough to break open something smaller?\"",
 						"duration": "2"
 					}
 				}
@@ -7001,9 +7001,9 @@
 						{
 							"id": "typewriter-text",
 							"objectClass": "DialogueText",
-							"sid": 436263184511026,
+							"sid": 691651567233136,
 							"parameters": {
-								"text": "\"NOX SAMPLE DIALOGUE PORTAIT PUZZLE.\"",
+								"text": "\"I put the food in the fridge.\" &newline& \"Text me if you need anything!\"",
 								"duration": "2"
 							}
 						}
@@ -7973,9 +7973,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 286738390961385,
+					"sid": 741741338824848,
 					"parameters": {
-						"text": "\"NOX SAMPLE DIALOGUE STAKE.\"",
+						"text": "\"I heard something break.\" &newline& \"Is everything okay in there?\"",
 						"duration": "2"
 					}
 				}
@@ -8492,9 +8492,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 400564463113499,
+					"sid": 255854936975336,
 					"parameters": {
-						"text": "\"NOX SAMPLE DIALOGUE PLANT MOVED.\"",
+						"text": "\"Hey, are you doing okay in there?\" &newline& \"If you're not feeling well, I can bring you some medicine.\"",
 						"duration": "2"
 					}
 				},
