@@ -1726,14 +1726,6 @@
 					"parameters": {
 						"object": "Inventory_Box"
 					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 361311741426902,
-					"parameters": {
-						"variable": "screwdriver_inplace"
-					}
 				}
 			],
 			"actions": [
@@ -7011,6 +7003,11 @@
 					}
 				},
 				{
+					"id": "destroy",
+					"objectClass": "portait_temp",
+					"sid": 301403707733532
+				},
+				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 352440490368066,
@@ -7099,19 +7096,6 @@
 					"parameters": {
 						"text": "\"I put the food in the fridge.\" &newline& \"Text me if you need anything!\"",
 						"duration": "2"
-					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "portait_temp",
-					"sid": 474622172093836
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 241576715012136,
-					"parameters": {
-						"seconds": "3"
 					}
 				},
 				{
