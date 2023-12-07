@@ -4241,14 +4241,6 @@
 				},
 				{
 					"id": "move-to-layer",
-					"objectClass": "Letter_Lock",
-					"sid": 356361282601330,
-					"parameters": {
-						"layer": "0"
-					}
-				},
-				{
-					"id": "move-to-layer",
 					"objectClass": "G",
 					"sid": 409638464918210,
 					"parameters": {
@@ -6775,14 +6767,6 @@
 				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 890303364953567,
-					"parameters": {
-						"variable": "VolumeSlider_Correct"
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
 					"sid": 217435694680096,
 					"parameters": {
 						"variable": "letterlock_clicked"
@@ -6809,16 +6793,16 @@
 				},
 				{
 					"id": "move-to-layer",
-					"objectClass": "portait_temp",
-					"sid": 548780449646926,
+					"objectClass": "Letter_Lock",
+					"sid": 719247488030164,
 					"parameters": {
 						"layer": "4"
 					}
 				},
 				{
 					"id": "move-to-layer",
-					"objectClass": "Letter_Lock",
-					"sid": 104586319899471,
+					"objectClass": "portait_temp",
+					"sid": 548780449646926,
 					"parameters": {
 						"layer": "4"
 					}
@@ -9152,6 +9136,22 @@
 					}
 				},
 				{
+					"id": "set-animation-frame",
+					"objectClass": "N",
+					"sid": 118946493846915,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "N",
+					"sid": 854101768907135,
+					"parameters": {
+						"layer": "4"
+					}
+				},
+				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 210087695624842,
@@ -9238,6 +9238,22 @@
 					"parameters": {
 						"object": "I_Box",
 						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "I",
+					"sid": 598794951087672,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "I",
+					"sid": 858666994318747,
+					"parameters": {
+						"layer": "4"
 					}
 				},
 				{
@@ -9330,6 +9346,22 @@
 					}
 				},
 				{
+					"id": "set-animation-frame",
+					"objectClass": "G",
+					"sid": 287106956419990,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "G",
+					"sid": 981756853156421,
+					"parameters": {
+						"layer": "4"
+					}
+				},
+				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 592707414048450,
@@ -9419,6 +9451,14 @@
 					}
 				},
 				{
+					"id": "move-to-layer",
+					"objectClass": "H_Lock",
+					"sid": 287988089528712,
+					"parameters": {
+						"layer": "4"
+					}
+				},
+				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 309070384109891,
@@ -9505,6 +9545,22 @@
 					"parameters": {
 						"object": "T_Box",
 						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "T",
+					"sid": 486681322690697,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "T",
+					"sid": 979834176653495,
+					"parameters": {
+						"layer": "4"
 					}
 				},
 				{
