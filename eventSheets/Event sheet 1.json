@@ -7013,71 +7013,6 @@
 					}
 				},
 				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 355880621185230,
-					"parameters": {
-						"object-to-create": "happy_nox",
-						"layer": "4",
-						"x": "1608",
-						"y": "450",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 642035720601084,
-					"parameters": {
-						"object-to-create": "dialogue_box",
-						"layer": "4",
-						"x": "977",
-						"y": "878",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 139709465318289,
-					"parameters": {
-						"object-to-create": "DialogueText",
-						"layer": "4",
-						"x": "dialogue_box.X",
-						"y": "dialogue_box.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "set-font-face",
-					"objectClass": "DialogueText",
-					"sid": 323956859321273,
-					"parameters": {
-						"font-face": "\"Bangla MN\"",
-						"style": "normal"
-					}
-				},
-				{
-					"id": "typewriter-text",
-					"objectClass": "DialogueText",
-					"sid": 137869020937030,
-					"parameters": {
-						"text": "\"I put the food in the fridge.\" &newline& \"Text me if you need anything!\"",
-						"duration": "2"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 745788683700171,
-					"parameters": {
-						"seconds": "3"
-					}
-				},
-				{
 					"id": "destroy",
 					"objectClass": "portait_temp",
 					"sid": 301403707733532
@@ -8031,6 +7966,63 @@
 						"volume": "(SFX_Volume-100)/3",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 691724668980831,
+					"parameters": {
+						"object-to-create": "happy_nox",
+						"layer": "4",
+						"x": "1608",
+						"y": "450",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 397251037103934,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "4",
+						"x": "977",
+						"y": "878",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 370133093474755,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "4",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 100980852561796,
+					"parameters": {
+						"font-face": "\"Bangla MN\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 360747760647580,
+					"parameters": {
+						"text": "\"I put the food in the fridge.\" &newline& \"Text me if you need anything!\"",
+						"duration": "2"
 					}
 				}
 			],
