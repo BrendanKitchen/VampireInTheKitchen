@@ -789,10 +789,10 @@
 				{
 					"id": "compare-time",
 					"objectClass": "System",
-					"sid": 429904474466716,
+					"sid": 371949085585888,
 					"parameters": {
 						"comparison": 3,
-						"time-seconds": "30"
+						"time-seconds": "40"
 					}
 				}
 			],
@@ -814,19 +814,19 @@
 				{
 					"id": "compare-time",
 					"objectClass": "System",
-					"sid": 356182252820405,
+					"sid": 555966361598103,
 					"parameters": {
 						"comparison": 5,
-						"time-seconds": "31"
+						"time-seconds": "41"
 					}
 				},
 				{
 					"id": "compare-time",
 					"objectClass": "System",
-					"sid": 213135727669480,
+					"sid": 278139990694564,
 					"parameters": {
 						"comparison": 3,
-						"time-seconds": "50"
+						"time-seconds": "70"
 					}
 				}
 			],
@@ -848,19 +848,10 @@
 				{
 					"id": "compare-time",
 					"objectClass": "System",
-					"sid": 659326308490254,
+					"sid": 891597489782006,
 					"parameters": {
 						"comparison": 5,
-						"time-seconds": "51"
-					}
-				},
-				{
-					"id": "compare-time",
-					"objectClass": "System",
-					"sid": 239574797968698,
-					"parameters": {
-						"comparison": 3,
-						"time-seconds": "60"
+						"time-seconds": "71"
 					}
 				}
 			],
