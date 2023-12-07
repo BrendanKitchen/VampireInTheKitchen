@@ -1875,6 +1875,89 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
+					"sid": 105479314516711,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "lock"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 501269596049247,
+					"parameters": {
+						"variable": "lock_broke"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 210653798134721,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 618455550277783,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 599262358201528,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 650122831180053,
+					"parameters": {
+						"text": "\"That's a big lock for a small cabinet...\" &newline& \"Maybe there's something important in there?\"",
+						"duration": "2"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 268152520711480,
+					"parameters": {
+						"audio-file": "NegativeFeedback",
+						"loop": "not-looping",
+						"volume": "(SFX_Volume-100)/3",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 537904196450196
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
 					"sid": 169342786449030,
 					"parameters": {
 						"mouse-button": "left",
@@ -7030,66 +7113,6 @@
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
 							}
-<<<<<<< Updated upstream
-						},
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 289968665398741,
-							"parameters": {
-								"object-to-create": "dialogue_box",
-								"layer": "1",
-								"x": "960",
-								"y": "880",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 382832048621554,
-							"parameters": {
-								"object-to-create": "confused_nox",
-								"layer": "1",
-								"x": "1608",
-								"y": "450",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 819217870921735,
-							"parameters": {
-								"object-to-create": "DialogueText",
-								"layer": "1",
-								"x": "dialogue_box.X",
-								"y": "dialogue_box.Y",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-font-face",
-							"objectClass": "DialogueText",
-							"sid": 806121977234062,
-							"parameters": {
-								"font-face": "\"Bangla MN\"",
-								"style": "normal"
-							}
-						},
-						{
-							"id": "typewriter-text",
-							"objectClass": "DialogueText",
-							"sid": 691651567233136,
-							"parameters": {
-								"text": "\"I put the food in the fridge.\" &newline& \"Text me if you need anything!\"",
-								"duration": "2"
-							}
-=======
->>>>>>> Stashed changes
 						}
 					],
 					"sid": 423654432290235

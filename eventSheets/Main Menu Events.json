@@ -32,6 +32,16 @@
 			"sid": 102773782645599
 		},
 		{
+			"eventType": "variable",
+			"name": "game_start",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 877540667498915
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -88,6 +98,15 @@
 					"sid": 696792674612792,
 					"parameters": {
 						"layout": "Bathroom_Scene1"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 945604225389841,
+					"parameters": {
+						"variable": "game_start",
+						"value": "true"
 					}
 				}
 			],
@@ -503,6 +522,15 @@
 					"sid": 174455694833779,
 					"parameters": {
 						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 941143821562084,
+					"parameters": {
+						"tag": "\"menumusic\"",
+						"db": "(Volume-100)/3"
 					}
 				},
 				{
@@ -1233,6 +1261,14 @@
 					"id": "every-tick",
 					"objectClass": "System",
 					"sid": 486922438811301
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 646357286898479,
+					"parameters": {
+						"variable": "game_start"
+					}
 				}
 			],
 			"actions": [
@@ -1247,6 +1283,37 @@
 				}
 			],
 			"sid": 439863594745795
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 234465337383693
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 698903464890385,
+					"parameters": {
+						"variable": "game_start"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 365700249518060,
+					"parameters": {
+						"variable": "Timer",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 924779682538575
 		}
 	],
 	"sid": 588019371100103
