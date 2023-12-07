@@ -292,6 +292,16 @@
 			"sid": 935107717093750
 		},
 		{
+			"eventType": "variable",
+			"name": "nox_dialogue_happy",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 511149629488731
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -1002,9 +1012,9 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 621371610696594,
+					"sid": 994347530017687,
 					"parameters": {
-						"text": "\"There's some blood in the bathtub. Where else have I seen a container full of blood?\" ",
+						"text": "\"There's some blood in the bathtub.\" &newline& \"Where else have I seen a container full of blood?\" ",
 						"duration": "2"
 					}
 				}
@@ -6662,7 +6672,7 @@
 				{
 					"id": "set-visible",
 					"objectClass": "baurbyPin",
-					"sid": 543177353504706,
+					"sid": 734624067216689,
 					"parameters": {
 						"visibility": "invisible"
 					}
@@ -6670,7 +6680,7 @@
 				{
 					"id": "set-visible",
 					"objectClass": "stake_A",
-					"sid": 109187936482363,
+					"sid": 340822175730372,
 					"parameters": {
 						"visibility": "invisible"
 					}
@@ -6678,17 +6688,17 @@
 				{
 					"id": "move-to-top",
 					"objectClass": "floor_bg",
-					"sid": 219529383996938
+					"sid": 868717130288332
 				},
 				{
 					"id": "move-to-top",
 					"objectClass": "magazine_zoomed",
-					"sid": 329030750813905
+					"sid": 449020775824582
 				},
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 914352273648487,
+					"sid": 491260805399994,
 					"parameters": {
 						"audio-file": "PaperInteraction",
 						"loop": "not-looping",
@@ -6700,7 +6710,7 @@
 				{
 					"id": "set-visible",
 					"objectClass": "Inventory",
-					"sid": 454735849673769,
+					"sid": 108810629781460,
 					"parameters": {
 						"visibility": "invisible"
 					}
@@ -6708,7 +6718,7 @@
 				{
 					"id": "set-visible",
 					"objectClass": "Inventory_Box",
-					"sid": 807935450704949,
+					"sid": 514957172977855,
 					"parameters": {
 						"visibility": "invisible"
 					}
@@ -6732,11 +6742,11 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 540771294300325,
+					"sid": 296548541141013,
 					"parameters": {
 						"variable": "puzzlescompleted",
 						"comparison": 5,
-						"value": "4"
+						"value": "5"
 					}
 				},
 				{
@@ -6802,7 +6812,7 @@
 				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 184158771428692,
+					"sid": 694634238565646,
 					"parameters": {
 						"variable": "letterlock_clicked",
 						"value": "true"
@@ -7003,6 +7013,71 @@
 					}
 				},
 				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 233503924813070,
+					"parameters": {
+						"object-to-create": "happy_nox",
+						"layer": "1",
+						"x": "1608",
+						"y": "450",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 761773361293998,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "977",
+						"y": "878",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 487285347697218,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 323956859321273,
+					"parameters": {
+						"font-face": "\"Bangla MN\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 137869020937030,
+					"parameters": {
+						"text": "\"I put the food in the fridge.\" &newline& \"Text me if you need anything!\"",
+						"duration": "2"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 745788683700171,
+					"parameters": {
+						"seconds": "3"
+					}
+				},
+				{
 					"id": "destroy",
 					"objectClass": "portait_temp",
 					"sid": 301403707733532
@@ -7106,60 +7181,12 @@
 					}
 				},
 				{
-					"id": "create-object",
+					"id": "set-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 394204854234001,
+					"sid": 517838956851398,
 					"parameters": {
-						"object-to-create": "happy_nox",
-						"layer": "1",
-						"x": "1608",
-						"y": "450",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 779877794155259,
-					"parameters": {
-						"object-to-create": "dialogue_box",
-						"layer": "1",
-						"x": "960",
-						"y": "880",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 316129327152677,
-					"parameters": {
-						"object-to-create": "DialogueText",
-						"layer": "1",
-						"x": "dialogue_box.X",
-						"y": "dialogue_box.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "set-font-face",
-					"objectClass": "DialogueText",
-					"sid": 989981175044158,
-					"parameters": {
-						"font-face": "\"Bangla MN\"",
-						"style": "normal"
-					}
-				},
-				{
-					"id": "typewriter-text",
-					"objectClass": "DialogueText",
-					"sid": 563000205587568,
-					"parameters": {
-						"text": "\"I put the food in the fridge.\" &newline& \"Text me if you need anything!\"",
-						"duration": "2"
+						"variable": "finalpuzzle_clicked",
+						"value": "false"
 					}
 				}
 			],
