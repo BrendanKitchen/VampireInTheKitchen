@@ -964,6 +964,68 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
+					"sid": 315462798672706,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "tub"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 517822374618403,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 766188083052832,
+					"parameters": {
+						"object-to-create": "DialogueText",
+						"layer": "1",
+						"x": "dialogue_box.X",
+						"y": "dialogue_box.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "DialogueText",
+					"sid": 869378045241086,
+					"parameters": {
+						"font-face": "\"Noteworthy\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 621371610696594,
+					"parameters": {
+						"text": "\"There's some blood in the bathtub. Where else have I seen a container full of blood?\" ",
+						"duration": "2"
+					}
+				}
+			],
+			"sid": 860821011728494
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
 					"sid": 175491250497641,
 					"parameters": {
 						"mouse-button": "left",
@@ -6958,11 +7020,6 @@
 					}
 				},
 				{
-					"id": "destroy",
-					"objectClass": "portait_temp",
-					"sid": 759227449600921
-				},
-				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 352440490368066,
@@ -6997,30 +7054,9 @@
 					}
 				},
 				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 891647766265157,
-					"parameters": {
-						"layout": "Sliding Puzzle"
-					}
-				},
-				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 239158033867993,
-					"parameters": {
-						"object-to-create": "dialogue_box",
-						"layer": "1",
-						"x": "960",
-						"y": "880",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 660198619969462,
+					"sid": 960248698150648,
 					"parameters": {
 						"object-to-create": "happy_nox",
 						"layer": "1",
@@ -7033,7 +7069,20 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 926172130190333,
+					"sid": 520042211387336,
+					"parameters": {
+						"object-to-create": "dialogue_box",
+						"layer": "1",
+						"x": "960",
+						"y": "880",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 379952846528316,
 					"parameters": {
 						"object-to-create": "DialogueText",
 						"layer": "1",
@@ -7046,7 +7095,7 @@
 				{
 					"id": "set-font-face",
 					"objectClass": "DialogueText",
-					"sid": 285425271478877,
+					"sid": 440155866145694,
 					"parameters": {
 						"font-face": "\"Bangla MN\"",
 						"style": "normal"
@@ -7055,10 +7104,31 @@
 				{
 					"id": "typewriter-text",
 					"objectClass": "DialogueText",
-					"sid": 576326145832363,
+					"sid": 919648445929311,
 					"parameters": {
 						"text": "\"I put the food in the fridge.\" &newline& \"Text me if you need anything!\"",
 						"duration": "2"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "portait_temp",
+					"sid": 474622172093836
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 241576715012136,
+					"parameters": {
+						"seconds": "3"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 891647766265157,
+					"parameters": {
+						"layout": "Sliding Puzzle"
 					}
 				},
 				{
@@ -7303,6 +7373,15 @@
 						"volume": "(Volume-100)/3",
 						"stereo-pan": "0",
 						"tag-optional": "\"menumusic2\""
+					}
+				},
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 506320443387996,
+					"parameters": {
+						"tag": "\"menumusic2\"",
+						"db": "(Volume-100)/3"
 					}
 				}
 			],
@@ -8607,12 +8686,12 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 141064293064107,
+					"sid": 339758570515988,
 					"parameters": {
-						"object-to-create": "dialogue_box",
+						"object-to-create": "confused_nox",
 						"layer": "1",
-						"x": "960",
-						"y": "880",
+						"x": "1608",
+						"y": "450",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
@@ -8620,12 +8699,12 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 781668514713540,
+					"sid": 141064293064107,
 					"parameters": {
-						"object-to-create": "confused_nox",
+						"object-to-create": "dialogue_box",
 						"layer": "1",
-						"x": "1608",
-						"y": "450",
+						"x": "960",
+						"y": "880",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
